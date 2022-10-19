@@ -1,0 +1,21 @@
+2-tyzdnove ulohy
+
+1 Návrh dizajnu webu pomocou nástroja Figma.
+
+2 Vytvorenie GitHub repozitára a ukladanie verzií projektu.
+
+3 Vytvorenie frontendu na základe vytvoreného dizajnu vo Figme s dôrazom na responzivitu.
+
+4 Vytvorenie formuláru na registráciu a prihlasovanie používateľov.
+
+5 Návrh a realizácia databázy pre zápis údajov od používateľov.
+
+6 Návrh a realizácia kódu pre vyhodnotenie údajov od používateľa.
+
+7 Návrh a realizácia programu pre generovanie tréningového plánu.
+
+8 Vytvorenie prezentácie v PowerPointe a dokumentácie vo Worde.
+
+-----------------------------------------------------------------
+ulohy:
+1.
