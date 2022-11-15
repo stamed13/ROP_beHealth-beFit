@@ -1,0 +1,78 @@
+#header {
+  position: fixed;
+  width: 100%;
+}
+
+#header #header-top {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background: #282828;
+}
+
+#header #header-top #bt-log-in {
+  width: 100px;
+  height: 45px;
+  font-size: 25px;
+  border-radius: 15px;
+  color: black;
+  background: #03A500;
+}
+
+#header #header-top #header-title {
+  font-weight: 800;
+  font-size: 45px;
+  color: white;
+}
+
+#header #header-top #logo {
+  width: 50px;
+  border-radius: 50%;
+}
+
+#header #header-menu {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background: #0E7619;
+}
+
+#header #header-menu nav {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+#header #header-menu nav #actual {
+  text-decoration: underline;
+}
+
+#header #header-menu nav a {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+#header #header-menu #search {
+  height: 30px;
+  width: 240px;
+  margin-right: 20px;
+  padding-left: 5px;
+  border-radius: 9px;
+}
+/*# sourceMappingURL=header.css.map */
