@@ -1,13 +1,31 @@
 #content {
     padding: 20px;
     padding-top: 130px;
-    #content-title {
-        display: grid;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 35px;
-    }
-    #main-info {
-        font-size: 25px;
+    #exercises {
+        #main {
+            #exercises-title {
+                display: grid;
+                justify-content: center;
+                font-weight: 600;
+                font-size: 35px;
+            }
+            #exercises-info {
+                font-size: 25px;
+            }
+            #exercises-kinds {
+                font-size: 25px;
+            }
+        }
+
+        #calisthenics {
+            padding-top: 20px;
+            #calisthenics-title {
+                font-weight: 600;
+                font-size: 30px;
+            }
+            #calisthenics-info {
+                font-size: 25px;
+            }
+        }
     }
 }

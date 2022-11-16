@@ -3,7 +3,7 @@
   padding-top: 130px;
 }
 
-#content #content-title {
+#content #exercises #main #exercises-title {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -13,7 +13,24 @@
   font-size: 35px;
 }
 
-#content #main-info {
+#content #exercises #main #exercises-info {
+  font-size: 25px;
+}
+
+#content #exercises #main #exercises-kinds {
+  font-size: 25px;
+}
+
+#content #exercises #calisthenics {
+  padding-top: 20px;
+}
+
+#content #exercises #calisthenics #calisthenics-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #exercises #calisthenics #calisthenics-info {
   font-size: 25px;
 }
 /*# sourceMappingURL=exercises.css.map */
