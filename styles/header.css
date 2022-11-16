@@ -18,11 +18,11 @@
 }
 
 #header #header-top #bt-log-in {
-  width: 100px;
+  width: 90px;
   height: 45px;
   font-size: 25px;
   border-radius: 15px;
-  color: black;
+  border: 2px solid black;
   background: #03A500;
 }
 
@@ -47,7 +47,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
   background: #0E7619;
 }
 
@@ -55,7 +54,6 @@
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  gap: 10px;
 }
 
 #header #header-menu nav #actual {
@@ -63,9 +61,11 @@
 }
 
 #header #header-menu nav a {
+  padding: 5px;
   font-size: 25px;
   text-decoration: none;
   color: black;
+  border: 1px solid black;
 }
 
 #header #header-menu #search {
@@ -73,6 +73,9 @@
   width: 240px;
   margin-right: 20px;
   padding-left: 5px;
+  font-size: 20px;
+  color: black;
   border-radius: 9px;
+  border: 2px solid black;
 }
 /*# sourceMappingURL=header.css.map */

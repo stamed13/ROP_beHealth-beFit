@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,KAAK;CAUrB;;AAZD,AAGI,QAHI,CAGJ,cAAc,CAAC;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;CAClB;;AARL,AASI,QATI,CASJ,UAAU,CAAC;EACP,SAAS,EAAE,IAAI;CAClB",
     "sources": [
-        "home.scss"
+        "exercises.scss"
     ],
     "names": [],
-    "file": "home.css"
+    "file": "exercises.css"
 }

@@ -2,7 +2,6 @@
     position: fixed;
     width: 100%;
     //background: #282828;
-
     #header-top {
         display: grid;
         grid-auto-flow: column;
@@ -10,62 +9,57 @@
         align-items: center;
         padding: 10px;
         background: #282828;
-
         #bt-log-in {
-            width: 100px;
+            //padding: 2x;
+            width: 90px;
             height: 45px;
             font-size: 25px;
             border-radius: 15px;
-            color: black;
+            border: 2px solid black;
             background: #03A500;
         }
-
         #header-title {
             font-weight: 800;
             font-size: 45px;
             color: white;
         }
-
         #logo {
             width: 50px;
             border-radius: 50%;
         }
     }
-
     #header-menu {
         display: grid;
         grid-auto-flow: column;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        //padding: 10px;
         background: #0E7619;
-
         nav {
             display: grid;
             grid-auto-flow: column;
-            gap: 10px;
-
+            //gap: 10px;
             #actual {
                 text-decoration: underline;
             }
-
             a {
+                padding: 5px;
                 font-size: 25px;
                 text-decoration: none;
                 color: black;
-
-                &:hover {
-
-                }
+                border: 1px solid black;
+                &:hover {}
             }
         }
-
         #search {
             height: 30px;
             width: 240px;
             margin-right: 20px;
             padding-left: 5px;
+            font-size: 20px;
+            color: black;
             border-radius: 9px;
+            border: 2px solid black
         }
     }
 }

@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "exercise.scss"
+        "content.scss"
     ],
     "names": [],
-    "file": "exercise.css"
+    "file": "content.css"
 }
