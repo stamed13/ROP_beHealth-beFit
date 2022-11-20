@@ -18,7 +18,31 @@
 }
 
 #content #exercises #main #exercises-kinds {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 12px;
   font-size: 25px;
+}
+
+#content #exercises #main #exercises-kinds #ex-kinds-kinds {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+#content #exercises #main #exercises-kinds #ex-kinds-kinds .ex-kinds-kind {
+  color: black;
+}
+
+#content #exercises #main #exercises-kinds #ex-kinds-kinds .ex-kinds-comma {
+  padding-right: 8px;
 }
 
 #content #exercises #calisthenics {
