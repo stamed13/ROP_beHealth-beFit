@@ -47,7 +47,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #0E7619;
+  background: #004700;
 }
 
 #header #header-menu nav {
@@ -58,14 +58,15 @@
 
 #header #header-menu nav #actual {
   text-decoration: underline;
+  color: black;
+  background: #03A500;
 }
 
 #header #header-menu nav a {
   padding: 5px;
   font-size: 25px;
   text-decoration: none;
-  color: black;
-  border: 1px solid black;
+  color: white;
 }
 
 #header #header-menu #search {
