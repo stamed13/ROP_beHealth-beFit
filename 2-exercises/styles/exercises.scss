@@ -3,7 +3,8 @@
     padding-top: 130px;
     #exercises {
         #main {
-            #exercises-title {
+            min-height: 100vh;
+            #content-title {
                 display: grid;
                 justify-content: center;
                 font-weight: 600;
@@ -12,18 +13,26 @@
             #exercises-info {
                 font-size: 25px;
             }
-            #exercises-kinds {
+
+            .exercise-title {
+                font-weight: 600;
+                font-size: 30px;
+            }
+            .exercise-info {
+                font-size: 25px;
+            }
+            .exercise-kinds {
                 display: grid;
                 grid-auto-flow: column;
                 justify-content: start;
                 gap: 12px;
                 font-size: 25px;
 
-                #ex-kinds-title {
+                .ex-kinds-title {
 
                 }
 
-                #ex-kinds-kinds {
+                .ex-kinds-kinds {
                     display: grid;
                     grid-auto-flow: column;
                     justify-content: start;
@@ -39,14 +48,41 @@
             }
         }
 
-        #calisthenics {
-            padding-top: 20px;
-            #calisthenics-title {
+        .exercise {
+            //padding-top: 20px;
+            padding-top: 130px;
+            min-height: 100vh;
+            .exercise-title {
                 font-weight: 600;
                 font-size: 30px;
             }
-            #calisthenics-info {
+            .exercise-info {
                 font-size: 25px;
+            }
+            .exercise-kinds {
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: start;
+                gap: 12px;
+                font-size: 25px;
+
+                .ex-kinds-title {
+
+                }
+
+                .ex-kinds-kinds {
+                    display: grid;
+                    grid-auto-flow: column;
+                    justify-content: start;
+
+                    .ex-kinds-kind {
+                        color: black;
+                    }
+                    .ex-kinds-comma {
+                        padding-right: 8px;
+                    }
+                    .ex-kinds-end {}
+                }
             }
         }
     }

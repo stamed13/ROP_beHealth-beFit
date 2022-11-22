@@ -3,7 +3,11 @@
   padding-top: 130px;
 }
 
-#content #exercises #main #exercises-title {
+#content #exercises #main {
+  min-height: 100vh;
+}
+
+#content #exercises #main #content-title {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -17,7 +21,16 @@
   font-size: 25px;
 }
 
-#content #exercises #main #exercises-kinds {
+#content #exercises #main .exercise-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #exercises #main .exercise-info {
+  font-size: 25px;
+}
+
+#content #exercises #main .exercise-kinds {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
@@ -28,7 +41,7 @@
   font-size: 25px;
 }
 
-#content #exercises #main #exercises-kinds #ex-kinds-kinds {
+#content #exercises #main .exercise-kinds .ex-kinds-kinds {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
@@ -37,24 +50,53 @@
           justify-content: start;
 }
 
-#content #exercises #main #exercises-kinds #ex-kinds-kinds .ex-kinds-kind {
+#content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
   color: black;
 }
 
-#content #exercises #main #exercises-kinds #ex-kinds-kinds .ex-kinds-comma {
+#content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-comma {
   padding-right: 8px;
 }
 
-#content #exercises #calisthenics {
-  padding-top: 20px;
+#content #exercises .exercise {
+  padding-top: 130px;
+  min-height: 100vh;
 }
 
-#content #exercises #calisthenics #calisthenics-title {
+#content #exercises .exercise .exercise-title {
   font-weight: 600;
   font-size: 30px;
 }
 
-#content #exercises #calisthenics #calisthenics-info {
+#content #exercises .exercise .exercise-info {
   font-size: 25px;
+}
+
+#content #exercises .exercise .exercise-kinds {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 12px;
+  font-size: 25px;
+}
+
+#content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+#content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
+  color: black;
+}
+
+#content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-comma {
+  padding-right: 8px;
 }
 /*# sourceMappingURL=exercises.css.map */
