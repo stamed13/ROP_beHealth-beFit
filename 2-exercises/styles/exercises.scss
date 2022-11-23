@@ -13,7 +13,6 @@
             #exercises-info {
                 font-size: 25px;
             }
-
             .exercise-title {
                 font-weight: 600;
                 font-size: 30px;
@@ -27,16 +26,11 @@
                 justify-content: start;
                 gap: 12px;
                 font-size: 25px;
-
-                .ex-kinds-title {
-
-                }
-
+                .ex-kinds-title {}
                 .ex-kinds-kinds {
                     display: grid;
                     grid-auto-flow: column;
                     justify-content: start;
-
                     .ex-kinds-kind {
                         color: black;
                     }
@@ -47,7 +41,6 @@
                 }
             }
         }
-
         .exercise {
             //padding-top: 20px;
             padding-top: 130px;
@@ -65,16 +58,11 @@
                 justify-content: start;
                 gap: 12px;
                 font-size: 25px;
-
-                .ex-kinds-title {
-
-                }
-
+                .ex-kinds-title {}
                 .ex-kinds-kinds {
                     display: grid;
                     grid-auto-flow: column;
                     justify-content: start;
-
                     .ex-kinds-kind {
                         color: black;
                     }
