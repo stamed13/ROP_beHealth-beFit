@@ -1,6 +1,24 @@
 #content {
   padding: 20px;
-  padding-top: 130px;
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content {
+    padding-top: 220px;
+  }
+}
+
+@media (min-width: 426px) {
+  #content {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 729px) {
+  #content {
+    padding-top: 100px;
+  }
 }
 
 #content #content-title {

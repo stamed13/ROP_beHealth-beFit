@@ -18,21 +18,34 @@
 
 <body>
     <header id="header">
-        <div id="header-top">
-            <button type="button" id="bt-log-in">Log in</button>
-            <div id="header-title">beHealth-beFit</div>
-            <a href="index.html"><img src="media/logo-real.svg" alt="hopa" id="logo"></a>
-        </div>
-        <div id="header-menu">
-            <nav>
-                <a href="index.html" id="actual">home</a>
-                <a href="2-exercises/exercises.html">exercises</a>
-                <a href="3-blog/blog.html">blog</a>
-                <a href="index.html">my-training</a>
-                <a href="index.html">about</a>
-                <a href="index.html">contact</a>
-            </nav>
-            <input type="search" placeholder="Search" id="search">
+        <div id="header-pc">
+            <div id="header-top">
+                <button type="button" id="bt-log-in">Log in</button>
+                <div id="header-title">beHealth-beFit</div>
+                <a href="index.html"><img src="media/logo-real.svg" alt="hopa" id="logo"></a>
+            </div>
+            <div id="header-menu">
+                <nav class="comp-nav">
+                    <a href="index.html" id="actual">home</a>
+                    <a href="2-exercises/exercises.html">exercises</a>
+                    <a href="3-blog/blog.html">blog</a>
+                    <a href="index.html">training</a>
+                    <a href="index.html">about</a>
+                    <a href="index.html">contact</a>
+                </nav>
+                <button class="hamburger">
+                    <div class="bar"></div>
+                </button>
+                <nav class="mobile-nav">
+                    <a href="index.html" id="actual">home</a>
+                    <a href="2-exercises/exercises.html">exercises</a>
+                    <a href="3-blog/blog.html">blog</a>
+                    <a href="index.html">training</a>
+                    <a href="index.html">about</a>
+                    <a href="index.html">contact</a>
+                </nav>
+                <input type="search" placeholder="Search" id="search">
+            </div>
         </div>
     </header>
     <div id="content">
@@ -44,6 +57,7 @@
             <div id="since">Since 2022</div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
