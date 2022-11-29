@@ -308,7 +308,7 @@
 
         #header-nav {
             position: fixed;
-            padding: 25px;
+            padding: 35px;
             top: 256;
             left: 100%;
             width: 100%;
@@ -317,29 +317,48 @@
             transition: 0.4s;
 
             display: grid;
-            justify-items: center;
+            justify-content: center;
             grid-auto-flow: row;
             gap: 30px;
 
             .search {
                 height: 30px;
+                width: 80%;
                 font-size: 20px;
                 color: black;
                 border-radius: 9px;
                 border: 2px solid black;
+                //background: black;
             } 
 
             #mobile-nav {
                 display: grid;
                 grid-auto-flow: row;
                 justify-content: center;
+                gap: 10px;
+
+                .actual {
+                    text-decoration: underline;
+                    color: black;
+                    background: #03A500;
+                    //background: rgb(204, 204, 204);
+                    //border: 1px solid black;
+                }
+
+                a {
+                    padding: 5px;
+                    width: 80%;
+                    text-decoration: none;
+                    color: white;
+                    background-color: #004700;
+                }
             }
         }
         
         #header-nav.is-active {
             left: 0;
         }
-
+        /*
         #header-menu {
             display: grid;
             align-items: center;
@@ -400,6 +419,7 @@
 
             
         }
+        */
     }
 
     //navigacia
