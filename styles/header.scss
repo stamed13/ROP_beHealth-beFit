@@ -318,7 +318,7 @@
 
             display: grid;
             justify-content: center;
-            grid-auto-flow: row;
+            //grid-auto-flow: row;
             gap: 30px;
 
             .search {
@@ -333,200 +333,36 @@
 
             #mobile-nav {
                 display: grid;
-                grid-auto-flow: row;
+                //grid-auto-flow: row;
                 justify-content: center;
                 gap: 10px;
+            }
 
-                .actual {
-                    text-decoration: underline;
-                    color: black;
-                    background: #03A500;
-                    //background: rgb(204, 204, 204);
-                    //border: 1px solid black;
-                }
+            #mobile-nav .actual {
+                text-decoration: underline;
+                color: black;
+                background: #03A500;
+                //background: rgb(204, 204, 204);
+                //border: 1px solid black;
+            }
 
-                a {
-                    padding: 5px;
-                    width: 80%;
-                    text-decoration: none;
-                    color: white;
-                    background-color: #004700;
-                }
+            #mobile-nav a {
+                padding: 5px;
+                width: 80%;
+                text-decoration: none;
+                color: white;
+                background-color: #004700;
             }
         }
         
         #header-nav.is-active {
             left: 0;
         }
-        /*
-        #header-menu {
-            display: grid;
-            align-items: center;
-            //padding: 10px;
-            background: #004700;
-
-            @media(min-width: 0px) {
-                grid-auto-flow: row;
-                justify-items: center;
-            }
-
-            @media(min-width: 729px) {
-                grid-auto-flow: column;
-                justify-content: space-between;
-            }
-
-            .mobile-nav {
-                @media(min-width: 0px) {
-                    display: none;
-                }
-
-                
-                @media(min-width: 426px) {
-                    display: grid;
-                    grid-auto-flow: column;
-                }
-                
-
-                //gap: 10px;
-                .actual {
-                    text-decoration: underline;
-                    color: black;
-                    background: #03A500;
-                    //background: rgb(204, 204, 204);
-                    //border: 1px solid black;
-                }
-
-                a {
-                    padding: 5px;
-                    text-decoration: none;
-                    color: white;
-
-                    @media(min-width: 0px) {
-                        font-size: 20px;
-                    }
-
-                    
-                    @media(min-width: 769px) {
-                        font-size: 25px;
-                    }
-                    
-
-                    &:hover {}
-                }
-            }
-
-
-
-            
-        }
-        */
+       
     }
-
-    //navigacia
-    //vypni ak nestlacene
-    /*
-    .mobile-nav {
-        //position: fixed;
-        top: 0;
-        left: 100%;
-        width: 100%;
-        min-height: 100vh;
-        display: block;
-        z-index: 98;
-        background-color: #12002F;
-        //padding-top: 20px;
-        transition: 0.4s;
-    }
-
-    .mobile-nav.is-active {
-        left: 0;
-    }
-
-    .mobile-nav a {
-        display: block;
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto 16px;
-        text-align: center;
-        padding: 12px 16px;
-        background-color: #03A500;
-    
-        color: #FFF;
-        text-decoration: none;
-    }
-    
-    .mobile-nav a:hover {
-        background-color: #24104f;
-    }
-
-    @media (min-width: 768px) {
-        .mobile-nav {
-            display: none;
-        }
-    
-        .hamburger {
-            display: none;
-        }
-    }
-    */
-    
-}
-
-//************  start of #header-nav ************
-#header-nav {
-
 }
 
 
-//search vyhladavac po rozkliknuti hamburgera
-/*
-.search {
-    height: 30px;
-    padding-left: 5px;
-    font-size: 20px;
-    color: black;
-    border-radius: 9px;
-    border: 2px solid black;
-} 
-*/
-
-//navigacny panel po rozkliknuti hamburgera
-/*
-#mobile-nav {
-	position: fixed;
-	//top: 0;
-	left: 100%;
-	width: 100%;
-	min-height: 100vh;
-	display: block;
-	z-index: 98;
-	background-color: #12002F;
-	padding-top: 80px;
-	transition: 0.4s;
-}
-
-#mobile-nav.is-active {
-	left: 0;
-}
-
-#mobile-nav a {
-	display: block;
-	width: 100%;
-	max-width: 200px;
-	margin: 0 auto 16px;
-	text-align: center;
-	padding: 12px 16px;
-	background-color: #1f103F;
-
-	color: #FFF;
-	text-decoration: none;
-}
-
-#mobile-nav a:hover {
-	background-color: #24104f;
-}
-*/
-//************  end of #header-nav ************
 
 //len ak mam rozliknuty hamburger, tak skryje content
 #content.is-active {

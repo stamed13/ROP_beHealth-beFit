@@ -41,13 +41,54 @@
   font-size: 25px;
 }
 
+@media (min-width: 0px) {
+  #content #exercises #main .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises #main .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 #content #exercises #main .exercise-kinds .ex-kinds-kinds {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+}
+
+@media (min-width: 0px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 826px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 #content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
@@ -83,6 +124,24 @@
   font-size: 25px;
 }
 
+@media (min-width: 0px) {
+  #content #exercises .exercise .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises .exercise .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
   display: -ms-grid;
   display: grid;
@@ -90,6 +149,33 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+}
+
+@media (min-width: 0px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 826px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {

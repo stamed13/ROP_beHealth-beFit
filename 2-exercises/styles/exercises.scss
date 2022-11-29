@@ -26,11 +26,36 @@
                 justify-content: start;
                 gap: 12px;
                 font-size: 25px;
+
+                @media(min-width: 0px) {
+                    grid-auto-flow: row;
+                    justify-content: start;
+                }
+        
+                @media(min-width: 426px) {
+                    grid-auto-flow: row;
+                    justify-content: start;
+                }
+
                 .ex-kinds-title {}
                 .ex-kinds-kinds {
                     display: grid;
-                    grid-auto-flow: column;
-                    justify-content: start;
+
+                    @media(min-width: 0px) {
+                        grid-auto-flow: row;
+                        justify-content: start;
+                    }
+            
+                    @media(min-width: 426px) {
+                        grid-auto-flow: row;
+                        justify-content: start;
+                    }
+
+                    @media(min-width: 826px) {
+                        grid-auto-flow: column;
+                        justify-content: start;
+                    }
+
                     .ex-kinds-kind {
                         color: black;
                     }
@@ -58,11 +83,36 @@
                 justify-content: start;
                 gap: 12px;
                 font-size: 25px;
+
+                @media(min-width: 0px) {
+                    grid-auto-flow: row;
+                    justify-content: start;
+                }
+        
+                @media(min-width: 426px) {
+                    grid-auto-flow: row;
+                    justify-content: start;
+                }
                 .ex-kinds-title {}
                 .ex-kinds-kinds {
                     display: grid;
                     grid-auto-flow: column;
                     justify-content: start;
+
+                    @media(min-width: 0px) {
+                        grid-auto-flow: row;
+                        justify-content: start;
+                    }
+            
+                    @media(min-width: 426px) {
+                        grid-auto-flow: row;
+                        justify-content: start;
+                    }
+
+                    @media(min-width: 826px) {
+                        grid-auto-flow: column;
+                        justify-content: start;
+                    }
                     .ex-kinds-kind {
                         color: black;
                     }
