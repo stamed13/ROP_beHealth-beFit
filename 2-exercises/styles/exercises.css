@@ -1,6 +1,24 @@
 #content {
   padding: 20px;
-  padding-top: 130px;
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 426px) {
+  #content {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 729px) {
+  #content {
+    padding-top: 100px;
+  }
 }
 
 #content #exercises #main {
@@ -88,15 +106,12 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    gap: 15px;
   }
 }
 
 #content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
   color: black;
-}
-
-#content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-comma {
-  padding-right: 8px;
 }
 
 #content #exercises .exercise {
@@ -175,14 +190,11 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    gap: 15px;
   }
 }
 
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
   color: black;
-}
-
-#content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-comma {
-  padding-right: 8px;
 }
 /*# sourceMappingURL=exercises.css.map */

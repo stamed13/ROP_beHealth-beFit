@@ -20,13 +20,22 @@
             padding-top: 20px;
             .blog {
                 display: grid;
-                gap: 25px;
-                grid-auto-flow: column;
                 justify-content: start;
                 border: 1px solid black;
                 border-radius: 5px;
                 background: #BFBFBF;
                 padding: 10px;
+
+                @media(min-width: 0px) {
+                    //gap: 25px;
+                    grid-auto-flow: row;
+                }
+
+                @media(min-width: 426px) {
+                    gap: 25px;
+                    grid-auto-flow: column;
+                }
+
                 .blog-image {
                     width: 190px;
                 }
@@ -39,6 +48,17 @@
                         grid-auto-flow: column;
                         //align-items: center;
                         justify-content: space-between;
+
+                        @media(min-width: 0px) {
+                            //gap: 25px;
+                            grid-auto-flow: row;
+                        }
+        
+                        @media(min-width: 426px) {
+                            gap: 25px;
+                            grid-auto-flow: column;
+                        }
+
                         .blog-title {
                             font-weight: 600;
                             font-size: 32px;

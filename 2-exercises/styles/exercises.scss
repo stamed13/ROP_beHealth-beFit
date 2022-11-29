@@ -1,6 +1,19 @@
 #content {
     padding: 20px;
-    padding-top: 130px;
+    min-height: 100vh;
+
+    @media(min-width: 0px) {
+        padding-top: 140px;
+    }
+
+    @media(min-width: 426px) {
+        padding-top: 130px;
+    }
+
+    @media(min-width: 729px) {
+        padding-top: 100px;
+    }
+
     #exercises {
         #main {
             min-height: 100vh;
@@ -54,15 +67,13 @@
                     @media(min-width: 826px) {
                         grid-auto-flow: column;
                         justify-content: start;
+                        gap: 15px;
                     }
 
                     .ex-kinds-kind {
                         color: black;
+
                     }
-                    .ex-kinds-comma {
-                        padding-right: 8px;
-                    }
-                    .ex-kinds-end {}
                 }
             }
         }
@@ -112,14 +123,11 @@
                     @media(min-width: 826px) {
                         grid-auto-flow: column;
                         justify-content: start;
+                        gap: 15px;
                     }
                     .ex-kinds-kind {
                         color: black;
                     }
-                    .ex-kinds-comma {
-                        padding-right: 8px;
-                    }
-                    .ex-kinds-end {}
                 }
             }
         }
