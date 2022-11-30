@@ -17,7 +17,10 @@
                 <input type="text">
                 <input type="text">
             </div>
-            <div id="log-in-footer"></div>
+            <div id="log-in-footer">
+                <a href="">Sigh in</a>
+                <a href="">create an account</a>
+            </div>
         </div>
     </div>
 
