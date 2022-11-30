@@ -9,7 +9,7 @@
   }
 }
 
-@media (min-width: 426px) {
+@media (min-width: 450px) {
   #header #header-computer {
     display: block;
   }
@@ -33,7 +33,7 @@
   }
 }
 
-@media (min-width: 426px) {
+@media (min-width: 450px) {
   #header #header-computer .header-top {
     grid-auto-flow: column;
     -webkit-box-pack: justify;
@@ -46,22 +46,23 @@
 #header #header-computer .header-top .bt-log-in {
   border: 2px solid black;
   background: #03A500;
-  /*
-                @media(min-width: 426px) {
-                    width: 90px;
-                    height: 45px;
-                    font-size: 25px;
-                    border-radius: 15px;
-                }
-                */
 }
 
-@media (min-width: 0px) {
+@media (min-width: 450px) {
   #header #header-computer .header-top .bt-log-in {
     width: 80px;
     height: 35px;
     font-size: 20px;
     border-radius: 30px;
+  }
+}
+
+@media (min-width: 800px) {
+  #header #header-computer .header-top .bt-log-in {
+    width: 90px;
+    height: 45px;
+    font-size: 25px;
+    border-radius: 15px;
   }
 }
 
@@ -133,6 +134,7 @@
     display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
+    gap: 5px;
   }
 }
 
@@ -180,7 +182,7 @@
   #header #header-computer .header-menu .search {
     width: 240px;
     margin-right: 10px;
-    margin-bottom: 0px;
+    padding: 10px;
   }
 }
 
@@ -203,7 +205,7 @@
   }
 }
 
-@media (min-width: 426px) {
+@media (min-width: 450px) {
   #header #header-mobile {
     display: none;
   }
@@ -224,7 +226,7 @@
   }
 }
 
-@media (min-width: 426px) {
+@media (min-width: 450px) {
   #header #header-mobile .header-top {
     grid-auto-flow: column;
     -webkit-box-pack: justify;
@@ -326,7 +328,9 @@
   border: none;
 }
 
-#header #header-mobile .header-menu #hamburger #bar, #header #header-mobile .header-menu #hamburger:after, #header #header-mobile .header-menu #hamburger:before {
+#header #header-mobile .header-menu #hamburger #bar,
+#header #header-mobile .header-menu #hamburger:after,
+#header #header-mobile .header-menu #hamburger:before {
   content: '';
   display: block;
   width: 100%;

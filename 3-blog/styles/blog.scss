@@ -1,6 +1,15 @@
 #content {
     padding: 20px;
-    padding-top: 130px;
+    min-height: 100vh;
+    @media(min-width: 0px) {
+        padding-top: 140px;
+    }
+    @media(min-width: 450px) {
+        padding-top: 130px;
+    }
+    @media(min-width: 729px) {
+        padding-top: 100px;
+    }
     #blog {
         #main {
             #content-title {
@@ -25,17 +34,14 @@
                 border-radius: 5px;
                 background: #BFBFBF;
                 padding: 10px;
-
                 @media(min-width: 0px) {
                     //gap: 25px;
                     grid-auto-flow: row;
                 }
-
                 @media(min-width: 426px) {
                     gap: 25px;
                     grid-auto-flow: column;
                 }
-
                 .blog-image {
                     width: 190px;
                 }
@@ -48,17 +54,14 @@
                         grid-auto-flow: column;
                         //align-items: center;
                         justify-content: space-between;
-
                         @media(min-width: 0px) {
                             //gap: 25px;
                             grid-auto-flow: row;
                         }
-        
                         @media(min-width: 426px) {
                             gap: 25px;
                             grid-auto-flow: column;
                         }
-
                         .blog-title {
                             font-weight: 600;
                             font-size: 32px;

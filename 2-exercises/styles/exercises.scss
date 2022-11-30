@@ -1,19 +1,15 @@
 #content {
     padding: 20px;
     min-height: 100vh;
-
     @media(min-width: 0px) {
         padding-top: 140px;
     }
-
-    @media(min-width: 426px) {
+    @media(min-width: 450px) {
         padding-top: 130px;
     }
-
     @media(min-width: 729px) {
         padding-top: 100px;
     }
-
     #exercises {
         #main {
             min-height: 100vh;
@@ -39,40 +35,32 @@
                 justify-content: start;
                 gap: 12px;
                 font-size: 25px;
-
                 @media(min-width: 0px) {
                     grid-auto-flow: row;
                     justify-content: start;
                 }
-        
                 @media(min-width: 426px) {
                     grid-auto-flow: row;
                     justify-content: start;
                 }
-
                 .ex-kinds-title {}
                 .ex-kinds-kinds {
                     display: grid;
-
                     @media(min-width: 0px) {
                         grid-auto-flow: row;
                         justify-content: start;
                     }
-            
                     @media(min-width: 426px) {
                         grid-auto-flow: row;
                         justify-content: start;
                     }
-
                     @media(min-width: 826px) {
                         grid-auto-flow: column;
                         justify-content: start;
                         gap: 15px;
                     }
-
                     .ex-kinds-kind {
                         color: black;
-
                     }
                 }
             }
@@ -94,12 +82,10 @@
                 justify-content: start;
                 gap: 12px;
                 font-size: 25px;
-
                 @media(min-width: 0px) {
                     grid-auto-flow: row;
                     justify-content: start;
                 }
-        
                 @media(min-width: 426px) {
                     grid-auto-flow: row;
                     justify-content: start;
@@ -109,17 +95,14 @@
                     display: grid;
                     grid-auto-flow: column;
                     justify-content: start;
-
                     @media(min-width: 0px) {
                         grid-auto-flow: row;
                         justify-content: start;
                     }
-            
                     @media(min-width: 426px) {
                         grid-auto-flow: row;
                         justify-content: start;
                     }
-
                     @media(min-width: 826px) {
                         grid-auto-flow: column;
                         justify-content: start;
