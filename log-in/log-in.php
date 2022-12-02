@@ -1,3 +1,7 @@
+<?php
+echo "<br>Ahoj php,<br> toto je log-in";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
