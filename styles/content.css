@@ -1,1 +1,4 @@
-/* No CSS *//*# sourceMappingURL=content.css.map */
+body.active #content {
+  display: none;
+}
+/*# sourceMappingURL=content.css.map */

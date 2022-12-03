@@ -114,13 +114,14 @@
     }
 
     #header-nav {
-        position: fixed;
+        position: relative;
         display: block;
         left: -100%;
-        top: 135px;
+        //top: 135px;
         gap: 0;
         background-color: #006600;
         width: 100%;
+        min-height: 100vh;
         transition: .3s;
 
 
@@ -135,7 +136,7 @@
             .search {
                 display: grid;
                 height: 30px;
-                width: 80%;
+                width: 65vw;
                 font-size: 20px;
                 color: black;
                 border-radius: 9px;
@@ -146,9 +147,14 @@
             .nav-menu {
                 display: grid;
                 justify-items: center;
-                gap: 60px;
+                gap: 10px;
 
                 .actual {
+                    display: grid;
+                    justify-content: center;
+                    width: 65vw;
+                    padding: 5px 0;
+                    border-radius: 5px;
                     text-decoration: underline;
                     background: #03A500;
                     color: black;
@@ -157,8 +163,9 @@
                 .nav-link {
                     display: grid;
                     justify-content: center;
-                    width: 50vw;
+                    width: 65vw;
                     padding: 5px 0;
+                    border-radius: 5px;
                     color: white;
                     background: #004700;
                     text-decoration: none;
@@ -324,12 +331,7 @@
 //**    end     **
 */
 
-//len ak mam rozliknuty hamburger, tak skryje content
-#content.active {
-    display: none;
-}
 
-//len ak mam rozliknuty hamburger, tak bude tiez footer
-#footer {
-    //position: fixed;
+body.active #header-mobile {
+    position: relative;
 }

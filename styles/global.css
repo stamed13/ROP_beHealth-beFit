@@ -18,4 +18,8 @@ body {
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
 }
+
+body.selected {
+  display: block;
+}
 /*# sourceMappingURL=global.css.map */
