@@ -10,11 +10,12 @@
             font-style: normal;
             font-weight: 400;
             color: white;
-
+            //
             @media(min-width: 0px) {
                 padding: 8px;
                 font-size: 18px;
             }
+            //
             @media(min-width: 450px) {
                 padding: 20px;
                 font-size: 20px;
@@ -22,8 +23,9 @@
         }
     }
 }
-
-//len ak mam rozliknuty hamburger, tak bude tiez footer
+//
+//
+//len ak mam rozliknuty hamburger, tak bude aj footer
 body.active #footer {
     position: relative;
     //top: 480px;

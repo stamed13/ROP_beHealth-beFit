@@ -1,15 +1,20 @@
 #content {
     padding: 20px;
     min-height: 100vh;
+    //
     @media(min-width: 0px) {
         padding-top: 140px;
     }
     @media(min-width: 450px) {
         padding-top: 130px;
     }
-    @media(min-width: 729px) {
-        padding-top: 100px;
+    @media(min-width: 500px) {
+        padding-top: 140px;
     }
+    @media(min-width: 800px) {
+        padding-top: 115px;
+    }
+    //
     #content-title {
         display: grid;
         justify-content: center;
