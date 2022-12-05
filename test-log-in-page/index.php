@@ -23,14 +23,16 @@
                     alt="hopa" id="logo"></a>
             </div>
             <form action="login.php" method="post" id="log-in-formular">
+                <?php if (isset($_GET['error'])) { ?>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+                <?php } ?>
                 <input type="text" id="username" name="username" 
                 placeholder="Username" required>
                 <input type="password" id="password" name="password" 
                 placeholder="Password" required>
             </form>
             <div id="log-in-footer">
-                <input type="submit" id="bt-login" name="submit" 
-                value="Login" required>
+                <button type="submit" id="bt-login" name="submit" value="Login" required><a href="login.php">Login</a></button>
                 <a href="../sign-up/sign-up.html" id="new-account">Don`t have an account</a>
             </div>
         </div>
