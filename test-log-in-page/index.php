@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="styles/log-in.css">
-
-    <title>Login</title>
+	<title>LOGIN</title>
+	<link rel="stylesheet" href="styles/log-in.css">
 </head>
 <body>
-    <form action="">
-        <h2>Login</h2>
+     <form action="login.php" method="post">
+     	<h2>LOGIN</h2>
+     	<?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php } ?>
+     	<label>User Name</label>
+     	<input type="text" name="uname" placeholder="User Name"><br>
 
-        <label>Username</label>
-        <input type="text" name="uname" placeholder="Username">
+     	<label>User Name</label>
+     	<input type="password" name="password" placeholder="Password"><br>
 
-        <label>Password</label>
-        <input type="text" name="password" placeholder="Password">
-
-        <button type="submit">Login</button>
-    </form>
+     	<button type="submit">Login</button>
+     </form>
 </body>
 </html>
