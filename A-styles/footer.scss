@@ -1,0 +1,33 @@
+#footer {
+    //height: 80px;
+    background: #282828;
+    #footer-info {
+        #since {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            color: white;
+            //
+            @media(min-width: 0px) {
+                padding: 8px;
+                font-size: 18px;
+            }
+            //
+            @media(min-width: 450px) {
+                padding: 20px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+//
+//
+//len ak mam rozliknuty hamburger, tak bude aj footer
+body.active #footer {
+    position: relative;
+    //top: 480px;
+    //width: 100%;
+}
