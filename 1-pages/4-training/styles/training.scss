@@ -1,0 +1,59 @@
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    //
+    @media(min-width: 0px) {
+        padding-top: 140px;
+    }
+    @media(min-width: 450px) {
+        padding-top: 130px;
+    }
+    @media(min-width: 500px) {
+        padding-top: 140px;
+    }
+    @media(min-width: 800px) {
+        padding-top: 115px;
+    }
+    //
+    #training {
+        display: grid;
+        gap: 120px;
+        //
+        #main {
+            //min-height: 100vh;
+            //
+            #content-title {
+                display: grid;
+                justify-content: center;
+                font-weight: 600;
+                font-size: 35px;
+            }
+            //
+            #training-info {
+                font-size: 25px;
+            }
+        }
+        //
+        #training-menu {
+            display: grid;
+            gap: 40px;
+            justify-content: center;
+            //
+            button {
+                width: 80vw;
+                font-weight: 600;
+                font-size: 25px;
+                background: #A5CE00;
+                border: 1px solid #000000;
+                border-radius: 8px;
+                //
+                @media(min-width: 0px) {
+                    height: 100px;
+                }
+                @media(min-width: 450px) {
+                    height: 140px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,206 @@
+#content {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 800px) {
+  #content {
+    padding-top: 115px;
+  }
+}
+
+#content #exercises #main {
+  min-height: 100vh;
+}
+
+#content #exercises #main #content-title {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#content #exercises #main #exercises-info {
+  font-size: 25px;
+}
+
+#content #exercises #main .exercise-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #exercises #main .exercise-info {
+  font-size: 25px;
+}
+
+#content #exercises #main .exercise-kinds {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 12px;
+  font-size: 25px;
+}
+
+@media (min-width: 0px) {
+  #content #exercises #main .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises #main .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+#content #exercises #main .exercise-kinds .ex-kinds-kinds {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 0px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 826px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 15px;
+  }
+}
+
+#content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
+  color: black;
+}
+
+#content #exercises .exercise {
+  padding-top: 130px;
+  min-height: 100vh;
+}
+
+#content #exercises .exercise .exercise-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #exercises .exercise .exercise-info {
+  font-size: 25px;
+}
+
+#content #exercises .exercise .exercise-kinds {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 12px;
+  font-size: 25px;
+}
+
+@media (min-width: 0px) {
+  #content #exercises .exercise .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises .exercise .exercise-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+#content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+@media (min-width: 0px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 826px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    grid-auto-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 15px;
+  }
+}
+
+#content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
+  color: black;
+}
+/*# sourceMappingURL=exercises.css.map */

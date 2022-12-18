@@ -1,0 +1,43 @@
+#content {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 800px) {
+  #content {
+    padding-top: 115px;
+  }
+}
+
+#content #content-title {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#content #main-info {
+  font-size: 25px;
+}
+/*# sourceMappingURL=home.css.map */

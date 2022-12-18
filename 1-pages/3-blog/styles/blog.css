@@ -1,0 +1,129 @@
+#content {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 800px) {
+  #content {
+    padding-top: 115px;
+  }
+}
+
+#content #blog #main #content-title {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#content #blog #main #exercises-info {
+  font-size: 25px;
+}
+
+#content #blog #blogs {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+#content #blog #blogs .blog {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #BFBFBF;
+  padding: 10px;
+}
+
+@media (min-width: 0px) {
+  #content #blog #blogs .blog {
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #blog #blogs .blog {
+    gap: 25px;
+    grid-auto-flow: column;
+  }
+}
+
+#content #blog #blogs .blog .blog-image {
+  width: 190px;
+}
+
+#content #blog #blogs .blog .blog-info {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  padding-right: 5px;
+}
+
+#content #blog #blogs .blog .blog-info .blog-header {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 0px) {
+  #content #blog #blogs .blog .blog-info .blog-header {
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 426px) {
+  #content #blog #blogs .blog .blog-info .blog-header {
+    gap: 25px;
+    grid-auto-flow: column;
+  }
+}
+
+#content #blog #blogs .blog .blog-info .blog-header .blog-title {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+#content #blog #blogs .blog .blog-info .blog-header .blog-cathegory {
+  font-style: italic;
+  font-size: 20px;
+}
+
+#content #blog #blogs .blog .blog-info .blog-description {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  font-size: 20px;
+}
+/*# sourceMappingURL=blog.css.map */

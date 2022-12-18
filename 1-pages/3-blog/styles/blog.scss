@@ -1,0 +1,88 @@
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    //
+    @media(min-width: 0px) {
+        padding-top: 140px;
+    }
+    @media(min-width: 450px) {
+        padding-top: 130px;
+    }
+    @media(min-width: 500px) {
+        padding-top: 140px;
+    }
+    @media(min-width: 800px) {
+        padding-top: 115px;
+    }
+    //
+    #blog {
+        #main {
+            #content-title {
+                display: grid;
+                justify-content: center;
+                font-weight: 600;
+                font-size: 35px;
+            }
+            #exercises-info {
+                font-size: 25px;
+            }
+        }
+        #blogs {
+            display: grid;
+            gap: 20px;
+            justify-content: center;
+            padding-top: 20px;
+            .blog {
+                display: grid;
+                justify-content: start;
+                border: 1px solid black;
+                border-radius: 5px;
+                background: #BFBFBF;
+                padding: 10px;
+                @media(min-width: 0px) {
+                    //gap: 25px;
+                    grid-auto-flow: row;
+                }
+                @media(min-width: 426px) {
+                    gap: 25px;
+                    grid-auto-flow: column;
+                }
+                .blog-image {
+                    width: 190px;
+                }
+                .blog-info {
+                    display: grid;
+                    gap: 5px;
+                    padding-right: 5px;
+                    .blog-header {
+                        display: grid;
+                        grid-auto-flow: column;
+                        //align-items: center;
+                        justify-content: space-between;
+                        @media(min-width: 0px) {
+                            //gap: 25px;
+                            grid-auto-flow: row;
+                        }
+                        @media(min-width: 426px) {
+                            gap: 25px;
+                            grid-auto-flow: column;
+                        }
+                        .blog-title {
+                            font-weight: 600;
+                            font-size: 32px;
+                        }
+                        .blog-cathegory {
+                            font-style: italic;
+                            font-size: 20px;
+                        }
+                    }
+                    .blog-description {
+                        display: grid;
+                        align-content: start;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,176 @@
+//hlavicka pre sirku ako maju mobily
+#header-mobile {
+    position: fixed;
+    width: 100%;
+    //viditelne len na mobiloch
+    @media(min-width: 0px) {
+        display: block;
+    }
+    //vacsia sirka skryje
+    @media(min-width: 450px) {
+        display: none;
+    }
+    //horna cast hlavicky
+    .header-top {
+        display: grid;
+        padding: 10px;
+        background: #282828;
+        //
+        grid-auto-flow: row;
+        justify-items: center;
+        gap: 5px;
+        //
+        #row {
+            display: grid;
+            //
+            @media(min-width: 0px) {
+                grid-auto-flow: column;
+                gap: 90px;
+            }
+            //
+            .bt-log-in {
+                border: 2px solid black;
+                background: #03A500;
+                //
+                @media(min-width: 0px) {
+                    width: 80px;
+                    height: 35px;
+                    font-size: 20px;
+                    border-radius: 30px;
+                }
+                //text tlacidla
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            //
+            .logo {
+                border-radius: 50%;
+                //
+                @media(min-width: 0px) {
+                    width: 35px;
+                }
+            }
+        }
+        //
+        .header-title {
+            color: white;
+            //
+            @media(min-width: 0px) {
+                font-weight: 600;
+                font-size: 30px;
+            }
+        }
+    }
+    //menu hlavicky, hamburger button
+    .header-menu {
+        display: grid;
+        justify-content: center;
+        background: #004700;
+        //
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            padding: 5px;
+        }
+        //
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: black;
+        }
+        //
+        .hamburger.active  .bar:nth-child(2) {
+            opacity: 0;
+        }
+        //
+        .hamburger.active  .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        //
+        .hamburger.active  .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+    //hamburger menu
+    #header-nav {
+        position: relative;
+        display: block;
+        left: -100%;
+        //top: 135px;
+        gap: 0;
+        background-color: #006600;
+        width: 100%;
+        min-height: 100vh;
+        transition: .3s;
+        //
+        div {
+            display: none;
+            padding: 30px;
+            justify-items: center;
+            grid-auto-flow: row;
+            gap: 30px;
+            //
+            .search {
+                display: grid;
+                height: 30px;
+                width: 65vw;
+                padding-left: 5px;
+                font-size: 20px;
+                color: black;
+                border-radius: 9px;
+                border: 2px solid black;
+                //background: black;
+            }
+            //
+            .nav-menu {
+                display: grid;
+                justify-items: center;
+                gap: 10px;
+                //
+                .actual {
+                    display: grid;
+                    justify-content: center;
+                    width: 65vw;
+                    padding: 5px 0;
+                    border-radius: 5px;
+                    text-decoration: underline;
+                    background: #03A500;
+                    color: black;
+                }
+                //
+                .nav-link {
+                    display: grid;
+                    justify-content: center;
+                    width: 65vw;
+                    padding: 5px 0;
+                    border-radius: 5px;
+                    color: white;
+                    background: #004700;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    //
+}
+//
+//
+//
+//ked kliknem, rozbali hamburger menu
+body.active #header-mobile {
+    position: relative;
+    //animacia zlava hamburger menu
+    #header-nav {
+        left: 0;
+        //viditelne menu
+        div {
+            display: grid;
+        }
+    }
+}
