@@ -169,7 +169,7 @@
   color: black;
 }
 
-#header-mobile #header-nav div .nav-menu .nav-link {
+#header-mobile #header-nav div .nav-menu a {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;

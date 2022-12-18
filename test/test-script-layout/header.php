@@ -6,13 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="media/real-icon3.png" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/global.css">
+
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/header-mobile.css">
-    <link rel="stylesheet" href="styles/content.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="1-home/styles/home.css">
+    <link rel="stylesheet" href="styles/global.css">
 
     <title>Home</title>
 </head>
@@ -23,7 +19,7 @@
             <div class="header-top">
                 <button type="button" class="bt-log-in"><a href="log-in/log-in.php">Log in</a></button>
                 <div class="header-title">beHealth-beFit</div>
-                <a href="index.html"><img src="media/logo-real.svg" alt="hopa" class="logo"></a>
+                <a href="index.html"><img src="../../2-tools/B-media/logo/logo.svg" alt="hopa" class="logo"></a>
             </div>
             <div class="header-menu">
                 <nav id="computer-nav">

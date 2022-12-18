@@ -1,9 +1,6 @@
 <?php
-    //aktualna stranka
-    $currentPage = 'index';
-
     //pripojenie header casti
-    include('C-layout/header.php');
+    include('header.php');
 ?>
 
     <div id="content">
@@ -13,7 +10,7 @@
     
 <?php
     //pripojenie footer casti
-    include('C-layout/footer.php');
+    //include('2-tools/C-layout/footer.php');
 ?>
 
 </body>
