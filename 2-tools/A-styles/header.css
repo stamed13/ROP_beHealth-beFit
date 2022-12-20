@@ -151,14 +151,14 @@
 
 #header-computer .header-menu #computer-nav .actual {
   text-decoration: underline;
-  color: black;
+  color: #000000;
   background: #03A500;
 }
 
 #header-computer .header-menu #computer-nav a {
   padding: 5px;
   text-decoration: none;
-  color: white;
+  color: #D3D3D3;
 }
 
 @media (min-width: 450px) {
