@@ -11,7 +11,9 @@
             <article id="main">
                 <div id="content-title">My training</div>
                 <div id="training-info">
-                    Najprv zadaj informacie o tvojom zivotnom style. Podla tychto informacii dostanes lepsie typy k treningu, treningovemu planu. Potom mozes pokojne vybrat si trening
+                    Najprv zadaj informacie o tvojom zivotnom style. Podla tychto informacii 
+                    dostanes lepsie typy k treningu, treningovemu planu. Potom mozes pokojne 
+                    vybrat si trening
                 </div>
             </article>
             <article id="training-menu">
