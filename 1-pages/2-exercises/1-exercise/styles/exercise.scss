@@ -15,6 +15,20 @@
         padding-top: 115px;
     }
     //
+    #back {
+        display: grid;
+        text-align: left;
+        width: 75px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 25px;
+        border-radius: 10px;
+        color: black;
+        background: #BFBFBF;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
     #exercises {
         #main {
             min-height: 100vh;
@@ -25,6 +39,7 @@
                 font-size: 35px;
             }
             #exercises-info {
+                //margin-top: 25px;
                 font-size: 25px;
             }
             .exercise-title {
@@ -119,13 +134,11 @@
                     }
                     .ex-kinds-kind {
                         color: black;
-                        //background: greenyellow;
                     }
                 }
             }
 
             .view-more {
-                display: none;
                 padding-top: 500px;
                 font-size: 25px;
                 color: black;

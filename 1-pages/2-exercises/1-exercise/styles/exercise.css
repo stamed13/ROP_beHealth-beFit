@@ -27,6 +27,21 @@
   }
 }
 
+#content #back {
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+  width: 75px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+  color: black;
+  background: #BFBFBF;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 #content #exercises #main {
   min-height: 100vh;
 }
@@ -213,9 +228,8 @@
 }
 
 #content #exercises .exercise .view-more {
-  display: none;
   padding-top: 500px;
   font-size: 25px;
   color: black;
 }
-/*# sourceMappingURL=exercises.css.map */
+/*# sourceMappingURL=exercise.css.map */
