@@ -29,7 +29,7 @@
         text-decoration: none;
     }
 
-    #exercises {
+    #type {
         #main {
             min-height: 100vh;
             #content-title {
@@ -38,7 +38,7 @@
                 font-weight: 600;
                 font-size: 35px;
             }
-            #exercises-info {
+            #type-info {
                 //margin-top: 25px;
                 font-size: 25px;
             }
@@ -49,39 +49,38 @@
             .exercise-info {
                 font-size: 25px;
             }
-            .exercise-kinds {
+            #exercises {
                 display: grid;
                 grid-auto-flow: column;
                 justify-content: start;
-                gap: 12px;
+                gap: 10px;
+                padding-top: 10px;
                 font-size: 25px;
-                @media(min-width: 0px) {
-                    grid-auto-flow: row;
-                    justify-content: start;
-                }
-                @media(min-width: 426px) {
-                    grid-auto-flow: row;
-                    justify-content: start;
-                }
+
                 .ex-kinds-title {
-                    padding-top: 20px;
+
                 }
                 .ex-kinds-kinds {
-                    display: grid;
-                    @media(min-width: 0px) {
-                        grid-auto-flow: row;
-                        justify-content: start;
-                    }
-                    @media(min-width: 426px) {
-                        grid-auto-flow: row;
-                        justify-content: start;
-                    }
-                    @media(min-width: 826px) {
-                        grid-auto-flow: column;
-                        justify-content: start;
-                        gap: 15px;
-                    }
+
                     .ex-kinds-kind {
+
+                    }
+                }
+            }
+
+            #types-of-type {
+                padding-top: 20px;
+                font-size: 25px;
+                
+                #types-ex-title {
+                    font-weight: 600;
+                }
+
+                #types-ex-list {
+                    display: grid;
+                    gap: 5px;
+
+                    .type-ex {
                         color: black;
                     }
                 }
@@ -98,50 +97,9 @@
             .exercise-info {
                 font-size: 25px;
             }
-            .exercise-kinds {
-                display: grid;
-                grid-auto-flow: column;
-                justify-content: start;
-                gap: 12px;
+            .exercises {
                 font-size: 25px;
-                @media(min-width: 0px) {
-                    grid-auto-flow: row;
-                    justify-content: start;
-                }
-                @media(min-width: 426px) {
-                    grid-auto-flow: row;
-                    justify-content: start;
-                }
-                .ex-kinds-title {
-                    padding-top: 20px;
-                }
-                .ex-kinds-kinds {
-                    display: grid;
-                    grid-auto-flow: column;
-                    justify-content: start;
-                    @media(min-width: 0px) {
-                        grid-auto-flow: row;
-                        justify-content: start;
-                    }
-                    @media(min-width: 426px) {
-                        grid-auto-flow: row;
-                        justify-content: start;
-                    }
-                    @media(min-width: 826px) {
-                        grid-auto-flow: column;
-                        justify-content: start;
-                        gap: 15px;
-                    }
-                    .ex-kinds-kind {
-                        color: black;
-                    }
-                }
-            }
-
-            .view-more {
-                padding-top: 500px;
-                font-size: 25px;
-                color: black;
+                font-weight: 600;
             }
         }
     }

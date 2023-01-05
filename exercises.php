@@ -22,10 +22,10 @@
                     <nav class="ex-kinds-kinds">
                         <a href="#calisthenics" class="ex-kinds-kind">kalistenika</a>
                         <a href="#flexibility" class="ex-kinds-kind">flexibilita</a>
-                        <a href="" class="ex-kinds-kind">rovnováha alebo stabilita</a>
-                        <a href="" class="ex-kinds-kind">kardio</a>
-                        <a href="" class="ex-kinds-kind">HIIT</a>
-                        <a href="" class="ex-kinds-kind">silový tréning</a>
+                        <a  class="ex-kinds-kind">rovnováha alebo stabilita</a>
+                        <a  class="ex-kinds-kind">kardio</a>
+                        <a  class="ex-kinds-kind">HIIT</a>
+                        <a  class="ex-kinds-kind">silový tréning</a>
                     </nav>
                 </div>
             </article>
@@ -41,8 +41,8 @@
                     <div class="ex-kinds-title">druhy:</div>
                     <nav class="ex-kinds-kinds">
                         <a href="1-pages/2-exercises/1-exercise/1-calisthenics/pull.php" class="ex-kinds-kind">príťah</a>
-                        <a href="" class="ex-kinds-kind">tlak</a>
-                        <a href="" class="ex-kinds-kind">nohy</a>
+                        <a href="1-pages/2-exercises/1-exercise/1-calisthenics/push.php" class="ex-kinds-kind">tlak</a>
+                        <a href="1-pages/2-exercises/1-exercise/1-calisthenics/leg.php" class="ex-kinds-kind">nohy</a>
                         <a href="1-pages/2-exercises/1-exercise/1-calisthenics/core.php" class="ex-kinds-kind">jadro</a>
                     </nav>
                 </div>
@@ -58,6 +58,7 @@
                 <div class="exercise-kinds">
                     <div class="ex-kinds-title">druhy:</div>
                     <nav class="ex-kinds-kinds">
+                        <a href="" class="ex-kinds-kind">rozcvička</a>
                         <a href="" class="ex-kinds-kind">celý chrbát</a>
                         <a href="" class="ex-kinds-kind">ramená</a>
                         <a href="" class="ex-kinds-kind">ruky</a>
@@ -66,7 +67,6 @@
                         <a href="" class="ex-kinds-kind">brucho</a>
                         <a href="" class="ex-kinds-kind">hamstring</a>
                         <a href="" class="ex-kinds-kind">lýtko</a>
-                        <a href="" class="ex-kinds-kind">chodidlo</a>
                         <a href="" class="ex-kinds-kind">chodidlo</a>
                     </nav>
                 </div>

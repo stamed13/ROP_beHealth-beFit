@@ -42,11 +42,11 @@
   text-decoration: none;
 }
 
-#content #exercises #main {
+#content #type #main {
   min-height: 100vh;
 }
 
-#content #exercises #main #content-title {
+#content #type #main #content-title {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -56,180 +56,66 @@
   font-size: 35px;
 }
 
-#content #exercises #main #exercises-info {
+#content #type #main #type-info {
   font-size: 25px;
 }
 
-#content #exercises #main .exercise-title {
+#content #type #main .exercise-title {
   font-weight: 600;
   font-size: 30px;
 }
 
-#content #exercises #main .exercise-info {
+#content #type #main .exercise-info {
   font-size: 25px;
 }
 
-#content #exercises #main .exercise-kinds {
+#content #type #main #exercises {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  gap: 12px;
+  gap: 10px;
+  padding-top: 10px;
   font-size: 25px;
 }
 
-@media (min-width: 0px) {
-  #content #exercises #main .exercise-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-@media (min-width: 426px) {
-  #content #exercises #main .exercise-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-#content #exercises #main .exercise-kinds .ex-kinds-title {
+#content #type #main #types-of-type {
   padding-top: 20px;
+  font-size: 25px;
 }
 
-#content #exercises #main .exercise-kinds .ex-kinds-kinds {
+#content #type #main #types-of-type #types-ex-title {
+  font-weight: 600;
+}
+
+#content #type #main #types-of-type #types-ex-list {
   display: -ms-grid;
   display: grid;
+  gap: 5px;
 }
 
-@media (min-width: 0px) {
-  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-@media (min-width: 426px) {
-  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-@media (min-width: 826px) {
-  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    gap: 15px;
-  }
-}
-
-#content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
+#content #type #main #types-of-type #types-ex-list .type-ex {
   color: black;
 }
 
-#content #exercises .exercise {
+#content #type .exercise {
   padding-top: 130px;
   min-height: 100vh;
 }
 
-#content #exercises .exercise .exercise-title {
+#content #type .exercise .exercise-title {
   font-weight: 600;
   font-size: 30px;
 }
 
-#content #exercises .exercise .exercise-info {
+#content #type .exercise .exercise-info {
   font-size: 25px;
 }
 
-#content #exercises .exercise .exercise-kinds {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  gap: 12px;
+#content #type .exercise .exercises {
   font-size: 25px;
-}
-
-@media (min-width: 0px) {
-  #content #exercises .exercise .exercise-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-@media (min-width: 426px) {
-  #content #exercises .exercise .exercise-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-#content #exercises .exercise .exercise-kinds .ex-kinds-title {
-  padding-top: 20px;
-}
-
-#content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-@media (min-width: 0px) {
-  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-@media (min-width: 426px) {
-  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
-
-@media (min-width: 826px) {
-  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    gap: 15px;
-  }
-}
-
-#content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
-  color: black;
-}
-
-#content #exercises .exercise .view-more {
-  padding-top: 500px;
-  font-size: 25px;
-  color: black;
+  font-weight: 600;
 }
 /*# sourceMappingURL=exercise.css.map */
