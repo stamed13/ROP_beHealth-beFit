@@ -15,11 +15,13 @@
                     Môže predĺžiť Váš život a pomôcť predchádzať určitým chorobám, ako sú niektoré druhy 
                     rakoviny, cukrovka a vysoká krvný tlak. Cvičenie je skvelý odpočinok od každodenných starostí 
                     a pomáha nám býť šťastnejší. Môžme si zlepšiť koordináciu, pohybové rozsahy, vytrvalosť, 
-                    rovnováhu alebo zvýšiť silu. Vybral som 6 bežných druhov cvičenia.
+                    rovnováhu alebo zvýšiť silu. Vybral som 6 bežných druhov cvičenia a dôležité informácie o tom čo robiť pred a po cvičení.
                 </div>
+
                 <div class="exercise-kinds">
                     <div class="ex-kinds-title">druhy:</div>
                     <nav class="ex-kinds-kinds">
+                    <a  href="#before-and-after" class="ex-kinds-kind">pred a po cvičení</a>
                         <a href="#calisthenics" class="ex-kinds-kind">kalistenika</a>
                         <a href="#flexibility" class="ex-kinds-kind">flexibilita</a>
                         <a  class="ex-kinds-kind">rovnováha alebo stabilita</a>
@@ -29,6 +31,26 @@
                     </nav>
                 </div>
             </article>
+
+            <article id="before-and-after" class="exercise">
+                <div class="exercise-title">Pred a po cvičení</div>
+                <div class="exercise-info">
+                    Pred cvičením je dôležité urobiť viacero úkonov. Potrebujeme zahriať svaly a potom sa rozcvičiť. 
+                    Neskôr, najlepšie večer, možeme urobiť statický strečing. Ten slúži na uvoľnenie svalstva  a regeneráciu 
+                    po tréningu.
+                </div>
+                <div class="exercise-kinds">
+                    <div class="ex-kinds-title">druhy:</div>
+                    <nav class="ex-kinds-kinds">
+                        <a class="ex-kinds-kind">zahrievačka</a>
+                        <a class="ex-kinds-kind">rozcvička na vrchnú časť</a>
+                        <a class="ex-kinds-kind">rozcvička na spodnú časť</a>
+                        <a class="ex-kinds-kind">statický strečing</a>
+                    </nav>
+                </div>
+                <a href="" class="view-more">pozrieť viac</a>
+            </article>
+
             <article id="calisthenics" class="exercise">
                 <div class="exercise-title">Kalistenika</div>
                 <div class="exercise-info">
@@ -48,6 +70,7 @@
                 </div>
                 <a href="" class="view-more">pozrieť viac</a>
             </article>
+
             <article id="flexibility" class="exercise">
                 <div class="exercise-title">Flexibilita</div>
                 <div class="exercise-info">
@@ -72,6 +95,7 @@
                 </div>
                 <a href="" class="view-more">pozrieť viac</a>
             </article>
+
         </section>
     </div>
 

@@ -1,6 +1,7 @@
 #header-computer {
   position: fixed;
   width: 100%;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (min-width: 0px) {

@@ -11,19 +11,19 @@
 
 @media (min-width: 450px) {
   #content {
-    padding-top: 130px;
+    padding-top: 105px;
   }
 }
 
 @media (min-width: 500px) {
   #content {
-    padding-top: 140px;
+    padding-top: 110px;
   }
 }
 
 @media (min-width: 800px) {
   #content {
-    padding-top: 115px;
+    padding-top: 125px;
   }
 }
 
@@ -101,8 +101,31 @@
 }
 
 #content #type .exercise {
-  padding-top: 130px;
   min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content #type .exercise {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content #type .exercise {
+    padding-top: 105px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #type .exercise {
+    padding-top: 110px;
+  }
+}
+
+@media (min-width: 800px) {
+  #content #type .exercise {
+    padding-top: 125px;
+  }
 }
 
 #content #type .exercise .exercise-title {
@@ -112,10 +135,20 @@
 
 #content #type .exercise .exercise-info {
   font-size: 25px;
+  padding-bottom: 20px;
 }
 
-#content #type .exercise .exercises {
+#content #type .exercise ul {
+  padding-left: 20px;
+}
+
+#content #type .exercise ul li .exercises {
   font-size: 25px;
   font-weight: 600;
+}
+
+#content #type .exercise ul li .info {
+  font-size: 25px;
+  font-weight: 400;
 }
 /*# sourceMappingURL=exercise.css.map */

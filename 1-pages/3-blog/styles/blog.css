@@ -9,7 +9,7 @@
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 500px) {
   #content {
     padding-top: 130px;
   }
@@ -23,7 +23,13 @@
 
 @media (min-width: 800px) {
   #content {
-    padding-top: 115px;
+    padding-top: 165px;
+  }
+}
+
+@media (min-width: 825px) {
+  #content {
+    padding-top: 125px;
   }
 }
 

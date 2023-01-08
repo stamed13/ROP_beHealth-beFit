@@ -1,6 +1,7 @@
 #header-computer {
   position: fixed;
   width: 100%;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (min-width: 0px) {
@@ -9,7 +10,7 @@
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 510px) {
   #header-computer {
     display: block;
   }
@@ -72,6 +73,7 @@
 
 #header-computer .header-top .header-title {
   color: white;
+  font-style: normal;
 }
 
 @media (min-width: 450px) {
@@ -133,7 +135,7 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 825px) {
   #header-computer .header-menu {
     grid-auto-flow: column;
     -webkit-box-pack: justify;

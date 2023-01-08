@@ -2,6 +2,7 @@
 #header-mobile {
     position: fixed;
     width: 100%;
+    font-family: 'Inter', sans-serif;
     //viditelne len na mobiloch
     @media(min-width: 0px) {
         display: block;
