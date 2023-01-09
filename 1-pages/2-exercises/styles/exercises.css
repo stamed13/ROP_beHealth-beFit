@@ -100,37 +100,39 @@
       -ms-flex-pack: center;
           justify-content: center;
   grid-auto-flow: row;
+  gap: 5px;
 }
 
 @media (min-width: 0px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (350px)[1];
-        grid-template-columns: repeat(1, 350px);
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
   }
 }
 
 @media (min-width: 600px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (350px)[2];
-        grid-template-columns: repeat(2, 350px);
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
   }
 }
 
 @media (min-width: 1000px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (350px)[3];
-        grid-template-columns: repeat(3, 350px);
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
   }
 }
 
 @media (min-width: 1300px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (350px)[4];
-        grid-template-columns: repeat(4, 350px);
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
   }
 }
 
 #content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
+  padding-right: 20px;
   color: black;
 }
 
@@ -217,46 +219,48 @@
       -ms-flex-pack: center;
           justify-content: center;
   grid-auto-flow: row;
+  gap: 5px;
 }
 
 @media (min-width: 0px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (300px)[1];
-        grid-template-columns: repeat(1, 300px);
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
   }
 }
 
 @media (min-width: 600px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (300px)[2];
-        grid-template-columns: repeat(2, 300px);
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
   }
 }
 
 @media (min-width: 1200px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (300px)[3];
-        grid-template-columns: repeat(3, 300px);
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
   }
 }
 
 @media (min-width: 1600px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (300px)[4];
-        grid-template-columns: repeat(4, 300px);
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
   }
 }
 
 @media (min-width: 2000px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (300px)[5];
-        grid-template-columns: repeat(5, 300px);
+    -ms-grid-columns: (auto)[5];
+        grid-template-columns: repeat(5, auto);
   }
 }
 
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
   display: -ms-grid;
   display: grid;
+  padding-right: 20px;
   color: black;
 }
 

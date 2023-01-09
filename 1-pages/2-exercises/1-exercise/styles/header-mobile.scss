@@ -26,6 +26,11 @@
             //
             @media(min-width: 0px) {
                 grid-auto-flow: column;
+                gap: 40px;
+            }
+
+            @media(min-width: 300px) {
+                grid-auto-flow: column;
                 gap: 90px;
             }
             //
@@ -59,6 +64,11 @@
             color: white;
             //
             @media(min-width: 0px) {
+                font-weight: 500;
+                font-size: 25px;
+            }
+
+            @media(min-width: 300px) {
                 font-weight: 600;
                 font-size: 30px;
             }

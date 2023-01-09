@@ -61,25 +61,26 @@
                     display: grid;
                     justify-content: center;
                     grid-auto-flow: row;
-                    //gap: 15px;
+                    gap: 5px;
 
                     @media(min-width: 0px) {
-                        grid-template-columns: repeat(1, 350px);
+                        grid-template-columns: repeat(1, auto);
                     }
 
                     @media(min-width: 600px) {
-                        grid-template-columns: repeat(2, 350px);
+                        grid-template-columns: repeat(2, auto);
                     }
 
                     @media(min-width: 1000px) {
-                        grid-template-columns: repeat(3, 350px);
+                        grid-template-columns: repeat(3, auto);
                     }
 
                     @media(min-width: 1300px) {
-                        grid-template-columns: repeat(4, 350px);
+                        grid-template-columns: repeat(4, auto);
                     }
 
                     .ex-kinds-kind {
+                        padding-right: 20px;
                         color: black;
                     }
                 }
@@ -134,26 +135,27 @@
                     display: grid;
                     justify-content: center;
                     grid-auto-flow: row;
-                    //gap: 15px;
+                    gap: 5px;
 
                     @media(min-width: 0px) {
-                        grid-template-columns: repeat(1, 300px);
+                        grid-template-columns: repeat(1, auto);
                     }
                     @media(min-width: 600px) {
-                        grid-template-columns: repeat(2, 300px);
+                        grid-template-columns: repeat(2, auto);
                     }
                     @media(min-width: 1200px) {
-                        grid-template-columns: repeat(3, 300px);
+                        grid-template-columns: repeat(3, auto);
                     }
                     @media(min-width: 1600px) {
-                        grid-template-columns: repeat(4, 300px);
+                        grid-template-columns: repeat(4, auto);
                     }
                     @media(min-width: 2000px) {
-                        grid-template-columns: repeat(5, 300px);
+                        grid-template-columns: repeat(5, auto);
                     }
                     .ex-kinds-kind {
                         display: grid;
                         //justify-content: left;
+                        padding-right: 20px;
                         color: black;
                         //background: greenyellow;
                     }

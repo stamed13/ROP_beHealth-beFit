@@ -34,6 +34,13 @@
 @media (min-width: 0px) {
   #header-mobile .header-top #row {
     grid-auto-flow: column;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 300px) {
+  #header-mobile .header-top #row {
+    grid-auto-flow: column;
     gap: 90px;
   }
 }
@@ -72,6 +79,13 @@
 }
 
 @media (min-width: 0px) {
+  #header-mobile .header-top .header-title {
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 300px) {
   #header-mobile .header-top .header-title {
     font-weight: 600;
     font-size: 30px;

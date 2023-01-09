@@ -40,10 +40,10 @@
                 </div>
                 <ul>
                     <li>
-                        <div class="exercises">skracovačky 5-10x</div>
+                        <div id="beg-shortening" class="exercises">skracovačky 5-10x</div>
                         <div class="info">
                             ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je na zemi, 
-                            pomaly sa dotýkaj rukami kolien
+                            pomaly sa dotýkaj rukami kolien ( známy cvik, ale nie je to brušák, ten je málo užitočný )
                         </div>
                     </li>
 
@@ -59,7 +59,7 @@
                         <div class="exercises">sklápačky 5-10x </div>
                         <div class="info">
                             ľahni si na chrbát, pokrč nohy (do 90° v kolennom aj v bedrovom kĺbe), plecia sú zatlačené, 
-                            chrbát je na zemi, pomaly sa dotýkaj lakťami kolien
+                            chrbát je na zemi, pomaly sa dotýkaj lakťami kolien (jednoduchšia verzia)
                         </div>
                     </li>
 
@@ -70,15 +70,45 @@
                             (do 90° aj v bedrovom kĺbe), chrbát je vystretý, vydrž v tejto polohe na špičkách
                         </div>
                     </li>
+
+                    <li>
+                    <div class="exercises">oddych  60s</div>
+                    </li>
+
+                    <li>
+                        <div class="exercises">ruské otočky  5x P+Ľ</div>
+                        <div class="info">
+                            ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je vystretý, 
+                            pomaly rotuj do strán, raz do prava a raz do ľava a dotkni sa prstami zeme
+                            (jednoduchšia verzia)
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="exercises">plank na kolenách  30-60s</div>
+                        <div class="info">
+                            ľahni si na brucho, vyflexuj špičky, plecia sú zatlačené, ruky sú pokrčené (do 90° v lakťoch), 
+                            predlaktie a dlane sú na zemi, chrbát je vystretý, zdvihni sa, napni zadok, vydrž v tejto pozícii 
+                            (príprava na plank)
+                        </div>
+                    </li>
                 </ul>
             </article>
 
             <article id="intermediate" class="exercise">
                 <div class="exercise-title">Pokročilý</div>
                 <div class="exercise-info">
-                info
+                    Level pokročilý je pre mierne pokročilých alebo pokročilých. Sú to už ťahšie cviky.
                 </div>
-                <div class="exercises">cvik</div>
+                <ul>
+                    <li>
+                        <div id="beg-shortening" class="exercises">gd</div>
+                        <div class="info">
+                            hfh
+                        </div>
+                    </li>
+
+                </ul>
             </article>
 
             <article id="expert" class="exercise">
