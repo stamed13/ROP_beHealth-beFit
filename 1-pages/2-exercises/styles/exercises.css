@@ -9,7 +9,7 @@
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 500px) {
   #content {
     padding-top: 130px;
   }
@@ -23,7 +23,13 @@
 
 @media (min-width: 800px) {
   #content {
-    padding-top: 115px;
+    padding-top: 165px;
+  }
+}
+
+@media (min-width: 825px) {
+  #content {
+    padding-top: 125px;
   }
 }
 
@@ -83,36 +89,44 @@
   }
 }
 
+#content #exercises #main .exercise-kinds .ex-kinds-title {
+  padding-top: 20px;
+}
+
 #content #exercises #main .exercise-kinds .ex-kinds-kinds {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-auto-flow: row;
 }
 
 @media (min-width: 0px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-grid-columns: (350px)[1];
+        grid-template-columns: repeat(1, 350px);
   }
 }
 
-@media (min-width: 426px) {
+@media (min-width: 600px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-grid-columns: (350px)[2];
+        grid-template-columns: repeat(2, 350px);
   }
 }
 
-@media (min-width: 826px) {
+@media (min-width: 1000px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    gap: 15px;
+    -ms-grid-columns: (350px)[3];
+        grid-template-columns: repeat(3, 350px);
+  }
+}
+
+@media (min-width: 1300px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-kinds {
+    -ms-grid-columns: (350px)[4];
+        grid-template-columns: repeat(4, 350px);
   }
 }
 
@@ -121,8 +135,37 @@
 }
 
 #content #exercises .exercise {
-  padding-top: 130px;
   min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content #exercises .exercise {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #exercises .exercise {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #exercises .exercise {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 800px) {
+  #content #exercises .exercise {
+    padding-top: 165px;
+  }
+}
+
+@media (min-width: 825px) {
+  #content #exercises .exercise {
+    padding-top: 125px;
+  }
 }
 
 #content #exercises .exercise .exercise-title {
@@ -163,44 +206,64 @@
   }
 }
 
+#content #exercises .exercise .exercise-kinds .ex-kinds-title {
+  padding-top: 20px;
+}
+
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-auto-flow: row;
 }
 
 @media (min-width: 0px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-grid-columns: (300px)[1];
+        grid-template-columns: repeat(1, 300px);
   }
 }
 
-@media (min-width: 426px) {
+@media (min-width: 600px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-grid-columns: (300px)[2];
+        grid-template-columns: repeat(2, 300px);
   }
 }
 
-@media (min-width: 826px) {
+@media (min-width: 1200px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    grid-auto-flow: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    gap: 15px;
+    -ms-grid-columns: (300px)[3];
+        grid-template-columns: repeat(3, 300px);
+  }
+}
+
+@media (min-width: 1600px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    -ms-grid-columns: (300px)[4];
+        grid-template-columns: repeat(4, 300px);
+  }
+}
+
+@media (min-width: 2000px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
+    -ms-grid-columns: (300px)[5];
+        grid-template-columns: repeat(5, 300px);
   }
 }
 
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
+  display: -ms-grid;
+  display: grid;
+  color: black;
+}
+
+#content #exercises .exercise .view-more {
+  display: none;
+  padding-top: 500px;
+  font-size: 25px;
   color: black;
 }
 /*# sourceMappingURL=exercises.css.map */

@@ -10,8 +10,7 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  font-family: 'Inter';
-  font-style: normal;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   color: white;
 }

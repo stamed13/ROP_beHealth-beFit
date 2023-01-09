@@ -1,0 +1,154 @@
+#content {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content {
+    padding-top: 105px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content {
+    padding-top: 110px;
+  }
+}
+
+@media (min-width: 800px) {
+  #content {
+    padding-top: 125px;
+  }
+}
+
+#content #back {
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+  width: 75px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+  color: black;
+  background: #BFBFBF;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#content #type #main {
+  min-height: 100vh;
+}
+
+#content #type #main #content-title {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#content #type #main #type-info {
+  font-size: 25px;
+}
+
+#content #type #main .exercise-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #type #main .exercise-info {
+  font-size: 25px;
+}
+
+#content #type #main #exercises {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 10px;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+#content #type #main #types-of-type {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+#content #type #main #types-of-type #types-ex-title {
+  font-weight: 600;
+}
+
+#content #type #main #types-of-type #types-ex-list {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+}
+
+#content #type #main #types-of-type #types-ex-list .type-ex {
+  color: black;
+}
+
+#content #type .exercise {
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content #type .exercise {
+    padding-top: 140px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content #type .exercise {
+    padding-top: 105px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #type .exercise {
+    padding-top: 110px;
+  }
+}
+
+@media (min-width: 800px) {
+  #content #type .exercise {
+    padding-top: 125px;
+  }
+}
+
+#content #type .exercise .exercise-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #type .exercise .exercise-info {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+#content #type .exercise ul {
+  padding-left: 20px;
+}
+
+#content #type .exercise ul li .exercises {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#content #type .exercise ul li .info {
+  font-size: 25px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=exercise.css.map */

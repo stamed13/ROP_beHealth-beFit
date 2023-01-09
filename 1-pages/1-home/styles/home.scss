@@ -5,14 +5,17 @@
     @media(min-width: 0px) {
         padding-top: 140px;
     }
-    @media(min-width: 450px) {
+    @media(min-width: 500px) {
         padding-top: 130px;
     }
     @media(min-width: 500px) {
         padding-top: 140px;
     }
     @media(min-width: 800px) {
-        padding-top: 115px;
+        padding-top: 165px;
+    }
+    @media(min-width: 825px) {
+        padding-top: 125px;
     }
     //
     #content-title {

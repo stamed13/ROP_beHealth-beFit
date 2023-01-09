@@ -2,12 +2,13 @@
 #header-mobile {
     position: fixed;
     width: 100%;
+    font-family: 'Inter', sans-serif;
     //viditelne len na mobiloch
     @media(min-width: 0px) {
         display: block;
     }
     //vacsia sirka skryje
-    @media(min-width: 450px) {
+    @media(min-width: 510px) {
         display: none;
     }
     //horna cast hlavicky
@@ -24,6 +25,11 @@
             display: grid;
             //
             @media(min-width: 0px) {
+                grid-auto-flow: column;
+                gap: 40px;
+            }
+
+            @media(min-width: 300px) {
                 grid-auto-flow: column;
                 gap: 90px;
             }
@@ -58,6 +64,11 @@
             color: white;
             //
             @media(min-width: 0px) {
+                font-weight: 500;
+                font-size: 25px;
+            }
+
+            @media(min-width: 300px) {
                 font-weight: 600;
                 font-size: 30px;
             }
@@ -85,15 +96,15 @@
             background-color: black;
         }
         //
-        .hamburger.active  .bar:nth-child(2) {
+        .hamburger.active .bar:nth-child(2) {
             opacity: 0;
         }
         //
-        .hamburger.active  .bar:nth-child(1) {
+        .hamburger.active .bar:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
         }
         //
-        .hamburger.active  .bar:nth-child(3) {
+        .hamburger.active .bar:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
         }
     }
@@ -159,6 +170,7 @@
     }
     //
 }
+
 //
 //
 //
