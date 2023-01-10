@@ -36,7 +36,7 @@
                     
                     <a href="index.php" class="<?php if($currentPage == 'index') {echo 'actual';} ?>">home</a>
                     <a href="exercises.php" class="<?php if($currentPage == 'exercises') {echo 'actual';} ?>">exercises</a>
-                    <a href="blog.php" class="<?php if($currentPage == 'blog') {echo 'actual';} ?>">blog</a>
+                    <a class="hide" href="blog.php" class="<?php if($currentPage == 'blog') {echo 'actual';} ?>">blog</a>
                     <a href="my-training.php" class="<?php if($currentPage == 'my-training') {echo 'actual';} ?>">my-training</a>
                     <a href="about.php" class="<?php if($currentPage == 'about') {echo 'actual';} ?>">about</a>
                     <a href="contact.php" class="<?php if($currentPage == 'contact') {echo 'actual';} ?>">contact</a>
@@ -66,7 +66,7 @@
                     <nav class="nav-menu">
                     <a href="index.php" class="<?php if($currentPage == 'index') {echo 'actual';} ?>">home</a>
                     <a href="exercises.php" class="<?php if($currentPage == 'exercises') {echo 'actual';} ?>">exercises</a>
-                    <a href="blog.php" class="<?php if($currentPage == 'blog') {echo 'actual';} ?>">blog</a>
+                    <a class="hide" href="blog.php" class="<?php if($currentPage == 'blog') {echo 'actual';} ?>">blog</a>
                     <a href="my-training.php" class="<?php if($currentPage == 'my-training') {echo 'actual';} ?>">my-training</a>
                     <a href="about.php" class="<?php if($currentPage == 'about') {echo 'actual';} ?>">about</a>
                     <a href="contact.php" class="<?php if($currentPage == 'contact') {echo 'actual';} ?>">contact</a>

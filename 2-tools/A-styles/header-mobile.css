@@ -170,6 +170,10 @@
   gap: 10px;
 }
 
+#header-mobile #header-nav div .nav-menu .hide {
+  display: none;
+}
+
 #header-mobile #header-nav div .nav-menu .actual {
   display: -ms-grid;
   display: grid;

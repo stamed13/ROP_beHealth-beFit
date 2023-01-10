@@ -81,16 +81,10 @@
                 <div class="exercise-kinds">
                     <div class="ex-kinds-title">druhy:</div>
                     <nav class="ex-kinds-kinds">
-                        <a href="" class="ex-kinds-kind">rozcvička</a>
-                        <a href="" class="ex-kinds-kind">celý chrbát</a>
-                        <a href="" class="ex-kinds-kind">ramená</a>
+                        <a href="" class="ex-kinds-kind">chrbát</a>
                         <a href="" class="ex-kinds-kind">ruky</a>
-                        <a href="" class="ex-kinds-kind">zápästie</a>
                         <a href="" class="ex-kinds-kind">krk</a>
-                        <a href="" class="ex-kinds-kind">brucho</a>
-                        <a href="" class="ex-kinds-kind">hamstring</a>
-                        <a href="" class="ex-kinds-kind">lýtko</a>
-                        <a href="" class="ex-kinds-kind">chodidlo</a>
+                        <a href="" class="ex-kinds-kind">nohy</a>
                     </nav>
                 </div>
                 <a href="" class="view-more">pozrieť viac</a>

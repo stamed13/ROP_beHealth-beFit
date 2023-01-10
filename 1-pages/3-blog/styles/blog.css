@@ -1,35 +1,30 @@
 #content {
+  display: none;
   padding: 20px;
   min-height: 100vh;
 }
 
 @media (min-width: 0px) {
   #content {
-    padding-top: 140px;
-  }
-}
-
-@media (min-width: 500px) {
-  #content {
     padding-top: 130px;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 300px) {
   #content {
-    padding-top: 140px;
+    padding-top: 138px;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 510px) {
   #content {
-    padding-top: 165px;
+    padding-top: 132px;
   }
 }
 
-@media (min-width: 825px) {
+@media (min-width: 900px) {
   #content {
-    padding-top: 125px;
+    padding-top: 128px;
   }
 }
 

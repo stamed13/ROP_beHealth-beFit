@@ -3,20 +3,18 @@
     min-height: 100vh;
     //
     @media(min-width: 0px) {
-        padding-top: 140px;
-    }
-    @media(min-width: 500px) {
         padding-top: 130px;
     }
-    @media(min-width: 500px) {
-        padding-top: 140px;
+    @media(min-width: 300px) {
+        padding-top: 138px;
     }
-    @media(min-width: 800px) {
-        padding-top: 165px;
+    @media(min-width: 510px) {
+        padding-top: 132px;
     }
-    @media(min-width: 825px) {
-        padding-top: 125px;
+    @media(min-width: 900px) {
+        padding-top: 128px;
     }
+
     //
     #content-title {
         display: grid;

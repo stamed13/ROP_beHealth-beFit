@@ -144,6 +144,10 @@
                 justify-items: center;
                 gap: 10px;
                 //
+                .hide {
+                    display: none;
+                }
+
                 .actual {
                     display: grid;
                     justify-content: center;
