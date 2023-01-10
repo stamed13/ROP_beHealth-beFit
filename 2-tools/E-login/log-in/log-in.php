@@ -12,29 +12,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="shortcut icon" href="../media/real-icon3.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../B-media/real-icon3.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles/log-in.css">
 
-    <title>Login</title>
+    <title>login</title>
 </head>
 <body>
     <div id="content">
         <div id="log-in">
             <div id="log-in-header">
                 <div id="log-in-title">Login</div>
-                <a href="../index.html"><img src="../media/logo-real.svg" 
+                <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
             </div>
             <form action="" method="" id="log-in-formular">
-                <input type="text" id="username" name="username" 
-                placeholder="Username" required>
+                <input type="text" id="email" name="email" 
+                placeholder="Email" required>
                 <input type="password" id="password" name="password" 
                 placeholder="Password" required>
             </form>
             <div id="log-in-footer">
                 <input type="submit" id="bt-login" name="submit" 
                 value="Login" required>
-                <a href="../sign-up/sign-up.html" id="new-account">Don`t have an account</a>
+                <a href="../sign-up/sign-up.php" id="new-account">Don`t have an account</a>
             </div>
         </div>
     </div>

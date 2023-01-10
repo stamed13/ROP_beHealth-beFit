@@ -27,12 +27,24 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 380px;
   height: 410px;
-  padding: 20px;
   background: #BFBFBF;
   border-radius: 5px;
   border: 1px solid #000000;
+}
+
+@media (min-width: 0px) {
+  #content #log-in {
+    width: 90vw;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #log-in {
+    width: 380px;
+    padding: 20px;
+  }
 }
 
 #content #log-in #log-in-header {
@@ -45,7 +57,48 @@ html body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 83px;
+}
+
+@media (min-width: 0px) {
+  #content #log-in #log-in-header {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 250px) {
+  #content #log-in #log-in-header {
+    gap: 35px;
+  }
+}
+
+@media (min-width: 300px) {
+  #content #log-in #log-in-header {
+    gap: 50px;
+  }
+}
+
+@media (min-width: 350px) {
+  #content #log-in #log-in-header {
+    gap: 65px;
+  }
+}
+
+@media (min-width: 400px) {
+  #content #log-in #log-in-header {
+    gap: 80px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content #log-in #log-in-header {
+    gap: 100px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #log-in #log-in-header {
+    gap: 85px;
+  }
 }
 
 #content #log-in #log-in-header #log-in-title {
@@ -78,12 +131,29 @@ html body {
 
 #content #log-in #log-in-formular input {
   height: 40px;
-  width: 320px;
   padding-left: 10px;
   font-size: 16px;
   color: black;
   background: #D9D9D9;
   border: 1px solid #000000;
+}
+
+@media (min-width: 0px) {
+  #content #log-in #log-in-formular input {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 490px) {
+  #content #log-in #log-in-formular input {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #log-in #log-in-formular input {
+    width: 320px;
+  }
 }
 
 #content #log-in #log-in-footer {
@@ -111,6 +181,7 @@ html body {
 }
 
 #content #log-in #log-in-footer #new-account {
+  text-align: center;
   font-weight: 600;
   text-decoration: underline;
   color: #000;
