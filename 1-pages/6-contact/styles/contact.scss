@@ -1,0 +1,44 @@
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    //
+    @media(min-width: 0px) {
+        padding-top: 130px;
+    }
+    @media(min-width: 300px) {
+        padding-top: 138px;
+    }
+    @media(min-width: 510px) {
+        padding-top: 132px;
+    }
+    @media(min-width: 900px) {
+        padding-top: 128px;
+    }
+    //
+    #content-title {
+        display: grid;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 35px;
+    }
+    #autor-info {
+        #title-autor {
+            font-weight: 600;
+            font-size: 30px;
+        }
+        .contact-item {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: left;
+            gap: 10px;
+            .item-title {
+                font-weight: 400;
+                font-size: 25px;
+            }
+            .item-content {
+                font-weight: 400;
+                font-size: 25px;
+            }
+        }
+    }
+}

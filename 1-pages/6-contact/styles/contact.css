@@ -1,1 +1,64 @@
-/* No CSS *//*# sourceMappingURL=contact.css.map */
+#content {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@media (min-width: 0px) {
+  #content {
+    padding-top: 130px;
+  }
+}
+
+@media (min-width: 300px) {
+  #content {
+    padding-top: 138px;
+  }
+}
+
+@media (min-width: 510px) {
+  #content {
+    padding-top: 132px;
+  }
+}
+
+@media (min-width: 900px) {
+  #content {
+    padding-top: 128px;
+  }
+}
+
+#content #content-title {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#content #autor-info #title-autor {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #autor-info .contact-item {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  gap: 10px;
+}
+
+#content #autor-info .contact-item .item-title {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+#content #autor-info .contact-item .item-content {
+  font-weight: 400;
+  font-size: 25px;
+}
+/*# sourceMappingURL=contact.css.map */
