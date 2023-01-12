@@ -18,7 +18,7 @@ html {
     padding-top: 80px;
     padding-bottom: 40px;
     //
-    #log-in {
+    #sign-up {
         display: grid;
         justify-content: center;
         height: 850px;
@@ -35,7 +35,7 @@ html {
             padding: 20px;
         }
         //
-        #log-in-header {
+        #sign-up-header {
             display: grid;
             grid-auto-flow: column;
             justify-content: end;
@@ -63,7 +63,7 @@ html {
                 gap: 85px;
             }
             //
-            #log-in-title {
+            #sign-up-title {
                 display: grid;
                 justify-self: center;
                 font-size: 25px;
@@ -78,7 +78,7 @@ html {
             }
         }
         //
-        #log-in-formular {
+        #sign-up-formular {
             display: grid;
             justify-content: center;
             grid-auto-flow: row;
@@ -136,7 +136,7 @@ html {
             }
         }
         //
-        #log-in-footer {
+        #sign-up-footer {
             display: grid;
             justify-items: center;
             grid-auto-flow: row;

@@ -19,13 +19,13 @@
 </head>
 <body>
     <div id="content">
-        <div id="log-in">
-            <div id="log-in-header">
-                <div id="log-in-title">Sign-up</div>
+        <div id="sign-up">
+            <div id="sign-up-header">
+                <div id="sign-up-title">Sign-up</div>
                 <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
             </div>
-            <form action="" method="" id="log-in-formular">
+            <form action="" method="" id="sign-up-formular">
                 <input type="email" id="email" name="email" 
                 placeholder="E-mail" required>
 
@@ -64,7 +64,7 @@
                 placeholder="Vaha" required>
 
             </form>
-            <div id="log-in-footer">
+            <div id="sign-up-footer">
                 <input type="submit" id="bt-login" name="submit" 
                 value="Register" required>
                 <a href="../log-in/log-in.php" id="new-account">Already have an account</a>
@@ -72,6 +72,6 @@
         </div>
     </div>
 
-    <div id="log-in-header"></div>
+    <div id="sign-up-header"></div>
 </body>
 </html>
