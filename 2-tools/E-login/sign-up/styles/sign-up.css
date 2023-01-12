@@ -19,6 +19,7 @@ html body {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 #content #log-in {
@@ -27,7 +28,7 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 410px;
+  height: 850px;
   background: #BFBFBF;
   border-radius: 5px;
   border: 1px solid #000000;
@@ -132,6 +133,7 @@ html body {
 #content #log-in #log-in-formular input {
   height: 40px;
   padding-left: 10px;
+  margin: 15px;
   font-size: 16px;
   color: black;
   background: #D9D9D9;
@@ -156,6 +158,42 @@ html body {
   }
 }
 
+#content #log-in #log-in-formular #password {
+  margin-bottom: 5px;
+}
+
+#content #log-in #log-in-formular #co-password {
+  margin-top: 0px;
+}
+
+#content #log-in #log-in-formular select {
+  height: 40px;
+  padding-left: 10px;
+  margin: 15px;
+  font-size: 16px;
+  color: black;
+  background: #D9D9D9;
+  border: 1px solid #000000;
+}
+
+@media (min-width: 0px) {
+  #content #log-in #log-in-formular select {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 490px) {
+  #content #log-in #log-in-formular select {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #log-in #log-in-formular select {
+    width: 320px;
+  }
+}
+
 #content #log-in #log-in-footer {
   display: -ms-grid;
   display: grid;
@@ -171,8 +209,8 @@ html body {
 }
 
 #content #log-in #log-in-footer #bt-login {
-  width: 130px;
-  height: 40px;
+  width: 224px;
+  height: 61px;
   font-size: 25px;
   font-weight: 500;
   border-radius: 10px;
@@ -186,4 +224,4 @@ html body {
   text-decoration: underline;
   color: #000;
 }
-/*# sourceMappingURL=log-in.css.map */
+/*# sourceMappingURL=sign-up.css.map */
