@@ -19,8 +19,8 @@
 
             <article id="training-menu">
                 <a id="bt-training" href="">Denna aktivita</a>
-                <a id="bt-training" href="">Denna aktivita</a>
-                <a id="bt-training" href="">Denna aktivita</a>
+                <a id="bt-training" href="">Rady a typy</a>
+                <a id="bt-training" href="">Trenigovy plan</a>
             </article>
 
         </section>
