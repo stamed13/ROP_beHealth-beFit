@@ -3,26 +3,38 @@
     min-height: 100vh;
     //
     @media(min-width: 0px) {
-        padding-top: 130px;
+        padding-top: 140px;
     }
-    @media(min-width: 300px) {
-        padding-top: 138px;
+    @media(min-width: 450px) {
+        padding-top: 105px;
     }
-    @media(min-width: 510px) {
-        padding-top: 132px;
+    @media(min-width: 500px) {
+        padding-top: 110px;
     }
-    @media(min-width: 900px) {
-        padding-top: 128px;
+    @media(min-width: 800px) {
+        padding-top: 125px;
     }
-    
     //
+    #back {
+        display: grid;
+        text-align: left;
+        width: 75px;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 25px;
+        border-radius: 10px;
+        color: black;
+        background: #BFBFBF;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
     #training {
         display: grid;
         gap: 120px;
         //
         #main {
             //min-height: 100vh;
-            //
             #content-title {
                 display: grid;
                 justify-content: center;
@@ -34,8 +46,9 @@
                 font-size: 25px;
             }
         }
-        //
+        
         #training-menu {
+            //padding-top: 45px;
             display: grid;
             gap: 40px;
             justify-content: center;

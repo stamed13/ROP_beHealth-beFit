@@ -1,0 +1,95 @@
+//hlavicka pre sirku ako maju mobily
+#header-mobile {
+    position: fixed;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    //viditelne len na mobiloch
+    @media(min-width: 0px) {
+        display: block;
+    }
+    //vacsia sirka skryje
+    @media(min-width: 450px) {
+        display: none;
+    }
+    //horna cast hlavicky
+    .header-top {
+        display: grid;
+        padding: 10px;
+        background: #282828;
+        //
+        grid-auto-flow: row;
+        justify-items: center;
+        gap: 5px;
+        //
+        #row {
+            display: grid;
+            //
+            @media(min-width: 0px) {
+                grid-auto-flow: column;
+                gap: 40px;
+            }
+
+            @media(min-width: 300px) {
+                grid-auto-flow: column;
+                gap: 90px;
+            }
+            //
+            .bt-log-in {
+                border: 2px solid black;
+                background: #03A500;
+                //
+                @media(min-width: 0px) {
+                    width: 80px;
+                    height: 35px;
+                    font-size: 20px;
+                    border-radius: 30px;
+                }
+                //text tlacidla
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            //
+            .logo {
+                border-radius: 50%;
+                //
+                @media(min-width: 0px) {
+                    width: 35px;
+                }
+            }
+        }
+        //
+        .header-title {
+            color: white;
+            //
+            @media(min-width: 0px) {
+                font-weight: 500;
+                font-size: 25px;
+            }
+
+            @media(min-width: 300px) {
+                font-weight: 600;
+                font-size: 30px;
+            }
+        }
+    }
+    //hamburger menu
+    #header-nav {
+        padding: 5px;
+        display: grid;
+        justify-content: center;
+        background-color: #006600;
+
+        .search {
+            height: 30px;
+            width: 65vw;
+            padding-left: 5px;
+            font-size: 20px;
+            color: black;
+            border-radius: 9px;
+            border: 2px solid black;
+        }
+    }
+    //
+}

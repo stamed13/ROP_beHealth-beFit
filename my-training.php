@@ -11,14 +11,11 @@
             <article id="main">
                 <div id="content-title">My training</div>
                 <div id="training-info">
-                    Najprv zadaj informacie o tvojom zivotnom style. Podla tychto informacii 
-                    dostanes lepsie typy k treningu, treningovemu planu. Potom mozes pokojne 
-                    vybrat si trening
+                    Môj tréning umožňuje zápis dennej aktivity, vyhodnotenie a tréningový plán.
                 </div>
             </article>
             <article id="training-menu">
-                <button type="button" id="bt-body"><a href="1-body/my-body.html">Moje telo</a></button>
-                <button type="button" id="bt-training">Moj trening</button>
+            <a id="bt-training" href="1-pages/4-my-training/1-training/2-training/training.php">Môj tréning</a>
             </article>
 
         </section>
