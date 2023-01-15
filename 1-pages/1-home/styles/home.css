@@ -37,7 +37,38 @@
   font-size: 35px;
 }
 
-#content #main-info {
+#content #main {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 75px;
+}
+
+#content #main #info {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 25px;
+}
+
+#content #main #home-sportsman {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  border-radius: 50px;
+}
+
+@media (min-width: 0px) {
+  #content #main #home-sportsman {
+    width: 75vw;
+  }
+}
+
+@media (min-width: 550px) {
+  #content #main #home-sportsman {
+    width: 400px;
+  }
 }
 /*# sourceMappingURL=home.css.map */
