@@ -2,6 +2,7 @@
     //aktualna stranka
     $currentPage = 'training';
     $page_styles = '../2-training/styles/training.css';
+    $up = '';
 
     //pripojenie header casti
     include('../layout/header.php');
@@ -18,7 +19,7 @@
             </article>
 
             <article id="training-menu">
-                <a id="bt-training" href="">Denna aktivita</a>
+                <a id="bt-training" href="1-activity/activity.php">Denna aktivita</a>
                 <a id="bt-training" href="">Rady a typy</a>
                 <a id="bt-training" href="">Trenigovy plan</a>
             </article>

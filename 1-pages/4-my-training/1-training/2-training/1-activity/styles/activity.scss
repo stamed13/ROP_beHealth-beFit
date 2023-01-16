@@ -1,0 +1,86 @@
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    //
+    @media(min-width: 0px) {
+        padding-top: 140px;
+    }
+    @media(min-width: 450px) {
+        padding-top: 105px;
+    }
+    @media(min-width: 500px) {
+        padding-top: 110px;
+    }
+    @media(min-width: 800px) {
+        padding-top: 125px;
+    }
+    //
+    #buttons-arrow {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+
+        #bt-arrow {
+            display: grid;
+            text-align: left;
+            width: 75px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 25px;
+            border-radius: 10px;
+            color: black;
+            background: #BFBFBF;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+
+    #training {
+        display: grid;
+        gap: 120px;
+        //
+        #main {
+            //min-height: 100vh;
+            #content-title {
+                display: grid;
+                justify-content: center;
+                font-weight: 600;
+                font-size: 35px;
+            }
+            //
+            #training-info {
+                font-size: 25px;
+            }
+        }
+        
+        #training-menu {
+            //padding-top: 45px;
+            display: grid;
+            gap: 40px;
+            justify-content: center;
+            //
+            #bt-training {
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                font-weight: 600;
+                background: #A5CE00;
+                border: 1px solid #000000;
+                border-radius: 8px;
+                color: black;
+                text-decoration: none;
+                //
+                @media(min-width: 0px) {
+                    height: 100px;
+                    width: 80vw;
+                    font-size: 25px;
+                }
+                @media(min-width: 600px) {
+                    height: 140px;
+                    width: 60vw;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
