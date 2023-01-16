@@ -15,21 +15,34 @@
         padding-top: 125px;
     }
     //
-    #back {
+    #buttons-arrow {
         display: grid;
-        text-align: left;
-        width: 75px;
-        padding: 10px;
-        margin-top: 10px;
-        font-size: 25px;
-        border-radius: 10px;
-        color: black;
-        background: #BFBFBF;
-        font-weight: 600;
-        text-decoration: none;
+        grid-auto-flow: column;
+
+        @media(min-width: 0px) {
+            justify-items: center;
+        }
+        @media(min-width: 450px) {
+            justify-items: left;
+        }
+
+        #bt-arrow {
+            display: grid;
+            text-align: left;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 25px;
+            border-radius: 10px;
+            color: black;
+            background: #BFBFBF;
+            font-weight: 600;
+            text-decoration: none;
+        }
     }
 
     #training {
+        padding-top: 20px;
         display: grid;
         gap: 120px;
         //

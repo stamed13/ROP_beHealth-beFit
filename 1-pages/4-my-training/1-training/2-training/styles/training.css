@@ -27,13 +27,31 @@
   }
 }
 
-#content #back {
+#content #buttons-arrow {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+@media (min-width: 0px) {
+  #content #buttons-arrow {
+    justify-items: center;
+  }
+}
+
+@media (min-width: 450px) {
+  #content #buttons-arrow {
+    justify-items: left;
+  }
+}
+
+#content #buttons-arrow #bt-arrow {
   display: -ms-grid;
   display: grid;
   text-align: left;
-  width: 75px;
   padding: 10px;
   margin-top: 10px;
+  font-family: 'Inter', sans-serif;
   font-size: 25px;
   border-radius: 10px;
   color: black;
@@ -43,6 +61,7 @@
 }
 
 #content #training {
+  padding-top: 20px;
   display: -ms-grid;
   display: grid;
   gap: 120px;

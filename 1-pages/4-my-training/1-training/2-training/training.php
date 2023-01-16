@@ -9,7 +9,9 @@
 ?>
 
     <div id="content">
-        <a href="../../../../my-training.php" id="back">naspäť</a>
+    <div id="buttons-arrow">
+            <a href="../../../../my-training.php" id="bt-arrow">naspäť</a>
+        </div>
         <section id="training">
             <article id="main">
                 <div id="content-title">My training</div>
