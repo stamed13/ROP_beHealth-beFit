@@ -13,11 +13,12 @@
             <a href="../training.php" id="bt-arrow">naspäť</a>
             <a href="#new-tab" id="bt-arrow">vpred</a>
         </div>
-        <section id="training">
+        <section id="activity">
             <article id="main">
                 <div id="content-title">Moja aktivita</div>
-                <div id="training-info">
-                    Mozes si vybrat z nasledujucich moznosti: 
+                <div id="activity-info">
+                Nech sa paci,  tu mozes postupne vyplnit tvoju dennu aktivitu. 
+                Pokojne si aktualizuj v priebehu dna.
                 </div>
             </article>
 

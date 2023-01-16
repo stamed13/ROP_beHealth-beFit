@@ -19,7 +19,6 @@
         display: grid;
         grid-auto-flow: column;
         justify-content: space-between;
-
         #bt-arrow {
             display: grid;
             text-align: left;
@@ -34,8 +33,7 @@
             text-decoration: none;
         }
     }
-
-    #training {
+    #activity {
         display: grid;
         gap: 120px;
         //
@@ -44,15 +42,16 @@
             #content-title {
                 display: grid;
                 justify-content: center;
+                background: #F89500;
+                border-radius: 10px;
                 font-weight: 600;
                 font-size: 35px;
             }
             //
-            #training-info {
+            #activity-info {
                 font-size: 25px;
             }
         }
-        
         #training-menu {
             //padding-top: 45px;
             display: grid;

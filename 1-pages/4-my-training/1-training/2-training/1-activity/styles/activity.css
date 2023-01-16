@@ -51,27 +51,29 @@
   text-decoration: none;
 }
 
-#content #training {
+#content #activity {
   display: -ms-grid;
   display: grid;
   gap: 120px;
 }
 
-#content #training #main #content-title {
+#content #activity #main #content-title {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: #F89500;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 35px;
 }
 
-#content #training #main #training-info {
+#content #activity #main #activity-info {
   font-size: 25px;
 }
 
-#content #training #training-menu {
+#content #activity #training-menu {
   display: -ms-grid;
   display: grid;
   gap: 40px;
@@ -80,7 +82,7 @@
           justify-content: center;
 }
 
-#content #training #training-menu #bt-training {
+#content #activity #training-menu #bt-training {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -97,7 +99,7 @@
 }
 
 @media (min-width: 0px) {
-  #content #training #training-menu #bt-training {
+  #content #activity #training-menu #bt-training {
     height: 100px;
     width: 80vw;
     font-size: 25px;
@@ -105,7 +107,7 @@
 }
 
 @media (min-width: 600px) {
-  #content #training #training-menu #bt-training {
+  #content #activity #training-menu #bt-training {
     height: 140px;
     width: 60vw;
     font-size: 30px;
