@@ -13,25 +13,25 @@
 
 @media (min-width: 0px) {
   #content #activity #main {
-    padding-top: 140px;
+    padding-top: 150px;
   }
 }
 
 @media (min-width: 450px) {
   #content #activity #main {
-    padding-top: 105px;
+    padding-top: 115px;
   }
 }
 
 @media (min-width: 500px) {
   #content #activity #main {
-    padding-top: 110px;
+    padding-top: 120px;
   }
 }
 
 @media (min-width: 800px) {
   #content #activity #main {
-    padding-top: 125px;
+    padding-top: 135px;
   }
 }
 

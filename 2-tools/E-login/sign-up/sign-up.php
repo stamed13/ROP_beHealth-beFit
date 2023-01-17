@@ -1,9 +1,6 @@
-<!--
 <?php
-    echo "<br>Ahoj php,<br> toto je log-in";
-?>
--->
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,18 +52,18 @@
                 </select>
 
                 <input type="number" id="age" name="age" 
-                placeholder="Vek" required>
+                placeholder="Vek">
 
                 <input type="number" id="height" name="height" 
-                placeholder="Vyska" required>
+                placeholder="Vyska">
 
                 <input type="number" id="weight" name="weight" 
-                placeholder="Vaha" required>
+                placeholder="Vaha">
 
+                <input type="submit" id="bt-login" name="submit" 
+                value="Register">
             </form>
             <div id="sign-up-footer">
-                <input type="submit" id="bt-login" name="submit" 
-                value="Register" required>
                 <a href="../log-in/log-in.php" id="new-account">Already have an account</a>
             </div>
         </div>

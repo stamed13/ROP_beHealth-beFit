@@ -80,7 +80,7 @@ html {
         //
         #sign-up-formular {
             display: grid;
-            justify-content: center;
+            justify-items: center;
             grid-auto-flow: row;
             gap: 0;
             padding-top: 15px;
@@ -134,21 +134,9 @@ html {
                     width: 320px;
                 }
             }
-        }
-        //
-        #sign-up-footer {
-            display: grid;
-            justify-items: center;
-            grid-auto-flow: row;
-            gap: 5px;
-            padding-top: 10px;
-            //
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            //
+            //    
             #bt-login {
+                padding-top: 10px;
                 width: 224px;
                 height: 61px;
                 font-size: 25px;
@@ -157,6 +145,12 @@ html {
                 background: #03A500;
                 border: 1px solid #000000;
             }
+        }
+        //
+        #sign-up-footer {
+            display: grid;
+            justify-items: center;
+            grid-auto-flow: row;
             //
             #new-account {
                 text-align: center;

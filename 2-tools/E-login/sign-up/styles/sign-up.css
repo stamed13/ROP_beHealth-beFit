@@ -122,9 +122,7 @@ html body {
 #content #sign-up #sign-up-formular {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   grid-auto-flow: row;
   gap: 0;
   padding-top: 15px;
@@ -194,21 +192,8 @@ html body {
   }
 }
 
-#content #sign-up #sign-up-footer {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  grid-auto-flow: row;
-  gap: 5px;
+#content #sign-up #sign-up-formular #bt-login {
   padding-top: 10px;
-}
-
-#content #sign-up #sign-up-footer a {
-  text-decoration: none;
-  color: black;
-}
-
-#content #sign-up #sign-up-footer #bt-login {
   width: 224px;
   height: 61px;
   font-size: 25px;
@@ -216,6 +201,13 @@ html body {
   border-radius: 10px;
   background: #03A500;
   border: 1px solid #000000;
+}
+
+#content #sign-up #sign-up-footer {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  grid-auto-flow: row;
 }
 
 #content #sign-up #sign-up-footer #new-account {
