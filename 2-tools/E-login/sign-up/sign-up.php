@@ -1,5 +1,72 @@
 <?php
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
 
+    require_once('../helper/config.php');
+
+    //polozky
+    $email = $_POST['email'];
+    $passwd = $_POST['passwd'];
+    $co_passwd = $_POST['co_passwd'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+
+    //kontrola
+    $error = [
+        "email" => false,
+        "passwd" => false,
+        "co_passwd" => false,
+        "fname" => false,
+        "lname" => false,
+    ];
+
+    // ak bol formular vypleny
+    if( !count($_POST) ) {
+        //kontrola emailu
+        //trim vystrihne vsetky medzery na zaciatku a konci
+        if(trim($_POST["email"]) == "") {
+            $error["email"] = true;
+        }
+
+        //kontrola hesla
+        if(trim($_POST["passwd"])  == "") {
+            $error["passwd"] = true;
+        }
+
+        //kontrola mena
+        if(trim($_POST["fname"])  == "") {
+            $error["fname"] = true;
+        }
+
+        //kontrola priezviska
+        if(trim($_POST["lname"])  == "") {
+            $error["lname"] = true;
+        }
+    }
+
+    //ulozenie do databazy
+
+    $sql = "INSERT INTO users (email, passwd, fname, lname)
+    VALUES ('$email', '$passwd', '$fname', '$lname')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+  
+    mysqli_close($conn);
+
+    /*
+    $stm = $con -> prepare("INSERT INTO users(email, passwd, fname, lname) 
+    VALUES (?, ?, ?, ?)");
+    $stm -> bind_param("ssss", $email, $passwd, $fname, $lname);
+    $stm -> execute();
+
+    echo "Registration successfully...";
+
+    $stm -> close();
+    $con -> close();
+    */
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +76,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="shortcut icon" href="../../B-media/real-icon3.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../B-media/real-icon3.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles/sign-up.css">
 
     <title>sign-up</title>
@@ -22,31 +89,31 @@
                 <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
             </div>
-            <form action="" method="" id="sign-up-formular">
-                <input type="email" id="email" name="email" 
-                placeholder="E-mail" required>
+            <form action="" method="post" id="sign-up-formular">
+                <input type="text" id="email" name="email" 
+                placeholder="E-mail" value="<?= $_POST['email'] ?>">
 
-                <input type="password" id="password" name="password" 
-                placeholder="Heslo" required>
+                <input type="password" id="password" name="passwd" 
+                placeholder="Heslo" value="<?= $_POST['passwd'] ?>">
 
-                <input type="password" id="co-password" name="co-password" 
-                placeholder="Potvrd heslo" required>
+                <input type="password" id="co-password" name="co_passwd" 
+                placeholder="Potvrd heslo" value="<?= $_POST['co_passwd'] ?>">
 
                 <input type="text" id="fname" name="fname" 
-                placeholder="Meno" required>
+                placeholder="Meno" value="<?= $_POST['fname'] ?>">
 
                 <input type="text" id="lname" name="lname" 
-                placeholder="Priezvisko" required>
+                placeholder="Priezvisko" value="<?= $_POST['lname'] ?>">
 
                 <select id="gender" name="gender">
                     <option value="0">Vyber pohlavie</option>
-                    <?php foreach($sizes as $size): ?>
-                        <option value="<?= $size["id"] ?>"
-                            <?php if($_POST["size"] == $size["id"]): ?>
+                    <?php foreach($genders as $gender): ?>
+                        <option value="<?= $gender["id"] ?>"
+                            <?php if($_POST["gender"] == $gender["id"]): ?>
                                 selected
                             <?php endif ?>
                         >
-                            <?= $size["name"] ?>
+                            <?= $size["gender"] ?>
                         </option>
                     <?php endforeach ?>
                 </select>

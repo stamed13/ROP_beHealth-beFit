@@ -1,10 +1,7 @@
-<?php
-//require_once('config.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>User Registration | PHP</title>
+	<title>register</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
