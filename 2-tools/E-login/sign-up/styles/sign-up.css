@@ -157,7 +157,8 @@ html body {
 }
 
 #content #sign-up #sign-up-formular #co-password {
-  display: none;
+  display: -ms-grid;
+  display: grid;
   margin-top: 0px;
 }
 

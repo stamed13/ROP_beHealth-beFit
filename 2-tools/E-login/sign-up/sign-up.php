@@ -45,16 +45,20 @@
 
     //ulozenie do databazy
 
-    $sql = "INSERT INTO users (email, passwd, fname, lname)
-    VALUES ('$email', '$passwd', '$fname', '$lname')";
+    if( count($_POST) != 0 && !($error["fname"]) && !($error["passwd"]) && !($error["fname"]) && !($error["lname"]) ) {
+        $sql = "INSERT INTO users (email, passwd, fname, lname)
+        VALUES ('$email', '$passwd', '$fname', '$lname')";
 
-    if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+        if (mysqli_query($conn, $sql)) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
   
-    mysqli_close($conn);
+        mysqli_close($conn);
+    } else {
+        echo "Chybny formular!!!";
+    }
 
     /*
     $stm = $con -> prepare("INSERT INTO users(email, passwd, fname, lname) 
@@ -96,8 +100,10 @@
                 <input type="password" id="password" name="passwd" 
                 placeholder="Heslo" value="<?= $_POST['passwd'] ?>">
 
+                <!--
                 <input type="password" id="co-password" name="co_passwd" 
                 placeholder="Potvrd heslo" value="<?= $_POST['co_passwd'] ?>">
+                -->
 
                 <input type="text" id="fname" name="fname" 
                 placeholder="Meno" value="<?= $_POST['fname'] ?>">
@@ -105,6 +111,7 @@
                 <input type="text" id="lname" name="lname" 
                 placeholder="Priezvisko" value="<?= $_POST['lname'] ?>">
 
+                <!--
                 <select id="gender" name="gender">
                     <option value="0">Vyber pohlavie</option>
                     <?php foreach($genders as $gender): ?>
@@ -117,7 +124,9 @@
                         </option>
                     <?php endforeach ?>
                 </select>
+                -->
 
+                <!--
                 <input type="number" id="age" name="age" 
                 placeholder="Vek">
 
@@ -126,6 +135,7 @@
 
                 <input type="number" id="weight" name="weight" 
                 placeholder="Vaha">
+                -->
 
                 <input type="submit" id="bt-login" name="submit" 
                 value="Register">

@@ -39,10 +39,7 @@ CREATE TABLE users (
     height TINYINT NOT NULL,
     weight TINYINT NOT NULL,
     plan_id INT NOT NULL,
-    advice_id INT NOT NULL,
-    FOREIGN KEY (gender_id) REFERENCES genders(id),
-    FOREIGN KEY (plan_id) REFERENCES plans(id),
-    FOREIGN KEY (advice_id) REFERENCES advice(id)
+    advice_id INT NOT NULL
 ) Engine = Innodb;
 
 CREATE TABLE cathegories (
@@ -56,8 +53,7 @@ INSERT INTO cathegories (name) VALUES ("strečing");
 CREATE TABLE parts (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     cathegory_id INT NOT NULL,
-    name VARCHAR(20) NOT NULL,
-    FOREIGN KEY (cathegory_id) REFERENCES cathegories(id)
+    name VARCHAR(20) NOT NULL
 ) Engine = Innodb;
 
 INSERT INTO parts (cathegory_id, name) VALUES (1, "príťah");
@@ -83,10 +79,7 @@ CREATE TABLE exercises (
     cathegory_id INT NOT NULL,
     part_id INT NOT NULL,
     level_id INT NOT NULL,
-    name VARCHAR(35) NOT NULL,
-    FOREIGN KEY (cathegory_id) REFERENCES cathegories(id),
-    FOREIGN KEY (part_id) REFERENCES parts(id),
-    FOREIGN KEY (level_id) REFERENCES levels(id)
+    name VARCHAR(35) NOT NULL
 ) Engine = Innodb;
 
 INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 1, 1, "skracovačky");
@@ -120,13 +113,5 @@ CREATE TABLE activities (
 	hand_st INT NOT NULL,
     back_st INT NOT NULL,
     leg_st INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (pull_ca) REFERENCES exercises(id),
-    FOREIGN KEY (push_ca) REFERENCES exercises(id),
-    FOREIGN KEY (core_ca) REFERENCES exercises(id),
-    FOREIGN KEY (leg_ca) REFERENCES exercises(id),
-    FOREIGN KEY (neck_st) REFERENCES exercises(id),
-    FOREIGN KEY (hand_st) REFERENCES exercises(id),
-    FOREIGN KEY (back_st) REFERENCES exercises(id),
-    FOREIGN KEY (leg_st) REFERENCES exercises(id)
+    FOREIGN KEY (user_id) REFERENCES users(id)
 ) Engine = Innodb;
