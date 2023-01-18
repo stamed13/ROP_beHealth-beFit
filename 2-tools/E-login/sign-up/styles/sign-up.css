@@ -156,6 +156,10 @@ html body {
   }
 }
 
+#content #sign-up #sign-up-formular #password {
+  margin-bottom: 5px;
+}
+
 #content #sign-up #sign-up-formular #co-password {
   display: -ms-grid;
   display: grid;
