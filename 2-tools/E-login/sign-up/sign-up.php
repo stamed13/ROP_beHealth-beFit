@@ -2,6 +2,7 @@
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     require_once('../helper/config.php');
+    require_once('fetch-data.php');
 
     //polozky
     $email = $_POST['email'];
@@ -12,6 +13,7 @@
 
     //kontrola
     $error = [
+        "checked" => false,
         "email" => false,
         "passwd" => false,
         "co_passwd" => false,
@@ -20,7 +22,7 @@
     ];
 
     // ak bol formular vypleny
-    if( !count($_POST) ) {
+    if( count($_POST) != 0 ) {
         //kontrola emailu
         //trim vystrihne vsetky medzery na zaciatku a konci
         if(trim($_POST["email"]) == "") {
@@ -43,9 +45,15 @@
         }
     }
 
+    if( count($_POST) != 0 && !$error["email"] && !$error["passwd"] && !$error["fname"] && !$error["lname"] ) {
+        $error["checked"] = true;
+    } else {
+        $error["checked"] = false;
+    }
+
     //ulozenie do databazy
 
-    if( count($_POST) != 0 && !($error["fname"]) && !($error["passwd"]) && !($error["fname"]) && !($error["lname"]) ) {
+    if( $error["checked"] ) {
         $sql = "INSERT INTO users (email, passwd, fname, lname)
         VALUES ('$email', '$passwd', '$fname', '$lname')";
 
@@ -111,20 +119,20 @@
                 <input type="text" id="lname" name="lname" 
                 placeholder="Priezvisko" value="<?= $_POST['lname'] ?>">
 
-                <!--
+                <!-- -->
                 <select id="gender" name="gender">
                     <option value="0">Vyber pohlavie</option>
-                    <?php foreach($genders as $gender): ?>
+                    <?php foreach($options as $option): ?>
                         <option value="<?= $gender["id"] ?>"
                             <?php if($_POST["gender"] == $gender["id"]): ?>
                                 selected
                             <?php endif ?>
                         >
-                            <?= $size["gender"] ?>
+                            <?= $option["name"] ?>
                         </option>
                     <?php endforeach ?>
                 </select>
-                -->
+                <!-- -->
 
                 <!--
                 <input type="number" id="age" name="age" 
