@@ -194,6 +194,10 @@ html body {
   }
 }
 
+#content #sign-up #sign-up-formular .eBorder {
+  border: 2px dashed red;
+}
+
 #content #sign-up #sign-up-formular #bt-login {
   padding-top: 10px;
   width: 224px;

@@ -1,11 +1,13 @@
 <?php
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     require_once('../helper/config.php');
     require_once "../helper/Helper.php";
     require_once('fetch-data.php');
 
     debug($_POST, "formular [data]");
+
+    debug($errors, "errors [data]");
 
     //polozky
     $email = $_POST['email'];
@@ -16,7 +18,7 @@
     $gender = $_POST['gender'];
 
     //kontrola
-    $error = [
+    $errors = [
         "checked" => false,
         "email" => false,
         "passwd" => false,
@@ -26,51 +28,55 @@
         "gender" => false,
     ];
 
+    $classes = [
+        "eBorder" => "eBorder",
+    ];
+
     // ak bol formular vypleny
     if( count($_POST) != 0 ) {
         //kontrola emailu
         //trim vystrihne vsetky medzery na zaciatku a konci
         if( trim($_POST["email"]) == "" || 
         ! (filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)) ) {
-            $error["email"] = true;
+            $errors["email"] = true;
         } 
 
         //kontrola hesla
         if( trim($_POST["passwd"])  == "") {
-            $error["passwd"] = true;
+            $errors["passwd"] = true;
         }
 
         //potvrdenie hesla
         if( trim($_POST["co_passwd"])  != trim($_POST["passwd"]) ) {
-            $error["co_passwd"] = true;
+            $errors["co_passwd"] = true;
         }
 
         //kontrola mena
         if( trim($_POST["fname"])  == "" ) {
-            $error["fname"] = true;
+            $errors["fname"] = true;
         }
 
         //kontrola priezviska
         if( trim($_POST["lname"])  == "" ) {
-            $error["lname"] = true;
+            $errors["lname"] = true;
         }
 
         //kontrola pohlaia
         if( trim($_POST["gender"])  == "" ) {
-            //$error["gender"] = true;
+            //$errors["gender"] = true;
         }
     }
 
-    if( count($_POST) != 0 && !$error["email"] && !$error["passwd"] && !$error["co_passwd"] 
-    && !$error["fname"] && !$error["lname"] && !$error["gender"] ) {
-        $error["checked"] = true;
+    if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] && !$errors["co_passwd"] 
+    && !$errors["fname"] && !$errors["lname"] && !$errors["gender"] ) {
+        $errors["checked"] = true;
     } else {
-        $error["checked"] = false;
+        $errors["checked"] = false;
     }
 
     //ulozenie do databazy
 
-    if( $error["checked"] ) {
+    if( $errors["checked"] ) {
         $sql = "INSERT INTO users (email, passwd, fname, lname, gender_id)
         VALUES ('$email', '$passwd', '$fname', '$lname', '$gender')";
 
@@ -108,19 +114,6 @@
     <link rel="shortcut icon" href="../B-media/real-icon3.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles/sign-up.css">
 
-    <style>
-        .alert {
-            background: red;
-            color: while;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .error-border {
-            border-color: red;
-        }
-    </style>
-
     <title>sign-up</title>
 </head>
 <body>
@@ -131,10 +124,29 @@
                 <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
             </div>
+
             <form action="" method="post" id="sign-up-formular">
-                <input type="text" id="email" name="email" 
+
+                <input type="text" id="email" 
+                class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>" name="email" 
+                placeholder="E-mail" value="<?= $_POST["email"] ?>">
+
+                <?php //echo addClass( ($errors["email"]),  $eBorder); ?>
+
+                <!--
+                <input type="text" id="email" class="error-border" name="email" 
                 placeholder="E-mail" value="<?= $_POST['email'] ?>"
-                <?php if( $error["email"] ): ?> class="error-border" <?php endif ?> >
+                class="error-border"
+                class="<?php if($errors["email"]): ?> error-border <?php endif ?>" >
+                -->
+
+                <?php 
+                    /*
+                    if($error["email"]) {
+                        echo "error-border";
+                    } 
+                    */
+                ?>
 
                 <input type="password" id="password" name="passwd" 
                 placeholder="Heslo" value="<?= $_POST['passwd'] ?>"
@@ -183,6 +195,7 @@
                 <input type="submit" id="bt-login" name="submit" 
                 value="Register">
             </form>
+
             <div id="sign-up-footer">
                 <a href="../log-in/log-in.php" id="new-account">Already have an account</a>
             </div>

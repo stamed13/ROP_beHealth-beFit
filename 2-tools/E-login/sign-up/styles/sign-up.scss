@@ -104,6 +104,9 @@ html {
                     width: 320px;
                 }
             }
+            #email {
+                //border: 2px dashed red;
+            }
             #password {
                 margin-bottom: 5px;
             }
@@ -129,6 +132,10 @@ html {
                 @media(min-width: 500px) {
                     width: 320px;
                 }
+            }
+            //
+            .eBorder {
+                border: 2px dashed red;
             }
             //    
             #bt-login {
