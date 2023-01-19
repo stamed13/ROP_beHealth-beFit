@@ -42,12 +42,12 @@
         } 
 
         //kontrola hesla
-        if( trim($_POST["passwd"])  == "") {
+        if( trim($_POST["passwd"])  == "" || strlen( trim($_POST["passwd"]) ) < 8) {
             $errors["passwd"] = true;
         }
 
         //potvrdenie hesla
-        if( trim($_POST["co_passwd"])  != trim($_POST["passwd"]) ) {
+        if( trim($_POST["co_passwd"])  != trim($_POST["passwd"]) || $errors["passwd"] ) {
             $errors["co_passwd"] = true;
         }
 
@@ -62,8 +62,8 @@
         }
 
         //kontrola pohlaia
-        if( trim($_POST["gender"])  == "" ) {
-            //$errors["gender"] = true;
+        if( $_POST["gender"]  == 0 ) {
+            $errors["gender"] = true;
         }
     }
 
@@ -128,35 +128,26 @@
             <form action="" method="post" id="sign-up-formular">
 
                 <input type="text" id="email" 
-                class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>" name="email" 
-                placeholder="E-mail" value="<?= $_POST["email"] ?>">
+                class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>" 
+                name="email" placeholder="E-mail" value="<?= $_POST["email"] ?>">
 
                 <?php //echo addClass( ($errors["email"]),  $eBorder); ?>
 
                 <!--
+                    chybne a neprehladne
                 <input type="text" id="email" class="error-border" name="email" 
                 placeholder="E-mail" value="<?= $_POST['email'] ?>"
                 class="error-border"
                 class="<?php if($errors["email"]): ?> error-border <?php endif ?>" >
                 -->
 
-                <?php 
-                    /*
-                    if($error["email"]) {
-                        echo "error-border";
-                    } 
-                    */
-                ?>
+                <input type="password" id="password" 
+                class="<?php echo addClass( $errors["passwd"], $classes["eBorder"] ); ?>" 
+                name="passwd" placeholder="Heslo" value="<?= $_POST["passwd"] ?>">
 
-                <input type="password" id="password" name="passwd" 
-                placeholder="Heslo" value="<?= $_POST['passwd'] ?>"
-                >
-
-                <!-- -->
-                <input type="password" id="co-password" name="co_passwd" 
-                placeholder="Potvrd heslo" value="<?= $_POST['co_passwd'] ?>"
-                >
-                <!-- -->
+                <input type="password" id="co-password" 
+                class="<?php echo addClass( $errors["co_passwd"], $classes["eBorder"] ); ?>" 
+                name="co_passwd" placeholder="Potvrd heslo" value="<?= $_POST["co_passwd"] ?>">
 
                 <input type="text" id="fname" name="fname" 
                 placeholder="Meno" value="<?= ucfirst($_POST['fname']) ?>"
