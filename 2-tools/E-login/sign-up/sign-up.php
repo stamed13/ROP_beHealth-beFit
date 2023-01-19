@@ -9,8 +9,8 @@
 
     //polozky
     $email = $_POST['email'];
-    $passwd = $_POST['passwd'];
-    $co_passwd = $_POST['co_passwd'];
+    $passwd = password_hash($_POST['passwd'], PASSWORD_DEFAULT);
+    $co_passwd = password_hash($_POST['co_passwd'], PASSWORD_DEFAULT);
     $fname = ucfirst($_POST['fname']);
     $lname = ucfirst($_POST['lname']);
     $gender = $_POST['gender'];
@@ -134,7 +134,7 @@
             <form action="" method="post" id="sign-up-formular">
                 <input type="text" id="email" name="email" 
                 placeholder="E-mail" value="<?= $_POST['email'] ?>"
-                >
+                <?php if( $error["email"] ): ?> class="error-border" <?php endif ?> >
 
                 <input type="password" id="password" name="passwd" 
                 placeholder="Heslo" value="<?= $_POST['passwd'] ?>"
