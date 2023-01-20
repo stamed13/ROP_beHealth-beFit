@@ -7,7 +7,11 @@
 
     debug($_POST, "formular [data]");
 
-    debug($errors, "errors [data]");
+    //$querySELECTemail = "SELECT email FROM users";
+    //SQLquery($conn, $querySELECTemail, $email);
+
+    $genders =  SQLquery($conn, "SELECT * FROM genders");
+
 
     //polozky
     $email = $_POST['email'];
@@ -42,7 +46,7 @@
         } 
 
         //kontrola hesla
-        if( trim($_POST["passwd"])  == "" || strlen( trim($_POST["passwd"]) ) < 8) {
+        if( trim($_POST["passwd"])  == "" || strlen( trim($_POST["passwd"]) ) < 8 ) {
             $errors["passwd"] = true;
         }
 
@@ -52,16 +56,16 @@
         }
 
         //kontrola mena
-        if( trim($_POST["fname"])  == "" ) {
+        if( trim($_POST["fname"])  == "" || strlen( trim($_POST["fname"]) ) < 2 ) {
             $errors["fname"] = true;
         }
 
         //kontrola priezviska
-        if( trim($_POST["lname"])  == "" ) {
+        if( trim($_POST["lname"])  == "" || strlen( trim($_POST["lname"]) ) < 2 ) {
             $errors["lname"] = true;
         }
 
-        //kontrola pohlaia
+        //kontrola pohlavie
         if( $_POST["gender"]  == 0 ) {
             $errors["gender"] = true;
         }
