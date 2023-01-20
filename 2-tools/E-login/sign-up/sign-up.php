@@ -5,7 +5,7 @@
     require_once "../helper/Helper.php";
     require_once('fetch-data.php');
 
-    debug($_POST, "formular [data]");
+    //debug($_POST, "formular [data]");
 
     //$querySELECTemail = "SELECT email FROM users";
     //SQLquery($conn, $querySELECTemail, $email);
@@ -124,9 +124,9 @@
     <div id="content">
         <div id="sign-up">
             <div id="sign-up-header">
-                <div id="sign-up-title">Sign-up</div>
                 <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
+                <div id="sign-up-title">Sign-up</div>
             </div>
 
             <form action="" method="post" id="sign-up-formular">

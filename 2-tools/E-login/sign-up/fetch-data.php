@@ -1,7 +1,6 @@
 <?php 
     //funkcia vykona prikaz spojeny s databazou
     function SQLquery($conn, $query) {
-      //$query ="SELECT * FROM genders";
       $result = $conn->query($query);
 
       if($result->num_rows> 0){
