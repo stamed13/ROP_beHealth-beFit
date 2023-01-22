@@ -17,13 +17,12 @@ html {
 #content {
     display: grid;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 40px;
     //
     #sign-up {
         display: grid;
         justify-content: center;
-        height: 850px;
         background: #BFBFBF;
         border-radius: 5px;
         border: 1px solid #000000;
@@ -33,7 +32,7 @@ html {
         }
         @media(min-width: 500px) {
             width: 450px;
-            //padding: 20px;
+            padding: 10px;
         }
         //
         #sign-up-header {
@@ -54,7 +53,7 @@ html {
             #sign-up-title {
                 display: grid;
                 //justify-self: center;
-                font-size: 25px;
+                font-size: 30px;
                 //font-weight: 600;
             }
             //
@@ -94,7 +93,7 @@ html {
                 }
             }
             #email {
-                //border: 2px dashed red;
+                margin-top: 25px;
             }
             #password {
                 margin-bottom: 5px;
@@ -113,6 +112,32 @@ html {
                 border: 1px solid #000000;
                 border-radius: 5px;
                 @media(min-width: 0px) {
+                    width: 82vw;
+                }
+                @media(min-width: 490px) {
+                    width: 400px;
+                }
+                //
+                @media(min-width: 500px) {
+                    width: 400px;
+                }
+            }
+            //
+            .eBorder {
+                border: 2px dashed red;
+            }
+
+            .eText {
+                padding: 5px;
+                margin-bottom: 5px;
+                display: grid;
+                justify-items: center;
+                text-align: center;
+                font-size: 20px;
+                background-color: red;
+                color: white;
+                border-radius: 5px;
+                @media(min-width: 0px) {
                     width: 80vw;
                 }
                 @media(min-width: 490px) {
@@ -122,10 +147,6 @@ html {
                 @media(min-width: 500px) {
                     width: 390px;
                 }
-            }
-            //
-            .eBorder {
-                border: 2px dashed red;
             }
             //    
             #bt-login {
@@ -152,7 +173,9 @@ html {
             grid-auto-flow: row;
             //
             #new-account {
+                padding-bottom: 30px;
                 text-align: center;
+                font-size: 20px;
                 font-weight: 600;
                 text-decoration: underline;
                 color: #000;

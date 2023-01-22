@@ -3,7 +3,7 @@
 
     require_once('../helper/config.php');
     require_once "../helper/Helper.php";
-    require_once('fetch-data.php');
+    require_once('sign-upHelp.php');
 
     //debug($_POST, "formular [data]");
 
@@ -95,7 +95,7 @@
         || $_POST["weight"] > 220 ) {
             $errors["weight"] = true;
         }
-    }
+    }    
 
     if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] && !$errors["co_passwd"] 
     && !$errors["fname"] && !$errors["lname"] && !$errors["gender"] && !$errors["age"]
@@ -112,27 +112,14 @@
         VALUES ('$email', '$passwd', '$fname', '$lname', '$gender')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "New record created successfully";
+            //echo "New record created successfully";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
   
         mysqli_close($conn);
-    } else {
-        echo "Chybny formular!!!";
-    }
+    } 
 
-    /*
-    $stm = $con -> prepare("INSERT INTO users(email, passwd, fname, lname) 
-    VALUES (?, ?, ?, ?)");
-    $stm -> bind_param("ssss", $email, $passwd, $fname, $lname);
-    $stm -> execute();
-
-    echo "Registration successfully...";
-
-    $stm -> close();
-    $con -> close();
-    */
 ?>
 
 <!DOCTYPE html>
@@ -157,6 +144,7 @@
             </div>
 
             <form action="" method="post" id="sign-up-formular">
+                <?php errorLOG($conn, $email); ?>
 
                 <input type="text" id="email" 
                 class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>"  

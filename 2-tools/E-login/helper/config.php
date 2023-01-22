@@ -6,13 +6,15 @@
 
     //vytvorenie pripojenia
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
     //kontrola pripojenia
 
+    /*
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error() );
     } else {
-        echo "Connect success!";
+        //echo "Connect success!";
     }
+    */
 ?>
