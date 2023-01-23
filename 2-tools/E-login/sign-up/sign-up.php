@@ -7,9 +7,6 @@
 
     //debug($_POST, "formular [data]");
 
-    //$querySELECTemail = "SELECT email FROM users";
-    //SQLquery($conn, $querySELECTemail, $email);
-
     $genders =  SQLquery($conn, "SELECT * FROM genders");
 
 
@@ -20,6 +17,11 @@
     $fname = ucfirst($_POST['fname']);
     $lname = ucfirst($_POST['lname']);
     $gender = $_POST['gender'];
+    $age = $_POST['age'];
+    $height = $_POST['height'];
+    $weight = $_POST['weight'];
+
+
 
     //kontrola
     $errors = [
@@ -33,6 +35,7 @@
         "age" => false,
         "height" => false,
         "weight" => false,
+        "registered" => false,
     ];
 
     $classes = [
@@ -108,13 +111,13 @@
     //ulozenie do databazy
 
     if( $errors["checked"] ) {
-        $sql = "INSERT INTO users (email, passwd, fname, lname, gender_id)
-        VALUES ('$email', '$passwd', '$fname', '$lname', '$gender')";
+        $sql = "INSERT INTO users (email, passwd, fname, lname, genderId, age, height, weight)
+        VALUES ('$email', '$passwd', '$fname', '$lname', '$gender', '$age', '$height', '$weight')";
 
         if (mysqli_query($conn, $sql)) {
-            //echo "New record created successfully";
+            $errors["registered"] = true;
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            $errors["registered"] = false;
         }
   
         mysqli_close($conn);
@@ -145,6 +148,7 @@
 
             <form action="" method="post" id="sign-up-formular">
                 <?php errorLOG($conn, $email); ?>
+                <?php register($errors); ?>
 
                 <input type="text" id="email" 
                 class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>"  
@@ -180,8 +184,8 @@
                 class="<?php echo addClass( $errors["gender"], $classes["eBorder"] ); ?>" >
                     <option value="0">Vyber pohlavie</option>
                     <?php foreach($genders as $gender): ?>
-                        <option value="<?= $gender["id"] ?>"
-                            <?php if($_POST["gender"] == $gender["id"]) { ?>
+                        <option value="<?= $gender["idGender"] ?>"
+                            <?php if($_POST["gender"] == $gender["idGender"]) { ?>
                                 selected
                             <?php } ?>
                         >

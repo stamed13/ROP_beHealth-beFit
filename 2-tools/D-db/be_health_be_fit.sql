@@ -1,66 +1,117 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Hostiteľ: 127.0.0.1
--- Čas generovania: Sun 04.Dec 2022, 21:15
--- Verzia serveru: 10.4.24-MariaDB
--- Verzia PHP: 7.4.29
+DROP DATABASE IF EXISTS rop_behealth_befit;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+CREATE DATABASE rop_behealth_befit;
 
+USE rop_behealth_befit;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+CREATE TABLE genders (
+	id TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(10) NOT NULL
+) Engine = Innodb;
 
---
--- Databáza: `be_health_be_fit`
---
+INSERT INTO genders (name) VALUES ("muž");
+INSERT INTO genders (name) VALUES ("žena");
 
--- --------------------------------------------------------
+CREATE TABLE plans (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    mon VARCHAR(40) NOT NULL,
+    tue VARCHAR(40) NOT NULL,
+    wed VARCHAR(40) NOT NULL,
+    thu VARCHAR(40) NOT NULL,
+    fri VARCHAR(40) NOT NULL,
+    sat VARCHAR(40) NOT NULL,
+    sun VARCHAR(40) NOT NULL
+) Engine = Innodb;
 
---
--- Štruktúra tabuľky pre tabuľku `users`
---
+CREATE TABLE advice (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(500) NOT NULL
+) Engine = Innodb;
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `uname` varchar(25) DEFAULT NULL,
-  `passwd` varchar(15) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE users (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(60) NOT NULL,
+    passwd VARCHAR(60) NOT NULL,
+    fname VARCHAR(20) NOT NULL,
+    lname VARCHAR(40) NOT NULL,
+    gender_id TINYINT NOT NULL,
+    age TINYINT NOT NULL,
+    height TINYINT NOT NULL,
+    weight TINYINT NOT NULL,
+    plan_id INT NOT NULL,
+    advice_id INT NOT NULL
+) Engine = Innodb;
 
---
--- Sťahujem dáta pre tabuľku `users`
---
+CREATE TABLE cathegories (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL
+) Engine = Innodb;
 
-INSERT INTO `users` (`id`, `uname`, `passwd`) VALUES
-(1, 'test', '1234');
+INSERT INTO cathegories (name) VALUES ("kalistenika");
+INSERT INTO cathegories (name) VALUES ("strečing");
 
---
--- Kľúče pre exportované tabuľky
---
+CREATE TABLE parts (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cathegory_id INT NOT NULL,
+    name VARCHAR(20) NOT NULL
+) Engine = Innodb;
 
---
--- Indexy pre tabuľku `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+INSERT INTO parts (cathegory_id, name) VALUES (1, "príťah");
+INSERT INTO parts (cathegory_id, name) VALUES (1, "tlak");
+INSERT INTO parts (cathegory_id, name) VALUES (1, "nohy");
+INSERT INTO parts (cathegory_id, name) VALUES (1, "brucho");
+INSERT INTO parts (cathegory_id, name) VALUES (2, "krk");
+INSERT INTO parts (cathegory_id, name) VALUES (2, "ruky");
+INSERT INTO parts (cathegory_id, name) VALUES (2, "chrbát");
+INSERT INTO parts (cathegory_id, name) VALUES (2, "nohy");
 
---
--- AUTO_INCREMENT pre exportované tabuľky
---
+CREATE TABLE levels (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(15) NOT NULL
+) Engine = Innodb;
 
---
--- AUTO_INCREMENT pre tabuľku `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
+INSERT INTO levels (name) VALUES ("začiatočník");
+INSERT INTO levels (name) VALUES ("pokročilí");
+INSERT INTO levels (name) VALUES ("expert");
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+CREATE TABLE exercises (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    cathegory_id INT NOT NULL,
+    part_id INT NOT NULL,
+    level_id INT NOT NULL,
+    name VARCHAR(35) NOT NULL
+) Engine = Innodb;
+
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 1, 1, "skracovačky");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 1, 1, "dotýkanie členkov");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 1, 1, "sklápačky");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 1, 1, "quadrupedál");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 1, 1, "ruské otočky");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 1, 1, "plank na kolenách");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 2, 1, "kolíska");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 2, 1, "striedavé zdvihy nôh");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 2, 1, "horolezci");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 2, 1, "ruské otočky");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 2, 1, "stierače");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 2, 1, "nožnice");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 2, 1, "izometria");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 3, 1, "dragon flag");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 3, 1, "vznos do 180°");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 3, 1, "stierače ťahšie");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 3, 1, "kolíska");
+INSERT INTO exercises (cathegory_id, part_id, level_id, name) VALUES (1, 3, 1, "tlak panvy nad seba");
+
+CREATE TABLE activities (
+	id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    date DATE,
+    pull_ca INT NOT NULL,
+    push_ca INT NOT NULL,
+    core_ca INT NOT NULL,
+    leg_ca INT NOT NULL,
+    neck_st INT NOT NULL,
+	hand_st INT NOT NULL,
+    back_st INT NOT NULL,
+    leg_st INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+) Engine = Innodb;

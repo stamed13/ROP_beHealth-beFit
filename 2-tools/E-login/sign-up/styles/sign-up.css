@@ -205,6 +205,68 @@ html body {
   }
 }
 
+#content #sign-up #sign-up-formular .rText {
+  padding: 5px;
+  margin-bottom: 5px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+@media (min-width: 0px) {
+  #content #sign-up #sign-up-formular .rText {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 490px) {
+  #content #sign-up #sign-up-formular .rText {
+    width: 390px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #sign-up #sign-up-formular .rText {
+    width: 390px;
+  }
+}
+
+#content #sign-up #sign-up-formular .gText {
+  padding: 5px;
+  margin-bottom: 5px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: #2d9e00;
+  color: white;
+  border-radius: 5px;
+}
+
+@media (min-width: 0px) {
+  #content #sign-up #sign-up-formular .gText {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 490px) {
+  #content #sign-up #sign-up-formular .gText {
+    width: 390px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #sign-up #sign-up-formular .gText {
+    width: 390px;
+  }
+}
+
 #content #sign-up #sign-up-formular #bt-login {
   height: 61px;
   font-size: 25px;
