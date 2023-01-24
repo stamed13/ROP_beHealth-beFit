@@ -121,9 +121,7 @@ html body {
 #content #log-in #log-in-formular {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   grid-auto-flow: row;
   gap: 0;
   padding-top: 15px;
@@ -156,6 +154,16 @@ html body {
   }
 }
 
+#content #log-in #log-in-formular #bt-login {
+  width: 130px;
+  height: 40px;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 10px;
+  background: #03A500;
+  border: 1px solid #000000;
+}
+
 #content #log-in #log-in-footer {
   display: -ms-grid;
   display: grid;
@@ -168,16 +176,6 @@ html body {
 #content #log-in #log-in-footer a {
   text-decoration: none;
   color: black;
-}
-
-#content #log-in #log-in-footer #bt-login {
-  width: 130px;
-  height: 40px;
-  font-size: 25px;
-  font-weight: 500;
-  border-radius: 10px;
-  background: #03A500;
-  border: 1px solid #000000;
 }
 
 #content #log-in #log-in-footer #new-account {

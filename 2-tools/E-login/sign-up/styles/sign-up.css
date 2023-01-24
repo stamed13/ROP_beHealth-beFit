@@ -267,7 +267,7 @@ html body {
   }
 }
 
-#content #sign-up #sign-up-formular #bt-login {
+#content #sign-up #sign-up-formular #bt-register {
   height: 61px;
   font-size: 25px;
   font-weight: 500;
@@ -277,13 +277,13 @@ html body {
 }
 
 @media (min-width: 0px) {
-  #content #sign-up #sign-up-formular #bt-login {
+  #content #sign-up #sign-up-formular #bt-register {
     width: 80vw;
   }
 }
 
 @media (min-width: 300px) {
-  #content #sign-up #sign-up-formular #bt-login {
+  #content #sign-up #sign-up-formular #bt-register {
     width: 230px;
   }
 }

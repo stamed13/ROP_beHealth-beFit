@@ -125,6 +125,8 @@
 
 ?>
 
+
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -206,7 +208,7 @@
                 name="weight" placeholder="Vaha" value="<?= $_POST['weight'] ?>"
                 class="<?php echo addClass( $errors["weight"], $classes["eBorder"] ); ?>" >
 
-                <input type="submit" id="bt-login" name="submit" 
+                <input type="submit" id="bt-register" name="submit" 
                 value="Register">
             </form>
 
@@ -215,7 +217,5 @@
             </div>
         </div>
     </div>
-
-    <div id="sign-up-header"></div>
 </body>
 </html>

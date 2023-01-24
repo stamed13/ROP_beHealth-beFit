@@ -79,7 +79,7 @@ html {
         //
         #log-in-formular {
             display: grid;
-            justify-content: center;
+            justify-items: center;
             grid-auto-flow: row;
             gap: 0;
             padding-top: 15px;
@@ -103,6 +103,17 @@ html {
                     width: 320px;
                 }
             }
+            //
+            #bt-login {
+                width: 130px;
+                height: 40px;
+                font-size: 25px;
+                font-weight: 500;
+                border-radius: 10px;
+                background: #03A500;
+                border: 1px solid #000000;
+            }
+            //
         }
         //
         #log-in-footer {
@@ -115,16 +126,6 @@ html {
             a {
                 text-decoration: none;
                 color: black;
-            }
-            //
-            #bt-login {
-                width: 130px;
-                height: 40px;
-                font-size: 25px;
-                font-weight: 500;
-                border-radius: 10px;
-                background: #03A500;
-                border: 1px solid #000000;
             }
             //
             #new-account {
