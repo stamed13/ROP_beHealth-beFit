@@ -121,21 +121,21 @@
                 $errors["age"] = true;
             }
         }
+  }
 
-        function register($errors) {
-            if ( $errors["checked"] == true ) {
-                //uspech
-                if( $errors["registered"] == true ) {
-                    echo "<p class='gText'> Úspešná registrácia! </p>";
-                }
-
-                //neuspech
-                if( $errors["registered"] == false ) {
-                    echo "<p class='rText'> Neúspešná registrácia! </p>";
-                }
-            }
+  //sprava o registracii
+  function register($errors) {
+    if ( $errors["checked"] == true ) {
+        //uspech
+        if( $errors["registered"] == true ) {
+            echo "<p class='gText'> Úspešná registrácia! </p>";
         }
 
-  }
+        //neuspech
+        if( $errors["registered"] == false ) {
+            echo "<p class='rText'> Neúspešná registrácia! </p>";
+        }
+    }
+}
 
 ?>

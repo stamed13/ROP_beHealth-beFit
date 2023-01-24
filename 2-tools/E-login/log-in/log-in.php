@@ -1,15 +1,18 @@
 <?php
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
-    require_once('../helper/config.php');
-    require_once "../helper/Helper.php";
+    require_once ('../helper/config.php');
+    require_once ('../helper/Helper.php');
+    require_once ('loginHelp.php');
 
     debug($_POST, "formular [data]");
 
     //polozky
     $email = $_POST['email'];
-    $passwd = password_hash($_POST['passwd'], PASSWORD_DEFAULT);
+    $passwd = $_POST['passwd'];
+    $hash = SQLquery($conn, " SELECT * FROM users WHERE email='$email' ");
 
+    echo $hash['passwd'];
 
     //kontrola
     $errors = [
@@ -23,20 +26,23 @@
         "eBorder" => "eBorder",
     ];
 
+
+    
+
+    //kontrola hesla
+    //SQLquery($conn, "SELECT passwd FROM users WHERE email='$email' ") != password_hash($_POST['passwd'], PASSWORD_DEFAULT)
+
     // ak bol formular vypleny
     if( count($_POST) != 0 ) {
         //kontrola emailu
         //trim vystrihne vsetky medzery na zaciatku a konci
         if( trim($_POST["email"]) == "" || 
-        ! (filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)) 
-        || strlen( trim($_POST["email"]) ) > 60  
-        || SQLquery($conn, "SELECT email FROM users WHERE email='$email' ") ) {
+        ! SQLquery($conn, "SELECT email FROM users WHERE email='$email' ") ) {
             $errors["email"] = true;
         } 
 
         //kontrola hesla
-        if( trim($_POST["passwd"])  == "" || strlen( trim($_POST["passwd"]) ) < 8 
-        || strlen( trim($_POST["passwd"]) ) > 10 ) {
+        if( ! password_verify($passwd, $row['passwd']) ) {
             $errors["passwd"] = true;
         }
 
@@ -75,6 +81,8 @@
             </div>
 
             <form action="" method="post" id="log-in-formular">
+                <?php errorLOG($conn, $email, $passwd); ?>
+                <?php login($errors); password($conn, $email, $passwd); ?>
 
                 <input type="text" id="email" 
                 class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>"  

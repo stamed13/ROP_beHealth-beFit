@@ -1,11 +1,11 @@
 <?php
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
-    require_once('../helper/config.php');
-    require_once "../helper/Helper.php";
-    require_once('sign-upHelp.php');
+    require_once ('../helper/config.php');
+    require_once ('../helper/Helper.php');
+    require_once ('registerHelp.php');
 
-    //debug($_POST, "formular [data]");
+    debug($_POST, "formular [data]");
 
     $genders =  SQLquery($conn, "SELECT * FROM genders");
 
