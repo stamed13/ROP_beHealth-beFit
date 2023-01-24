@@ -18,7 +18,8 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #content #log-in {
@@ -27,7 +28,6 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 410px;
   background: #BFBFBF;
   border-radius: 5px;
   border: 1px solid #000000;
@@ -42,7 +42,7 @@ html body {
 
 @media (min-width: 500px) {
   #content #log-in {
-    width: 380px;
+    width: 300px;
     padding: 20px;
   }
 }
@@ -50,70 +50,41 @@ html body {
 #content #log-in #log-in-header {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (min-width: 0px) {
   #content #log-in #log-in-header {
-    gap: 20px;
-  }
-}
-
-@media (min-width: 250px) {
-  #content #log-in #log-in-header {
-    gap: 35px;
-  }
-}
-
-@media (min-width: 300px) {
-  #content #log-in #log-in-header {
-    gap: 50px;
-  }
-}
-
-@media (min-width: 350px) {
-  #content #log-in #log-in-header {
-    gap: 65px;
-  }
-}
-
-@media (min-width: 400px) {
-  #content #log-in #log-in-header {
-    gap: 80px;
-  }
-}
-
-@media (min-width: 450px) {
-  #content #log-in #log-in-header {
-    gap: 100px;
+    grid-auto-flow: row;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0;
   }
 }
 
 @media (min-width: 500px) {
   #content #log-in #log-in-header {
-    gap: 85px;
+    grid-auto-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 120px;
   }
 }
 
 #content #log-in #log-in-header #log-in-title {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 #content #log-in #log-in-header #logo {
   display: -ms-grid;
   display: grid;
-  -ms-grid-column-align: e;
-      justify-self: e;
   width: 50px;
   border-radius: 50%;
 }
@@ -130,10 +101,12 @@ html body {
 #content #log-in #log-in-formular input {
   height: 40px;
   padding-left: 10px;
+  margin: 10px;
   font-size: 16px;
   color: black;
   background: #D9D9D9;
   border: 1px solid #000000;
+  border-radius: 5px;
 }
 
 @media (min-width: 0px) {
@@ -148,9 +121,9 @@ html body {
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 320px) {
   #content #log-in #log-in-formular input {
-    width: 320px;
+    width: 270px;
   }
 }
 
@@ -179,13 +152,13 @@ html body {
 
 @media (min-width: 490px) {
   #content #log-in #log-in-formular .eText {
-    width: 390px;
+    width: 60vw;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 320px) {
   #content #log-in #log-in-formular .eText {
-    width: 390px;
+    width: 270px;
   }
 }
 
@@ -210,13 +183,13 @@ html body {
 
 @media (min-width: 490px) {
   #content #log-in #log-in-formular .rText {
-    width: 390px;
+    width: 60vw;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 320px) {
   #content #log-in #log-in-formular .rText {
-    width: 390px;
+    width: 270px;
   }
 }
 
@@ -241,18 +214,18 @@ html body {
 
 @media (min-width: 490px) {
   #content #log-in #log-in-formular .gText {
-    width: 390px;
+    width: 60vw;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 320px) {
   #content #log-in #log-in-formular .gText {
-    width: 390px;
+    width: 270px;
   }
 }
 
 #content #log-in #log-in-formular #bt-login {
-  width: 130px;
+  margin-top: 10px;
   height: 40px;
   font-size: 25px;
   font-weight: 500;
@@ -261,22 +234,29 @@ html body {
   border: 1px solid #000000;
 }
 
+@media (min-width: 0px) {
+  #content #log-in #log-in-formular #bt-login {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 300px) {
+  #content #log-in #log-in-formular #bt-login {
+    width: 150px;
+  }
+}
+
 #content #log-in #log-in-footer {
   display: -ms-grid;
   display: grid;
   justify-items: center;
   grid-auto-flow: row;
-  gap: 5px;
-  padding-top: 10px;
-}
-
-#content #log-in #log-in-footer a {
-  text-decoration: none;
-  color: black;
 }
 
 #content #log-in #log-in-footer #new-account {
+  padding-bottom: 30px;
   text-align: center;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: underline;
   color: #000;

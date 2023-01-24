@@ -15,12 +15,12 @@ html {
 #content {
     display: grid;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     //
     #log-in {
         display: grid;
         justify-content: center;
-        height: 410px;
         background: #BFBFBF;
         border-radius: 5px;
         border: 1px solid #000000;
@@ -30,48 +30,35 @@ html {
             padding: 5px;
         }
         @media(min-width: 500px) {
-            width: 380px;
+            width: 300px;
             padding: 20px;
         }
         //
         #log-in-header {
             display: grid;
-            grid-auto-flow: column;
-            justify-content: end;
-            align-items: center;
-
             @media(min-width: 0px) {
-                gap: 20px;
-            }
-            @media(min-width: 250px) {
-                gap: 35px;
-            }
-            @media(min-width: 300px) {
-                gap: 50px;
-            }
-            @media(min-width: 350px) {
-                gap: 65px;
-            }
-            @media(min-width: 400px) {
-                gap: 80px;
-            }
-            @media(min-width: 450px) {
-                gap: 100px;
+                grid-auto-flow: row;
+                justify-items: center;
+                align-items: center;
+                gap: 0;
             }
             @media(min-width: 500px) {
-                gap: 85px;
+                grid-auto-flow: column;
+                justify-content: start;
+                align-items: center;
+                gap: 120px;
             }
             //
             #log-in-title {
                 display: grid;
-                justify-self: center;
-                font-size: 25px;
+                //justify-self: center;
+                font-size: 30px;
                 //font-weight: 600;
             }
             //
             #logo {
                 display: grid;
-                justify-self: e;
+                //justify-self: start;
                 width: 50px;
                 border-radius: 50%;
             }
@@ -87,11 +74,12 @@ html {
             input {
                 height: 40px;
                 padding-left: 10px;
+                margin: 10px;
                 font-size: 16px;
                 color: black;
                 background: #D9D9D9;
                 border: 1px solid #000000;
-
+                border-radius: 5px;
                 @media(min-width: 0px) {
                     width: 80vw;
                 }
@@ -99,8 +87,8 @@ html {
                     width: 60vw;
                 }
                 //
-                @media(min-width: 500px) {
-                    width: 320px;
+                @media(min-width: 320px) {
+                    width: 270px;
                 }
             }
             //
@@ -122,11 +110,11 @@ html {
                     width: 80vw;
                 }
                 @media(min-width: 490px) {
-                    width: 390px;
+                    width: 60vw;
                 }
                 //
-                @media(min-width: 500px) {
-                    width: 390px;
+                @media(min-width: 320px) {
+                    width: 270px;
                 }
             }
 
@@ -144,11 +132,11 @@ html {
                     width: 80vw;
                 }
                 @media(min-width: 490px) {
-                    width: 390px;
+                    width: 60vw;
                 }
                 //
-                @media(min-width: 500px) {
-                    width: 390px;
+                @media(min-width: 320px) {
+                    width: 270px;
                 }
             }
 
@@ -166,22 +154,29 @@ html {
                     width: 80vw;
                 }
                 @media(min-width: 490px) {
-                    width: 390px;
+                    width: 60vw;
                 }
                 //
-                @media(min-width: 500px) {
-                    width: 390px;
+                @media(min-width: 320px) {
+                    width: 270px;
                 }
             }
             //
             #bt-login {
-                width: 130px;
+                margin-top: 10px;
                 height: 40px;
                 font-size: 25px;
                 font-weight: 500;
                 border-radius: 10px;
                 background: #03A500;
                 border: 1px solid #000000;
+
+                @media(min-width: 0px) {
+                    width: 80vw;
+                }
+                @media(min-width: 300px) {
+                    width: 150px;
+                }
             }
             //
         }
@@ -190,16 +185,11 @@ html {
             display: grid;
             justify-items: center;
             grid-auto-flow: row;
-            gap: 5px;
-            padding-top: 10px;
-            //
-            a {
-                text-decoration: none;
-                color: black;
-            }
             //
             #new-account {
+                padding-bottom: 30px;
                 text-align: center;
+                font-size: 20px;
                 font-weight: 600;
                 text-decoration: underline;
                 color: #000;

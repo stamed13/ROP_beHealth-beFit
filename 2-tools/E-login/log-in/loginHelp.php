@@ -31,7 +31,7 @@
             //password($conn, $email, $passwd);
 
             //kontrola hesla
-            if( $errors["passwd"] == true ) {
+            if( password($conn, $email, $passwd) == true ) {
                 echo "<p class='eText'> Nesprávne heslo. </p>";
             }
         }
@@ -39,11 +39,9 @@
 
   //sprava o prihlaseni
   function login($errors) {
+    //uspech
     if ( $errors["checked"] == true ) {
-        //uspech
-        if( $errors["registered"] == true ) {
-            echo "<p class='gText'> Úspešná prihlasenie! </p>";
-        }
+        echo "<p class='gText'> Úspešné prihlasenie! </p>";
     }
 }
 
@@ -56,15 +54,12 @@
 		if (mysqli_num_rows($result) == 1) {
 			$row = mysqli_fetch_assoc($result);
             if ($row['email'] == $email && password_verify($passwd, $row['passwd']) ) {
-                $errors["passwd"] = false;
-                echo "<p class='gText'> Úspešná registrácia! </p>";
+                return false;
             }else{
-                $errors["passwd"] = true;
-                echo "<p class='eText'> Nesprávne heslo. </p>";
+                return true;
 			}
 		}else{
-            $errors["passwd"] = true;
-            echo "<p class='eText'> Nesprávne heslo. </p>";
+            return true;
 		}
 }
 

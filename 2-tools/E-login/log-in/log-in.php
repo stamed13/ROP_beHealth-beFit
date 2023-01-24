@@ -5,7 +5,7 @@
     require_once ('../helper/Helper.php');
     require_once ('loginHelp.php');
 
-    debug($_POST, "formular [data]");
+    //debug($_POST, "formular [data]");
 
     //polozky
     $email = $_POST['email'];
@@ -42,7 +42,7 @@
         } 
 
         //kontrola hesla
-        if( ! password_verify($passwd, $row['passwd']) ) {
+        if( password($conn, $email, $passwd) == true ) {
             $errors["passwd"] = true;
         }
 
@@ -75,14 +75,14 @@
     <div id="content">
         <div id="log-in">
             <div id="log-in-header">
-                <div id="log-in-title">Login</div>
                 <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
+                <div id="log-in-title">Sign-up</div>
             </div>
 
             <form action="" method="post" id="log-in-formular">
                 <?php errorLOG($conn, $email, $passwd); ?>
-                <?php login($errors); password($conn, $email, $passwd); ?>
+                <?php login($errors); //password($conn, $email, $passwd); ?>
 
                 <input type="text" id="email" 
                 class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>"  
@@ -93,7 +93,7 @@
                 name="passwd" placeholder="Heslo" value="<?= $_POST["passwd"] ?>">
 
                 <input type="submit" id="bt-login" name="submit" 
-                value="Register">
+                value="Login">
             </form>
 
             <div id="log-in-footer">

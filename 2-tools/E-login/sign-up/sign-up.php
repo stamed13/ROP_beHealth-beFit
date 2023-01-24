@@ -5,7 +5,7 @@
     require_once ('../helper/Helper.php');
     require_once ('registerHelp.php');
 
-    debug($_POST, "formular [data]");
+    //debug($_POST, "formular [data]");
 
     $genders =  SQLquery($conn, "SELECT * FROM genders");
 
