@@ -61,6 +61,27 @@
 		}else{
             return true;
 		}
-}
+  }
+
+    //inicialy
+    function inicialy($conn, $email) {
+        $inicialy = "";
+        $fname = "";
+        $lname = "";
+        $sql = "SELECT * FROM users WHERE email='$email'";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) == 1) {
+			$row = mysqli_fetch_assoc($result);
+
+            $fname = substr($row['fname'], 1, 0);
+            $lname = substr($row['lname'], 0, 1);
+            $inicialy = $fname;
+
+            return $fname;
+		}
+    }
+
 
 ?>

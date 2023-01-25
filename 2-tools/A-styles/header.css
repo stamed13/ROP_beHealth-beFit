@@ -36,13 +36,73 @@
   }
 }
 
+#header-computer .header-top .logins {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+}
+
 #header-computer .header-top .logins .bt-loged {
+  display: -ms-grid;
+  display: grid;
   padding: 5px;
   font-weight: 600;
   font-size: 20px;
   color: white;
   background: #0E7619;
   border-radius: 50%;
+}
+
+#header-computer .header-top .logins .ham-settings {
+  padding: 5px 15px;
+  margin-top: 33px;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  background: #D9D9D9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+#header-computer .header-top .logins .ham-settings .name {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  font-size: 25px;
+  text-decoration: underline;
+  color: black;
+}
+
+#header-computer .header-top .logins .ham-settings .profile {
+  margin-top: 5px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+#header-computer .header-top .logins .ham-settings .log-out {
+  margin-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  background: #B6B6B6;
+  border: 1px solid #000000;
+  border-radius: 5px;
 }
 
 #header-computer .header-top .bt-log-in {

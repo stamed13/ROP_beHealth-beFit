@@ -1,11 +1,16 @@
 <?php
+    session_start();
+    
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     require_once ('../helper/config.php');
     require_once ('../helper/Helper.php');
     require_once ('loginHelp.php');
+    require_once ('loged.php');
 
     //debug($_POST, "formular [data]");
+
+    //debug($_SESSION, "session [data]");
 
     //polozky
     $email = $_POST['email'];
@@ -50,8 +55,21 @@
 
     if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
         $errors["checked"] = true;
+        $_SESSION['login'] = true;
+        //$_SESSION['name'] = inicialy($conn, $email);//pridanie inicialov
+        header("Location: ../../../index.php");
     } else {
         $errors["checked"] = false;
+        $_SESSION['login'] = false;
+    }
+
+    function loginSession($errors) {
+        if( $errors["checked"] == true ) {
+            $_SESSION['login'] = true;
+            $_SESSION['name'] = true;
+        } else {
+            $_SESSION['login'] = false;
+        }
     }
 
 ?>

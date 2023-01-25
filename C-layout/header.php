@@ -1,5 +1,18 @@
 <?php
+    session_start();
+
     require_once ('header-login.php');
+    //require_once ('2-tools/E-login/log-in/log-in.php');
+
+    //echo $_SESSION["login"];
+
+    if(!isset($_SESSION["login"])){
+        $_SESSION["login"] = false;
+    }
+
+    //$_SESSION['login'] = false;
+
+    //loginSession($errors);
 ?>
 
 <!DOCTYPE html>
@@ -32,10 +45,7 @@
         <div id="header-computer">
             <div class="header-top">
                 <?php login(); ?>
-                <div class="logins">
-                    <div class="bt-loged">FL</div>
-                    <div class="settings"></div>
-                </div>
+                
                 <div class="header-title">beHealth-beFit</div>
                 <a href="index.php"><img src="2-tools/B-media/logo-real.svg" alt="hopa" class="logo"></a>
             </div>

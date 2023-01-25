@@ -1,9 +1,17 @@
 <?php
+    require_once ('2-tools/E-login/log-in/loged.php');
+
     //aktualna stranka
     $currentPage = 'index';
 
     //pripojenie header casti
     include('C-layout/header.php');
+
+    if( 1 < 5 ) {
+        
+    } else {
+        
+    }
 ?>
 
     <div id="content">
