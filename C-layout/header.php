@@ -1,3 +1,7 @@
+<?php
+    require_once ('header-login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +31,11 @@
     <header id="header">
         <div id="header-computer">
             <div class="header-top">
-                <button type="button" class="bt-log-in"><a href="2-tools/E-login/log-in/log-in.php">Log in</a></button>
+                <?php login(); ?>
+                <div class="logins">
+                    <div class="bt-loged">FL</div>
+                    <div class="settings"></div>
+                </div>
                 <div class="header-title">beHealth-beFit</div>
                 <a href="index.php"><img src="2-tools/B-media/logo-real.svg" alt="hopa" class="logo"></a>
             </div>

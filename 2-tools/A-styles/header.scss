@@ -24,6 +24,18 @@
             justify-content: space-between;
             gap: 5px;
         }
+        //
+        .logins {
+            .bt-loged {
+                padding: 5px;
+                font-weight: 600;
+                font-size: 20px;
+                color: white;
+                background: #0E7619;
+                border-radius: 50%;
+            }
+            .settings {}
+        }
         //tlacidlo prihlasenia
         .bt-log-in {
             border: 2px solid black;
@@ -101,14 +113,13 @@
         }
         //
         #computer-nav {
-            display: grid;                
+            display: grid;
             grid-auto-flow: column;
             gap: 5px;
             //
             .hide {
                 display: none;
             }
-
             .actual {
                 text-decoration: underline;
                 color: #000000;
