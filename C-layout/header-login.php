@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ERROR);// E_ALL, E_WARNING
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     function login() {
         //$inicialy = $_SESSION['name'];
@@ -8,6 +8,8 @@
 
         $inicialy = $_SESSION['name'];
         $fullname = $_SESSION['fullname'];
+
+        $button = true;
 
         if ( $_SESSION['login'] == false ) {
             echo "
@@ -18,11 +20,7 @@
         if ( $_SESSION['login'] == true ) {
             //echo $_SESSION['name'];
 
-            if(isset($_POST["submit"])){
-                $button = true;
-            } else {
-                $button = false;
-            }
+
 
         echo "
             <div class='logins'>
@@ -31,13 +29,31 @@
                 </form>
                 
         ";
-        if($button == true){
-            hamSetting($fullname);
+
+        //hamSetting($fullname);
+
+        if(isset($_POST["submit"])){
+            if($button == true){
+                $button = false;
+                hamSetting($fullname);
+                //echo $button;
+                
+            }
+            else{
+                $button = true;
+                //echo $button;
+            }
+
         } 
+
+        //hamSetting($fullname);
+
         echo "               
             </div>
             ";
         }
+
+
 
     }
     
@@ -51,4 +67,33 @@
                 </div>
         ";
     }
+
+    //
+    /*
+            if ( $_SESSION['login'] == true ) {
+            //echo $_SESSION['name'];
+
+
+        echo "
+            <div class='logins'>
+                <div class='bt-loged'>$inicialy</div>
+                
+                
+        ";
+
+        hamSetting($fullname);
+
+        /*echo "
+                <div class='ham-settings'>
+                    <div class='name'> $fullname </div>
+                    <a href='' class='profile'>profil</a>
+                    <a href='2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+                </div>
+        ";*/
+
+        /*echo "               
+            </div>
+            ";
+        }*/
+    /* */
 ?>
