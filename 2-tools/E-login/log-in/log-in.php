@@ -53,7 +53,7 @@
 
     }    
 
-    if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
+    /*if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
         $errors["checked"] = true;
         $_SESSION['login'] = true;
         $inicialy = inicialy($conn, $email);
@@ -64,6 +64,21 @@
     } else {
         $errors["checked"] = false;
         $_SESSION['login'] = false;
+    }*/
+
+    if(isset($_POST['submit'])){
+        if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
+            $errors["checked"] = true;
+            $_SESSION['login'] = true;
+            $inicialy = inicialy($conn, $email);
+            $_SESSION['name'] = $inicialy;//pridanie inicialov
+            $fullname = fullname($conn, $email);
+            $_SESSION['fullname'] = $fullname;
+            header("Location: ../../../index.php");
+        } else {
+            $errors["checked"] = false;
+            $_SESSION['login'] = false;
+        }
     }
 
     function loginSession($errors) {

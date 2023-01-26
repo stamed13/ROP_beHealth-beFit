@@ -50,8 +50,7 @@
                 <a href="index.php"><img src="2-tools/B-media/logo-real.svg" alt="hopa" class="logo"></a>
             </div>
             <div class="header-menu">
-                <nav id="computer-nav">
-                    
+                <nav id="computer-nav">                   
                     <a href="index.php" class="<?php if($currentPage == 'index') {echo 'actual';} ?>">home</a>
                     <a href="exercises.php" class="<?php if($currentPage == 'exercises') {echo 'actual';} ?>">exercises</a>
                     <a class="hide" href="blog.php" class="<?php if($currentPage == 'blog') {echo 'actual';} ?>">blog</a>

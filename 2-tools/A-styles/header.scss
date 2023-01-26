@@ -38,11 +38,12 @@
                 background: #0E7619;
                 border-radius: 50%;
             }
+            //
             .ham-settings {
                 padding: 5px 15px;
                 margin-top: 33px;
                 position: absolute;
-                display: grid;
+                display: none;
                 background: #D9D9D9;
                 border: 1px solid #000000;
                 border-radius: 10px;
@@ -212,4 +213,11 @@
         }
     }
     //
+}
+
+//
+#header-computer {
+    .header-top.login {
+        display: grid;
+    }
 }
