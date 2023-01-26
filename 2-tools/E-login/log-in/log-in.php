@@ -56,7 +56,10 @@
     if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
         $errors["checked"] = true;
         $_SESSION['login'] = true;
-        //$_SESSION['name'] = inicialy($conn, $email);//pridanie inicialov
+        $inicialy = inicialy($conn, $email);
+        $_SESSION['name'] = $inicialy;//pridanie inicialov
+        $fullname = fullname($conn, $email);
+        $_SESSION['fullname'] = $fullname;
         header("Location: ../../../index.php");
     } else {
         $errors["checked"] = false;

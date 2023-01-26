@@ -65,9 +65,6 @@
 
     //inicialy
     function inicialy($conn, $email) {
-        $inicialy = "";
-        $fname = "";
-        $lname = "";
         $sql = "SELECT * FROM users WHERE email='$email'";
 
 		$result = mysqli_query($conn, $sql);
@@ -75,11 +72,28 @@
 		if (mysqli_num_rows($result) == 1) {
 			$row = mysqli_fetch_assoc($result);
 
-            $fname = substr($row['fname'], 1, 0);
+            $fname = substr($row['fname'], 0, 1);
             $lname = substr($row['lname'], 0, 1);
-            $inicialy = $fname;
+            $inicialy = substr_replace($fname, $lname, 1, 0);
 
-            return $fname;
+            return $inicialy;
+		}
+    }
+
+    function fullname($conn, $email) {
+        $sql = "SELECT * FROM users WHERE email='$email'";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) == 1) {
+			$row = mysqli_fetch_assoc($result);
+
+            //$fname = $row['fname'];
+            $fname = substr_replace(" ", $row['fname'], 0, 0);
+            //$lname = $row['lname'];
+            $fullname = substr_replace($row['lname'], $fname, 0, 0);
+
+            return $fullname;
 		}
     }
 
