@@ -43,28 +43,37 @@
 }
 
 #header-computer .header-top .logins .bt-loged {
-  display: -ms-grid;
-  display: grid;
+  position: relative;
+  display: block;
   padding: 5px;
   font-weight: 600;
   font-size: 20px;
   color: white;
   background: #0E7619;
+  border: 0;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #header-computer .header-top .logins .ham-settings {
-  padding: 5px 15px;
-  margin-top: 33px;
-  position: absolute;
-  display: -ms-grid;
-  display: grid;
-  background: #D9D9D9;
-  border: 1px solid #000000;
   border-radius: 10px;
+  position: relative;
+  display: block;
+  left: -100%;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-#header-computer .header-top .logins .ham-settings .name {
+#header-computer .header-top .logins .ham-settings div {
+  padding: 5px 15px;
+  margin-top: 33px;
+  display: none;
+  padding: 30px;
+  background: #D9D9D9;
+  border: 1px solid #000000;
+}
+
+#header-computer .header-top .logins .ham-settings div .name {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -76,7 +85,7 @@
   color: black;
 }
 
-#header-computer .header-top .logins .ham-settings .profile {
+#header-computer .header-top .logins .ham-settings div .profile {
   margin-top: 5px;
   display: -ms-grid;
   display: grid;
@@ -89,7 +98,7 @@
   color: black;
 }
 
-#header-computer .header-top .logins .ham-settings .log-out {
+#header-computer .header-top .logins .ham-settings div .log-out {
   margin-top: 15px;
   display: -ms-grid;
   display: grid;
@@ -103,6 +112,14 @@
   background: #B6B6B6;
   border: 1px solid #000000;
   border-radius: 5px;
+}
+
+#header-computer .header-top .logins .ham-settings.active {
+  left: 0;
+}
+
+#header-computer .header-top .logins .ham-settings.active div {
+  display: block;
 }
 
 #header-computer .header-top .bt-log-in {
@@ -249,7 +266,15 @@
   }
 }
 
-#header-computer .header-top.login {
+.logins {
+  position: relative;
+}
+
+.logins .ham-settings.login {
+  left: 0;
+}
+
+.logins .ham-settings.login div {
   display: -ms-grid;
   display: grid;
 }
