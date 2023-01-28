@@ -49,71 +49,72 @@
                 echo "<p class='eText'> Zadaj heslo zložené z ľubovoľných 8-11 znakov, čisel alebo symbolov. </p>";
                 $errors["passwd"] = true;
             }
-        }
 
-        //ak je spravne vyplnene heslo
-        if ( $errors["email"] == false || $errors["passwd"] == false ) {
-            //potvrdenie hesla
-            if( trim($_POST["co_passwd"])  != trim($_POST["passwd"]) ) {
-                echo "<p class='eText'> Potvrď heslo. </p>";
-                $errors["co_passwd"] = true;
+            if ( $errors["email"] == false && $errors["passwd"] == false ) {
+                //potvrdenie hesla
+                if( trim($_POST["co_passwd"])  != trim($_POST["passwd"]) ) {
+                    echo "<p class='eText'> Potvrď heslo. </p>";
+                    $errors["co_passwd"] = true;
+                }
+
+                //ak je spravne vyplnene aj potvrdene heslo
+                if ( $errors["email"] == false && $errors["passwd"] == false 
+                && $errors["co_passwd"] == false ) {
+                    //kontrola mena
+                    if( trim($_POST["fname"])  == "" || strlen( trim($_POST["fname"]) ) < 2 
+                    || strlen( trim($_POST["fname"]) ) > 20 ) {
+                        echo "<p class='eText'> Zadaj meno s počtom znakov 2-20. </p>";
+                        $errors["fname"] = true;
+                    }
+
+                    //kontrola priezviska
+                    if( trim($_POST["lname"])  == "" || strlen( trim($_POST["lname"]) ) < 2 
+                    || strlen( trim($_POST["lname"]) ) > 40 ) {
+                        echo "<p class='eText'> Zadaj priezvisko s počtom znakov 2-40. </p>";
+                        $errors["lname"] = true;
+                    }
+
+                    //ak je spravne vyplnene predosle
+                    if ( $errors["email"] == false && $errors["passwd"] == false 
+                    && $errors["co_passwd"] == false && $errors["fname"] == false 
+                    && $errors["lname"] == false ) {
+                        //kontrola pohlavia
+                        if( $_POST["gender"]  == 0 ) {
+                            echo "<p class='eText'> Vyber si pohlavie. </p>";
+                            $errors["gender"] = true;
+                        }
+
+                                //ak je spravne vyplnene pohlavie
+                                if ( $errors["email"] == false && $errors["passwd"] == false 
+                                && $errors["co_passwd"] == false && $errors["fname"] == false 
+                                && $errors["lname"] == false && $errors["gender"] == false ) {
+                                    //kontrola veku
+                                    if( $_POST["age"]  == 0 ||  $_POST["age"] < 15 
+                                    || $_POST["age"] > 150  ) {
+                                        echo "<p class='eText'> Zadaj vek od 15r. </p>";
+                                        $errors["age"] = true;
+                                    }
+
+                                    //kontrola vysky
+                                    if( $_POST["height"]  == 0 || $_POST["height"] < 130 
+                                    || $_POST["height"] > 240 ) {
+                                        echo "<p class='eText'> Zadaj vysku. </p>";
+                                        $errors["age"] = true;
+                                    }
+
+                                    //kontrola vahy
+                                    if( $_POST["weight"]  == 0 || $_POST["weight"] < 30 
+                                    || $_POST["weight"] > 220 ) {
+                                        echo "<p class='eText'> Zadaj vahu. </p>";
+                                        $errors["age"] = true;
+                                    }
+                                }
+                    }
+                } 
             }
         }
 
-        //ak je spravne vyplnene aj potvrdene heslo
-        if ( $errors["email"] == false || $errors["passwd"] == false 
-        || $errors["co_passwd"] == false ) {
-            //kontrola mena
-            if( trim($_POST["fname"])  == "" || strlen( trim($_POST["fname"]) ) < 2 
-            || strlen( trim($_POST["fname"]) ) > 20 ) {
-                echo "<p class='eText'> Zadaj meno s počtom znakov 2-20. </p>";
-                $errors["fname"] = true;
-            }
-
-            //kontrola priezviska
-            if( trim($_POST["lname"])  == "" || strlen( trim($_POST["lname"]) ) < 2 
-            || strlen( trim($_POST["lname"]) ) > 40 ) {
-                echo "<p class='eText'> Zadaj priezvisko s počtom znakov 2-40. </p>";
-                $errors["lname"] = true;
-            }
-        }
-
-        //ak je spravne vyplnene predosle
-        if ( $errors["email"] == false || $errors["passwd"] == false 
-        || $errors["co_passwd"] == false || $errors["fname"] == false 
-        || $errors["lname"] == false ) {
-            //kontrola pohlavia
-            if( $_POST["gender"]  == 0 ) {
-                echo "<p class='eText'> Vyber si pohlavie. </p>";
-                $errors["gender"] = true;
-            }
-        }
-
-        //ak je spravne vyplnene pohlavie
-        if ( $errors["email"] == false || $errors["passwd"] == false 
-        || $errors["co_passwd"] == false || $errors["fname"] == false 
-        || $errors["lname"] == false || $errors["gender"] == false ) {
-            //kontrola veku
-            if( $_POST["age"]  == 0 ||  $_POST["age"] < 15 
-            || $_POST["age"] > 150  ) {
-                echo "<p class='eText'> Zadaj vek od 15r. </p>";
-                $errors["age"] = true;
-            }
-
-            //kontrola vysky
-            if( $_POST["height"]  == 0 || $_POST["height"] < 130 
-            || $_POST["height"] > 240 ) {
-                echo "<p class='eText'> Zadaj vysku. </p>";
-                $errors["age"] = true;
-            }
-
-            //kontrola vahy
-            if( $_POST["weight"]  == 0 || $_POST["weight"] < 30 
-            || $_POST["weight"] > 220 ) {
-                echo "<p class='eText'> Zadaj vahu. </p>";
-                $errors["age"] = true;
-            }
-        }
+        
   }
 
   //sprava o registracii
