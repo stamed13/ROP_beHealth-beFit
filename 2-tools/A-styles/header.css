@@ -36,13 +36,13 @@
   }
 }
 
-#header-computer .header-top .logins {
+#header-computer .header-top .loginsC {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: row;
 }
 
-#header-computer .header-top .logins .bt-loged {
+#header-computer .header-top .loginsC .bt-logedC {
   display: -ms-grid;
   display: grid;
   padding: 5px;
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-#header-computer .header-top .logins .ham-settings {
+#header-computer .header-top .loginsC .ham-settingsC {
   left: -100%;
   padding: 5px 15px;
   margin-top: 33px;
@@ -67,7 +67,7 @@
   border-radius: 10px;
 }
 
-#header-computer .header-top .logins .ham-settings .name {
+#header-computer .header-top .loginsC .ham-settingsC .name {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -79,7 +79,7 @@
   color: black;
 }
 
-#header-computer .header-top .logins .ham-settings .profile {
+#header-computer .header-top .loginsC .ham-settingsC .profile {
   margin-top: 5px;
   display: -ms-grid;
   display: grid;
@@ -92,7 +92,7 @@
   color: black;
 }
 
-#header-computer .header-top .logins .ham-settings .log-out {
+#header-computer .header-top .loginsC .ham-settingsC .log-out {
   margin-top: 15px;
   display: -ms-grid;
   display: grid;
@@ -108,35 +108,30 @@
   border-radius: 5px;
 }
 
-#header-computer .header-top .logins .ham-settings.active {
-  left: 0;
+#header-computer .header-top .loginsC .ham-settingsC.active {
+  left: 10px;
 }
 
 #header-computer .header-top .bt-log-in {
   border: 2px solid black;
   border-radius: 15px;
   background: #03A500;
+  text-decoration: none;
+  color: black;
 }
 
 @media (min-width: 450px) {
   #header-computer .header-top .bt-log-in {
-    width: 80px;
-    height: 35px;
+    padding: 5px;
     font-size: 20px;
   }
 }
 
 @media (min-width: 900px) {
   #header-computer .header-top .bt-log-in {
-    width: 90px;
-    height: 45px;
+    padding: 5px;
     font-size: 25px;
   }
-}
-
-#header-computer .header-top .bt-log-in a {
-  text-decoration: none;
-  color: black;
 }
 
 #header-computer .header-top .header-title {

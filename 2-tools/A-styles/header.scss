@@ -1,18 +1,18 @@
-//hlavicka pre sirku vacsiu ako maju mobily
+// hlavicka pre sirku pocitacov
 #header-computer {
     position: fixed;
     width: 100%;
     font-family: 'Inter', sans-serif;
     //background: #282828;
-    //skryte na mobile
+    // skryte na mobile
     @media(min-width: 0px) {
         display: none;
     }
-    //viditelne
+    // viditelne na pocitaci
     @media(min-width: 510px) {
         display: block;
     }
-    //horna cast hlavicky
+    // horna cast hlavicky
     .header-top {
         display: grid;
         align-items: center;
@@ -24,12 +24,12 @@
             justify-content: space-between;
             gap: 5px;
         }
-        //
-        .logins {
+        // prihlaseny pouzivatel
+        .loginsC {
             display: grid;
             grid-auto-flow: row;
-    
-            .bt-loged {
+            // tlacidlo prihlaseneho
+            .bt-logedC {
                 display: grid;
                 padding: 5px;
                 font-weight: 600;
@@ -40,8 +40,8 @@
                 border-radius: 50%;
                 cursor: pointer;
             }
-            //
-            .ham-settings {
+            // menu prihlaseneho
+            .ham-settingsC {
                 left: -100%;
                 padding: 5px 15px;
                 margin-top: 33px;
@@ -81,37 +81,26 @@
                     border-radius: 5px;
                 }
             }
-    
-            .ham-settings.active {
-                left: 0;
-                //transition: 5s;
+            // stlacene tlacidlo prihlaseneho, zobrazi menu prihlaseneho
+            .ham-settingsC.active {
+                left: 10px;
             }
         }
-        //tlacidlo prihlasenia
+        // tlacidlo prihlasenia
         .bt-log-in {
             border: 2px solid black;
             border-radius: 15px;
             background: #03A500;
+            text-decoration: none;
+            color: black;
             //
             @media(min-width: 450px) {
-                width: 80px;
-                height: 35px;
+                padding: 5px;
                 font-size: 20px;
             }
-            @media(min-width: 500px) {
-                //width: 84px;
-                //height: 39px;
-                //font-size: 22px;
-            }
             @media(min-width: 900px) {
-                width: 90px;
-                height: 45px;
+                padding: 5px;
                 font-size: 25px;
-            }
-            //text tlacidla
-            a {
-                text-decoration: none;
-                color: black;
             }
         }
         //nazov webu
@@ -147,7 +136,7 @@
             }
         }
     }
-    //menu hlavicky full
+    // menu hlavicky full
     .header-menu {
         display: grid;
         align-items: center;
@@ -162,15 +151,16 @@
             grid-auto-flow: column;
             justify-content: space-between;
         }
-        //
+        // navigacne menu
         #computer-nav {
             display: grid;
             grid-auto-flow: column;
             gap: 5px;
-            //
+            // nepouzivana stranka
             .hide {
                 display: none;
             }
+            // aktualna stranka
             .actual {
                 text-decoration: underline;
                 color: #000000;
@@ -178,7 +168,7 @@
                 //background: rgb(204, 204, 204);
                 //border: 1px solid black;
             }
-            //
+            // tlacidlo
             a {
                 padding: 5px;
                 text-decoration: none;
@@ -197,7 +187,7 @@
                 &:hover {}
             }
         }
-        //
+        // vyhladavac
         .search {
             height: 30px;
             padding-left: 5px;

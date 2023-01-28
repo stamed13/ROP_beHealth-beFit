@@ -6,7 +6,6 @@
     require_once ('../helper/config.php');
     require_once ('../helper/Helper.php');
     require_once ('loginHelp.php');
-    require_once ('loged.php');
 
     //debug($_POST, "formular [data]");
 
@@ -118,7 +117,7 @@
 
             <form action="" method="post" id="log-in-formular">
                 <?php errorLOG($conn, $email, $passwd); ?>
-                <?php login($errors); //password($conn, $email, $passwd); ?>
+                <?php login($errors); ?>
 
                 <input type="text" id="email" 
                 class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>"  

@@ -1,6 +1,4 @@
 <?php
-    require_once ('2-tools/E-login/log-in/loged.php');
-
     //aktualna stranka
     $currentPage = 'index';
 
