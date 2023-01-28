@@ -28,7 +28,7 @@
         .logins {
             display: grid;
             grid-auto-flow: row;
-
+    
             .bt-loged {
                 display: grid;
                 padding: 5px;
@@ -38,12 +38,11 @@
                 background: #0E7619;
                 border: 0;
                 border-radius: 50%;
-                //cursor: pointer;
+                cursor: pointer;
             }
             //
             .ham-settings {
-                //left: 10px;
-                //left: -100%;
+                left: -100%;
                 padding: 5px 15px;
                 margin-top: 33px;
                 position: absolute;
@@ -51,7 +50,7 @@
                 background: #D9D9D9;
                 border: 1px solid #000000;
                 border-radius: 10px;
-
+    
                 .name {
                     display: grid;
                     justify-content: center;
@@ -82,9 +81,10 @@
                     border-radius: 5px;
                 }
             }
-
+    
             .ham-settings.active {
-                //left: 10px;
+                left: 0;
+                //transition: 5s;
             }
         }
         //tlacidlo prihlasenia

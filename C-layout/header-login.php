@@ -19,7 +19,13 @@
 
             //echo $_SESSION['name'];
 
+            /*echo "
+                <div class='logins'>
+                    <div class='bt-loged'>$inicialy</div>
 
+                    hamSetting($fullname);
+                </div>
+            ";*/
 
             echo "
                 <div class='logins'>
@@ -42,13 +48,14 @@
 
     function hamSetting($fullname) {
         echo "
-            <div class='ham-settings'>
-                <div class='name'> $fullname </div>
-                <a href='' class='profile'>profil</a>
-                <a href='2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
-            </div>
+        <div class='ham-settings'>
+            <div class='name'> $fullname </div>
+            <a href='' class='profile'>profil</a>
+            <a href='2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+        </div>
         ";
     }
+
 
     //
     /*
@@ -141,5 +148,3 @@
     }
     */
 ?>
-
-<!-- <script src="login-ham.js"></script> -->
