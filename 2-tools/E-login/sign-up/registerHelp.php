@@ -1,14 +1,7 @@
 <?php 
-    //funkcia vykona prikaz spojeny s databazou
-    function SQLquery($conn, $query) {
-      $result = $conn->query($query);
+    function errorLOG($conn) {
+        $email = $_POST['email'];
 
-      if($result->num_rows> 0){
-        return mysqli_fetch_all($result, MYSQLI_ASSOC);
-      }
-    }
-
-    function errorLOG($conn, $email) {
         $errors = [
             "check" => false,
             "email" => false,
@@ -44,7 +37,7 @@
         } 
 
         //kontrola emailu
-        if( SQLquery($conn, "SELECT email FROM users WHERE email='$email' ") ) {
+        if( mySQLall($conn, "SELECT email FROM users WHERE email='$email' ") ) {
             echo "<p class='eText'> E-mail už existuje. </p>";
             $errors["email"] = true;
         } 
@@ -138,4 +131,13 @@
     }
 }
 
+
+    //funkcia vykona prikaz spojeny s databazou
+    /*function SQLquery($conn, $query) {
+        $result = $conn->query($query);
+  
+        if($result->num_rows> 0){
+          return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        }
+      }*/
 ?>

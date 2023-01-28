@@ -7,7 +7,7 @@
 
     //debug($_POST, "formular [data]");
 
-    $genders =  SQLquery($conn, "SELECT * FROM genders");
+    $genders =  mySQLall($conn, "SELECT * FROM genders");
 
 
     //polozky
@@ -43,13 +43,13 @@
     ];
 
     // ak bol formular vypleny
+        //trim vystrihne vsetky medzery na zaciatku a konci
     if( count($_POST) != 0 ) {
         //kontrola emailu
-        //trim vystrihne vsetky medzery na zaciatku a konci
         if( trim($_POST["email"]) == "" || 
         ! (filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)) 
         || strlen( trim($_POST["email"]) ) > 60  
-        || SQLquery($conn, "SELECT email FROM users WHERE email='$email' ") ) {
+        || mySQLall($conn, "SELECT email FROM users WHERE email='$email' ") ) {
             $errors["email"] = true;
         } 
 
@@ -100,6 +100,7 @@
         }
     }    
 
+    //kontrola chyb
     if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] && !$errors["co_passwd"] 
     && !$errors["fname"] && !$errors["lname"] && !$errors["gender"] && !$errors["age"]
     && !$errors["height"] && !$errors["weight"] ) {
@@ -109,7 +110,6 @@
     }
 
     //ulozenie do databazy
-
     if( $errors["checked"] ) {
         $sql = "INSERT INTO users (email, passwd, fname, lname, genderId, age, height, weight)
         VALUES ('$email', '$passwd', '$fname', '$lname', '$gender', '$age', '$height', '$weight')";
@@ -149,7 +149,7 @@
             </div>
 
             <form action="" method="post" id="sign-up-formular">
-                <?php errorLOG($conn, $email); ?>
+                <?php errorLOG($conn); ?>
                 <?php register($errors); ?>
 
                 <input type="text" id="email" 
@@ -158,8 +158,8 @@
 
                 <?php //echo addClass( ($errors["email"]),  $eBorder); ?>
 
-                <!--
-                    chybne a neprehladne
+                <!-- chybne a neprehladne -->
+                <!--    
                 <input type="text" id="email" class="error-border" name="email" 
                 placeholder="E-mail" value="<?= $_POST['email'] ?>"
                 class="error-border"

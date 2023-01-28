@@ -20,4 +20,24 @@
             return $class;
         }
     }
+
+    //funkcia vykona prikaz spojeny s databazou
+    function mySQLall($conn, $query) {
+        $result = $conn->query($query);
+  
+        if($result->num_rows> 0){
+            return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        }
+    }
+
+    //funkcia vykona prikaz spojeny s databazou
+    function mySQLassoc($conn, $sql) {
+	    $result = mysqli_query($conn, $sql);
+
+	    if (mysqli_num_rows($result) == 1) {
+	    	$row = mysqli_fetch_assoc($result);
+            return $row;
+	    }
+    }
+
 ?>

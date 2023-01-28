@@ -8,15 +8,12 @@
     require_once ('loginHelp.php');
 
     //debug($_POST, "formular [data]");
-
     //debug($_SESSION, "session [data]");
 
     //polozky
     $email = $_POST['email'];
     $passwd = $_POST['passwd'];
-    $hash = SQLquery($conn, " SELECT * FROM users WHERE email='$email' ");
-
-    echo $hash['passwd'];
+    $hash = mySQLall($conn, " SELECT * FROM users WHERE email='$email' ");
 
     //kontrola
     $errors = [
@@ -26,6 +23,7 @@
         "loged" => false,
     ];
 
+    //triedy
     $classes = [
         "eBorder" => "eBorder",
     ];
@@ -37,11 +35,11 @@
     //SQLquery($conn, "SELECT passwd FROM users WHERE email='$email' ") != password_hash($_POST['passwd'], PASSWORD_DEFAULT)
 
     // ak bol formular vypleny
+        //trim vystrihne vsetky medzery na zaciatku a konci
     if( count($_POST) != 0 ) {
         //kontrola emailu
-        //trim vystrihne vsetky medzery na zaciatku a konci
         if( trim($_POST["email"]) == "" || 
-        ! SQLquery($conn, "SELECT email FROM users WHERE email='$email' ") ) {
+        ! mySQLall($conn, "SELECT email FROM users WHERE email='$email' ") ) {
             $errors["email"] = true;
         } 
 
@@ -52,19 +50,7 @@
 
     }    
 
-    /*if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
-        $errors["checked"] = true;
-        $_SESSION['login'] = true;
-        $inicialy = inicialy($conn, $email);
-        $_SESSION['name'] = $inicialy;//pridanie inicialov
-        $fullname = fullname($conn, $email);
-        $_SESSION['fullname'] = $fullname;
-        header("Location: ../../../index.php");
-    } else {
-        $errors["checked"] = false;
-        $_SESSION['login'] = false;
-    }*/
-
+    //ulozenie informacii o prihlasovani ako stav a uzivatel
     if(isset($_POST['submit'])){
         if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
             $errors["checked"] = true;
@@ -76,15 +62,6 @@
             header("Location: ../../../index.php");
         } else {
             $errors["checked"] = false;
-            $_SESSION['login'] = false;
-        }
-    }
-
-    function loginSession($errors) {
-        if( $errors["checked"] == true ) {
-            $_SESSION['login'] = true;
-            $_SESSION['name'] = true;
-        } else {
             $_SESSION['login'] = false;
         }
     }
