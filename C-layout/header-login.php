@@ -21,17 +21,17 @@
 
 
 
-        echo "
-            <div class='logins'>
-                <div class='bt-loged'>$inicialy</div>
-                
-        ";
+            echo "
+                <div class='logins'>
+                    <div class='bt-loged'>$inicialy</div>
 
-        hamSetting($fullname);
+            ";
+
+            hamSetting($fullname);
 
 
-        echo "               
-            </div>
+            echo "               
+                </div>
             ";
         }
 
@@ -142,4 +142,4 @@
     */
 ?>
 
-<script src="login-ham.js"></script>
+<!-- <script src="login-ham.js"></script> -->

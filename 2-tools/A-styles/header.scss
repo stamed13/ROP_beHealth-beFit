@@ -38,11 +38,12 @@
                 background: #0E7619;
                 border: 0;
                 border-radius: 50%;
-                cursor: pointer;
+                //cursor: pointer;
             }
             //
             .ham-settings {
-                left: -100%;
+                //left: 10px;
+                //left: -100%;
                 padding: 5px 15px;
                 margin-top: 33px;
                 position: absolute;
@@ -83,7 +84,7 @@
             }
 
             .ham-settings.active {
-                left: 10px;
+                //left: 10px;
             }
         }
         //tlacidlo prihlasenia

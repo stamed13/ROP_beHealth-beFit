@@ -52,11 +52,9 @@
   background: #0E7619;
   border: 0;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 #header-computer .header-top .logins .ham-settings {
-  left: -100%;
   padding: 5px 15px;
   margin-top: 33px;
   position: absolute;
@@ -106,10 +104,6 @@
   background: #B6B6B6;
   border: 1px solid #000000;
   border-radius: 5px;
-}
-
-#header-computer .header-top .logins .ham-settings.active {
-  left: 10px;
 }
 
 #header-computer .header-top .bt-log-in {
