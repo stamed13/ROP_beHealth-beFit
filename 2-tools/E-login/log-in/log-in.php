@@ -28,9 +28,6 @@
         "eBorder" => "eBorder",
     ];
 
-
-    
-
     //kontrola hesla
     //SQLquery($conn, "SELECT passwd FROM users WHERE email='$email' ") != password_hash($_POST['passwd'], PASSWORD_DEFAULT)
 
@@ -44,7 +41,7 @@
         } 
 
         //kontrola hesla
-        if( password($conn, $email, $passwd) == true ) {
+        if( password($conn, "SELECT * FROM users WHERE email='$email'", $email, $passwd) == true ) {
             $errors["passwd"] = true;
         }
 
@@ -55,9 +52,9 @@
         if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
             $errors["checked"] = true;
             $_SESSION['login'] = true;
-            $inicialy = inicialy($conn, $email);
+            $inicialy = inicialy($conn, "SELECT * FROM users WHERE email='$email'");
             $_SESSION['name'] = $inicialy;//pridanie inicialov
-            $fullname = fullname($conn, $email);
+            $fullname = fullname($conn, "SELECT * FROM users WHERE email='$email'");
             $_SESSION['fullname'] = $fullname;
             header("Location: ../../../index.php");
         } else {

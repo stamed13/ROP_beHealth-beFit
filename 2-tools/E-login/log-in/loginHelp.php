@@ -22,7 +22,7 @@
             //password($conn, $email, $passwd);
 
             //kontrola hesla
-            if( password($conn, $email, $passwd) == true ) {
+            if( password($conn, "SELECT * FROM users WHERE email='$email'", $email, $passwd) == true ) {
                 echo "<p class='eText'> Nesprávne heslo. </p>";
             }
         }
@@ -37,55 +37,36 @@
 }
 
   //sprava o prihlaseni
-  function password($conn, $email, $passwd) {
-    $sql = "SELECT * FROM users WHERE email='$email'";
+  function password($conn, $sql, $email, $passwd) {
+    $row = mySQLassoc($conn, $sql);
 
-		$result = mysqli_query($conn, $sql);
-
-		if (mysqli_num_rows($result) == 1) {
-			$row = mysqli_fetch_assoc($result);
-            if ($row['email'] == $email && password_verify($passwd, $row['passwd']) ) {
-                return false;
-            }else{
-                return true;
-			}
-		}else{
-            return true;
-		}
+    if ($row['email'] == $email && password_verify($passwd, $row['passwd']) ) {
+        return false;
+    } else {
+        return true;
+    }
   }
 
     //inicialy
-    function inicialy($conn, $email) {
-        $sql = "SELECT * FROM users WHERE email='$email'";
+    function inicialy($conn, $sql) {
+        $row = mySQLassoc($conn, $sql);
 
-		$result = mysqli_query($conn, $sql);
+        $fname = substr($row['fname'], 0, 1);
+        $lname = substr($row['lname'], 0, 1);
+        $inicialy = substr_replace($fname, $lname, 1, 0);
 
-		if (mysqli_num_rows($result) == 1) {
-			$row = mysqli_fetch_assoc($result);
-
-            $fname = substr($row['fname'], 0, 1);
-            $lname = substr($row['lname'], 0, 1);
-            $inicialy = substr_replace($fname, $lname, 1, 0);
-
-            return $inicialy;
-		}
+        return $inicialy;
     }
 
-    function fullname($conn, $email) {
-        $sql = "SELECT * FROM users WHERE email='$email'";
+    function fullname($conn, $sql) {
+        $row = mySQLassoc($conn, $sql);
 
-		$result = mysqli_query($conn, $sql);
+		//$fname = $row['fname'];
+        $fname = substr_replace(" ", $row['fname'], 0, 0);
+        //$lname = $row['lname'];
+        $fullname = substr_replace($row['lname'], $fname, 0, 0);
 
-		if (mysqli_num_rows($result) == 1) {
-			$row = mysqli_fetch_assoc($result);
-
-            //$fname = $row['fname'];
-            $fname = substr_replace(" ", $row['fname'], 0, 0);
-            //$lname = $row['lname'];
-            $fullname = substr_replace($row['lname'], $fname, 0, 0);
-
-            return $fullname;
-		}
+        return $fullname;
     }
 
     //funkcia vykona prikaz spojeny s databazou
