@@ -35,14 +35,14 @@
   }
 }
 
-#content #activity #main-content {
+#content #activity #main #main-content {
   display: -ms-grid;
   display: grid;
   justify-items: center;
   gap: 10px;
 }
 
-#content #activity #main-content #content-title {
+#content #activity #main #main-content #content-title {
   padding: 10px;
   display: -ms-grid;
   display: grid;
@@ -55,7 +55,7 @@
   text-align: center;
 }
 
-#content #activity #main-content #activity-info {
+#content #activity #main #main-content #activity-info {
   display: -ms-grid;
   display: grid;
   justify-items: center;
@@ -91,6 +91,19 @@
   #content #activity .form {
     padding-top: 135px;
   }
+}
+
+#content #activity .form .form-content .form-title {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  background: #f80000;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
 }
 
 #content #activity .buttons-arrow {

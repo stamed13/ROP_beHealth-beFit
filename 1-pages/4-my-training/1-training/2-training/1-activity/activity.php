@@ -15,6 +15,9 @@
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
+    debug($_POST, "formular [data]");
+
+    //daj to cali a druhe stretch... 
     $exercises =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
 
 ?>
@@ -43,21 +46,24 @@
                 <div class="form-content">
                     <div class="form-title">Posilovanie</div>
 
-                    <form action="" method="post">
+                    <form action="" method="post" id="calisthenics">
                         
-                    <select id="exercise" name="exercise" 
-                    class="" >
-                        <option value="0">Vyber cvik na brucho</option>
-                        <?php foreach($exercises as $exercise): ?>
-                            <option value="<?= $exercise["idExercise"] ?>"
-                                <?php if($_POST["exercise"] == $exercise["idExercise"]) { ?>
-                                    selected
-                                <?php } ?>
-                            >
-                                <?= $exercise["name"] ?>
-                            </option>
-                        <?php endforeach ?>
-                    </select>
+                        <select id="exercise" name="exercise" 
+                        class="" >
+                            <option value="0">Vyber cvik na brucho</option>
+                            <?php foreach($exercises as $exercise): ?>
+                                <option value="<?= $exercise["idExercise"] ?>"
+                                    <?php if($_POST["exercise"] == $exercise["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $exercise["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <input type="submit" id="bt-register" name="submit" 
+                        value="Ulozit">
 
                     </form>
                 </div>

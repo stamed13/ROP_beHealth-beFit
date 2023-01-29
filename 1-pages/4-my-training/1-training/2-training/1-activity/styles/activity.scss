@@ -22,32 +22,32 @@
             @media(min-width: 800px) {
                 padding-top: 135px;
             }
-        }
 
-        #main-content {
-            display: grid;
-            justify-items: center;
-            gap: 10px;
-            
-            #content-title {
-                padding: 10px;
+            #main-content {
                 display: grid;
                 justify-items: center;
-                background: #F89500;
-                border-radius: 10px;
-                font-family: 'Inter', sans-serif;
-                font-weight: 600;
-                font-size: 35px;
-                text-align: center;
-            }
-            //
-            #activity-info {
-                display: grid;
-                justify-items: center;
-                font-size: 25px;
-                font-family: 'Inter', sans-serif;
-                font-weight: 600;
-                text-align: center;
+                gap: 10px;
+                
+                #content-title {
+                    padding: 10px;
+                    display: grid;
+                    justify-items: center;
+                    background: #F89500;
+                    border-radius: 10px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 35px;
+                    text-align: center;
+                }
+                //
+                #activity-info {
+                    display: grid;
+                    justify-items: center;
+                    font-size: 25px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    text-align: center;
+                }
             }
         }
 
@@ -66,10 +66,21 @@
             @media(min-width: 800px) {
                 padding-top: 135px;
             }
-        }
 
-        .form-content {
+            .form-content {
             
+                .form-title {
+                    padding: 10px;
+                    display: grid;
+                    justify-items: center;
+                    background: #f80000;
+                    border-radius: 10px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 35px;
+                    text-align: center;
+                }
+            }
         }
 
         .buttons-arrow {
