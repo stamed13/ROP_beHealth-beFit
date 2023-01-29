@@ -81,6 +81,8 @@ CREATE TABLE exercises (
     name VARCHAR(35) NOT NULL
 ) Engine = Innodb;
 
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "tlak panvy nad seba");
+
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "skracovačky");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "dotýkanie členkov");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "sklápačky");

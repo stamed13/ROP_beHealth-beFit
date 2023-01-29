@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'activity';
@@ -15,10 +15,13 @@
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
-    debug($_POST, "formular [data]");
+//    debug($_POST, "formular [data]");
 
     //daj to cali a druhe stretch... 
-    $exercises =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
+    $caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
+    $caliPushs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
+    $caliLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='3'");
+    $caliCores =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
 
 ?>
 
@@ -46,24 +49,40 @@
                 <div class="form-content">
                     <div class="form-title">Posilovanie</div>
 
+                    <?php //debug($_POST, "formular [data]"); ?>
+
                     <form action="" method="post" id="calisthenics">
                         
-                        <select id="exercise" name="exercise" 
+                    <select id="calisthenics" name="pull" 
                         class="" >
-                            <option value="0">Vyber cvik na brucho</option>
-                            <?php foreach($exercises as $exercise): ?>
-                                <option value="<?= $exercise["idExercise"] ?>"
-                                    <?php if($_POST["exercise"] == $exercise["idExercise"]) { ?>
+                            <option value="0">Vyber cvik na pritah</option>
+                            <?php foreach($caliPulls as $caliPull): ?>
+                                <option value="<?= $caliPull["idExercise"] ?>"
+                                    <?php if($_POST["pull"] == $caliPull["idExercise"]) { ?>
                                         selected
                                     <?php } ?>
                                 >
-                                    <?= $exercise["name"] ?>
+                                    <?= $caliPull["name"] ?>
                                 </option>
                             <?php endforeach ?>
                         </select>
 
-                        <input type="submit" id="bt-register" name="submit" 
-                        value="Ulozit">
+                        <select id="calisthenics" name="core" 
+                        class="" >
+                            <option value="0">Vyber cvik na brucho</option>
+                            <?php foreach($caliCores as $caliCore): ?>
+                                <option value="<?= $caliCore["idExercise"] ?>"
+                                    <?php if($_POST["core"] == $caliCore["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $caliCore["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <input type="submit" class="bt-save" name="save" 
+                        value="Uložiť">
 
                     </form>
                 </div>
@@ -75,7 +94,44 @@
                     <a href="../training.php" class="bt-arrow">ukoncit</a>
                 </div>
                 <div class="form-content">
-                    strecing
+                    <div class="form-title">Strecing</div>
+
+                    <?php //debug($_POST, "formular [data]"); ?>
+
+                    <form action="" method="post" id="calisthenics">
+    
+                    <select id="stretching" name="pull" 
+                        class="" >
+                            <option value="0">Vyber cvik na pritah</option>
+                            <?php foreach($caliPulls as $caliPull): ?>
+                                <option value="<?= $caliPull["idExercise"] ?>"
+                                    <?php if($_POST["pull"] == $caliPull["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $caliPull["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+                                    
+                        <select id="stretching" name="core" 
+                        class="" >
+                            <option value="0">Vyber cvik na brucho</option>
+                            <?php foreach($caliCores as $caliCore): ?>
+                                <option value="<?= $caliCore["idExercise"] ?>"
+                                    <?php if($_POST["core"] == $caliCore["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $caliCore["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+                                    
+                        <input type="submit" class="bt-save" name="save" 
+                        value="Uložiť">
+                                    
+                    </form>
                 </div>
             </article>
         </section>
