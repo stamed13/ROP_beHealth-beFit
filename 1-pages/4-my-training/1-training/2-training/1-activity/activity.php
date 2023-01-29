@@ -22,6 +22,8 @@
     $caliPushs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
     $caliLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='3'");
     $caliCores =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
+    $streNecks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='5'");
+    $streHands =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='6'");
 
 ?>
 
@@ -100,30 +102,30 @@
 
                     <form action="" method="post" id="calisthenics">
     
-                    <select id="stretching" name="pull" 
+                    <select id="stretching" name="neck" 
                         class="" >
-                            <option value="0">Vyber cvik na pritah</option>
-                            <?php foreach($caliPulls as $caliPull): ?>
-                                <option value="<?= $caliPull["idExercise"] ?>"
-                                    <?php if($_POST["pull"] == $caliPull["idExercise"]) { ?>
-                                        selected
+                            <option value="0">Vyber cvik na krk</option>
+                            <?php foreach($streNecks as $streNeck): ?>
+                                <option value="<?= $streNeck["idExercise"] ?>"
+                                    <?php if($_POST["neck"] == $streNeck["idExercise"]) { ?>
+                                        streNeck
                                     <?php } ?>
                                 >
-                                    <?= $caliPull["name"] ?>
+                                    <?= $streNeck["name"] ?>
                                 </option>
                             <?php endforeach ?>
                         </select>
                                     
-                        <select id="stretching" name="core" 
+                        <select id="stretching" name="hand" 
                         class="" >
-                            <option value="0">Vyber cvik na brucho</option>
-                            <?php foreach($caliCores as $caliCore): ?>
-                                <option value="<?= $caliCore["idExercise"] ?>"
-                                    <?php if($_POST["core"] == $caliCore["idExercise"]) { ?>
+                            <option value="0">Vyber cvik na ruky</option>
+                            <?php foreach($streHands as $castreHandliCore): ?>
+                                <option value="<?= $streHand["idExercise"] ?>"
+                                    <?php if($_POST["hand"] == $streHand["idExercise"]) { ?>
                                         selected
                                     <?php } ?>
                                 >
-                                    <?= $caliCore["name"] ?>
+                                    <?= $streHand["name"] ?>
                                 </option>
                             <?php endforeach ?>
                         </select>
