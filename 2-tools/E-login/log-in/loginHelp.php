@@ -6,24 +6,26 @@
             "passwd" => false,
         ];
 
-        if ( trim($_POST["email"])  == "" || trim($_POST["passwd"])  == "" ) {
-            echo "<p class='eText'> Vypln udaje. </p>";
-            $errors["check"] = true;
-        }
-
-        //kontrola emailu
-        if( ! (mySQLall($conn, "SELECT email FROM users WHERE email='$email' ")) ) {
-            echo "<p class='eText'> E-mail neexistuje. </p>";
-            $errors["email"] = true;
-        } 
-
-        //ak je spravne vyplneny email
-        if ( $errors["email"] == false ) {
-            //password($conn, $email, $passwd);
-
-            //kontrola hesla
-            if( password($conn, "SELECT * FROM users WHERE email='$email'", $email, $passwd) == true ) {
-                echo "<p class='eText'> Nesprávne heslo. </p>";
+        if ( isset($_POST["submit"])) {
+            if ( trim($_POST["email"])  == "" || trim($_POST["passwd"])  == "" ) {
+                echo "<p class='eText'> Vypln udaje. </p>";
+                $errors["check"] = true;
+            }
+    
+            //kontrola emailu
+            if( ! (mySQLall($conn, "SELECT email FROM users WHERE email='$email' ")) ) {
+                echo "<p class='eText'> E-mail neexistuje. </p>";
+                $errors["email"] = true;
+            } 
+    
+            //ak je spravne vyplneny email
+            if ( $errors["email"] == false ) {
+                //password($conn, $email, $passwd);
+    
+                //kontrola hesla
+                if( password($conn, "SELECT * FROM users WHERE email='$email'", $email, $passwd) == true ) {
+                    echo "<p class='eText'> Nesprávne heslo. </p>";
+                }
             }
         }
   }

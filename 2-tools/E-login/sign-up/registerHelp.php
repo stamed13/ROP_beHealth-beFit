@@ -15,16 +15,20 @@
             "weight" => false,
         ];
 
-        if ( trim($_POST["email"])  == "" || trim($_POST["passwd"])  == "" || 
-        trim($_POST["co_passwd"])  == "" || trim($_POST["lname"])  == "" ||
-        trim($_POST["fname"])  == "" || trim($_POST["gender"])  == "" ||
-        trim($_POST["age"])  == "" || trim($_POST["height"])  == "" || 
-        trim($_POST["weight"])  == "" ) {
-            echo "<p class='eText'> Vypln udaje. </p>";
-            $errors["check"] = true;
+        if ( isset($_POST["submit"]) ) {
+            if ( trim($_POST["email"])  == "" || trim($_POST["passwd"])  == "" || 
+            trim($_POST["co_passwd"])  == "" || trim($_POST["lname"])  == "" ||
+            trim($_POST["fname"])  == "" || trim($_POST["gender"])  == "" ||
+            trim($_POST["age"])  == "" || trim($_POST["height"])  == "" || 
+            trim($_POST["weight"])  == "" ) {
+                echo "<p class='eText'> Vypln udaje. </p>";
+                $errors["check"] = true;
+            }
         }
 
-        //nesprávnom formáte emailu
+
+        if ( isset($_POST["submit"]) ) {
+                    //nesprávnom formáte emailu
         if( ! (filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)) ) {
             echo "<p class='eText'> E-mail je v nesprávnom formáte. </p>";
             $errors["email"] = true;
@@ -112,6 +116,7 @@
                     }
                 } 
             }
+        }
         }
 
         

@@ -4,6 +4,8 @@
 
     //pripojenie header casti
     include('C-layout/header.php');
+
+    $_SESSION["location"] = "../../../blog.php";
 ?>
 
     <div id="content">

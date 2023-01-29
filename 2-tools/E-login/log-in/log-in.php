@@ -15,6 +15,12 @@
     $passwd = $_POST['passwd'];
     $hash = mySQLall($conn, " SELECT * FROM users WHERE email='$email' ");
 
+    $location = substr_replace(" ", "Location:", 0, 0);
+    $headerLocation = substr_replace($_SESSION["location"], $location, 0, 0);
+
+    //kontrola umiestnenia aktualnej stranky
+    //echo actualLocation();
+
     //kontrola
     $errors = [
         "checked" => false,
@@ -56,7 +62,7 @@
             $_SESSION['name'] = $inicialy;//pridanie inicialov
             $fullname = fullname($conn, "SELECT * FROM users WHERE email='$email'");
             $_SESSION['fullname'] = $fullname;
-            header("Location: ../../../index.php");
+            header(actualLocation());
         } else {
             $errors["checked"] = false;
             $_SESSION['login'] = false;

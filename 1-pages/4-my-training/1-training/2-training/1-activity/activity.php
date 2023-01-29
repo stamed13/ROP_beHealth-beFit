@@ -1,4 +1,8 @@
 <?php
+    session_start();
+    
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    
     //aktualna stranka
     $currentPage = 'activity';
     $page_styles = 'styles/activity.css';
@@ -8,21 +12,10 @@
     //pripojenie header casti
     include('../../layout/header.php');
 
-    $serverName = "localhost";
-    $userName = "root";
-    $password = "";
-    $dbName = "rop_behealth_befit";
+    require_once ('../../../../../2-tools/E-login/helper/config.php');
+    require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
-    //vytvorenie pripojenia
-
-    $con = mysqli_connect($serverName, $userName, $password, $dbName);
-
-    if (mysqli_connect_error()) {
-        echo "Failed to connect!";
-        exit();
-    }
-
-    echo "Connect success!";
+    $exercises =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
 
 ?>
 
@@ -49,19 +42,23 @@
                 </div>
                 <div class="form-content">
                     <div class="form-title">Posilovanie</div>
-                    <form action="">
-                        <select name="size">
-                            <option value="0">Vyber cvik na posilovanie brucha</option>
-                            <?php foreach($exercises as $exercise): ?>
-                                <option value="<?= $exercise["id"] ?>"
-                                    <?php if($_POST["exercise"] == $exercise["id"]): ?>
-                                        selected
-                                    <?php endif ?>
-                                >
-                                    <?= $size["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
+
+                    <form action="" method="post">
+                        
+                    <select id="exercise" name="exercise" 
+                    class="" >
+                        <option value="0">Vyber cvik na brucho</option>
+                        <?php foreach($exercises as $exercise): ?>
+                            <option value="<?= $exercise["idExercise"] ?>"
+                                <?php if($_POST["exercise"] == $exercise["idExercise"]) { ?>
+                                    selected
+                                <?php } ?>
+                            >
+                                <?= $exercise["name"] ?>
+                            </option>
+                        <?php endforeach ?>
+                    </select>
+
                     </form>
                 </div>
             </article>

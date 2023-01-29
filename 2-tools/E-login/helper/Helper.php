@@ -40,4 +40,11 @@
 	    }
     }
 
+    //funkcia na presmerovanie na aktualnu stranku
+    function actualLocation() {
+        $location = substr_replace(" ", "Location:", 0, 0);
+        $headerLocation = substr_replace($_SESSION["location"], $location, 0, 0);
+        return $headerLocation;
+    }
+
 ?>

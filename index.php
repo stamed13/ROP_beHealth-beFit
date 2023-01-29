@@ -5,11 +5,7 @@
     //pripojenie header casti
     include('C-layout/header.php');
 
-    if( 1 < 5 ) {
-        
-    } else {
-        
-    }
+    $_SESSION["location"] = "../../../index.php";
 ?>
 
     <div id="content">
