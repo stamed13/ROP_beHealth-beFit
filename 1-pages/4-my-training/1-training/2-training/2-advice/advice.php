@@ -21,114 +21,24 @@
 
 
     <div id="content">
-        <section id="activity">
+        <section id="advice">
+
             <article id="main">
                 <div class="buttons-arrow">
                     <a href="../training.php" class="bt-arrow">naspäť</a>
-                    <a href="#cali" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vpravo.svg" alt="hopa"></a>
+                    <a href="#cali" class="bt-arrow">ukoncit</a>
                 </div>
                 <div id="main-content">
-                    <div id="content-title">Moja aktivita</div>
-                    <div id="activity-info">
-                        Nech sa paci,  tu mozes postupne vyplnit tvoju dennu aktivitu. 
-                        Pokojne si aktualizuj v priebehu dna. <?php //$_SESSION['email'] ?>
+                    <div id="content-title">Rady a typy</div>
+                    <div id="hello-user">
+                        Dobry den <?php if(isset($_SESSION['fullname'])){echo $_SESSION['fullname'];} ?>!
                     </div>
                 </div>
-            </article>
-
-            <article class="form" id="cali">
-                <div class="buttons-arrow">
-                    <a href="#main" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vlavo.svg" alt="hopa"></a>
-                    <a href="#stretch" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vpravo.svg" alt="hopa"></a>
-                </div>
-                <div class="form-content">
-                    <div class="form-title">Posilovanie</div>
-
-                    <?php //debug($_POST, "formular [data]"); ?>
-
-                    <form action="" method="post" id="calisthenics">
-                        
-                    <select id="calisthenics" name="pull" 
-                        class="" >
-                            <option value="0">Vyber cvik na pritah</option>
-                            <?php foreach($caliPulls as $caliPull): ?>
-                                <option value="<?= $caliPull["idExercise"] ?>"
-                                    <?php if($_POST["pull"] == $caliPull["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
-                                >
-                                    <?= $caliPull["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-
-                        <select id="calisthenics" name="core" 
-                        class="" >
-                            <option value="0">Vyber cvik na brucho</option>
-                            <?php foreach($caliCores as $caliCore): ?>
-                                <option value="<?= $caliCore["idExercise"] ?>"
-                                    <?php if($_POST["core"] == $caliCore["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
-                                >
-                                    <?= $caliCore["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-
-                        <input type="submit" class="bt-save" name="save" 
-                        value="Uložiť">
-
-                    </form>
+                <div id="advice-list">
+                    Rady, jeden...
                 </div>
             </article>
-
-            <article class="form" id="stretch">
-                <div class="buttons-arrow">
-                    <a href="#cali" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vlavo.svg" alt="hopa"></a>
-                    <a href="../training.php" class="bt-arrow">ukoncit</a>
-                </div>
-                <div class="form-content">
-                    <div class="form-title">Strecing</div>
-
-                    <?php //debug($_POST, "formular [data]"); ?>
-
-                    <form action="" method="post" id="calisthenics">
-    
-                    <select id="stretching" name="neck" 
-                        class="" >
-                            <option value="0">Vyber cvik na krk</option>
-                            <?php foreach($streNecks as $streNeck): ?>
-                                <option value="<?= $streNeck["idExercise"] ?>"
-                                    <?php if($_POST["neck"] == $streNeck["idExercise"]) { ?>
-                                        streNeck
-                                    <?php } ?>
-                                >
-                                    <?= $streNeck["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-                                    
-                        <select id="stretching" name="hand" 
-                        class="" >
-                            <option value="0">Vyber cvik na ruky</option>
-                            <?php foreach($streHands as $castreHandliCore): ?>
-                                <option value="<?= $streHand["idExercise"] ?>"
-                                    <?php if($_POST["hand"] == $streHand["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
-                                >
-                                    <?= $streHand["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-                                    
-                        <input type="submit" class="bt-save" name="save" 
-                        value="Uložiť">
-                                    
-                    </form>
-                </div>
-            </article>
+            
         </section>
 
         
