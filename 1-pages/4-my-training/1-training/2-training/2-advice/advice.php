@@ -1,31 +1,21 @@
 <?php
-    session_start();
-    
     //error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
-    $currentPage = 'activity';
-    $page_styles = 'styles/activity.css';
+    $currentPage = 'advice';
+    $page_styles = 'styles/advice.css';
     $up = '../';
-    $curPageLink = '../1-activity/activity.php#main';
+    $curPageLink = '../2-advice/advice.php#main';
 
     //pripojenie header casti
     include('../../layout/header.php');
 
-    $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/1-activity/activity.php#main";
+    $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/2-advice/advice..php#main";
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
-    //debug($_POST, "formular [data]");
 
-    //vyber vsetkych cvikov podla kategorii
-    $caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
-    $caliPushs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
-    $caliLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='3'");
-    $caliCores =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
-    $streNecks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='5'");
-    $streHands =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='6'");
 
 ?>
 

@@ -7,6 +7,8 @@
 
     //pripojenie header casti
     include('../layout/header.php');
+
+    $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/training.php";
 ?>
 
     <div id="content">
@@ -23,7 +25,7 @@
 
             <article id="training-menu">
                 <a id="bt-training" href="1-activity/activity.php#main">Denná aktivita</a>
-                <a id="bt-training" href="">Rady a typy</a>
+                <a id="bt-training" href="2-advice/advice.php">Rady a typy</a>
                 <a id="bt-training" href="">Trenigový plán</a>
             </article>
 
