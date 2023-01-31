@@ -8,6 +8,8 @@
 
     if (session_destroy()) {
         header(actualLocation());
+        //echo actualLocation();
+        //echo $_SESSION["location"];
     }
 
 ?>

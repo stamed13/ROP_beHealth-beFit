@@ -6,6 +6,8 @@
     include('C-layout/header.php');
 
     $_SESSION["location"] = "../../../index.php";
+
+    //session_destroy();
 ?>
 
     <div id="content">

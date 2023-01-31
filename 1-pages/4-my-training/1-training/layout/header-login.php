@@ -6,7 +6,7 @@
         // tlacidlo na prihlasenie
         if ( $_SESSION['login'] == false ) {
             echo "
-                <a href='2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
+                <a href='../../../../2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
             ";
         }
 
@@ -42,7 +42,7 @@
         // tlacidlo na prihlasenie
         if ( $_SESSION['login'] == false ) {
             echo "
-                <a href='2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
+                <a href='../../../../2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
             ";
         }
 
@@ -79,7 +79,7 @@
         <div class='ham-settingsC'>
             <div class='name'> $fullname </div>
             <a href='' class='profile'>profil</a>
-            <a href='2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
         </div>
         ";
     }
@@ -90,7 +90,7 @@
         <div class='ham-settingsM'>
             <div class='name'> $fullname </div>
             <a href='' class='profile'>profil</a>
-            <a href='2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
         </div>
         ";
     }
