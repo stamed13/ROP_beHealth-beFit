@@ -99,17 +99,13 @@
             .bt-log-in {
                 border: 2px solid black;
                 background: #03A500;
+                text-decoration: none;
+                color: black;
                 //
                 @media(min-width: 0px) {
-                    width: 80px;
-                    height: 35px;
+                    padding: 5px;
                     font-size: 20px;
                     border-radius: 30px;
-                }
-                //text tlacidla
-                a {
-                    text-decoration: none;
-                    color: black;
                 }
             }
             //

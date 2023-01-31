@@ -116,35 +116,22 @@
   border: 2px solid black;
   border-radius: 15px;
   background: #03A500;
+  text-decoration: none;
+  color: black;
 }
 
 @media (min-width: 450px) {
   #header-computer .header-top .bt-log-in {
-    width: 80px;
-    height: 35px;
+    padding: 5px;
     font-size: 20px;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 900px) {
   #header-computer .header-top .bt-log-in {
-    width: 84px;
-    height: 39px;
-    font-size: 22px;
-  }
-}
-
-@media (min-width: 800px) {
-  #header-computer .header-top .bt-log-in {
-    width: 90px;
-    height: 45px;
+    padding: 5px;
     font-size: 25px;
   }
-}
-
-#header-computer .header-top .bt-log-in a {
-  text-decoration: none;
-  color: black;
 }
 
 #header-computer .header-top .header-title {
