@@ -22,7 +22,7 @@
     <header id="header">
         <div id="header-computer">
             <div class="header-top">
-                <button type="button" class="bt-log-in"><a href="2-tools/E-login/log-in/log-in.php">Log in</a></button>
+                <button type="button" class="bt-log-in"><a href="<?php echo $up ?>../../../../2-tools/E-login/log-in/log-in.php">Log in</a></button>
                 <div class="header-title">beHealth-beFit</div>
                 <a href="<?php echo $curPageLink ?>"><img src="<?php echo $up ?>../../../../2-tools/B-media/logo-real.svg" alt="hopa" class="logo"></a>
             </div>
@@ -34,7 +34,7 @@
         <div id="header-mobile">
             <div class="header-top">
                 <div id="row">
-                    <button type="button" class="bt-log-in"><a href="2-tools/E-login/log-in/log-in.php">Log in</a></button>
+                    <button type="button" class="bt-log-in"><a href="<?php echo $up ?>../../../../2-tools/E-login/log-in/log-in.php">Log in</a></button>
                     <a href="<?php echo $curPageLink ?>"><img src="<?php echo $up ?>../../../../2-tools/B-media/logo-real.svg" alt="hopa" class="logo"></a>
                 </div>
                 <div class="header-title">beHealth-beFit</div>

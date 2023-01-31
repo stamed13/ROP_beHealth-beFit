@@ -1,0 +1,208 @@
+#content {
+    //min-height: 100vh;
+    padding: 20px;
+    // denna aktivita
+    #activity {
+        //padding-top: 20px;
+        display: grid;
+        //gap: 120px;
+        //
+        #main {
+            min-height: 100vh;
+            //
+            @media(min-width: 0px) {
+                padding-top: 150px;
+            }
+            @media(min-width: 450px) {
+                padding-top: 115px;
+            }
+            @media(min-width: 500px) {
+                padding-top: 120px;
+            }
+            @media(min-width: 800px) {
+                padding-top: 135px;
+            }
+            // uvod
+            #main-content {
+                display: grid;
+                justify-items: center;
+                gap: 10px;
+                // nadpis
+                #content-title {
+                    padding: 10px;
+                    display: grid;
+                    justify-items: center;
+                    background: #F89500;
+                    color: #000;
+                    border-radius: 10px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 35px;
+                    text-align: center;
+                }
+                // kratke informacie
+                #activity-info {
+                    display: grid;
+                    justify-items: center;
+                    font-size: 25px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    text-align: center;
+                }
+            }
+        }
+        // formulare dennej aktivity
+        .form {
+            min-height: 100vh;
+            //
+            @media(min-width: 0px) {
+                padding-top: 150px;
+            }
+            @media(min-width: 450px) {
+                padding-top: 115px;
+            }
+            @media(min-width: 500px) {
+                padding-top: 120px;
+            }
+            @media(min-width: 800px) {
+                padding-top: 135px;
+            }
+            // obsah formularu
+            .form-content {
+                display: grid;
+                justify-items: center;
+                //grid-auto-flow: row;
+                gap: 25px;
+                // nadpis pre kategoriu
+                .form-title {
+                    padding: 5px 25px;
+                    display: grid;
+                    justify-items: center;
+                    background: #000000;
+                    color: white;
+                    border-radius: 10px;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 32px;
+                    text-align: center;
+                }
+                // formular dennej aktivity
+                form {
+                    display: grid;
+                    justify-items: center;
+                    gap: 10px;
+                    // vyber cviku
+                    select {
+                        display: grid;
+                        gap: 5px;
+                        padding: 10px;
+                        font-weight: 600;
+                        font-size: 25px;
+                        color: #000000;
+                        background: #A5CE00;
+                        border: 1px solid #000000;
+                        border-radius: 10px;
+                        // cviky...
+                        option {
+                            color: #000000;
+                            background: #c2c2c2;
+                        }
+                    }
+                    // tlacidlo na ulozenie aktivity
+                    .bt-save {
+                        padding: 10px;
+                        font-weight: 600;
+                        font-size: 25px;
+                        color: #ffffff;
+                        background: #000000;
+                        border-radius: 15px;
+                        border: none;
+                    }
+                }
+            }
+        }
+        // formular posilovanie
+        #cali {
+
+            // obsah formularu
+            .form-content {
+                // nadpis pre kategoriu
+                .form-title {
+                    color: #000;
+                    background: #e27e0c;
+                }
+                // formular posilovania
+                form {
+                    // vyber cviku
+                    #calisthenics {
+
+                        // cviky...
+                        option {
+
+                        }
+                    }
+                    // tlacidlo na ulozenie aktivity
+                    .bt-save {
+        
+                    }
+                }
+            }
+        }
+        // formular strecing
+        #stretch {
+
+            // obsah formularu
+            .form-content {
+                // nadpis pre kategoriu
+                .form-title {
+                    color: #000;
+                    background: #00C500;
+                }
+                // formular strecovania
+                form {
+                    // vyber cviku
+                    #stretching {
+
+                        // cviky...
+                        option {
+
+                        }
+                    }
+                    // tlacidlo na ulozenie aktivity
+                    .bt-save {
+        
+                    }
+                }
+            }
+        }
+        // sipky na posun
+        .buttons-arrow {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: space-between;
+
+            @media(min-width: 0px) {
+                margin-bottom: 10px;
+            }
+            @media(min-width: 450px) {
+                margin-bottom: 0;
+            }
+            // sipka
+            .bt-arrow {
+                display: grid;
+                padding: 10px;
+                font-family: 'Inter', sans-serif;
+                font-size: 25px;
+                border-radius: 10px;
+                color: black;
+                background: #BFBFBF;
+                font-weight: 600;
+                text-decoration: none;
+                // obrazok sipky
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

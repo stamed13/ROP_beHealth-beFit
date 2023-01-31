@@ -58,11 +58,12 @@
         if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
             $errors["checked"] = true;
             $_SESSION['login'] = true;
+            $_SESSION['email'] = $_POST['email'];
             $inicialy = inicialy($conn, "SELECT * FROM users WHERE email='$email'");
             $_SESSION['name'] = $inicialy;//pridanie inicialov
             $fullname = fullname($conn, "SELECT * FROM users WHERE email='$email'");
             $_SESSION['fullname'] = $fullname;
-            header(actualLocation());
+            header(actualLocation());// presmerovanie na aktualnu stranku
         } else {
             $errors["checked"] = false;
             $_SESSION['login'] = false;
@@ -90,7 +91,7 @@
     <div id="content">
         <div id="log-in">
             <div id="log-in-header">
-                <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
+                <a href="<?php echo $_SESSION["location"]; ?>"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
                 <div id="log-in-title">Sign-up</div>
             </div>
