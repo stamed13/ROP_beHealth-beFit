@@ -5,7 +5,7 @@
     //pripojenie header casti
     include('layout/header.php');
 
-    $_SESSION["location"] = "../../../index.php";
+    $_SESSION["location"] = "../profile/profile.php";
 
     //session_destroy();
 ?>

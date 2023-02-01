@@ -12,6 +12,7 @@
 
     //ak pouzivatel nie je prihlaseny, presmeruje ho naspat
     if ( $_SESSION['login'] == false ) {
+        header("Location: ../../../index.php");
         //header(actual());
     }
 
@@ -31,7 +32,7 @@
     <link rel="shortcut icon" href="../../../2-tools/B-media/real-icon3.png" type="image/x-icon" />
     <link rel="stylesheet" href="../../../2-tools/A-styles/global.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="/styles/header-mobile.css">
+    <link rel="stylesheet" href="styles/header-mobile.css">
     <link rel="stylesheet" href="../../../2-tools/A-styles/content.css">
     <link rel="stylesheet" href="../../../2-tools/A-styles/footer.css">
     <link rel="stylesheet" href="<?php echo $page_styles ?>">
