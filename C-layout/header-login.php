@@ -78,7 +78,7 @@
         echo "
         <div class='ham-settingsC'>
             <div class='name'> $fullname </div>
-            <a href='' class='profile'>profil</a>
+            <a href='2-tools/E-login/profile/profile.php' class='profile'>profil</a>
             <a href='2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
         </div>
         ";
@@ -89,7 +89,7 @@
         echo "
         <div class='ham-settingsM'>
             <div class='name'> $fullname </div>
-            <a href='' class='profile'>profil</a>
+            <a href='2-tools/E-login/profile/profile.php' class='profile'>profil</a>
             <a href='2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
         </div>
         ";

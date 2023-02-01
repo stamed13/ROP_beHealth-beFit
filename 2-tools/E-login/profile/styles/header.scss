@@ -41,48 +41,52 @@
                 cursor: pointer;
             }
             // menu prihlaseneho
-            .ham-settingsC {
-                left: -100%;
+            .profile-menuC {
+                height: 100vh;
+                //left: -100%;
+                left: 0;
+                z-index: 20px;
                 padding: 5px 15px;
-                margin-top: 33px;
                 position: absolute;
                 display: grid;
-                background: #D9D9D9;
-                border: 1px solid #000000;
-                border-radius: 10px;
-                .name {
-                    display: grid;
-                    justify-content: center;
-                    font-weight: 400;
-                    font-size: 25px;
-                    text-decoration: underline;
-                    color: black;
+                background: #0E7619;
+                //border: 1px solid #000000;
+                //border-radius: 10px;
+
+                @media(min-width: 0px){
+                    margin-top: 85px;
                 }
-                .profile {
-                    margin-top: 5px;
-                    display: grid;
-                    justify-content: left;
-                    font-weight: 400;
-                    font-size: 20px;
-                    text-decoration: none;
-                    color: black;
+                @media(min-width: 500px){
+                    margin-top: 87px;
                 }
-                .log-out {
-                    margin-top: 15px;
+                @media(min-width: 800px){
+                    margin-top: 96px;
+                }
+                //
+                #computer-nav {
+                    margin: 0;
+                    padding: 0;
                     display: grid;
-                    justify-content: center;
-                    font-weight: 400;
-                    font-size: 20px;
+                    gap: 5px;
+                    // odkazy na stranky
+                    a {
+                        display: grid;
+                        text-decoration: none;
+                        color: whitesmoke;
+                    }
+                }
+                //
+                .bt-logout {
+                    display: grid;
                     text-decoration: none;
-                    color: black;
-                    background: #B6B6B6;
-                    border: 1px solid #000000;
-                    border-radius: 5px;
+                    color: rgb(0, 0, 0);
+                    background: whitesmoke;
+                    border: 1px solid black;
                 }
             }
             // stlacene tlacidlo prihlaseneho, zobrazi menu prihlaseneho
-            .ham-settingsC.active {
-                left: 10px;
+            .profile-menuC.active {
+                //left: 0;
             }
         }
         //tlacidlo prihlasenia

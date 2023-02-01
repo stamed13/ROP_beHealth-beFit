@@ -55,61 +55,57 @@
   cursor: pointer;
 }
 
-#header-computer .header-top .loginsC .ham-settingsC {
-  left: -100%;
+#header-computer .header-top .loginsC .profile-menuC {
+  height: 100vh;
+  left: 0;
+  z-index: 20px;
   padding: 5px 15px;
-  margin-top: 33px;
   position: absolute;
   display: -ms-grid;
   display: grid;
-  background: #D9D9D9;
-  border: 1px solid #000000;
-  border-radius: 10px;
+  background: #0E7619;
 }
 
-#header-computer .header-top .loginsC .ham-settingsC .name {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 400;
-  font-size: 25px;
-  text-decoration: underline;
-  color: black;
+@media (min-width: 0px) {
+  #header-computer .header-top .loginsC .profile-menuC {
+    margin-top: 85px;
+  }
 }
 
-#header-computer .header-top .loginsC .ham-settingsC .profile {
-  margin-top: 5px;
+@media (min-width: 500px) {
+  #header-computer .header-top .loginsC .profile-menuC {
+    margin-top: 87px;
+  }
+}
+
+@media (min-width: 800px) {
+  #header-computer .header-top .loginsC .profile-menuC {
+    margin-top: 96px;
+  }
+}
+
+#header-computer .header-top .loginsC .profile-menuC #computer-nav {
+  margin: 0;
+  padding: 0;
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  font-weight: 400;
-  font-size: 20px;
+  gap: 5px;
+}
+
+#header-computer .header-top .loginsC .profile-menuC #computer-nav a {
+  display: -ms-grid;
+  display: grid;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+#header-computer .header-top .loginsC .profile-menuC .bt-logout {
+  display: -ms-grid;
+  display: grid;
   text-decoration: none;
   color: black;
-}
-
-#header-computer .header-top .loginsC .ham-settingsC .log-out {
-  margin-top: 15px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 400;
-  font-size: 20px;
-  text-decoration: none;
-  color: black;
-  background: #B6B6B6;
-  border: 1px solid #000000;
-  border-radius: 5px;
-}
-
-#header-computer .header-top .loginsC .ham-settingsC.active {
-  left: 10px;
+  background: whitesmoke;
+  border: 1px solid black;
 }
 
 #header-computer .header-top .bt-log-in {

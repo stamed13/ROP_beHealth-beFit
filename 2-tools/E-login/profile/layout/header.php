@@ -2,6 +2,7 @@
     session_start();
 
     require_once ('header-login.php');
+    require_once ('../helper/Helper.php');
     //require_once ('2-tools/E-login/log-in/log-in.php');
 
     //echo $_SESSION["login"];
@@ -48,7 +49,7 @@
                 <?php loginComputer(); ?>
 
                 <div class="header-title">beHealth-beFit</div>
-                <a href=""><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
+                <a href="<?php echo $_SESSION["location"]; ?>"><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
             </div>
             <div class="header-menu">
                 <input type="search" placeholder="Search" class="search">

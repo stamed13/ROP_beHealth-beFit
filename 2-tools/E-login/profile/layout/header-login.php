@@ -3,13 +3,6 @@
 
     //funkcia pre prihlaseneho pouzivatela
     function loginComputer() {
-        // tlacidlo na prihlasenie
-        if ( $_SESSION['login'] == false ) {
-            echo "
-                <a href='' class='bt-log-in'>Log in</a>
-            ";
-        }
-
         // prihlaseny pouzivatel
         if ( $_SESSION['login'] == true ) {
             //$_SESSION['name'] = "sm";
@@ -26,7 +19,7 @@
 
             ";
 
-            hamSettingC($fullname);
+            hamNavC($fullname);
 
 
             echo "               
@@ -39,13 +32,6 @@
 
     //funkcia pre prihlaseneho pouzivatela
     function loginMobile() {
-        // tlacidlo na prihlasenie
-        if ( $_SESSION['login'] == false ) {
-            echo "
-                <a href='' class='bt-log-in'>Log in</a>
-            ";
-        }
-
         // prihlaseny pouzivatel
         if ( $_SESSION['login'] == true ) {
             //$_SESSION['name'] = "sm";
@@ -62,7 +48,7 @@
 
             ";
 
-            hamSettingM($fullname);
+            hamNavM($fullname);
 
 
             echo "               
@@ -74,23 +60,24 @@
     
 
     // funkcia na menu pre prihlaseneho
-    function hamSettingC($fullname) {
+    function hamNavC($fullname) {
         echo "
-        <div class='ham-settingsC'>
-            <div class='name'> $fullname </div>
-            <a href='' class='profile'>profil</a>
-            <a href='' class='log-out'>log-out</a>
+        <div class='profile-menuC'>
+            <nav id='computer-nav'>
+                <a href=''>home</a>
+                <a href=''>profile</a>
+                <a href=''>settings</a>
+            </nav>
+            <a href='' class='bt-logout'>log out</a>
         </div>
         ";
     }
 
     // funkcia na menu pre prihlaseneho
-    function hamSettingM($fullname) {
+    function hamNavM($fullname) {
         echo "
-        <div class='ham-settingsM'>
-            <div class='name'> $fullname </div>
-            <a href='' class='profile'>profil</a>
-            <a href='' class='log-out'>log-out</a>
+        <div class='profile-menuM'>
+
         </div>
         ";
     }
