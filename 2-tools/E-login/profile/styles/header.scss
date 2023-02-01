@@ -1,0 +1,162 @@
+//hlavicka pre sirku vacsiu ako maju mobily
+#header-computer {
+    position: fixed;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    //background: #282828;
+    //skryte na mobile
+    @media(min-width: 0px) {
+        display: none;
+    }
+    //viditelne
+    @media(min-width: 450px) {
+        display: block;
+    }
+    //horna cast hlavicky
+    .header-top {
+        display: grid;
+        align-items: center;
+        padding: 10px;
+        background: #282828;
+        //
+        @media(min-width: 450px) {
+            grid-auto-flow: column;
+            justify-content: space-between;
+            gap: 5px;
+        }
+        // prihlaseny pouzivatel
+        .loginsC {
+            display: grid;
+            grid-auto-flow: row;
+            // tlacidlo prihlaseneho
+            .bt-logedC {
+                display: grid;
+                padding: 5px;
+                font-weight: 600;
+                font-size: 20px;
+                color: white;
+                background: #0E7619;
+                border: 0;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            // menu prihlaseneho
+            .ham-settingsC {
+                left: -100%;
+                padding: 5px 15px;
+                margin-top: 33px;
+                position: absolute;
+                display: grid;
+                background: #D9D9D9;
+                border: 1px solid #000000;
+                border-radius: 10px;
+                .name {
+                    display: grid;
+                    justify-content: center;
+                    font-weight: 400;
+                    font-size: 25px;
+                    text-decoration: underline;
+                    color: black;
+                }
+                .profile {
+                    margin-top: 5px;
+                    display: grid;
+                    justify-content: left;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: black;
+                }
+                .log-out {
+                    margin-top: 15px;
+                    display: grid;
+                    justify-content: center;
+                    font-weight: 400;
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: black;
+                    background: #B6B6B6;
+                    border: 1px solid #000000;
+                    border-radius: 5px;
+                }
+            }
+            // stlacene tlacidlo prihlaseneho, zobrazi menu prihlaseneho
+            .ham-settingsC.active {
+                left: 10px;
+            }
+        }
+        //tlacidlo prihlasenia
+        .bt-log-in {
+            border: 2px solid black;
+            border-radius: 15px;
+            background: #03A500;
+            text-decoration: none;
+            color: black;
+            //
+            @media(min-width: 450px) {
+                padding: 5px;
+                font-size: 20px;
+            }
+            @media(min-width: 900px) {
+                padding: 5px;
+                font-size: 25px;
+            }
+        }
+        //nazov webu
+        .header-title {
+            color: white;
+            //        
+            @media(min-width: 450px) {
+                font-weight: 600;
+                font-size: 30px;
+            }
+            @media(min-width: 500px) {
+                font-weight: 600;
+                font-size: 35px;
+            }
+            @media(min-width: 800px) {
+                font-weight: 800;
+                font-size: 45px;
+            }
+        }
+        //
+        .logo {
+            border-radius: 50%;
+            //
+            @media(min-width: 450px) {
+                width: 35px;
+            }
+            @media(min-width: 500px) {
+                width: 40px;
+            }
+            @media(min-width: 800px) {
+                width: 50px;
+            }
+        }
+    }
+    //menu hlavicky full
+    .header-menu {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background: #004700;
+        //
+        .search {
+            height: 30px;
+            padding-left: 5px;
+            margin: 5px;
+            font-size: 20px;
+            color: black;
+            border-radius: 9px;
+            border: 2px solid black;
+            //
+            @media(min-width: 450px) {
+                width: 300px;
+            }
+            @media(min-width: 800px) {
+                width: 400px;
+            }
+        }
+    }
+    //
+}
