@@ -16,7 +16,7 @@
     
 <?php
     //pripojenie footer casti
-    include('../../../C-layout/footer.php');
+    include('layout/footer.php');
 ?>
 
 </body>

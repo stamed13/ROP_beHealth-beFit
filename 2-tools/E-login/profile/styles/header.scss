@@ -27,7 +27,6 @@
         // prihlaseny pouzivatel
         .loginsC {
             display: grid;
-            grid-auto-flow: row;
             // tlacidlo prihlaseneho
             .bt-logedC {
                 display: grid;
@@ -39,54 +38,6 @@
                 border: 0;
                 border-radius: 50%;
                 cursor: pointer;
-            }
-            // menu prihlaseneho
-            .profile-menuC {
-                height: 100vh;
-                //left: -100%;
-                left: 0;
-                z-index: 20px;
-                padding: 5px 15px;
-                position: absolute;
-                display: grid;
-                background: #0E7619;
-                //border: 1px solid #000000;
-                //border-radius: 10px;
-
-                @media(min-width: 0px){
-                    margin-top: 85px;
-                }
-                @media(min-width: 500px){
-                    margin-top: 87px;
-                }
-                @media(min-width: 800px){
-                    margin-top: 96px;
-                }
-                //
-                #computer-nav {
-                    margin: 0;
-                    padding: 0;
-                    display: grid;
-                    gap: 5px;
-                    // odkazy na stranky
-                    a {
-                        display: grid;
-                        text-decoration: none;
-                        color: whitesmoke;
-                    }
-                }
-                //
-                .bt-logout {
-                    display: grid;
-                    text-decoration: none;
-                    color: rgb(0, 0, 0);
-                    background: whitesmoke;
-                    border: 1px solid black;
-                }
-            }
-            // stlacene tlacidlo prihlaseneho, zobrazi menu prihlaseneho
-            .profile-menuC.active {
-                //left: 0;
             }
         }
         //tlacidlo prihlasenia
@@ -138,29 +89,74 @@
             }
         }
     }
-    //menu hlavicky full
-    .header-menu {
+    //
+}
+// menu prihlaseneho pre pocitace
+.profile-menuC {
+    left: -100%;
+    //left: 0;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    gap: 25px;
+    background: #0E7619;
+    //border: 1px solid #000000;
+    //border-radius: 10px;
+
+    @media(min-width: 0px){
+        display: none;
+    }
+    @media(min-width: 450px){
+        margin-top: 88px;
         display: grid;
-        align-items: center;
-        justify-items: center;
-        background: #004700;
-        //
-        .search {
-            height: 30px;
-            padding-left: 5px;
-            margin: 5px;
-            font-size: 20px;
+    }
+    @media(min-width: 500px){
+        margin-top: 88px;
+    }
+    @media(min-width: 800px){
+        margin-top: 96px;
+    }
+    // navigacne menu profil pre pocitace
+    #computer-nav {
+        display: grid;
+        justify-items: left;
+        // odkazy na stranky
+        a {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 45px;
+            display: grid;
+            font-size: 25px;
+            text-decoration: none;
+            color: #D3D3D3;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .actual {
+            padding-right: 62px;
+            padding-bottom: 5px;
             color: black;
-            border-radius: 9px;
-            border: 2px solid black;
-            //
-            @media(min-width: 450px) {
-                width: 300px;
-            }
-            @media(min-width: 800px) {
-                width: 400px;
-            }
+            background: #03A500;
+            text-decoration: underline;
         }
     }
-    //
+    // tlacidlo na odhlasenie
+    .bt-logout {
+        margin: 25px;
+        padding: 8px;
+        display: grid;
+        justify-content: center;
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        background: #B6B6B6;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: 'Inter', sans-serif;
+    }
+}
+// stlacene tlacidlo prihlaseneho, zobrazi menu prihlaseneho
+.profile-menuC.active {
+    left: 0;
 }

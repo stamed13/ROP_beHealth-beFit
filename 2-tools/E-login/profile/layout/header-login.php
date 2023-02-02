@@ -19,7 +19,7 @@
 
             ";
 
-            hamNavC($fullname);
+            //hamNavC();
 
 
             echo "               
@@ -48,7 +48,7 @@
 
             ";
 
-            hamNavM($fullname);
+            //hamNavM();
 
 
             echo "               
@@ -60,26 +60,31 @@
     
 
     // funkcia na menu pre prihlaseneho
-    function hamNavC($fullname) {
-        echo "
-        <div class='profile-menuC'>
-            <nav id='computer-nav'>
-                <a href=''>home</a>
-                <a href=''>profile</a>
-                <a href=''>settings</a>
-            </nav>
-            <a href='' class='bt-logout'>log out</a>
-        </div>
-        ";
+    function hamNavC($currentPage) {
+        if ( $_SESSION['login'] == true ) {
+            echo "
+            <div class='profile-menuC'>
+                <nav id='computer-nav'>
+                    <a href=''>home</a>
+                    <a href='<?php echo $currentPage; ?> .php' class='actual'>profile</a>
+                </nav>
+                <a href='' class='bt-logout'>log out</a>
+            </div>
+            ";
+        }
     }
 
     // funkcia na menu pre prihlaseneho
-    function hamNavM($fullname) {
+    function hamNavM($currentPage) {
         echo "
         <div class='profile-menuM'>
 
         </div>
         ";
+    }
+
+    function profile($currentPage) {
+        if($currentPage == 'profile') {echo 'actual';}
     }
 
 ?>

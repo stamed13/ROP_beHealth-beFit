@@ -49,10 +49,7 @@
                 <?php loginComputer(); ?>
 
                 <div class="header-title">beHealth-beFit</div>
-                <a href="<?php echo $_SESSION["location"]; ?>"><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
-            </div>
-            <div class="header-menu">
-                <input type="search" placeholder="Search" class="search">
+                <a href="<? echo $currentPage; ?>.php"><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
             </div>
         </div>
 
@@ -65,9 +62,7 @@
                 </div>
                 <div class="header-title">beHealth-beFit</div>
             </div>
-            <div id="header-nav">
-                <input type="search" placeholder="Search" class="search">
-            </div>
         </div>
 
     </header>
+    <?php hamNavC($currentPage); ?>
