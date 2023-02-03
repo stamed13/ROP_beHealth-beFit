@@ -180,6 +180,10 @@
   font-family: 'Inter', sans-serif;
 }
 
+.profile-menuC #computer-nav .hide {
+  display: none;
+}
+
 .profile-menuC #computer-nav .actual {
   padding-right: 62px;
   padding-bottom: 5px;

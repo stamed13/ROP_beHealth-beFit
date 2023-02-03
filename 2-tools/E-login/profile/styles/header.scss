@@ -132,7 +132,11 @@
             color: #D3D3D3;
             font-family: 'Inter', sans-serif;
         }
-
+        // skryje link/tlacidlo
+        .hide {
+            display: none;
+        }
+        // aktualna stranka, zatial zbytocne
         .actual {
             padding-right: 62px;
             padding-bottom: 5px;

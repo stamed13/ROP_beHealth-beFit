@@ -65,8 +65,8 @@
             echo "
             <div class='profile-menuC'>
                 <nav id='computer-nav'>
-                    <a href=''>home</a>
-                    <a href='<?php echo $currentPage; ?> .php' class='actual'>profile</a>
+                    <a href='../'>home</a>
+                    <a href='' class='hide'>profile</a>
                 </nav>
                 <a href='' class='bt-logout'>log out</a>
             </div>
