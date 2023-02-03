@@ -61,11 +61,12 @@
 
     // funkcia na menu pre prihlaseneho
     function hamNavC($currentPage) {
+        $location = $_SESSION['location'];
         if ( $_SESSION['login'] == true ) {
             echo "
             <div class='profile-menuC'>
                 <nav id='computer-nav'>
-                    <a href='../'>home</a>
+                    <a href='$location'>naspäť</a>
                     <a href='' class='hide'>profile</a>
                 </nav>
                 <a href='' class='bt-logout'>log out</a>

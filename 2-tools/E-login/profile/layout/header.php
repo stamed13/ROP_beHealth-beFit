@@ -49,7 +49,7 @@
                 <?php loginComputer(); ?>
 
                 <div class="header-title">beHealth-beFit</div>
-                <a href="<? echo $currentPage; ?>.php"><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
+                <a href="<?= $currentPage ?>.php"><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
             </div>
         </div>
 
