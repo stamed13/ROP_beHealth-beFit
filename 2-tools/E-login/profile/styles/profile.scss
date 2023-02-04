@@ -20,19 +20,18 @@
                 padding-top: 120px;
             }
             @media(min-width: 800px) {
-                padding-top: 135px;
+                padding-top: 80px;
             }
             // uvod
             #main-content {
                 display: grid;
-                justify-items: center;
+                //justify-items: center;
                 gap: 10px;
                 // nadpis
                 #content-title {
                     padding: 10px;
                     display: grid;
                     justify-items: center;
-                    background: #F89500;
                     color: #000;
                     border-radius: 10px;
                     font-family: 'Inter', sans-serif;
@@ -42,12 +41,69 @@
                 }
                 // kratke informacie
                 #profile-content {
+                    padding: 25px;
+                    padding-bottom: 50%;
                     display: grid;
-                    justify-items: center;
-                    font-size: 25px;
                     font-family: 'Inter', sans-serif;
-                    font-weight: 600;
-                    text-align: center;
+                    background: #A7A7A7;
+                    border-radius: 30px;
+                    // tlacidlo na upravu profilu
+                    #edit {
+                        display: grid;
+                        //
+                        @media(min-width: 0){
+                            position: relative;
+                            justify-content: center;
+                            padding-bottom: 15px;
+                        }
+                        @media(min-width: 500px){
+                            position: absolute;
+                            right: 20px;
+                            margin: 15px;
+                            padding: 0;
+                            justify-content: right;
+                        }
+                        //
+                        img {
+                            display: grid;
+                        }
+                    }
+                    // profilove informacie
+                    #info {
+                        display: grid;
+                        justify-items: center;
+                        gap: 25px;
+                        font-size: 25px;
+                        // meno, email
+                        #name {
+                            display: grid;
+                            justify-items: center;
+                            gap: 5px;
+                            font-weight: 400;
+                            //
+                            #fullname {
+                                font-size: 30px;
+                                font-weight: 600;
+                            }
+                            //
+                            #email {}
+                        }
+                        // ostatne
+                        #other {
+                            display: grid;
+                            justify-items: center;
+                            gap: 5px;
+                            font-weight: 400;
+                            //
+                            #gender {}
+                            //
+                            #age {}
+                            //
+                            #weight {}
+                            //
+                            #height {}
+                        }
+                    }
                 }
             }
         }
@@ -72,7 +128,7 @@
                 font-size: 25px;
                 border-radius: 10px;
                 color: black;
-                background: #BFBFBF;
+                background: #EBEBEB;
                 font-weight: 600;
                 text-decoration: none;
                 // obrazok sipky

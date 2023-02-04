@@ -3,6 +3,8 @@
     $currentPage = 'profile';
     $page_styles = 'styles/profile.css';
 
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
+
     //pripojenie header casti
     include('layout/header.php');
 
@@ -19,7 +21,7 @@
                     <a href="" class="bt-arrow">naspäť</a>
                 </div>
                 <div id="main-content">
-                    <div id="content-title">Treningovy plan</div>
+                    <div id="content-title">Profil</div>
                     <div id="profile-content">
                         <a href="" id="edit"><img src="media/edit.svg" alt="hopa"></a>
 

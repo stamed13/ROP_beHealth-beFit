@@ -46,7 +46,7 @@
     <header id="header">
         <div id="header-computer">
             <div class="header-top">
-                <?php loginComputer(); ?>
+                <?php loginComputer($currentPage); ?>
 
                 <div class="header-title">beHealth-beFit</div>
                 <a href="<?= $currentPage ?>.php"><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
@@ -65,4 +65,3 @@
         </div>
 
     </header>
-    <?php hamNavC($currentPage); ?>

@@ -31,14 +31,13 @@
 
 @media (min-width: 800px) {
   #content #profile #main {
-    padding-top: 135px;
+    padding-top: 80px;
   }
 }
 
 #content #profile #main #main-content {
   display: -ms-grid;
   display: grid;
-  justify-items: center;
   gap: 10px;
 }
 
@@ -47,7 +46,6 @@
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  background: #F89500;
   color: #000;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
@@ -57,13 +55,74 @@
 }
 
 #content #profile #main #main-content #profile-content {
+  padding: 25px;
+  padding-bottom: 50%;
+  display: -ms-grid;
+  display: grid;
+  font-family: 'Inter', sans-serif;
+  background: #A7A7A7;
+  border-radius: 30px;
+}
+
+#content #profile #main #main-content #profile-content #edit {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 0) {
+  #content #profile #main #main-content #profile-content #edit {
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #profile #main #main-content #profile-content #edit {
+    position: absolute;
+    right: 20px;
+    margin: 15px;
+    padding: 0;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+
+#content #profile #main #main-content #profile-content #edit img {
+  display: -ms-grid;
+  display: grid;
+}
+
+#content #profile #main #main-content #profile-content #info {
   display: -ms-grid;
   display: grid;
   justify-items: center;
+  gap: 25px;
   font-size: 25px;
-  font-family: 'Inter', sans-serif;
+}
+
+#content #profile #main #main-content #profile-content #info #name {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  font-weight: 400;
+}
+
+#content #profile #main #main-content #profile-content #info #name #fullname {
+  font-size: 30px;
   font-weight: 600;
-  text-align: center;
+}
+
+#content #profile #main #main-content #profile-content #info #other {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  font-weight: 400;
 }
 
 #content #profile .buttons-arrow {
@@ -95,7 +154,7 @@
   font-size: 25px;
   border-radius: 10px;
   color: black;
-  background: #BFBFBF;
+  background: #EBEBEB;
   font-weight: 600;
   text-decoration: none;
 }

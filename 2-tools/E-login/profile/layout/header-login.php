@@ -2,7 +2,7 @@
     //error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     //funkcia pre prihlaseneho pouzivatela
-    function loginComputer() {
+    function loginComputer($currentPage) {
         // prihlaseny pouzivatel
         if ( $_SESSION['login'] == true ) {
             //$_SESSION['name'] = "sm";
@@ -19,7 +19,7 @@
 
             ";
 
-            //hamNavC();
+            hamNavC($currentPage);
 
 
             echo "               
