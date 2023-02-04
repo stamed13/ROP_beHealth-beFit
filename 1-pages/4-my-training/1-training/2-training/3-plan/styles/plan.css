@@ -47,7 +47,7 @@
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  background: #F89500;
+  background: #FFC700;
   color: #000;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
@@ -66,7 +66,25 @@
   text-align: center;
 }
 
-#content #plan .buttons-arrow {
+#content #plan #main #table-plan {
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #A5CE00;
+  border-radius: 25px;
+}
+
+#content #plan #main #table-plan tr td {
+  padding: 5px;
+  font-weight: 700;
+  font-size: 30px;
+  border: 1px solid black;
+}
+
+#content #plan #main .buttons-arrow {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
@@ -76,18 +94,18 @@
 }
 
 @media (min-width: 0px) {
-  #content #plan .buttons-arrow {
+  #content #plan #main .buttons-arrow {
     margin-bottom: 10px;
   }
 }
 
 @media (min-width: 450px) {
-  #content #plan .buttons-arrow {
+  #content #plan #main .buttons-arrow {
     margin-bottom: 0;
   }
 }
 
-#content #plan .buttons-arrow .bt-arrow {
+#content #plan #main .buttons-arrow .bt-arrow {
   display: -ms-grid;
   display: grid;
   padding: 10px;
@@ -100,6 +118,6 @@
   text-decoration: none;
 }
 
-#content #plan .buttons-arrow .bt-arrow img {
+#content #plan #main .buttons-arrow .bt-arrow img {
   width: 30px;
 }

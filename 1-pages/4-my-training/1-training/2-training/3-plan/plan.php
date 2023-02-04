@@ -24,28 +24,51 @@
         <section id="plan">
 
             <article id="main">
+                
                 <div class="buttons-arrow">
                     <a href="../training.php" class="bt-arrow">naspäť</a>
                     <a href="../training.php" class="bt-arrow">ukoncit</a>
                 </div>
+
                 <div id="main-content">
                     <div id="content-title">Treningovy plan</div>
                     <div id="plan-content">
                         
                     </div>
                 </div>
+
                 <table id="table-plan">
                     <tr>
-                        <td>cali</td>
-                        <td>stre</td>
+                        <td></td>
+                        <td>kalistenika / strecing</td>
                     </tr>
                     <tr>
-                        <td>mo</td>
-                        <td>tue</td>
+                        <td>PO</td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td>xx</td>
-                        <td>xx</td>
+                        <td>UT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ST</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ŠT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PI</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>SO</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>NE</td>
+                        <td></td>
                     </tr>
                 </table>
             </article>

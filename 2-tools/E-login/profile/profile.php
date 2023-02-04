@@ -18,12 +18,12 @@
 
             <article id="main">
                 <div class="buttons-arrow">
-                    <a href="" class="bt-arrow">naspäť</a>
+                    <a href="" class="bt-arrow hide">naspäť</a>
                 </div>
                 <div id="main-content">
                     <div id="content-title">Profil</div>
                     <div id="profile-content">
-                        <a href="" id="edit"><img src="media/edit.svg" alt="hopa"></a>
+                        <a href="edit-profile.php" id="edit"><img src="media/edit.svg" alt="hopa"></a>
 
                         <div id="info">
                             <div id="name">

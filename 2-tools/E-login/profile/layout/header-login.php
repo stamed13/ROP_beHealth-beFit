@@ -66,7 +66,7 @@
             echo "
             <div class='profile-menuC'>
                 <nav id='computer-nav'>
-                    <a href='$location'>naspäť</a>
+                    <a href='$location'>domov</a>
                     <a href='' class='hide'>profile</a>
                 </nav>
                 <a href='' class='bt-logout'>log out</a>

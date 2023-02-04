@@ -162,3 +162,7 @@
 #content #profile .buttons-arrow .bt-arrow img {
   width: 30px;
 }
+
+#content #profile .buttons-arrow .hide {
+  display: none;
+}

@@ -32,7 +32,7 @@
                     padding: 10px;
                     display: grid;
                     justify-items: center;
-                    background: #F89500;
+                    background: #FFC700;
                     color: #000;
                     border-radius: 10px;
                     font-family: 'Inter', sans-serif;
@@ -50,33 +50,51 @@
                     text-align: center;
                 }
             }
-        }
-        // sipky na posun
-        .buttons-arrow {
-            display: grid;
-            grid-auto-flow: column;
-            justify-content: space-between;
-
-            @media(min-width: 0px) {
-                margin-bottom: 10px;
-            }
-            @media(min-width: 450px) {
-                margin-bottom: 0;
-            }
-            // sipka
-            .bt-arrow {
+            // tabulka treningovy plan
+            #table-plan {
+                padding: 15px;
                 display: grid;
-                padding: 10px;
-                font-family: 'Inter', sans-serif;
-                font-size: 25px;
-                border-radius: 10px;
-                color: black;
-                background: #BFBFBF;
-                font-weight: 600;
-                text-decoration: none;
-                // obrazok sipky
-                img {
-                    width: 30px;
+                justify-content: center;
+                background: #A5CE00;
+                border-radius: 25px;
+                //
+                tr {
+                    //
+                    td {
+                        padding: 5px;
+                        font-weight: 700;
+                        font-size: 30px;
+                        border: 1px solid black;
+                    }
+                }
+            }
+            // sipky na posun
+            .buttons-arrow {
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: space-between;
+
+                @media(min-width: 0px) {
+                    margin-bottom: 10px;
+                }
+                @media(min-width: 450px) {
+                    margin-bottom: 0;
+                }
+                // sipka
+                .bt-arrow {
+                    display: grid;
+                    padding: 10px;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 25px;
+                    border-radius: 10px;
+                    color: black;
+                    background: #BFBFBF;
+                    font-weight: 600;
+                    text-decoration: none;
+                    // obrazok sipky
+                    img {
+                        width: 30px;
+                    }
                 }
             }
         }

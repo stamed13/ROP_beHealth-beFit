@@ -247,7 +247,7 @@
   font-size: 25px;
   font-weight: 500;
   border-radius: 10px;
-  background: #03A500;
+  background: #DFDFDF;
   border: 1px solid #000000;
 }
 
@@ -299,4 +299,8 @@
 
 #content #profile .buttons-arrow .bt-arrow img {
   width: 30px;
+}
+
+#content #profile .buttons-arrow .hide {
+  display: none;
 }

@@ -18,7 +18,7 @@
 
             <article id="main">
                 <div class="buttons-arrow">
-                    <a href="" class="bt-arrow">naspäť</a>
+                    <a href="profile.php" class="bt-arrow">naspäť</a>
                 </div>
                 <div id="main-content">
                     <div id="content-title">Upravit profil</div>
