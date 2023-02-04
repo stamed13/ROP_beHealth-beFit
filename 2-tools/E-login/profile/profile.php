@@ -5,6 +5,9 @@
 
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
+    require_once ('../helper/config.php');
+    require_once ('../helper/Helper.php');
+
     //pripojenie header casti
     include('layout/header.php');
 
@@ -27,8 +30,8 @@
 
                         <div id="info">
                             <div id="name">
-                                <div id="fullname">FULLNAME</div>
-                                <div id="email">EMAIL</div>
+                                <div id="fullname"> <?= $_SESSION['fullname'] ?> </div>
+                                <div id="email"> <?= $_SESSION['email'] ?> </div>
                             </div>
 
                             <div id="other">

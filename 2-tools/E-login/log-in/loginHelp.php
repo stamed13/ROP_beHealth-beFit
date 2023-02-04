@@ -71,6 +71,14 @@
         return $fullname;
     }
 
+    function email($conn, $sql) {
+        $row = mySQLassoc($conn, $sql);
+
+        $email = $row['email'];
+
+        return $email;
+    }
+
     //funkcia vykona prikaz spojeny s databazou
     /*function SQLquery($conn, $query) {
         $result = $conn->query($query);

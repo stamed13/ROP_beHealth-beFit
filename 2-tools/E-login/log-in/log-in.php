@@ -63,6 +63,7 @@
             $_SESSION['name'] = $inicialy;//pridanie inicialov
             $fullname = fullname($conn, "SELECT * FROM users WHERE email='$email'");
             $_SESSION['fullname'] = $fullname;
+            $_SESSION['email'] = email($conn, "SELECT * FROM users WHERE email='$email'");
             header(actualLocation());// presmerovanie na aktualnu stranku
         } else {
             $errors["checked"] = false;
