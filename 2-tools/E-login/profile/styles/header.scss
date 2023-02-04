@@ -100,25 +100,7 @@
             .profile-menuC.active {
                 left: 25px;
             }
-        }
-        //tlacidlo prihlasenia
-        .bt-log-in {
-            border: 2px solid black;
-            border-radius: 15px;
-            background: #03A500;
-            text-decoration: none;
-            color: black;
-            //
-            @media(min-width: 450px) {
-                padding: 5px;
-                font-size: 20px;
-            }
-            @media(min-width: 900px) {
-                padding: 5px;
-                font-size: 25px;
-            }
-        }
-        
+        }   
         //nazov webu
         .header-title {
             color: white;

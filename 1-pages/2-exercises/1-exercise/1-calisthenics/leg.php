@@ -1,9 +1,15 @@
 <?php
     //aktualna stranka
     $currentPage = 'leg';
+    $page_styles = '../styles/exercise.css';
+    $up = '';
+    $curPageLink = '../1-calisthenics/leg.php';
 
     //pripojenie header casti
     include('../layout/header.php');
+
+    $_SESSION["location"] = "../../../1-pages/2-exercises/1-exercise/1-calisthenics/leg.php";
+
 ?>
 
     <div id="content">

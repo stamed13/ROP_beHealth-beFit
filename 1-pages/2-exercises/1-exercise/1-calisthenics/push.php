@@ -1,9 +1,15 @@
 <?php
     //aktualna stranka
     $currentPage = 'push';
+    $page_styles = '../styles/exercise.css';
+    $up = '';
+    $curPageLink = '../1-calisthenics/push.php';
 
     //pripojenie header casti
     include('../layout/header.php');
+
+    $_SESSION["location"] = "../../../1-pages/2-exercises/1-exercise/1-calisthenics/push.php";
+
 ?>
 
     <div id="content">

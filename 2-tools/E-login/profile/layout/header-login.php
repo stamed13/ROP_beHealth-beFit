@@ -31,7 +31,7 @@
 
 
     //funkcia pre prihlaseneho pouzivatela
-    function loginMobile() {
+    function loginMobile($currentPage) {
         // prihlaseny pouzivatel
         if ( $_SESSION['login'] == true ) {
             //$_SESSION['name'] = "sm";
@@ -48,7 +48,7 @@
 
             ";
 
-            //hamNavM();
+            hamNavM($currentPage);
 
 
             echo "               
@@ -77,11 +77,18 @@
 
     // funkcia na menu pre prihlaseneho
     function hamNavM($currentPage) {
-        echo "
-        <div class='profile-menuM'>
-
-        </div>
-        ";
+        $location = $_SESSION['location'];
+        if ( $_SESSION['login'] == true ) {
+            echo "
+            <div class='profile-menuM'>
+                <nav id='mobile-nav'>
+                    <a href='$location'>domov</a>
+                    <a href='' class='hide'>profile</a>
+                </nav>
+                <a href='' class='bt-logout'>log out</a>
+            </div>
+            ";
+        }
     }
 
     function profile($currentPage) {

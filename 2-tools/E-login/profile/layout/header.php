@@ -56,7 +56,7 @@
         <div id="header-mobile">
             <div class="header-top">
                 <div id="row">
-                    <?php loginMobile(); ?>
+                    <?php loginMobile($currentPage); ?>
 
                     <a href=""><img src="../../B-media/logo-real.svg" alt="hopa" class="logo"></a>
                 </div>

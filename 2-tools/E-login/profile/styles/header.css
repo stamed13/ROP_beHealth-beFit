@@ -121,28 +121,6 @@
   left: 25px;
 }
 
-#header-computer .header-top .bt-log-in {
-  border: 2px solid black;
-  border-radius: 15px;
-  background: #03A500;
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 450px) {
-  #header-computer .header-top .bt-log-in {
-    padding: 5px;
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 900px) {
-  #header-computer .header-top .bt-log-in {
-    padding: 5px;
-    font-size: 25px;
-  }
-}
-
 #header-computer .header-top .header-title {
   color: white;
 }

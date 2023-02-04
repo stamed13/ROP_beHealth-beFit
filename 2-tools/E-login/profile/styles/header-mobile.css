@@ -48,8 +48,6 @@
 #header-mobile .header-top #row .loginsM {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: row;
-  justify-items: left;
 }
 
 #header-mobile .header-top #row .loginsM .bt-logedM {
@@ -65,75 +63,71 @@
   cursor: pointer;
 }
 
-#header-mobile .header-top #row .loginsM .ham-settingsM {
-  padding: 5px 15px;
-  margin-top: 33px;
+#header-mobile .header-top #row .loginsM .profile-menuM {
+  left: -100%;
+  margin-top: 45px;
   position: absolute;
-  display: none;
-  background: #D9D9D9;
-  border: 1px solid #000000;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 25px;
+  background: #0E7619;
   border-radius: 10px;
 }
 
-#header-mobile .header-top #row .loginsM .ham-settingsM .name {
+#header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav {
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-weight: 400;
+  justify-items: left;
+}
+
+#header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 45px;
+  display: -ms-grid;
+  display: grid;
   font-size: 25px;
-  text-decoration: underline;
-  color: black;
-}
-
-#header-mobile .header-top #row .loginsM .ham-settingsM .profile {
-  margin-top: 5px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  font-weight: 400;
-  font-size: 20px;
   text-decoration: none;
-  color: black;
+  color: #D3D3D3;
+  font-family: 'Inter', sans-serif;
 }
 
-#header-mobile .header-top #row .loginsM .ham-settingsM .log-out {
-  margin-top: 15px;
+#header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav .hide {
+  display: none;
+}
+
+#header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav .actual {
+  padding-right: 62px;
+  padding-bottom: 5px;
+  color: black;
+  background: #03A500;
+  text-decoration: underline;
+}
+
+#header-mobile .header-top #row .loginsM .profile-menuM .bt-logout {
+  margin: 25px;
+  padding: 8px;
+  margin-top: 50%;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 400;
   font-size: 20px;
   text-decoration: none;
   color: black;
   background: #B6B6B6;
-  border: 1px solid #000000;
+  border: 1px solid black;
   border-radius: 5px;
+  font-family: 'Inter', sans-serif;
 }
 
-#header-mobile .header-top #row .loginsM .ham-settingsM.active {
-  display: -ms-grid;
-  display: grid;
-}
-
-#header-mobile .header-top #row .bt-log-in {
-  border: 2px solid black;
-  background: #03A500;
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 0px) {
-  #header-mobile .header-top #row .bt-log-in {
-    padding: 5px;
-    font-size: 20px;
-    border-radius: 30px;
-  }
+#header-mobile .header-top #row .loginsM .profile-menuM.active {
+  left: 25px;
 }
 
 #header-mobile .header-top #row .logo {
@@ -162,24 +156,4 @@
     font-weight: 600;
     font-size: 30px;
   }
-}
-
-#header-mobile #header-nav {
-  padding: 5px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #006600;
-}
-
-#header-mobile #header-nav .search {
-  height: 30px;
-  width: 65vw;
-  padding-left: 5px;
-  font-size: 20px;
-  color: black;
-  border-radius: 9px;
-  border: 2px solid black;
 }
