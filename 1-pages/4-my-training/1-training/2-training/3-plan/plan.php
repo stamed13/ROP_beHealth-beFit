@@ -5,12 +5,12 @@
     $currentPage = 'plan';
     $page_styles = 'styles/plan.css';
     $up = '../';
-    $curPageLink = '../3-plan/plan.php#main';
+    $curPageLink = '../3-plan/plan.php';
 
     //pripojenie header casti
     include('../../layout/header.php');
 
-    $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/3-plan/plan..php#main";
+    $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/3-plan/plan.php";
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');

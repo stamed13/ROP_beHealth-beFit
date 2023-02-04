@@ -2,11 +2,11 @@
     //error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     //funkcia pre prihlaseneho pouzivatela
-    function loginComputer() {
+    function loginComputer($up) {
         // tlacidlo na prihlasenie
         if ( $_SESSION['login'] == false ) {
             echo "
-                <a href='../../../../2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
+                <a href='$up../../../../2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
             ";
         }
 
@@ -26,7 +26,7 @@
 
             ";
 
-            hamSettingC($fullname);
+            hamSettingC($fullname, $up);
 
 
             echo "               
@@ -38,11 +38,11 @@
 
 
     //funkcia pre prihlaseneho pouzivatela
-    function loginMobile() {
+    function loginMobile($up) {
         // tlacidlo na prihlasenie
         if ( $_SESSION['login'] == false ) {
             echo "
-                <a href='../../../../2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
+                <a href='$up../../../../2-tools/E-login/log-in/log-in.php' class='bt-log-in'>Log in</a>
             ";
         }
 
@@ -62,7 +62,7 @@
 
             ";
 
-            hamSettingM($fullname);
+            hamSettingM($fullname, $up);
 
 
             echo "               
@@ -74,23 +74,23 @@
     
 
     // funkcia na menu pre prihlaseneho
-    function hamSettingC($fullname) {
+    function hamSettingC($fullname, $up) {
         echo "
         <div class='ham-settingsC'>
             <div class='name'> $fullname </div>
-            <a href='' class='profile'>profil</a>
-            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+            <a href='$up../../../../2-tools/E-login/profile/profile.php' class='profile'>profil</a>
+            <a href='$up../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
         </div>
         ";
     }
 
     // funkcia na menu pre prihlaseneho
-    function hamSettingM($fullname) {
+    function hamSettingM($fullname, $up) {
         echo "
         <div class='ham-settingsM'>
             <div class='name'> $fullname </div>
-            <a href='' class='profile'>profil</a>
-            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+            <a href='$up../../../../2-tools/E-login/profile/profile.php' class='profile'>profil</a>
+            <a href='$up../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
         </div>
         ";
     }

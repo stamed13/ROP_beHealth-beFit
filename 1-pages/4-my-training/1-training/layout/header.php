@@ -39,7 +39,7 @@
     <header id="header">
         <div id="header-computer">
             <div class="header-top">
-                <?php loginComputer(); ?>
+                <?php loginComputer($up); ?>
 
                 <div class="header-title">beHealth-beFit</div>
                 <a href="<?php echo $curPageLink ?>"><img src="<?php echo $up ?>../../../../2-tools/B-media/logo-real.svg" alt="hopa" class="logo"></a>
@@ -52,7 +52,7 @@
         <div id="header-mobile">
             <div class="header-top">
                 <div id="row">
-                    <?php loginMobile(); ?>
+                    <?php loginMobile($up); ?>
 
                     <a href="<?php echo $curPageLink ?>"><img src="<?php echo $up ?>../../../../2-tools/B-media/logo-real.svg" alt="hopa" class="logo"></a>
                 </div>

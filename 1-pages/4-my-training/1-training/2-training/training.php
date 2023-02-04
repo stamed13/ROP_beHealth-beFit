@@ -9,6 +9,7 @@
     include('../layout/header.php');
 
     $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/training.php";
+    
 ?>
 
     <div id="content">
