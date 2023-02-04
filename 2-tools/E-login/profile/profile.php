@@ -10,7 +10,22 @@
     //session_destroy();
 ?>
 
-    <div id="profile">
+    <div id="content">
+        <section id="profile">
+
+            <article id="main">
+                <div class="buttons-arrow">
+                    <a href="" class="bt-arrow">naspäť</a>
+                </div>
+                <div id="main-content">
+                    <div id="content-title">Treningovy plan</div>
+                    <div id="profile-content">
+                        <a href="" id="edit"><img src="media/edit.svg" alt="hopa"></a>
+                    </div>
+                </div>
+            </article>
+            
+        </section>
 
     </div>
     

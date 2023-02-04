@@ -52,8 +52,6 @@
             
         </section>
 
-        
-        
     </div>
 
 <?php
