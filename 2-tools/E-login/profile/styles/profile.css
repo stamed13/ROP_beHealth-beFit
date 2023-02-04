@@ -1,28 +1,105 @@
-#profile {
+#content {
   padding: 20px;
+}
+
+#content #profile {
+  display: -ms-grid;
+  display: grid;
+}
+
+#content #profile #main {
   min-height: 100vh;
 }
 
 @media (min-width: 0px) {
-  #profile {
-    padding-top: 140px;
+  #content #profile #main {
+    padding-top: 150px;
   }
 }
 
 @media (min-width: 450px) {
-  #profile {
-    padding-top: 105px;
+  #content #profile #main {
+    padding-top: 115px;
   }
 }
 
 @media (min-width: 500px) {
-  #profile {
-    padding-top: 110px;
+  #content #profile #main {
+    padding-top: 120px;
   }
 }
 
 @media (min-width: 800px) {
-  #profile {
-    padding-top: 125px;
+  #content #profile #main {
+    padding-top: 135px;
   }
+}
+
+#content #profile #main #main-content {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+#content #profile #main #main-content #content-title {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  background: #F89500;
+  color: #000;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+}
+
+#content #profile #main #main-content #profile-content {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  font-size: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+#content #profile .buttons-arrow {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 0px) {
+  #content #profile .buttons-arrow {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 450px) {
+  #content #profile .buttons-arrow {
+    margin-bottom: 0;
+  }
+}
+
+#content #profile .buttons-arrow .bt-arrow {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+  border-radius: 10px;
+  color: black;
+  background: #BFBFBF;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#content #profile .buttons-arrow .bt-arrow img {
+  width: 30px;
 }

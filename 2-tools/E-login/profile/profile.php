@@ -1,6 +1,7 @@
 <?php
     //aktualna stranka
     $currentPage = 'profile';
+    $page_styles = 'styles/profile.css';
 
     //pripojenie header casti
     include('layout/header.php');
@@ -21,6 +22,20 @@
                     <div id="content-title">Treningovy plan</div>
                     <div id="profile-content">
                         <a href="" id="edit"><img src="media/edit.svg" alt="hopa"></a>
+
+                        <div id="info">
+                            <div id="name">
+                                <div id="fullname">FULLNAME</div>
+                                <div id="email">EMAIL</div>
+                            </div>
+
+                            <div id="other">
+                                <div id="gender">GENDER</div>
+                                <div id="age">AGE</div>
+                                <div id="weight">WEIGHT</div>
+                                <div id="height">HEIGHT</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
