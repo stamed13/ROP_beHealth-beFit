@@ -6,8 +6,7 @@
         WHERE users.email='$email'";
 
         $row = mySQLassoc($conn, $sql);
-        $gender = $row['name'];
-        return $gender;
+        return $row['name'];
     }
 
     function age($conn){
@@ -16,7 +15,24 @@
         WHERE email='$email'";
 
         $row = mySQLassoc($conn, $sql);
-        $age = $row['age'];
-        return $age;
+        return $row['age'];
+    }
+
+    function height($conn){
+        $email = $_SESSION['email'];
+        $sql = "SELECT height FROM users  
+        WHERE email='$email'";
+
+        $row = mySQLassoc($conn, $sql);
+        return $row['height'];
+    }
+
+    function weight($conn){
+        $email = $_SESSION['email'];
+        $sql = "SELECT weight FROM users  
+        WHERE email='$email'";
+
+        $row = mySQLassoc($conn, $sql);
+        return $row['weight'];
     }
 ?>

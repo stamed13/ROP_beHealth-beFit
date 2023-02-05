@@ -36,10 +36,10 @@
                             </div>
 
                             <div id="other">
-                                <div id="gender"> <?= gender($conn) ?> </div>
-                                <div id="age"> <?= age($conn) ?> </div>
-                                <div id="weight">WEIGHT</div>
-                                <div id="height">HEIGHT</div>
+                                <div id="gender">pohlavie: <?= gender($conn) ?> </div>
+                                <div id="age">vek: <?= age($conn) ?> </div>
+                                <div id="height">výška: <?= height($conn) ?> </div>
+                                <div id="weight">váha: <?= weight($conn) ?> </div>
                             </div>
                         </div>
                     </div>
