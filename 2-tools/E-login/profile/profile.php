@@ -3,10 +3,11 @@
     $currentPage = 'profile';
     $page_styles = 'styles/profile.css';
 
-    error_reporting(E_ERROR);// E_ALL, E_WARNING
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     require_once ('../helper/config.php');
     require_once ('../helper/Helper.php');
+    require_once ('profileHelp.php');
 
     //pripojenie header casti
     include('layout/header.php');
@@ -35,8 +36,8 @@
                             </div>
 
                             <div id="other">
-                                <div id="gender">GENDER</div>
-                                <div id="age">AGE</div>
+                                <div id="gender"> <?= gender($conn) ?> </div>
+                                <div id="age"> <?= age($conn) ?> </div>
                                 <div id="weight">WEIGHT</div>
                                 <div id="height">HEIGHT</div>
                             </div>
