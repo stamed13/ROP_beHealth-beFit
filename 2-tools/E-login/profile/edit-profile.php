@@ -5,12 +5,148 @@
 
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
+    require_once ('../helper/config.php');
+    require_once ('../helper/Helper.php');
+    require_once ('profileHelp.php');
+
     //pripojenie header casti
     include('layout/header.php');
 
     //$_SESSION["location"] = "../profile/profile.php";
 
     //session_destroy();
+
+    $genders =  mySQLall($conn, "SELECT * FROM genders");
+
+
+    // nove udaje
+    $email = $_POST['email'];
+    $passwd = password_hash($_POST['passwd'], PASSWORD_DEFAULT);
+    $co_passwd = password_hash($_POST['co_passwd'], PASSWORD_DEFAULT);
+    $fname = ucfirst($_POST['fname']);
+    $lname = ucfirst($_POST['lname']);
+    $gender = $_POST['gender'];
+    $age = $_POST['age'];
+    $height = $_POST['height'];
+    $weight = $_POST['weight'];
+
+    // aktualne udaje
+    $emailA = $_SESSION['email'];
+    $passwdA = "";
+    $fnameA = "";
+    $lnameA = "";
+    $genderA = "";
+    $ageA = "";
+    $heightA = "";
+    $weightA = "";
+
+    //kontrola
+    $errors = [
+        "checked" => false,
+        "email" => false,
+        "passwd" => false,
+        "co_passwd" => false,
+        "fname" => false,
+        "lname" => false,
+        "gender" => false,
+        "age" => false,
+        "height" => false,
+        "weight" => false,
+        "registered" => false,
+    ];
+
+    $classes = [
+        "eBorder" => "eBorder",
+    ];
+
+    // ak bol formular vypleny
+        //trim vystrihne vsetky medzery na zaciatku a konci
+    if( count($_POST) != 0 ) {
+        //kontrola emailu
+        if( trim($_POST["email"]) == "" || 
+        ! (filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)) 
+        || strlen( trim($_POST["email"]) ) > 60  
+        || ( mySQLall($conn, "SELECT email FROM users WHERE email='$email' ") && $email != $emailA ) ) {
+            $errors["email"] = true;
+        } 
+
+        //kontrola hesla
+        if( trim($_POST["passwd"])  == "" || strlen( trim($_POST["passwd"]) ) < 8 
+        || strlen( trim($_POST["passwd"]) ) > 10 ) {
+            $errors["passwd"] = true;
+        }
+
+        //potvrdenie hesla
+        if( trim($_POST["co_passwd"])  != trim($_POST["passwd"]) || $errors["passwd"] ) {
+            $errors["co_passwd"] = true;
+        }
+
+        //kontrola mena
+        if( trim($_POST["fname"])  == "" || strlen( trim($_POST["fname"]) ) < 2 
+        || strlen( trim($_POST["fname"]) ) > 20 ) {
+            $errors["fname"] = true;
+        }
+
+        //kontrola priezviska
+        if( trim($_POST["lname"])  == "" || strlen( trim($_POST["lname"]) ) < 2 
+        || strlen( trim($_POST["lname"]) ) > 40 ) {
+            $errors["lname"] = true;
+        }
+
+        //kontrola pohlavia
+        if( $_POST["gender"]  == 0 ) {
+            $errors["gender"] = true;
+        }
+
+        //kontrola veku
+        if( $_POST["age"]  == 0 ||  $_POST["age"] < 15 
+        || $_POST["age"] > 150  ) {
+            $errors["age"] = true;
+        }
+
+        //kontrola vysky
+        if( $_POST["height"]  == 0 || $_POST["height"] < 130 
+        || $_POST["height"] > 240 ) {
+            $errors["height"] = true;
+        }
+
+        //kontrola vahy
+        if( $_POST["weight"]  == 0 || $_POST["weight"] < 30 
+        || $_POST["weight"] > 220 ) {
+            $errors["weight"] = true;
+        }
+    }    
+
+    //kontrola chyb
+    if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] && !$errors["co_passwd"] 
+    && !$errors["fname"] && !$errors["lname"] && !$errors["gender"] && !$errors["age"]
+    && !$errors["height"] && !$errors["weight"] ) {
+        $errors["checked"] = true;
+    } else {
+        $errors["checked"] = false;
+    }
+
+    //ulozenie do databazy
+    if( $errors["checked"] ) {
+        $sql = "
+        UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
+        genderId='$gender', age='$age', height='$height', weight='$weight'
+        WHERE email='$email'
+        ";
+        //$sql = "INSERT INTO users (email, passwd, fname, lname, genderId, age, height, weight)
+        //VALUES ('$email', '$passwd', '$fname', '$lname', '$gender', '$age', '$height', '$weight')";
+
+        if (mysqli_query($conn, $sql)) {
+            $errors["registered"] = true;
+        } else {
+            $errors["registered"] = false;
+        }
+  
+        mysqli_close($conn);
+
+        //header("Location: ../log-in/log-in.php");
+    } 
+
 ?>
 
     <div id="content">
@@ -25,8 +161,8 @@
                     <div id="profile-content">
                         
                     <form action="" method="post" id="sign-up-formular">
-                        <?php //errorLOG($conn); ?>
-                        <?php //register($errors); ?>
+                        <?php errorLOG($conn); ?>
+                        <?php register($errors); ?>
 
                         <input type="text" id="email" 
                         class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>"  
