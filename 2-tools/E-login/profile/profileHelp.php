@@ -1,4 +1,22 @@
 <?php
+    function fname($conn){
+        $email = $_SESSION['email'];
+        $sql = "SELECT fname FROM users  
+        WHERE email='$email'";
+
+        $row = mySQLassoc($conn, $sql);
+        return $row['fname'];
+    }
+
+    function lname($conn){
+        $email = $_SESSION['email'];
+        $sql = "SELECT lname FROM users  
+        WHERE email='$email'";
+
+        $row = mySQLassoc($conn, $sql);
+        return $row['lname'];
+    }
+
     function gender($conn){
         $email = $_SESSION['email'];
         $sql = "SELECT genders.name FROM users  

@@ -128,13 +128,11 @@
 
     //ulozenie do databazy
     if( $errors["checked"] ) {
-        $sql = "
-        UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
-        genderId='$gender', age='$age', height='$height', weight='$weight'
-        WHERE email='$email'
-        ";
+        $sql = "UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
+        genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email';";
         //$sql = "INSERT INTO users (email, passwd, fname, lname, genderId, age, height, weight)
         //VALUES ('$email', '$passwd', '$fname', '$lname', '$gender', '$age', '$height', '$weight')";
+        mysqli_query($conn, $sql);
 
         if (mysqli_query($conn, $sql)) {
             $errors["registered"] = true;
@@ -166,13 +164,21 @@
 
                         <input type="text" id="email" 
                         class="<?php echo addClass( $errors["email"], $classes["eBorder"] ); ?>"  
-                        name="email" placeholder="E-mail" value="<?= $_POST["email"] ?>">
+                        name="email" placeholder="E-mail" 
+                        value="<?php 
+                        if($_POST["email"] == ""){
+                            echo $_SESSION['email'];
+                        } else {
+                            echo $_POST["email"];
+                        }
+                         ?>">
 
                         <?php //echo addClass( ($errors["email"]),  $eBorder); ?>
 
                         <input type="password" id="password" 
                         class="<?php echo addClass( $errors["passwd"], $classes["eBorder"] ); ?>" 
-                        name="passwd" placeholder="Heslo" value="<?= $_POST["passwd"] ?>">
+                        name="passwd" placeholder="Heslo" 
+                        value="<?= $_POST["passwd"] ?>">
 
                         <input type="password" id="co-password" 
                         class="<?php echo addClass( $errors["co_passwd"], $classes["eBorder"] ); ?>" 
@@ -180,11 +186,25 @@
 
                         <input type="text" id="fname" 
                         class="<?php echo addClass( $errors["fname"], $classes["eBorder"] ); ?>" 
-                        name="fname" placeholder="Meno" value="<?= ucfirst($_POST['fname']) ?>">
+                        name="fname" placeholder="Meno" 
+                        value="<?php 
+                        if($_POST["fname"] == ""){
+                            echo fname($conn);
+                        } else {
+                            echo $_POST["fname"];
+                        }
+                        ?>">
 
                         <input type="text" id="lname" 
                         class="<?php echo addClass( $errors["lname"], $classes["eBorder"] ); ?>" 
-                        name="lname" placeholder="Priezvisko" value="<?= ucfirst($_POST['lname']) ?>">
+                        name="lname" placeholder="Priezvisko" 
+                        value="<?php 
+                        if($_POST["lname"] == ""){
+                            echo lname($conn);
+                        } else {
+                            echo $_POST["lname"];
+                        }
+                        ?>">
 
                         <select id="gender" name="gender" 
                         class="<?php echo addClass( $errors["gender"], $classes["eBorder"] ); ?>" >
