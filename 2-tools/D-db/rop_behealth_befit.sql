@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS rop_behealth_befit;
 
-CREATE DATABASE rop_behealth_befit;
+CREATE DATABASE rop_behealth_befit CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 USE rop_behealth_befit;
 
@@ -81,7 +81,15 @@ CREATE TABLE exercises (
     name VARCHAR(35) NOT NULL
 ) Engine = Innodb;
 
-INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "tlak panvy nad seba");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "aktívny vis");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "vytlacanie z ramien");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "negatívny zhyb nadhmat");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "izometria podhmat");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "izometria nadhmat");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "austrálsky zhyb");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 2, "zhyb podhmat");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 2, "zhyb nadhmat");
+INSERT INTO exercises (partId, levelId, name) VALUES (1, 2, "austrálsky zhyb ťahší");
 
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "skracovačky");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "dotýkanie členkov");
@@ -92,14 +100,14 @@ INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "plank na kolenách"
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "kolíska");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "striedavé zdvihy nôh");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "horolezci");
-INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "ruské otočky");
+INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "ruské otočky ťahšie");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "stierače");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "nožnice");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "izometria");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "dragon flag");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "vznos do 180°");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "stierače ťahšie");
-INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "kolíska");
+INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "kolíska ťahšia");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "tlak panvy nad seba");
 
 CREATE TABLE activities (

@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'activity';
@@ -19,11 +19,13 @@
 
     //vyber vsetkych cvikov podla kategorii
     $caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
-    $caliPushs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
+    $caliPushs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='2'");
     $caliLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='3'");
     $caliCores =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
     $streNecks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='5'");
     $streHands =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='6'");
+    $streBacks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='7'");
+    $streLegss =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
 
 ?>
 
@@ -66,6 +68,34 @@
                                     <?php } ?>
                                 >
                                     <?= $caliPull["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <select id="calisthenics" name="push" 
+                        class="" >
+                            <option value="0">Vyber cvik na tlak</option>
+                            <?php foreach($caliPushs as $caliPush): ?>
+                                <option value="<?= $caliPush["idExercise"] ?>"
+                                    <?php if($_POST["core"] == $caliPush["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $caliPush["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <select id="calisthenics" name="leg" 
+                        class="" >
+                            <option value="0">Vyber cvik na nohy</option>
+                            <?php foreach($caliLegs as $caliLeg): ?>
+                                <option value="<?= $caliLeg["idExercise"] ?>"
+                                    <?php if($_POST["core"] == $caliLeg["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $caliLeg["name"] ?>
                                 </option>
                             <?php endforeach ?>
                         </select>
@@ -127,6 +157,34 @@
                                     <?php } ?>
                                 >
                                     <?= $streHand["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <select id="stretching" name="back" 
+                        class="" >
+                            <option value="0">Vyber cvik na chrbát</option>
+                            <?php foreach($streBacks as $streBack): ?>
+                                <option value="<?= $streBack["idExercise"] ?>"
+                                    <?php if($_POST["hand"] == $streBack["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $streBack["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <select id="stretching" name="leg" 
+                        class="" >
+                            <option value="0">Vyber cvik na nohy</option>
+                            <?php foreach($streLegs as $streLeg): ?>
+                                <option value="<?= $streLeg["idExercise"] ?>"
+                                    <?php if($_POST["hand"] == $streLeg["idExercise"]) { ?>
+                                        streLeg
+                                    <?php } ?>
+                                >
+                                    <?= $streLeg["name"] ?>
                                 </option>
                             <?php endforeach ?>
                         </select>
