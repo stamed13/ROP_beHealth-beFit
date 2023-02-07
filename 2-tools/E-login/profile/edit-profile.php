@@ -129,9 +129,10 @@
     //ulozenie do databazy
     if( $errors["checked"] ) {
         $sql = "UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
-        genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email';";
-        //$sql = "INSERT INTO users (email, passwd, fname, lname, genderId, age, height, weight)
-        //VALUES ('$email', '$passwd', '$fname', '$lname', '$gender', '$age', '$height', '$weight')";
+        genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email'";
+
+        //$sql = "UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
+        //genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email';";
         mysqli_query($conn, $sql);
 
         if (mysqli_query($conn, $sql)) {

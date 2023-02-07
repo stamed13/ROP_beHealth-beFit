@@ -40,6 +40,13 @@
 	    }
     }
 
+    //funkcia vykona prikaz spojeny s databazou
+    function mySQLupdate($conn, $sql) {
+        if ($conn->query($sql) === TRUE) {
+            echo true;
+        }
+    }
+
     //funkcia na presmerovanie na aktualnu stranku
     function actualLocation() {
         $location = substr_replace(" ", "Location:", 0, 0);

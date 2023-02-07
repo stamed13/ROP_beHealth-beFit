@@ -36,8 +36,8 @@ CREATE TABLE users (
     lname VARCHAR(40) NOT NULL,
     genderId TINYINT NOT NULL,
     age TINYINT NOT NULL,
-    height TINYINT NOT NULL,
-    weight TINYINT NOT NULL,
+    height INT NOT NULL,
+    weight INT NOT NULL,
     planId INT NOT NULL,
     adviceId INT NOT NULL
 ) Engine = Innodb;
