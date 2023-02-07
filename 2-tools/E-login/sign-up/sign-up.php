@@ -122,7 +122,7 @@
   
         mysqli_close($conn);
 
-        header("Location: ../log-in/log-in.php");
+        //header("Location: ../log-in/log-in.php");
     } 
 
 ?>

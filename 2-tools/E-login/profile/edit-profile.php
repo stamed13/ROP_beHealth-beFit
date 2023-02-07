@@ -222,16 +222,37 @@
                         </select>
 
                         <input type="number" id="age" 
-                        name="age" placeholder="Vek" value="<?= $_POST['age'] ?>"
-                        class="<?php echo addClass( $errors["age"], $classes["eBorder"] ); ?>" >
+                        name="age" placeholder="Vek" 
+                        class="<?php echo addClass( $errors["age"], $classes["eBorder"] ); ?>" 
+                        value="<?php 
+                        if($_POST["age"] == ""){
+                            echo age($conn);
+                        } else {
+                            echo $_POST["age"];
+                        }
+                         ?>">
 
                         <input type="number" id="height" 
-                        name="height" placeholder="Vyska" value="<?= $_POST['height'] ?>"
-                        class="<?php echo addClass( $errors["height"], $classes["eBorder"] ); ?>" >
+                        name="height" placeholder="Vyska" 
+                        class="<?php echo addClass( $errors["height"], $classes["eBorder"] ); ?>" 
+                        value="<?php 
+                        if($_POST["height"] == ""){
+                            echo height($conn);
+                        } else {
+                            echo $_POST["height"];
+                        }
+                         ?>">
 
                         <input type="number" id="weight" 
-                        name="weight" placeholder="Vaha" value="<?= $_POST['weight'] ?>"
-                        class="<?php echo addClass( $errors["weight"], $classes["eBorder"] ); ?>" >
+                        name="weight" placeholder="Vaha" 
+                        class="<?php echo addClass( $errors["weight"], $classes["eBorder"] ); ?>"
+                        value="<?php 
+                        if($_POST["weight"] == ""){
+                            echo weight($conn);
+                        } else {
+                            echo $_POST["weight"];
+                        }
+                         ?>">
 
                         <input type="submit" id="bt-register" name="submit" 
                         value="Register">
