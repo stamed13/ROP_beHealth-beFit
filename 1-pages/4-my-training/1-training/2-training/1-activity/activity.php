@@ -51,12 +51,14 @@
                         Pokojne si aktualizuj v priebehu dna. <?php //echo $_SESSION['email'] ?>
                     </div>
                 </div>
+                <!--
                 <div class="exercise">
-                    <h1>JADRO</h1>
-                    <?php foreach($caliCores as $caliPull): ?>
+                    <h1>NOHY</h1>
+                    <?php foreach($streLegs as $caliPull): ?>
                         <div><?= $caliPull["name"] ?></div>
                     <?php endforeach ?>
                 </div>
+                -->
             </article>
 
             <article class="form" id="cali">
