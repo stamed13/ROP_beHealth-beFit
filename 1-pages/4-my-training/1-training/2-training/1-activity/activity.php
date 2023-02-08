@@ -25,7 +25,14 @@
     $streNecks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='5'");
     $streHands =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='6'");
     $streBacks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='7'");
-    $streLegss =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
+    $streLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
+
+    // kontrola vyplnenia prveho formularu
+    function errorCALI(){
+        if( $_POST['saveCali'] ){
+            echo "<div class=''>nemas vyplnene</div>";
+        }
+    }
 
 ?>
 
@@ -41,7 +48,7 @@
                     <div id="content-title">Moja aktivita</div>
                     <div id="activity-info">
                         Nech sa paci,  tu mozes postupne vyplnit tvoju dennu aktivitu. 
-                        Pokojne si aktualizuj v priebehu dna. <?php //$_SESSION['email'] ?>
+                        Pokojne si aktualizuj v priebehu dna. <?php //echo $_SESSION['email'] ?>
                     </div>
                 </div>
             </article>
@@ -57,6 +64,8 @@
                     <?php //debug($_POST, "formular [data]"); ?>
 
                     <form action="" method="post" id="calisthenics">
+
+                    <?php errorCALI(); ?>
                         
                     <select id="calisthenics" name="pull" 
                         class="" >
@@ -114,7 +123,7 @@
                             <?php endforeach ?>
                         </select>
 
-                        <input type="submit" class="bt-save" name="save" 
+                        <input type="submit" class="bt-save" name="saveCali" 
                         value="Uložiť">
 
                     </form>
@@ -139,7 +148,7 @@
                             <?php foreach($streNecks as $streNeck): ?>
                                 <option value="<?= $streNeck["idExercise"] ?>"
                                     <?php if($_POST["neck"] == $streNeck["idExercise"]) { ?>
-                                        streNeck
+                                        selected
                                     <?php } ?>
                                 >
                                     <?= $streNeck["name"] ?>
@@ -181,7 +190,7 @@
                             <?php foreach($streLegs as $streLeg): ?>
                                 <option value="<?= $streLeg["idExercise"] ?>"
                                     <?php if($_POST["hand"] == $streLeg["idExercise"]) { ?>
-                                        streLeg
+                                        selected
                                     <?php } ?>
                                 >
                                     <?= $streLeg["name"] ?>
@@ -189,7 +198,7 @@
                             <?php endforeach ?>
                         </select>
                                     
-                        <input type="submit" class="bt-save" name="save" 
+                        <input type="submit" class="bt-save" name="saveSt" 
                         value="Uložiť">
                                     
                     </form>

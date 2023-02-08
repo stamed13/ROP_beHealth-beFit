@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS rop_behealth_befit;
 
-CREATE DATABASE rop_behealth_befit CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE rop_behealth_befit CHARACTER SET utf8 COLLATE utf8_slovak_ci;
 
 USE rop_behealth_befit;
 
@@ -164,9 +164,15 @@ CREATE TABLE activities (
     coreCa INT NOT NULL,
     legCa INT NOT NULL,
     neckSt INT NOT NULL,
-	handSt INT NOT NULL,
+	bicepsSt INT NOT NULL,
+	tricepsSt INT NOT NULL,
+	shoulderSt INT NOT NULL,
+	wristSt INT NOT NULL,
     backSt INT NOT NULL,
-    legSt INT NOT NULL
+    hamstringSt INT NOT NULL,
+	calfSt INT NOT NULL,
+	buttSt INT NOT NULL,
+	attractorSt INT NOT NULL
 ) Engine = Innodb;
 
 CREATE TABLE userActivity (
