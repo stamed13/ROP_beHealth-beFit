@@ -133,10 +133,10 @@ INSERT INTO exercises (partId, levelId, name) VALUES (3, 2, "drep na 1 nohe s no
 INSERT INTO exercises (partId, levelId, name) VALUES (3, 2, "izometria v polohe stolička");
 INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe so záťažou");
 INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe s nohou vo flexe");
-INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe s rukami za chrbtom");
+INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe, ruky za chrbtom");
 INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "skok na prekážku");
-INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe vo flexe a so záťažou");
-INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe vo flexe a s výskokom");
+INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe so záťažou");
+INSERT INTO exercises (partId, levelId, name) VALUES (3, 3, "drep na 1 nohe s výskokom");
 
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "skracovačky");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "dotýkanie členkov");

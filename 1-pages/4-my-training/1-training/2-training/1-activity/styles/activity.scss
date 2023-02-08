@@ -50,6 +50,13 @@
                     text-align: center;
                 }
             }
+
+            .exercise {
+                display: grid;
+                justify-items: left;
+                gap: 2px;
+                font-size: 25px;
+            }
         }
         // formulare dennej aktivity
         .form {

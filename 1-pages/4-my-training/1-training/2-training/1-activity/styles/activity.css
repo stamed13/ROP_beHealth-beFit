@@ -66,6 +66,14 @@
   text-align: center;
 }
 
+#content #activity #main .exercise {
+  display: -ms-grid;
+  display: grid;
+  justify-items: left;
+  gap: 2px;
+  font-size: 25px;
+}
+
 #content #activity .form {
   min-height: 100vh;
 }
@@ -197,4 +205,3 @@
 #content #activity .buttons-arrow .bt-arrow img {
   width: 30px;
 }
-/*# sourceMappingURL=activity.css.map */
