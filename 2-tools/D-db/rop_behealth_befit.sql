@@ -157,6 +157,52 @@ INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "stierače ťahšie"
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "kolíska ťahšia");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "tlak panvy nad seba");
 
+INSERT INTO exercises (partId, levelId, name) VALUES (5, 1, "predklon");
+INSERT INTO exercises (partId, levelId, name) VALUES (5, 1, "záklon");
+INSERT INTO exercises (partId, levelId, name) VALUES (5, 2, "malý úklon na stranu");
+INSERT INTO exercises (partId, levelId, name) VALUES (5, 2, "ťahanie hlavy nadol");
+INSERT INTO exercises (partId, levelId, name) VALUES (5, 3, "veľký úklon na stranu");
+INSERT INTO exercises (partId, levelId, name) VALUES (5, 3, "rotácia do strán");
+
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 1, "posuny v sede");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 1, "krúženie ramenami");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 1, "ťahanie sa za ramenom");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 1, "predklony so zápästím");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 2, "zdvih do polmostíka");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 2, "pretáčanie ramien s palicou");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 2, "ťahanie rúk pomocou expandera");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 2, "záklony s vytočeným zápästím");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 3, "výdrž v polmostíku");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 3, "posuny v striežke");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 3, "spojenie rúk za chrbtom");
+INSERT INTO exercises (partId, levelId, name) VALUES (6, 3, "záklony s pretočeným zápästím");
+
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "úklon do strany");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "mačací chrbát");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "kobra strečing");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "váľanie nôh");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "koba-zajac");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "úklony do strán");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "krúženie rukou na boku");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "pretáčanie ramien v ľahu");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 3, "výdrž v pluhu");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 3, "zbalená kolíska");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 3, "zakopávanie v ľahu");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 3, "výdrž v mostíku");
+
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 1, "predklon v sede");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 1, "kozácke drepy");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 1, "vystieranie nohy v ľahu");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 1, "pozícia dieťa");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 2, "širšia striežka");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 2, "motýlik");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 2, "pike pulses s 1 nohou");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 2, "pozícia holub");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 3, "užšia striežka");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 3, "výdrž v rozštepe");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 3, "pike pulses");
+INSERT INTO exercises (partId, levelId, name) VALUES (8, 3, "zakláňanie sa v striežke");
+
 CREATE TABLE activities (
 	idActivity INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     pullCa INT NOT NULL,

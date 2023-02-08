@@ -165,7 +165,7 @@
                         <select id="stretching" name="hand" 
                         class="" >
                             <option value="0">Vyber cvik na ruky</option>
-                            <?php foreach($streHands as $castreHandliCore): ?>
+                            <?php foreach($streHands as $streHand): ?>
                                 <option value="<?= $streHand["idExercise"] ?>"
                                     <?php if($_POST["hand"] == $streHand["idExercise"]) { ?>
                                         selected
