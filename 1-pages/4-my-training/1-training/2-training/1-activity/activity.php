@@ -27,6 +27,11 @@
     $streBacks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='7'");
     $streLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
 
+    // ak nie som prihlaseny presmeruje naspat
+    if( $_SESSION['login'] == false ){
+        header("Location: ../training.php");
+    }
+
     // kontrola vyplnenia prveho formularu
     function errorCALI(){
         if( $_POST['saveCali'] ){
