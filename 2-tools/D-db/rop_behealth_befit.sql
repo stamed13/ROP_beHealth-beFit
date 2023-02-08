@@ -78,7 +78,7 @@ CREATE TABLE exercises (
 	idExercise INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     partId INT NOT NULL,
     levelId INT NOT NULL,
-    name VARCHAR(35) NOT NULL
+    name VARCHAR(40) NOT NULL
 ) Engine = Innodb;
 
 INSERT INTO exercises (partId, levelId, name) VALUES (1, 1, "aktívny vis");
