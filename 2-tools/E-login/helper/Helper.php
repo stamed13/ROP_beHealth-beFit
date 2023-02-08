@@ -28,6 +28,9 @@
         if($result->num_rows> 0){
             return mysqli_fetch_all($result, MYSQLI_ASSOC);
         }
+        else {
+            return 0;
+        }
     }
 
     //funkcia vykona prikaz spojeny s databazou
@@ -38,6 +41,9 @@
 	    	$row = mysqli_fetch_assoc($result);
             return $row;
 	    }
+        else {
+            return 0;
+        }
     }
 
     //funkcia vykona prikaz spojeny s databazou

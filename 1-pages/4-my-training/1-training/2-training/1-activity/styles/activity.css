@@ -158,6 +158,30 @@
   border: none;
 }
 
+#content #activity .form .rText {
+  padding: 5px;
+  font-size: 20px;
+  background: red;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+#content #activity .form .gText {
+  padding: 5px;
+  font-size: 20px;
+  background: green;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+#content #activity .form .oText {
+  padding: 5px;
+  font-size: 20px;
+  background: orange;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
 #content #activity #cali .form-content .form-title {
   color: #000;
   background: #e27e0c;

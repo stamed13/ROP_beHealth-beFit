@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ERROR);// E_ALL, E_WARNING
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'activity';
@@ -35,7 +35,11 @@
     // kontrola vyplnenia prveho formularu
     function errorCALI(){
         if( $_POST['saveCali'] ){
-            echo "<div class=''>nemas vyplnene</div>";
+            echo "<div class='rText'>nemas vyplnene</div>";
+
+            if( mySQLassoc($conn, "") == 1 ){
+                echo "Ahoj! Vidim, ze si to este kratko.";
+            }
         }
     }
 

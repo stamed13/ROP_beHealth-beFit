@@ -127,6 +127,30 @@
                     }
                 }
             }
+            //
+            .rText {
+                padding: 5px;
+                font-size: 20px;
+                background: red;
+                color: whitesmoke;
+                border-radius: 10px;
+            }
+
+            .gText {
+                padding: 5px;
+                font-size: 20px;
+                background: green;
+                color: whitesmoke;
+                border-radius: 10px;
+            }
+
+            .oText {
+                padding: 5px;
+                font-size: 20px;
+                background: orange;
+                color: whitesmoke;
+                border-radius: 10px;
+            }
         }
         // formular posilovanie
         #cali {
