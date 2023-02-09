@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'activity';
@@ -14,6 +14,7 @@
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
+    require_once ('activityHelp.php');
 
     //debug($_POST, "formular [data]");
 
@@ -32,16 +33,7 @@
         header("Location: ../training.php");
     }
 
-    // kontrola vyplnenia prveho formularu
-    function errorCALI(){
-        if( $_POST['saveCali'] ){
-            echo "<div class='rText'>nemas vyplnene</div>";
-
-            if( mySQLassoc($conn, "") == 1 ){
-                echo "Ahoj! Vidim, ze si to este kratko.";
-            }
-        }
-    }
+    
 
 ?>
 
@@ -103,7 +95,7 @@
                             <option value="0">Vyber cvik na tlak</option>
                             <?php foreach($caliPushs as $caliPush): ?>
                                 <option value="<?= $caliPush["idExercise"] ?>"
-                                    <?php if($_POST["core"] == $caliPush["idExercise"]) { ?>
+                                    <?php if($_POST["push"] == $caliPush["idExercise"]) { ?>
                                         selected
                                     <?php } ?>
                                 >
@@ -117,7 +109,7 @@
                             <option value="0">Vyber cvik na nohy</option>
                             <?php foreach($caliLegs as $caliLeg): ?>
                                 <option value="<?= $caliLeg["idExercise"] ?>"
-                                    <?php if($_POST["core"] == $caliLeg["idExercise"]) { ?>
+                                    <?php if($_POST["leg"] == $caliLeg["idExercise"]) { ?>
                                         selected
                                     <?php } ?>
                                 >
@@ -158,6 +150,8 @@
                     <?php //debug($_POST, "formular [data]"); ?>
 
                     <form action="" method="post" id="calisthenics">
+
+                    <?php errorSTRETCH(); ?>
     
                     <select id="stretching" name="neck" 
                         class="" >

@@ -147,14 +147,14 @@ INSERT INTO exercises (partId, levelId, name) VALUES (4, 1, "plank na kolenách"
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "kolíska");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "striedavé zdvihy nôh");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "horolezci");
-INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "ruské otočky ťahšie");
+INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "ruské otočky ťažšie");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "stierače");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "nožnice");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 2, "izometria");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "dragon flag");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "vznos do 180°");
-INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "stierače ťahšie");
-INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "kolíska ťahšia");
+INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "stierače ťažšie");
+INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "kolíska ťažšia");
 INSERT INTO exercises (partId, levelId, name) VALUES (4, 3, "tlak panvy nad seba");
 
 INSERT INTO exercises (partId, levelId, name) VALUES (5, 1, "predklon");
@@ -210,15 +210,9 @@ CREATE TABLE activities (
     coreCa INT NOT NULL,
     legCa INT NOT NULL,
     neckSt INT NOT NULL,
-	bicepsSt INT NOT NULL,
-	tricepsSt INT NOT NULL,
-	shoulderSt INT NOT NULL,
-	wristSt INT NOT NULL,
+	handSt INT NOT NULL,
     backSt INT NOT NULL,
-    hamstringSt INT NOT NULL,
-	calfSt INT NOT NULL,
-	buttSt INT NOT NULL,
-	attractorSt INT NOT NULL
+	legSt INT NOT NULL
 ) Engine = Innodb;
 
 CREATE TABLE userActivity (

@@ -183,12 +183,12 @@
     if ( $errors["checked"] == true ) {
         //uspech
         if( $errors["registered"] == true ) {
-            echo "<p class='gText'> Úspešná registrácia! </p>";
+            echo "<p class='gText'> Úspech! </p>";
         }
 
         //neuspech
         if( $errors["registered"] == false ) {
-            echo "<p class='rText'> Neúspešná registrácia! </p>";
+            echo "<p class='rText'> Chyba! </p>";
         }
     }
 }
