@@ -55,7 +55,16 @@
         "loged" => false,
     ];
 
-    saveActivity($conn, $calisthenics, $errors);
+    //saveActivity($conn, $calisthenics, $errors);
+    
+    $sql = "INSERT INTO useractivity (userId) 
+    VALUES ( $idUSer )";
+    if (mysqli_query($conn, $sql)) {
+        echo "uspech";
+    } else {
+        echo "chyba";
+    }
+    mysqli_close($conn);
     
 ?>
 
@@ -97,7 +106,8 @@
                     <form action="" method="post" id="calisthenics">
 
                     <?php errorCALI($errors); ?>
-                    <?php warningCALI(); ?>
+                    <?php warningCALI($errors); ?>
+                    <?php infoCALI($errors); ?>
                         
                     <select id="calisthenics" name="pull" 
                         class="" >

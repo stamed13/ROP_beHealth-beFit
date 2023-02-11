@@ -10,9 +10,10 @@
             }
         }
 
-        if($errors["success"]){
-
-        }
+        // vytvorenie alebo aktualizovanie aktivity - chyba
+        if( ! $errors["success"]){
+            //echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+        } 
     }
 
     // kontrola vyplnenia druheho formularu - chyby
@@ -21,7 +22,7 @@
     }
 
     // kontrola vyplnenia prveho formularu - varovania
-    function warningCALI(){
+    function warningCALI($errors){
         if( $_POST['saveCali'] ){
 
             
@@ -42,27 +43,36 @@
     }
 
     // kontrola vyplnenia prveho formularu - informacie
-    function infoSTRETCH(){
-        if( $_POST['saveStre'] ){
-            
+    function infoCALI($errors){
+        if( $_POST['saveCali'] ){
+            // vytvorenie alebo aktualizovanie aktivity
+            if($errors["success"]){
+                echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+            } 
         }
     }
 
     // ulozenie aktivity
     function saveActivity($conn, $calisthenics, $errors){
         $idUSer = $_SESSION['idUser'];
+        $pull = $calisthenics["pull"];
+        $push = $calisthenics["push"];
+        $core = $calisthenics["core"];
+        $leg = $calisthenics["leg"];
 
         // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
-        if( ! mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUSer' AND (SELECT CURDATE())") ){
+        if( mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
             // vytvorenie aktivity z cvikov posilovania
             if( $_POST['saveCali'] ){
                 // kontrola formularu
-                if( $_POST["pull"] == 0 && $_POST["push"] == 0 
-                && $_POST["leg"] == 0 && $_POST["core"] == 0 ) {
-                    $sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
-                    VALUES ( (SELECT CURDATE()), $idUSer, $calisthenics['pull'], $calisthenics['push'], $calisthenics['core'], $calisthenics['leg'] )";
+                //if( $_POST["pull"] == 0 && $_POST["push"] == 0 
+                //&& $_POST["leg"] == 0 && $_POST["core"] == 0 )
 
-                    mysqli_query($conn, $sql);
+                if( 1 == 1 ) {
+                    //$sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
+                    //VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $leg )";
+
+                    $sql = "SELECT CURDATE()";
 
                     if (mysqli_query($conn, $sql)) {
                         $errors["success"] = true;
