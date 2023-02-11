@@ -57,14 +57,7 @@
 
     //saveActivity($conn, $calisthenics, $errors);
     
-    $sql = "INSERT INTO useractivity (userId) 
-    VALUES ( $idUSer )";
-    if (mysqli_query($conn, $sql)) {
-        echo "uspech";
-    } else {
-        echo "chyba";
-    }
-    mysqli_close($conn);
+    
     
 ?>
 
@@ -109,6 +102,24 @@
                     <?php warningCALI($errors); ?>
                     <?php infoCALI($errors); ?>
                         
+                        <?php
+                            $idUSer = $_SESSION['idUser'];
+                            $sql = "INSERT INTO useractivity (userId) VALUES ( $idUSer )";
+                            if (mysqli_query($conn, $sql)) {
+                                echo "uspech";
+                            } else {
+                                echo "chyba";
+                            }
+                            
+
+                            $email = $_SESSION['email'];
+                            echo $_SESSION['email'];
+                            $id =  mySQLassoc($conn, "SELECT * FROM users WHERE email='$email'");
+                            echo $id["idUser"];
+
+                            mysqli_close($conn);
+                        ?>
+
                     <select id="calisthenics" name="pull" 
                         class="" >
                             <option value="0">Vyber cvik na pritah</option>
