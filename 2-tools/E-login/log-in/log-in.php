@@ -58,6 +58,7 @@
         if( count($_POST) != 0 && !$errors["email"] && !$errors["passwd"] ) {
             $errors["checked"] = true;
             $_SESSION['login'] = true;
+            $_SESSION['idUser'] = mySQLassoc($conn, "SELECT idUser FROM users WHERE email='$email'");
             $_SESSION['email'] = $_POST['email'];
             $inicialy = inicialy($conn, "SELECT * FROM users WHERE email='$email'");
             $_SESSION['name'] = $inicialy;//pridanie inicialov

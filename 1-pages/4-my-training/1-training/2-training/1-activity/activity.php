@@ -39,6 +39,23 @@
     $caPushVal = $_POST["push"];
     $caLegVal = $_POST["leg"];
     $caCoreVal = $_POST["core"];*/
+
+    $calisthenics = [
+        "pull" => $_POST["pull"],
+        "push" => $_POST["push"],
+        "leg" => $_POST["leg"],
+        "core" => $_POST["core"],
+    ];
+
+    $errors = [
+        "checked" => false,
+        "success" => false,
+        "email" => false,
+        "passwd" => false,
+        "loged" => false,
+    ];
+
+    saveActivity($conn, $calisthenics, $errors);
     
 ?>
 
@@ -79,7 +96,7 @@
 
                     <form action="" method="post" id="calisthenics">
 
-                    <?php errorCALI(); ?>
+                    <?php errorCALI($errors); ?>
                     <?php warningCALI(); ?>
                         
                     <select id="calisthenics" name="pull" 
@@ -215,7 +232,7 @@
                             <?php endforeach ?>
                         </select>
                                     
-                        <input type="submit" class="bt-save" name="saveSt" 
+                        <input type="submit" class="bt-save" name="saveStre" 
                         value="Uložiť">
                                     
                     </form>
