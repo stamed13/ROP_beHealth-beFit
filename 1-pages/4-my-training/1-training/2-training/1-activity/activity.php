@@ -34,9 +34,12 @@
     $streLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
 
     // premenne na ulozenie stavu vyplnenia oboch formularov
-    $caPullVal = $_POST["pull"];
+    // ne bars funguje
+    /*$caPullVal = $_POST["pull"];
+    $caPushVal = $_POST["push"];
+    $caLegVal = $_POST["leg"];
+    $caCoreVal = $_POST["core"];*/
     
-
 ?>
 
 
@@ -77,6 +80,7 @@
                     <form action="" method="post" id="calisthenics">
 
                     <?php errorCALI(); ?>
+                    <?php warningCALI(); ?>
                         
                     <select id="calisthenics" name="pull" 
                         class="" >
@@ -153,7 +157,7 @@
 
                     <form action="" method="post" id="calisthenics">
 
-                    <?php errorSTRETCH(); ?>
+                    <?php //errorSTRETCH(); ?>
     
                     <select id="stretching" name="neck" 
                         class="" >
@@ -217,6 +221,16 @@
                     </form>
                 </div>
             </article>
+
+            <div>
+                <?php
+                    // kontrola premennych
+                    /*echo "pull:  "; echo $caPullVal; 
+                    echo "  push:  "; echo $caPushVal;
+                    echo "  leg:   "; echo $caLegVal;
+                    echo "  core:  "; echo $caCoreVal;*/
+                ?>
+            </div>
         </section>
 
         

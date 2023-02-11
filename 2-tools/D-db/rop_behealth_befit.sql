@@ -204,22 +204,20 @@ INSERT INTO exercises (partId, levelId, name) VALUES (8, 3, "pike pulses");
 INSERT INTO exercises (partId, levelId, name) VALUES (8, 3, "zakláňanie sa v striežke");
 
 CREATE TABLE activities (
-	idActivity INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    pullCa INT NOT NULL,
-    pushCa INT NOT NULL,
-    coreCa INT NOT NULL,
-    legCa INT NOT NULL,
-    neckSt INT NOT NULL,
-	handSt INT NOT NULL,
-    backSt INT NOT NULL,
-	legSt INT NOT NULL
+	idActivity INT NOT NULL PRIMARY KEY AUTO_INCREMENT
 ) Engine = Innodb;
 
 CREATE TABLE userActivity (
 	idUsrAct BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	date DATE,
     userId INT NOT NULL,
-	activityId INT NOT NULL,
-    FOREIGN KEY (userId) REFERENCES users(idUser),
-	FOREIGN KEY (activityId) REFERENCES activities(idActivity)
+	pullCa INT NOT NULL,
+    pushCa INT NOT NULL,
+    coreCa INT NOT NULL,
+    legCa INT NOT NULL,
+    neckSt INT NOT NULL,
+	handSt INT NOT NULL,
+    backSt INT NOT NULL,
+	legSt INT NOT NULL,
+    FOREIGN KEY (userId) REFERENCES users(idUser)
 ) Engine = Innodb;
