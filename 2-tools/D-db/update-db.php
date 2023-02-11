@@ -4,11 +4,30 @@
     require_once ('../E-login/helper/config.php');
     require_once ('../E-login/helper/Helper.php');
 
-    function update($conn){
-        // naplnenie tabulky vsetkymi moznymi
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (1, 1, 1, 1, 1, 1, 1, 1, 1)";
+    function updateACTIVITY($conn){
+        // vyprazdenie tabulke
+        $sql = "TRUNCATE TABLE activities";
         mysqli_query($conn, $sql);
+
+        // naplnenie tabulky vsetkymi moznymi
+        // len 1, 2, 3
+        $sql = "INSERT INTO activities (idActivity) VALUES (1)";   mysqli_query($conn, $sql);
+        $sql = "UPDATE activities SET pullCa='1', pushCa='1', coreCa='1', legCa='1', neckSt='1', handSt='1', backSt='1', legSt='1' WHERE idActivity=1";
+        mysqli_query($conn, $sql);
+
+        $sql = "INSERT INTO activities (idActivity) VALUES (2)";   mysqli_query($conn, $sql);
+        $sql = "UPDATE activities SET pullCa='2', pushCa='2', coreCa='2', legCa='2', neckSt='2', handSt='2', backSt='2', legSt='2' WHERE idActivity=2";
+        mysqli_query($conn, $sql);
+
+        $sql = "INSERT INTO activities (idActivity) VALUES (3)";   mysqli_query($conn, $sql);
+        $sql = "UPDATE activities SET pullCa='3', pushCa='3', coreCa='3', legCa='3', neckSt='3', handSt='3', backSt='3', legSt='3' WHERE idActivity=3";
+        mysqli_query($conn, $sql);
+
+
+        // zaciatocnik a pokrocily
+
+
+
 
         $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
         VALUES (2, 2, 1, 1, 1, 1, 1, 1, 1)";
@@ -37,12 +56,6 @@
         $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
         VALUES (8, 2, 2, 2, 2, 2, 2, 2, 1)";
         mysqli_query($conn, $sql);
-
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (9, 2, 2, 2, 2, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
 
         $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
         VALUES (10, 1, 2, 2, 2, 2, 2, 2, 2)";
@@ -152,152 +165,22 @@
         mysqli_query($conn, $sql);
 
 
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (36, 3, 3, 3, 3, 3, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (37, 2, 3, 3, 3, 3, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (38, 2, 2, 3, 3, 3, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (39, 2, 2, 2, 1, 3, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (40, 2, 2, 2, 2, 3, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (41, 2, 2, 2, 2, 2, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (42, 2, 2, 2, 2, 2, 2, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (43, 2, 2, 2, 2, 2, 2, 2, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (44, 3, 2, 2, 2, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (45, 3, 3, 2, 2, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (46, 3, 3, 3, 2, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (47, 3, 3, 3, 3, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (48, 3, 3, 3, 3, 3, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (49, 3, 3, 3, 3, 3, 3, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (50, 3, 3, 3, 3, 3, 3, 3, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (51, 2, 3, 2, 2, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (52, 2, 3, 2, 3, 2, 2, 2, 2)";
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (53, 2, 3, 2, 3, 3, 2, 2, 2)";
-        mysqli_query($conn, $sql);        
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (54, 2, 3, 2, 3, 3, 3, 2, 2)";
-        mysqli_query($conn, $sql);        
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (55, 2, 3, 2, 3, 3, 3, 3, 2)";
-        mysqli_query($conn, $sql);        
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (56, 2, 3, 2, 3, 3, 3, 3, 3)";
-        mysqli_query($conn, $sql);        
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (56, 2, 2, 3, 2, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (57, 2, 2, 3, 2, 3, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (58, 2, 2, 3, 2, 3, 3, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (59, 2, 2, 3, 2, 3, 3, 3, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (60, 2, 2, 3, 2, 3, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (61, 2, 2, 2, 3, 2, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (62, 2, 2, 2, 3, 2, 3, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (63, 2, 2, 2, 3, 2, 3, 3, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (64, 2, 2, 2, 3, 2, 3, 3, 3)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (65, 2, 2, 2, 2, 3, 2, 2, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (66, 2, 2, 2, 2, 3, 2, 3, 2)";
-        mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (67, 2, 2, 2, 2, 3, 2, 3, 3)";
-        mysqli_query($conn, $sql);
+        // pokrocily a expert
         
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (68, 2, 2, 2, 2, 2, 3, 2, 2)";
+
+
+        /*
+        $sql = "INSERT INTO activities (idActivity) VALUES (35)";
         mysqli_query($conn, $sql);
-
-        $sql = "INSERT INTO activities (idActivity, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) 
-        VALUES (69, 2, 2, 2, 2, 2, 3, 2, 3)";
+        $sql = "UPDATE activities SET pullCa='0', pushCa='0', coreCa='0', legCa='0', neckSt='0', handSt='0', backSt='0', legSt='0' WHERE idActivity=50";
         mysqli_query($conn, $sql);
+        */
 
-
-        /*if (mysqli_query($conn, $sql)) {
+        if (mysqli_query($conn, $sql)) {
             echo "USPECH!!!";
         } else {
             echo "CHYBA!!!";
-        }*/
+        }
   
         mysqli_close($conn);
     }
@@ -305,6 +188,18 @@
     
 ?>
 
-<h1>ADMIN</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update-DB</title>
+</head>
+<body>
+    <h1>ADMIN</h1>
 
-<?php update($conn); ?>
+    <?php updateACTIVITY($conn); ?>
+
+</body>
+</html>

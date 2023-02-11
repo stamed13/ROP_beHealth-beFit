@@ -10,6 +10,11 @@
     //pripojenie header casti
     include('../../layout/header.php');
 
+    // ak nie som prihlaseny presmeruje naspat
+    if( $_SESSION['login'] == false ){
+        header("Location: ../training.php");
+    }
+
     $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/1-activity/activity.php#main";
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
@@ -28,11 +33,8 @@
     $streBacks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='7'");
     $streLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
 
-    // ak nie som prihlaseny presmeruje naspat
-    if( $_SESSION['login'] == false ){
-        header("Location: ../training.php");
-    }
-
+    // premenne na ulozenie stavu vyplnenia oboch formularov
+    $caPullVal = $_POST["pull"];
     
 
 ?>
