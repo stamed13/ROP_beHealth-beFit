@@ -118,14 +118,22 @@
                     $leg = $calisthenics["leg"];
 
                     // zistenie obtiaznosti cviku danej oblasti posilovania
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$pull'");
-                    $pull = $row["levelId"];
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$push'");
-                    $push = $row["levelId"];
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$core'");
-                    $core = $row["levelId"];
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
-                    $leg = $row["levelId"];
+                    if( $pull > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$pull'");
+                        $pull = $row["levelId"];
+                    }
+                    if( $push > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$push'");
+                        $push = $row["levelId"];
+                    }
+                    if( $core > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$core'");
+                        $core = $row["levelId"];
+                    }
+                    if( $leg > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
+                        $leg = $row["levelId"];
+                    }
                     
 
                     /*
@@ -306,15 +314,26 @@
                     $back = $calisthenics["back"];
                     $leg = $calisthenics["leg"];
 
+                    echo $neck;
+
                     // zistenie obtiaznosti cviku danej oblasti strecingu
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$neck'");
-                    $neck = $row["levelId"];
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$hand'");
-                    $hand = $row["levelId"];
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$back'");
-                    $back = $row["levelId"];
-                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
-                    $leg = $row["levelId"];
+                    if( $neck > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$neck'");
+                        $neck = $row["levelId"];
+                    }
+                    if( $hand > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$hand'");
+                        $hand = $row["levelId"];
+                    }
+                    if( $back > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$back'");
+                        $back = $row["levelId"];
+                    }
+                    if( $leg > 0 ){
+                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
+                        $leg = $row["levelId"];
+                    }
+                    
                     
                     // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
                     if( mySQLall($conn, "SELECT * FROM useractivity 
