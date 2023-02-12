@@ -9,20 +9,33 @@
                 echo "<div class='rText'>Vyber aspon jeden cvik na posilovanie!</div>";
             } 
             // ak vyplnil apon jeden cvik
-            else {
-
+            if($errors["checked"] == false) {
+                // vytvorenie alebo aktualizovanie aktivity - chyba
+                if( $errors["success"] == false ){
+                    //echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+                } 
             }
         }
 
-        // vytvorenie alebo aktualizovanie aktivity - chyba
-        if( ! $errors["success"]){
-            echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
-        } 
     }
 
     // kontrola vyplnenia druheho formularu - chyby
-    function errorSTRETCH(){
-        
+    function errorSTRETCH($errors){
+        if( $_POST['saveStre'] ){
+
+            // ak nevyplnil apon jeden cvik
+            if( $_POST["neck"] == 0 && $_POST["hand"] == 0 
+            && $_POST["back"] == 0 && $_POST["leg"] == 0 ){
+                echo "<div class='rText'>Vyber aspon jeden cvik na strecing!</div>";
+            } 
+            // ak vyplnil apon jeden cvik
+            if($errors["checked"] == false) {
+                // vytvorenie alebo aktualizovanie aktivity - chyba
+                if( $errors["success"] == false ){
+                    //echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+                } 
+            }
+        }
     }
 
     // kontrola vyplnenia prveho formularu - varovania
@@ -49,10 +62,34 @@
     // kontrola vyplnenia prveho formularu - informacie
     function infoCALI($errors){
         if( $_POST['saveCali'] ){
-            // vytvorenie alebo aktualizovanie aktivity
-            if($errors["success"]){
-                echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+            // ak nevyplnil apon jeden cvik
+            if( $_POST["pull"] == 0 && $_POST["push"] == 0 
+            && $_POST["leg"] == 0 && $_POST["core"] == 0 ){
+                
             } 
+            if($errors["checked"] == false) {
+                // vytvorenie alebo aktualizovanie aktivity
+                if( $errors["success"] == true){
+                    //echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+                } 
+            }
+        }
+    }
+
+    // kontrola vyplnenia prveho formularu - informacie
+    function infoSTRETCH($errors){
+        if( $_POST['saveStre'] ){
+            // ak nevyplnil apon jeden cvik
+            if( $_POST["neck"] == 0 && $_POST["hand"] == 0 
+            && $_POST["back"] == 0 && $_POST["leg"] == 0 ){
+                
+            } 
+            if($errors["checked"] == false) {
+                // vytvorenie alebo aktualizovanie aktivity
+                if( $errors["success"] == true){
+                    //echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+                } 
+            }
         }
     }
 

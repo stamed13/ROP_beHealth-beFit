@@ -104,6 +104,8 @@
                         $errors["checked"] = false;
                     }
 
+                    //$errors["success"] = true;
+
                     errorCALI($errors); 
                     warningCALI($errors);
                     infoCALI($errors);
@@ -115,22 +117,85 @@
                         "core" => $_POST["core"],
                     ];
 
-                    saveActivity($conn, $calisthenics, $errors);
+                    //saveActivity($conn, $calisthenics, $errors);
 
                     $idUSer = $_SESSION['idUser'];
                     $pull = $calisthenics["pull"];
                     $push = $calisthenics["push"];
                     $core = $calisthenics["core"];
                     $leg = $calisthenics["leg"];
+                    
+                    // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
+                    if( mySQLall($conn, "SELECT * FROM useractivity 
+                    WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+                    //if(1 == 1){
+                        echo "Dnes nie je aktivita.  ";
+                    
+                        // vytvorenie aktivity z cvikov posilovania
+                        if( $_POST['saveCali'] ){
+                            //echo "Odoslany formular. ";
+                        
+                            // kontrola formularu
+                            if( $errors["checked"] == false ) {
+                                //echo "Spravny formular.";
+                            
+                                $sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
+                                VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $leg )";
 
-                          $sql = "TRUNCATE useractivity";
+                                //$sql = "SELECT CURDATE()";
+                            
+                                if (mysqli_query($conn, $sql)) {
+                                    $errors["success"] = true;
+                                    echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+                                } else {
+                                    $errors["success"] = false;
+                                    echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+                                }
+  
+                                mysqli_close($conn);
+                            }
+                        }
+
+                    } 
+                    // ak je vytvorena, aktualizujem aktivitu 
+                    else {
+                        echo "Dnes uz je aktivita.  ";
+
+                        // aktualizovanie aktivity z cvikov posilovania
+                        if( $_POST['saveCali'] ){
+                            //echo "Odoslany formular. ";
+
+                            // kontrola formularu
+                            if( $errors["checked"] == false ) {
+                                //echo "Spravny formular.";
+
+                                $sql = "UPDATE useractivity SET pullCa='$pull', pushCa='$push', coreCa='$core', 
+                                legCa='$leg' WHERE userId='$idUSer' AND (SELECT CURDATE())";
+
+                                //$sql = "SELECT CURDATE()";
+
+                                if (mysqli_query($conn, $sql)) {
+                                    $errors["success"] = true;
+                                    echo "<div class='gText'>Uspesne aktualizovanie aktivity!</div>";
+                                } else {
+                                    $errors["success"] = false;
+                                    echo "<div class='rText'>Neuspesne aktualizovanie aktivity!</div>";
+                                }
+  
+                                mysqli_close($conn);
+                            }
+                        }
+
+                    }
+
+                    /*      $sql = "TRUNCATE useractivity";
                             if (mysqli_query($conn, $sql)) {
                                 echo "uspech";
                             } else {
                                 echo "chyba";
                             }
 
-                            mysqli_close($conn);    
+                            mysqli_close($conn);    */
                     ?>
 
                     <select id="calisthenics" name="pull" 
@@ -208,7 +273,110 @@
 
                     <form action="" method="post" id="calisthenics">
 
-                    <?php //errorSTRETCH(); ?>
+                    <?php
+                    // ak nevyplnil apon jeden cvik 
+                    if( $_POST["neck"] == 0 && $_POST["hand"] == 0 
+                    && $_POST["back"] == 0 && $_POST["leg"] == 0 ){
+                        $errors["checked"] = true;
+                    } 
+                    // ak vyplnil apon jeden cvik
+                    else {
+                        $errors["checked"] = false;
+                    }
+
+                    //$errors["success"] = true;
+
+                    errorSTRETCH($errors); 
+                    //warningCALI($errors);
+                    infoSTRETCH($errors);
+
+                    $calisthenics = [
+                        "neck" => $_POST["neck"],
+                        "hand" => $_POST["hand"],
+                        "back" => $_POST["back"],
+                        "leg" => $_POST["leg"],
+                    ];
+
+                    //saveActivity($conn, $calisthenics, $errors);
+
+                    $idUSer = $_SESSION['idUser'];
+                    $neck = $calisthenics["neck"];
+                    $hand = $calisthenics["hand"];
+                    $back = $calisthenics["back"];
+                    $leg = $calisthenics["leg"];
+                    
+                    // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
+                    if( mySQLall($conn, "SELECT * FROM useractivity 
+                    WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+                    //if(1 == 1){
+                        echo "Dnes nie je aktivita.  ";
+                    
+                        // vytvorenie aktivity z cvikov posilovania
+                        if( $_POST['saveStre'] ){
+                            //echo "Odoslany formular. ";
+                        
+                            // kontrola formularu
+                            if( $errors["checked"] == false ) {
+                                //echo "Spravny formular.";
+                            
+                                $sql = "INSERT INTO useractivity (date, userId, neckSt, handSt, backSt, legSt) 
+                                VALUES ( (SELECT CURDATE()), $idUSer, $neck, $hand, $back, $leg )";
+
+                                //$sql = "SELECT CURDATE()";
+                            
+                                if (mysqli_query($conn, $sql)) {
+                                    $errors["success"] = true;
+                                    echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+                                } else {
+                                    $errors["success"] = false;
+                                    echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+                                }
+  
+                                mysqli_close($conn);
+                            }
+                        }
+
+                    } 
+                    // ak je vytvorena, aktualizujem aktivitu 
+                    else {
+                        echo "Dnes uz je aktivita.  ";
+
+                        // aktualizovanie aktivity z cvikov posilovania
+                        if( $_POST['saveStre'] ){
+                            //echo "Odoslany formular. ";
+
+                            // kontrola formularu
+                            if( $errors["checked"] == false ) {
+                                //echo "Spravny formular.";
+
+                                $sql = "UPDATE useractivity SET neckSt='$neck', handSt='$hand', backSt='$back', 
+                                legSt='$leg' WHERE userId='$idUSer' AND (SELECT CURDATE())";
+
+                                //$sql = "SELECT CURDATE()";
+
+                                if (mysqli_query($conn, $sql)) {
+                                    $errors["success"] = true;
+                                    echo "<div class='gText'>Uspesne aktualizovanie aktivity!</div>";
+                                } else {
+                                    $errors["success"] = false;
+                                    echo "<div class='rText'>Neuspesne aktualizovanie aktivity!</div>";
+                                }
+  
+                                mysqli_close($conn);
+                            }
+                        }
+
+                    }
+
+                    /*      $sql = "TRUNCATE useractivity";
+                            if (mysqli_query($conn, $sql)) {
+                                echo "uspech";
+                            } else {
+                                echo "chyba";
+                            }
+
+                            mysqli_close($conn);    */
+                    ?>
     
                     <select id="stretching" name="neck" 
                         class="" >
@@ -243,7 +411,7 @@
                             <option value="0">Vyber cvik na chrbát</option>
                             <?php foreach($streBacks as $streBack): ?>
                                 <option value="<?= $streBack["idExercise"] ?>"
-                                    <?php if($_POST["hand"] == $streBack["idExercise"]) { ?>
+                                    <?php if($_POST["back"] == $streBack["idExercise"]) { ?>
                                         selected
                                     <?php } ?>
                                 >
@@ -257,7 +425,7 @@
                             <option value="0">Vyber cvik na nohy</option>
                             <?php foreach($streLegs as $streLeg): ?>
                                 <option value="<?= $streLeg["idExercise"] ?>"
-                                    <?php if($_POST["hand"] == $streLeg["idExercise"]) { ?>
+                                    <?php if($_POST["leg"] == $streLeg["idExercise"]) { ?>
                                         selected
                                     <?php } ?>
                                 >
