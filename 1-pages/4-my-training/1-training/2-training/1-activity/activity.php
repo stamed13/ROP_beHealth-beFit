@@ -40,12 +40,7 @@
     $caLegVal = $_POST["leg"];
     $caCoreVal = $_POST["core"];*/
 
-    $calisthenics = [
-        "pull" => $_POST["pull"],
-        "push" => $_POST["push"],
-        "leg" => $_POST["leg"],
-        "core" => $_POST["core"],
-    ];
+    
 
     $errors = [
         "checked" => false,
@@ -98,27 +93,45 @@
 
                     <form action="" method="post" id="calisthenics">
 
-                    <?php errorCALI($errors); ?>
-                    <?php warningCALI($errors); ?>
-                    <?php infoCALI($errors); ?>
-                        
-                        <?php
-                            $idUSer = $_SESSION['idUser'];
-                            $sql = "INSERT INTO useractivity (userId) VALUES ( $idUSer )";
+                    <?php
+                    // ak nevyplnil apon jeden cvik 
+                    if( $_POST["pull"] == 0 && $_POST["push"] == 0 
+                    && $_POST["leg"] == 0 && $_POST["core"] == 0 ){
+                        $errors["checked"] = true;
+                    } 
+                    // ak vyplnil apon jeden cvik
+                    else {
+                        $errors["checked"] = false;
+                    }
+
+                    errorCALI($errors); 
+                    warningCALI($errors);
+                    infoCALI($errors);
+
+                    $calisthenics = [
+                        "pull" => $_POST["pull"],
+                        "push" => $_POST["push"],
+                        "leg" => $_POST["leg"],
+                        "core" => $_POST["core"],
+                    ];
+
+                    saveActivity($conn, $calisthenics, $errors);
+
+                    $idUSer = $_SESSION['idUser'];
+                    $pull = $calisthenics["pull"];
+                    $push = $calisthenics["push"];
+                    $core = $calisthenics["core"];
+                    $leg = $calisthenics["leg"];
+
+                          $sql = "TRUNCATE useractivity";
                             if (mysqli_query($conn, $sql)) {
                                 echo "uspech";
                             } else {
                                 echo "chyba";
                             }
-                            
 
-                            $email = $_SESSION['email'];
-                            echo $_SESSION['email'];
-                            $id =  mySQLassoc($conn, "SELECT * FROM users WHERE email='$email'");
-                            echo $id["idUser"];
-
-                            mysqli_close($conn);
-                        ?>
+                            mysqli_close($conn);    
+                    ?>
 
                     <select id="calisthenics" name="pull" 
                         class="" >

@@ -181,7 +181,7 @@ INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "úklon do strany");
 INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "mačací chrbát");
 INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "kobra strečing");
 INSERT INTO exercises (partId, levelId, name) VALUES (7, 1, "váľanie nôh");
-INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "koba-zajac");
+INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "kobra-zajac");
 INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "úklony do strán");
 INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "krúženie rukou na boku");
 INSERT INTO exercises (partId, levelId, name) VALUES (7, 2, "pretáčanie ramien v ľahu");

@@ -7,12 +7,16 @@
             if( $_POST["pull"] == 0 && $_POST["push"] == 0 
             && $_POST["leg"] == 0 && $_POST["core"] == 0 ){
                 echo "<div class='rText'>Vyber aspon jeden cvik na posilovanie!</div>";
+            } 
+            // ak vyplnil apon jeden cvik
+            else {
+
             }
         }
 
         // vytvorenie alebo aktualizovanie aktivity - chyba
         if( ! $errors["success"]){
-            //echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+            echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
         } 
     }
 
@@ -62,17 +66,21 @@
 
         // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
         if( mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+        //if(1 == 1){
+            echo "Dnes nie je aktivita.  ";
+
             // vytvorenie aktivity z cvikov posilovania
             if( $_POST['saveCali'] ){
+                echo "Odoslany formular. ";
+
                 // kontrola formularu
-                //if( $_POST["pull"] == 0 && $_POST["push"] == 0 
-                //&& $_POST["leg"] == 0 && $_POST["core"] == 0 )
+                if( $errors["checked"] == false ) {
+                    echo "Spravny formular.";
 
-                if( 1 == 1 ) {
-                    //$sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
-                    //VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $leg )";
+                    $sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
+                    VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $leg )";
 
-                    $sql = "SELECT CURDATE()";
+                    //$sql = "SELECT CURDATE()";
 
                     if (mysqli_query($conn, $sql)) {
                         $errors["success"] = true;
