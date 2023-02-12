@@ -32,15 +32,7 @@
     $streHands =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='6'");
     $streBacks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='7'");
     $streLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
-
-    // premenne na ulozenie stavu vyplnenia oboch formularov
-    // ne bars funguje
-    /*$caPullVal = $_POST["pull"];
-    $caPushVal = $_POST["push"];
-    $caLegVal = $_POST["leg"];
-    $caCoreVal = $_POST["core"];*/
-
-    
+   
 
     $errors = [
         "checked" => false,
@@ -124,12 +116,29 @@
                     $push = $calisthenics["push"];
                     $core = $calisthenics["core"];
                     $leg = $calisthenics["leg"];
+
+                    // zistenie obtiaznosti cviku danej oblasti posilovania
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$pull'");
+                    $pull = $row["levelId"];
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$push'");
+                    $push = $row["levelId"];
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$core'");
+                    $core = $row["levelId"];
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
+                    $leg = $row["levelId"];
+                    
+
+                    /*
+                    $sql = "TRUNCATE useractivity";
+                    mysqli_query($conn, $sql)
+                    mysqli_close($conn);    
+                    */
                     
                     // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
                     if( mySQLall($conn, "SELECT * FROM useractivity 
                     WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
                     //if(1 == 1){
-                        echo "Dnes nie je aktivita.  ";
+                        //echo "Dnes nie je aktivita.  ";
                     
                         // vytvorenie aktivity z cvikov posilovania
                         if( $_POST['saveCali'] ){
@@ -159,7 +168,7 @@
                     } 
                     // ak je vytvorena, aktualizujem aktivitu 
                     else {
-                        echo "Dnes uz je aktivita.  ";
+                        //echo "Dnes uz je aktivita.  ";
 
                         // aktualizovanie aktivity z cvikov posilovania
                         if( $_POST['saveCali'] ){
@@ -188,14 +197,6 @@
 
                     }
 
-                    /*      $sql = "TRUNCATE useractivity";
-                            if (mysqli_query($conn, $sql)) {
-                                echo "uspech";
-                            } else {
-                                echo "chyba";
-                            }
-
-                            mysqli_close($conn);    */
                     ?>
 
                     <select id="calisthenics" name="pull" 
@@ -226,20 +227,6 @@
                             <?php endforeach ?>
                         </select>
 
-                        <select id="calisthenics" name="leg" 
-                        class="" >
-                            <option value="0">Vyber cvik na nohy</option>
-                            <?php foreach($caliLegs as $caliLeg): ?>
-                                <option value="<?= $caliLeg["idExercise"] ?>"
-                                    <?php if($_POST["leg"] == $caliLeg["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
-                                >
-                                    <?= $caliLeg["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-
                         <select id="calisthenics" name="core" 
                         class="" >
                             <option value="0">Vyber cvik na brucho</option>
@@ -250,6 +237,20 @@
                                     <?php } ?>
                                 >
                                     <?= $caliCore["name"] ?>
+                                </option>
+                            <?php endforeach ?>
+                        </select>
+
+                        <select id="calisthenics" name="leg" 
+                        class="" >
+                            <option value="0">Vyber cvik na nohy</option>
+                            <?php foreach($caliLegs as $caliLeg): ?>
+                                <option value="<?= $caliLeg["idExercise"] ?>"
+                                    <?php if($_POST["leg"] == $caliLeg["idExercise"]) { ?>
+                                        selected
+                                    <?php } ?>
+                                >
+                                    <?= $caliLeg["name"] ?>
                                 </option>
                             <?php endforeach ?>
                         </select>
@@ -304,12 +305,22 @@
                     $hand = $calisthenics["hand"];
                     $back = $calisthenics["back"];
                     $leg = $calisthenics["leg"];
+
+                    // zistenie obtiaznosti cviku danej oblasti strecingu
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$neck'");
+                    $neck = $row["levelId"];
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$hand'");
+                    $hand = $row["levelId"];
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$back'");
+                    $back = $row["levelId"];
+                    $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
+                    $leg = $row["levelId"];
                     
                     // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
                     if( mySQLall($conn, "SELECT * FROM useractivity 
                     WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
                     //if(1 == 1){
-                        echo "Dnes nie je aktivita.  ";
+                        //echo "Dnes nie je aktivita.  ";
                     
                         // vytvorenie aktivity z cvikov posilovania
                         if( $_POST['saveStre'] ){
@@ -319,6 +330,8 @@
                             if( $errors["checked"] == false ) {
                                 //echo "Spravny formular.";
                             
+                                $sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
+                                VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $leg )";
                                 $sql = "INSERT INTO useractivity (date, userId, neckSt, handSt, backSt, legSt) 
                                 VALUES ( (SELECT CURDATE()), $idUSer, $neck, $hand, $back, $leg )";
 
@@ -339,7 +352,7 @@
                     } 
                     // ak je vytvorena, aktualizujem aktivitu 
                     else {
-                        echo "Dnes uz je aktivita.  ";
+                        //echo "Dnes uz je aktivita.  ";
 
                         // aktualizovanie aktivity z cvikov posilovania
                         if( $_POST['saveStre'] ){

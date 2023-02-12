@@ -10,10 +10,7 @@
             } 
             // ak vyplnil apon jeden cvik
             if($errors["checked"] == false) {
-                // vytvorenie alebo aktualizovanie aktivity - chyba
-                if( $errors["success"] == false ){
-                    //echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
-                } 
+                
             }
         }
 
@@ -30,10 +27,7 @@
             } 
             // ak vyplnil apon jeden cvik
             if($errors["checked"] == false) {
-                // vytvorenie alebo aktualizovanie aktivity - chyba
-                if( $errors["success"] == false ){
-                    //echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
-                } 
+                
             }
         }
     }
@@ -68,10 +62,7 @@
                 
             } 
             if($errors["checked"] == false) {
-                // vytvorenie alebo aktualizovanie aktivity
-                if( $errors["success"] == true){
-                    //echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
-                } 
+                
             }
         }
     }
@@ -85,10 +76,7 @@
                 
             } 
             if($errors["checked"] == false) {
-                // vytvorenie alebo aktualizovanie aktivity
-                if( $errors["success"] == true){
-                    //echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
-                } 
+                
             }
         }
     }
