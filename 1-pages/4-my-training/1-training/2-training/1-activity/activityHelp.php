@@ -65,7 +65,8 @@
         $leg = $calisthenics["leg"];
 
         // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
-        if( mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+        if( mySQLall($conn, "SELECT * FROM useractivity 
+        WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
         //if(1 == 1){
             echo "Dnes nie je aktivita.  ";
 
@@ -95,7 +96,30 @@
         } 
         // ak je vytvorena, aktualizujem aktivitu 
         else {
+            echo "Dnes uz je aktivita.  ";
 
+            // aktualizovanie aktivity z cvikov posilovania
+            if( $_POST['saveCali'] ){
+                echo "Odoslany formular. ";
+
+                // kontrola formularu
+                if( $errors["checked"] == false ) {
+                    echo "Spravny formular.";
+
+                    $sql = "UPDATE useractivity SET pullCa='$pull', pushCa='$push', coreCa='$core', 
+                    legCa='$leg' WHERE userId='$idUSer' AND (SELECT CURDATE())";
+
+                    //$sql = "SELECT CURDATE()";
+
+                    if (mysqli_query($conn, $sql)) {
+                        $errors["success"] = true;
+                    } else {
+                        $errors["success"] = false;
+                    }
+  
+                    mysqli_close($conn);
+                }
+            }
 
         }
     }
