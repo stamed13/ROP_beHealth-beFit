@@ -212,9 +212,17 @@
                             <option value="0">Vyber cvik na pritah</option>
                             <?php foreach($caliPulls as $caliPull): ?>
                                 <option value="<?= $caliPull["idExercise"] ?>"
-                                    <?php if($_POST["pull"] == $caliPull["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                    <?php 
+                                    if( mySQLall($conn, "SELECT * FROM useractivity 
+                                    WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+                                        if($_POST["pull"] == $caliPull["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    else {
+                                        echo "uz mam aktivitu";
+                                    }
+                                    ?>
                                 >
                                     <?= $caliPull["name"] ?>
                                 </option>
