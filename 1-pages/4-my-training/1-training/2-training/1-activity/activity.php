@@ -314,8 +314,6 @@
                     $back = $calisthenics["back"];
                     $leg = $calisthenics["leg"];
 
-                    echo $neck;
-
                     // zistenie obtiaznosti cviku danej oblasti strecingu
                     if( $neck > 0 ){
                         $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$neck'");
