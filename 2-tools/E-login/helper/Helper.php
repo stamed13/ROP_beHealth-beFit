@@ -46,6 +46,17 @@
         }
     }
 
+    //funkcia vykona prikaz, vrati true / false
+    function mySQLcheck($conn, $sql){
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            return true;
+	    }
+        else {
+            return false;
+        }
+    }
+
     //funkcia vykona prikaz spojeny s databazou
     function mySQLupdate($conn, $sql) {
         if ($conn->query($sql) === TRUE) {

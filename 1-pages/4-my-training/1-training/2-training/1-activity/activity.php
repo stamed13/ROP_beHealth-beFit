@@ -135,6 +135,8 @@
                         $leg = $row["levelId"];
                     }
                     
+                    echo mySQLall($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     /*
                     $sql = "TRUNCATE useractivity";
@@ -143,8 +145,8 @@
                     */
                     
                     // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
-                    if( mySQLall($conn, "SELECT * FROM useractivity 
-                    WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == false ){
                     //if(1 == 1){
                         //echo "Dnes nie je aktivita.  ";
                     
@@ -175,7 +177,8 @@
 
                     } 
                     // ak je vytvorena, aktualizujem aktivitu 
-                    else {
+                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == true ){
                         //echo "Dnes uz je aktivita.  ";
 
                         // aktualizovanie aktivity z cvikov posilovania
@@ -340,10 +343,14 @@
                         $leg = $row["levelId"];
                     }
                     
+                    $row = mySQLassoc($conn, "SELECT CURDATE()");
+                    echo $row["0"];
                     
                     // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
-                    if( mySQLall($conn, "SELECT * FROM useractivity 
-                    WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+                    // SELECT * FROM useractivity WHERE (userId=1) AND (date=(SELECT CURDATE()));
+
+                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == false ){
                     //if(1 == 1){
                         //echo "Dnes nie je aktivita.  ";
                     
@@ -355,8 +362,6 @@
                             if( $errors["checked"] == false ) {
                                 //echo "Spravny formular.";
                             
-                                $sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
-                                VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $leg )";
                                 $sql = "INSERT INTO useractivity (date, userId, neckSt, handSt, backSt, legSt) 
                                 VALUES ( (SELECT CURDATE()), $idUSer, $neck, $hand, $back, $leg )";
 
@@ -376,7 +381,8 @@
 
                     } 
                     // ak je vytvorena, aktualizujem aktivitu 
-                    else {
+                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == true ){
                         //echo "Dnes uz je aktivita.  ";
 
                         // aktualizovanie aktivity z cvikov posilovania
