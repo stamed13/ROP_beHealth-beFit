@@ -134,9 +134,7 @@
                         $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
                         $leg = $row["levelId"];
                     }
-                    
-                    echo mySQLall($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                
 
                     /*
                     $sql = "TRUNCATE useractivity";
@@ -216,14 +214,17 @@
                             <?php foreach($caliPulls as $caliPull): ?>
                                 <option value="<?= $caliPull["idExercise"] ?>"
                                     <?php 
-                                    if( mySQLall($conn, "SELECT * FROM useractivity 
-                                    WHERE userId='$idUSer' AND (SELECT CURDATE())") == 0 ){
+                                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == false ){
                                         if($_POST["pull"] == $caliPull["idExercise"]) { 
                                             echo "selected";
                                         }
                                     } 
-                                    else {
-                                        echo "uz mam aktivitu";
+                                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == true ){
+                                        if($_POST["pull"] == $caliPull["idExercise"]) { 
+                                            echo "selected";
+                                        }
                                     }
                                     ?>
                                 >
