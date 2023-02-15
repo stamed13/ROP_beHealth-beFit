@@ -225,7 +225,7 @@
                                         if($_POST["pull"] == $caliPull["idExercise"]) { 
                                             echo "selected";
                                         }
-                                    }
+                                    } 
                                     ?>
                                 >
                                     <?= $caliPull["name"] ?>
