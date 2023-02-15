@@ -37,12 +37,14 @@
     $errors = [
         "checked" => false,
         "success" => false,
+        "activity" => false,
         "email" => false,
         "passwd" => false,
         "loged" => false,
     ];
 
     //saveActivity($conn, $calisthenics, $errors);
+    
     
     
     
@@ -102,6 +104,8 @@
                     warningCALI($errors);
                     infoCALI($errors);
 
+                    
+
                     $calisthenics = [
                         "pull" => $_POST["pull"],
                         "push" => $_POST["push"],
@@ -119,32 +123,37 @@
 
                     // zistenie obtiaznosti cviku danej oblasti posilovania
                     if( $pull > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$pull'");
-                        $pull = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$pull'");
+                        //$pull = $row["levelId"];
                     }
                     if( $push > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$push'");
-                        $push = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$push'");
+                        //$push = $row["levelId"];
                     }
                     if( $core > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$core'");
-                        $core = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$core'");
+                        //$core = $row["levelId"];
                     }
                     if( $leg > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
-                        $leg = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
+                        //$leg = $row["levelId"];
                     }
                 
+                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                    echo $activity["pullCa"];
 
                     /*
                     $sql = "TRUNCATE useractivity";
                     mysqli_query($conn, $sql)
                     mysqli_close($conn);    
                     */
+
+                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
                     
                     // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
-                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == false ){
+                    if( $errors["activity"] == false ){
                     //if(1 == 1){
                         //echo "Dnes nie je aktivita.  ";
                     
@@ -175,8 +184,7 @@
 
                     } 
                     // ak je vytvorena, aktualizujem aktivitu 
-                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == true ){
+                    if( $errors["activity"] == true ){
                         //echo "Dnes uz je aktivita.  ";
 
                         // aktualizovanie aktivity z cvikov posilovania
@@ -222,7 +230,9 @@
                                     } 
                                     if( mySQLcheck($conn, "SELECT * FROM useractivity 
                                     WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == true ){
-                                        if($_POST["pull"] == $caliPull["idExercise"]) { 
+                                        $pull = mySQLassoc($conn, "SELECT * FROM useractivity 
+                                        WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                        if($pull["pullCa"] == $caliPull["idExercise"]) { 
                                             echo "selected";
                                         }
                                     } 
@@ -350,8 +360,10 @@
                     // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
                     // SELECT * FROM useractivity WHERE (userId=1) AND (date=(SELECT CURDATE()));
 
-                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == false ){
+                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+
+                    if( $errors["activity"] == false ){
                     //if(1 == 1){
                         //echo "Dnes nie je aktivita.  ";
                     
@@ -382,8 +394,7 @@
 
                     } 
                     // ak je vytvorena, aktualizujem aktivitu 
-                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == true ){
+                    if( $errors["activity"] == true ){
                         //echo "Dnes uz je aktivita.  ";
 
                         // aktualizovanie aktivity z cvikov posilovania
