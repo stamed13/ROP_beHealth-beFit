@@ -377,7 +377,7 @@
                     //warningCALI($errors);
                     infoSTRETCH($errors);
 
-                    $calisthenics = [
+                    $stretching = [
                         "neck" => $_POST["neck"],
                         "hand" => $_POST["hand"],
                         "back" => $_POST["back"],
@@ -387,10 +387,15 @@
                     //saveActivity($conn, $calisthenics, $errors);
 
                     $idUSer = $_SESSION['idUser'];
-                    $neck = $calisthenics["neck"];
-                    $hand = $calisthenics["hand"];
-                    $back = $calisthenics["back"];
-                    $leg = $calisthenics["leg"];
+                    $neck = $stretching["neck"];
+                    $hand = $stretching["hand"];
+                    $back = $stretching["back"];
+                    $leg = $stretching["leg"];
+
+                    echo $neck;
+                    echo $hand;
+                    echo $back;
+                    echo $leg;
 
                     //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
                     $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
@@ -413,11 +418,14 @@
                         //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
                         //$leg = $row["levelId"];
                     }
+
                     
-                    //$row = mySQLassoc($conn, "SELECT CURDATE()");
-                    //echo $row["0"];
+                    /*
+                    $sql = "TRUNCATE useractivity";
+                    mysqli_query($conn, $sql)
+                    mysqli_close($conn);    
+                    */
                     
-                    // SELECT * FROM useractivity WHERE (userId=1) AND (date=(SELECT CURDATE()));
 
                     $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
                     WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
@@ -485,14 +493,6 @@
 
                     }
 
-                    /*      $sql = "TRUNCATE useractivity";
-                            if (mysqli_query($conn, $sql)) {
-                                echo "uspech";
-                            } else {
-                                echo "chyba";
-                            }
-
-                            mysqli_close($conn);    */
                     ?>
     
                     <select id="stretching" name="neck" 
@@ -527,9 +527,22 @@
                             <option value="0">Vyber cvik na ruky</option>
                             <?php foreach($streHands as $streHand): ?>
                                 <option value="<?= $streHand["idExercise"] ?>"
-                                    <?php if($_POST["hand"] == $streHand["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                    <?php 
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    //ak dnes nemam aktivitu, oznacim vyber z metody POST
+                                    if( $errors["activity"] == false ){
+                                        if($_POST["hand"] == $streHand["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    //ak uz mam aktivitu, predznacim vyber z aktivity
+                                    if( $errors["activity"] == true ){
+                                        if($activity["handSt"] == $streHand["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    ?>
                                 >
                                     <?= $streHand["name"] ?>
                                 </option>
@@ -541,9 +554,22 @@
                             <option value="0">Vyber cvik na chrbát</option>
                             <?php foreach($streBacks as $streBack): ?>
                                 <option value="<?= $streBack["idExercise"] ?>"
-                                    <?php if($_POST["back"] == $streBack["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                    <?php 
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    //ak dnes nemam aktivitu, oznacim vyber z metody POST
+                                    if( $errors["activity"] == false ){
+                                        if($_POST["back"] == $streBack["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    //ak uz mam aktivitu, predznacim vyber z aktivity
+                                    if( $errors["activity"] == true ){
+                                        if($activity["backSt"] == $streBack["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    ?>
                                 >
                                     <?= $streBack["name"] ?>
                                 </option>
@@ -555,9 +581,22 @@
                             <option value="0">Vyber cvik na nohy</option>
                             <?php foreach($streLegs as $streLeg): ?>
                                 <option value="<?= $streLeg["idExercise"] ?>"
-                                    <?php if($_POST["leg"] == $streLeg["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                <?php 
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    //ak dnes nemam aktivitu, oznacim vyber z metody POST
+                                    if( $errors["activity"] == false ){
+                                        if($_POST["leg"] == $streLeg["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    //ak uz mam aktivitu, predznacim vyber z aktivity
+                                    if( $errors["activity"] == true ){
+                                        if($activity["legSt"] == $streLeg["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    ?>
                                 >
                                     <?= $streLeg["name"] ?>
                                 </option>
