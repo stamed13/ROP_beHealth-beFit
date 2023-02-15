@@ -45,10 +45,14 @@
 
     //saveActivity($conn, $calisthenics, $errors);
     
-    
-    
-    
 ?>
+
+
+
+
+
+
+
 
 
     <div id="content">
@@ -74,6 +78,14 @@
                 </div>
                 -->
             </article>
+
+
+
+
+
+
+
+
 
             <article class="form" id="cali">
                 <div class="buttons-arrow">
@@ -185,6 +197,7 @@
                         }
 
                     } 
+					
                     // ak je vytvorena, aktualizujem aktivitu 
                     if( $errors["activity"] == true ){
                         //echo "Dnes uz je aktivita.  ";
@@ -251,7 +264,7 @@
                             <option value="0">Vyber cvik na tlak</option>
                             <?php foreach($caliPushs as $caliPush): ?>
                                 <option value="<?= $caliPush["idExercise"] ?>"
-                                <?php 
+                                    <?php 
                                     $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
                                     WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
                                     if( $errors["activity"] == false ){
@@ -276,9 +289,20 @@
                             <option value="0">Vyber cvik na brucho</option>
                             <?php foreach($caliCores as $caliCore): ?>
                                 <option value="<?= $caliCore["idExercise"] ?>"
-                                    <?php if($_POST["core"] == $caliCore["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                    <?php 
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    if( $errors["activity"] == false ){
+                                        if($_POST["core"] == $caliCore["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    if( $errors["activity"] == true ){
+                                        if($activity["coreCa"] == $caliCore["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    ?>
                                 >
                                     <?= $caliCore["name"] ?>
                                 </option>
@@ -290,9 +314,20 @@
                             <option value="0">Vyber cvik na nohy</option>
                             <?php foreach($caliLegs as $caliLeg): ?>
                                 <option value="<?= $caliLeg["idExercise"] ?>"
-                                    <?php if($_POST["leg"] == $caliLeg["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                <?php 
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    if( $errors["activity"] == false ){
+                                        if($_POST["leg"] == $caliLeg["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    if( $errors["activity"] == true ){
+                                        if($activity["legCa"] == $caliLeg["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    ?>
                                 >
                                     <?= $caliLeg["name"] ?>
                                 </option>
@@ -306,6 +341,13 @@
                 </div>
             </article>
 
+
+
+
+
+
+
+
             <article class="form" id="stretch">
                 <div class="buttons-arrow">
                     <a href="#cali" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vlavo.svg" alt="hopa"></a>
@@ -316,7 +358,7 @@
 
                     <?php //debug($_POST, "formular [data]"); ?>
 
-                    <form action="" method="post" id="calisthenics">
+                    <form action="" method="post" id="stretch">
 
                     <?php
                     // ak nevyplnil apon jeden cvik 
@@ -350,33 +392,37 @@
                     $back = $calisthenics["back"];
                     $leg = $calisthenics["leg"];
 
+                    //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
+                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+
                     // zistenie obtiaznosti cviku danej oblasti strecingu
                     if( $neck > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$neck'");
-                        $neck = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$neck'");
+                        //$neck = $row["levelId"];
                     }
                     if( $hand > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$hand'");
-                        $hand = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$hand'");
+                        //$hand = $row["levelId"];
                     }
                     if( $back > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$back'");
-                        $back = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$back'");
+                        //$back = $row["levelId"];
                     }
                     if( $leg > 0 ){
-                        $row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
-                        $leg = $row["levelId"];
+                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
+                        //$leg = $row["levelId"];
                     }
                     
-                    $row = mySQLassoc($conn, "SELECT CURDATE()");
-                    echo $row["0"];
+                    //$row = mySQLassoc($conn, "SELECT CURDATE()");
+                    //echo $row["0"];
                     
-                    // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
                     // SELECT * FROM useractivity WHERE (userId=1) AND (date=(SELECT CURDATE()));
 
                     $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
                     WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
+                    // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
                     if( $errors["activity"] == false ){
                     //if(1 == 1){
                         //echo "Dnes nie je aktivita.  ";
@@ -407,6 +453,7 @@
                         }
 
                     } 
+                    
                     // ak je vytvorena, aktualizujem aktivitu 
                     if( $errors["activity"] == true ){
                         //echo "Dnes uz je aktivita.  ";
@@ -453,9 +500,22 @@
                             <option value="0">Vyber cvik na krk</option>
                             <?php foreach($streNecks as $streNeck): ?>
                                 <option value="<?= $streNeck["idExercise"] ?>"
-                                    <?php if($_POST["neck"] == $streNeck["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                    <?php 
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    //ak dnes nemam aktivitu, oznacim vyber z metody POST
+                                    if( $errors["activity"] == false ){
+                                        if($_POST["neck"] == $streNeck["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    //ak uz mam aktivitu, predznacim vyber z aktivity
+                                    if( $errors["activity"] == true ){
+                                        if($activity["neckSt"] == $streNeck["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    ?>
                                 >
                                     <?= $streNeck["name"] ?>
                                 </option>
