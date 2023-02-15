@@ -121,6 +121,10 @@
                     $core = $calisthenics["core"];
                     $leg = $calisthenics["leg"];
 
+                    //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
+                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+
                     // zistenie obtiaznosti cviku danej oblasti posilovania
                     if( $pull > 0 ){
                         //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$pull'");
@@ -139,9 +143,7 @@
                         //$leg = $row["levelId"];
                     }
                 
-                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
-                    echo $activity["pullCa"];
+
 
                     /*
                     $sql = "TRUNCATE useractivity";
@@ -196,7 +198,7 @@
                                 //echo "Spravny formular.";
 
                                 $sql = "UPDATE useractivity SET pullCa='$pull', pushCa='$push', coreCa='$core', 
-                                legCa='$leg' WHERE userId='$idUSer' AND (SELECT CURDATE())";
+                                legCa='$leg' WHERE userId='$idUSer' AND (date=(SELECT CURDATE()))";
 
                                 //$sql = "SELECT CURDATE()";
 
@@ -222,18 +224,19 @@
                             <?php foreach($caliPulls as $caliPull): ?>
                                 <option value="<?= $caliPull["idExercise"] ?>"
                                     <?php 
-                                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
-                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == false ){
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    //ak dnes nemam aktivitu, oznacim vyber z metody POST
+                                    if( $errors["activity"] == false ){
                                         if($_POST["pull"] == $caliPull["idExercise"]) { 
                                             echo "selected";
                                         }
                                     } 
-                                    if( mySQLcheck($conn, "SELECT * FROM useractivity 
-                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))") == true ){
-                                        $pull = mySQLassoc($conn, "SELECT * FROM useractivity 
-                                        WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
-                                        if($pull["pullCa"] == $caliPull["idExercise"]) { 
+                                    //ak uz mam aktivitu, predznacim vyber z aktivity
+                                    if( $errors["activity"] == true ){
+                                        if($activity["pullCa"] == $caliPull["idExercise"]) { 
                                             echo "selected";
+                                            //$_POST["pullCa"] = $activity["pullCa"];
                                         }
                                     } 
                                     ?>
@@ -248,9 +251,20 @@
                             <option value="0">Vyber cvik na tlak</option>
                             <?php foreach($caliPushs as $caliPush): ?>
                                 <option value="<?= $caliPush["idExercise"] ?>"
-                                    <?php if($_POST["push"] == $caliPush["idExercise"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                <?php 
+                                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                                    if( $errors["activity"] == false ){
+                                        if($_POST["push"] == $caliPush["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    if( $errors["activity"] == true ){
+                                        if($activity["pushCa"] == $caliPush["idExercise"]) { 
+                                            echo "selected";
+                                        }
+                                    } 
+                                    ?>
                                 >
                                     <?= $caliPush["name"] ?>
                                 </option>
@@ -406,7 +420,7 @@
                                 //echo "Spravny formular.";
 
                                 $sql = "UPDATE useractivity SET neckSt='$neck', handSt='$hand', backSt='$back', 
-                                legSt='$leg' WHERE userId='$idUSer' AND (SELECT CURDATE())";
+                                legSt='$leg' WHERE userId='$idUSer' AND (date=(SELECT CURDATE()))";
 
                                 //$sql = "SELECT CURDATE()";
 
