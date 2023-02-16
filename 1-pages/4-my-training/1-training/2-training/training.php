@@ -25,7 +25,7 @@
             </article>
 
             <article id="training-menu">
-                <a id="bt-training" href="1-activity/activity.php#main">Denná aktivita</a>
+                <a id="bt-training" href="1-activity/activity1.php">Denná aktivita</a>
                 <a id="bt-training" href="2-advice/advice.php">Rady a typy</a>
                 <a id="bt-training" href="3-plan/plan.php">Trenigový plán</a>
             </article>

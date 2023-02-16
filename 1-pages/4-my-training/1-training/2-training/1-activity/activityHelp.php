@@ -33,14 +33,18 @@
     }
 
     // kontrola vyplnenia prveho formularu - varovania
-    function warningCALI($errors){
+    function warningCALI($errors, $conn){
+        $idUSer = $_SESSION['idUser'];
+
         if( $_POST['saveCali'] ){
 
             
         }
 
         // prvy zaznam, upozornim, ze ma vyplnit tym co dokaze
-        if( 1 + 1 != 2 ){
+        if( mySQLcheck($conn, "SELECT * FROM useractivity 
+        WHERE (userId='$idUSer')") == false ){
+            echo "<div class='oText'>Ahoj! Toto je tvoja prva aktivita. Vypln prosim vsetky moznosti. Ukaz mi prosim, co dokazes!</div>";
             //echo "Ahoj! Vidim, ze si tu este kratko. Vyber prosim cviky, ktore ";
 
             // ak je extrem
@@ -48,8 +52,29 @@
             || $_POST["legC"] == 1 || $_POST["core"] == 1
             && $_POST["pull"] == 3 || $_POST["push"] == 3 
             || $_POST["legC"] == 3 || $_POST["core"] == 3 ){
-                echo "<div class='oText'>Urcite to dokazes?</div>";
+                //echo "<div class='oText'>Urcite to dokazes?</div>";
             }
+        }
+    }
+
+    // kontrola vyplnenia druheho formularu - varovania
+    function warningSTRE($errors, $conn){
+        $idUSer = $_SESSION['idUser'];
+        $activityCount = mySQLassoc($conn, "SELECT COUNT(id) FROM useractivity WHERE (userId='$idUSer')");
+        echo $activityCount;
+
+        if( $_POST['saveCali'] ){
+
+            
+        }
+
+        // prvy zaznam, upozornim, ze ma vyplnit tym co dokaze
+        if( $activityCount == 0 || ( $activityCount == 1 && ( $_POST["neck"] == 0 || $_POST["hand"] == 0 
+        || $_POST["back"] == 0 || $_POST["leg"] == 0 ) ) ){
+            echo "<div class='oText'>Ahoj! Toto je tvoja prva aktivita. Vypln prosim vsetky moznosti. Ukaz mi prosim, co dokazes!</div>";
+            //echo "Ahoj! Vidim, ze si tu este kratko. Vyber prosim cviky, ktore ";
+
+            //extrem
         }
     }
 

@@ -5,7 +5,7 @@
     $currentPage = 'activity';
     $page_styles = 'styles/activity.css';
     $up = '../';
-    $curPageLink = '../1-activity/activity.php#main';
+    $curPageLink = '../1-activity/activity2.php#cali';
 
     //pripojenie header casti
     include('../../layout/header.php');
@@ -59,40 +59,10 @@
 
     <div id="content">
         <section id="activity">
-            <article id="main">
-                <div class="buttons-arrow">
-                    <a href="../training.php" class="bt-arrow">naspäť</a>
-                    <a href="#cali" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vpravo.svg" alt="hopa"></a>
-                </div>
-                <div id="main-content">
-                    <div id="content-title">Moja aktivita</div>
-                    <div id="activity-info">
-                        Nech sa paci,  tu mozes postupne vyplnit tvoju dennu aktivitu. 
-                        Pokojne si aktualizuj v priebehu dna. <?php //echo $_SESSION['email'] ?>
-                    </div>
-                </div>
-                <!--
-                <div class="exercise">
-                    <h1>NOHY</h1>
-                    <?php foreach($streLegs as $caliPull): ?>
-                        <div><?= $caliPull["name"] ?></div>
-                    <?php endforeach ?>
-                </div>
-                -->
-            </article>
-
-
-
-
-
-
-
-
-
             <article class="form" id="cali">
                 <div class="buttons-arrow">
-                    <a href="#main" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vlavo.svg" alt="hopa"></a>
-                    <a href="#stretch" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vpravo.svg" alt="hopa"></a>
+                    <a href="activity1.php" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vlavo.svg" alt="hopa"></a>
+                    <a href="activity3.php" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vpravo.svg" alt="hopa"></a>
                 </div>
                 <div class="form-content">
                     <div class="form-title">Posilovanie</div>
@@ -330,237 +300,6 @@
                 </div>
             </article>
 
-
-
-
-
-
-
-
-            <article class="form" id="stretch">
-                <div class="buttons-arrow">
-                    <a href="#cali" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vlavo.svg" alt="hopa"></a>
-                    <a href="../training.php" class="bt-arrow">ukoncit</a>
-                </div>
-                <div class="form-content">
-                    <div class="form-title">Strecing</div>
-
-                    <?php //debug($_POST, "formular [data]"); ?>
-
-                    <form action="" method="post" id="stretch">
-
-                    <?php
-                    // ak nevyplnil apon jeden cvik 
-                    if( $_POST["neck"] == 0 && $_POST["hand"] == 0 
-                    && $_POST["back"] == 0 && $_POST["leg"] == 0 ){
-                        $errors["checked"] = true;
-                    } 
-                    // ak vyplnil apon jeden cvik
-                    else {
-                        $errors["checked"] = false;
-                    }
-
-                    $activity = 0;
-                    //$errors["success"] = true;
-
-                    errorSTRETCH($errors); 
-                    warningSTRE($errors, $conn);
-                    infoSTRETCH($errors);
-
-                    $stretching = [
-                        "neck" => $_POST["neck"],
-                        "hand" => $_POST["hand"],
-                        "back" => $_POST["back"],
-                        "leg" => $_POST["leg"],
-                    ];
-
-                    //saveActivity($conn, $calisthenics, $errors);
-
-                    $idUSer = $_SESSION['idUser'];
-                    $neck = $stretching["neck"];
-                    $hand = $stretching["hand"];
-                    $back = $stretching["back"];
-                    $leg = $stretching["leg"];
-
-                    echo $neck;
-                    echo $hand;
-                    echo $back;
-                    echo $leg;
-
-                    //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
-                    //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
-
-                    
-                    /*
-                    $sql = "TRUNCATE useractivity";
-                    mysqli_query($conn, $sql)
-                    mysqli_close($conn);    
-                    */
-                    
-
-                    $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
-
-                    // ak nie je vytvorena aktivita od pouzivatela v dnesnom dni, vytvorim
-                    if( $errors["activity"] == false ){
-                    //if(1 == 1){
-                        echo "Dnes nie je aktivita.  ";
-
-                        $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
-                        WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
-                    
-                        // vytvorenie aktivity z cvikov posilovania
-                        if( $_POST['saveStre'] ){
-                            //echo "Odoslany formular. ";
-                        
-                            // kontrola formularu
-                            if( $errors["checked"] == false ) {
-                                //echo "Spravny formular.";
-                            
-                                $sql = "INSERT INTO useractivity (date, userId, neckSt, handSt, backSt, legSt) 
-                                VALUES ( (SELECT CURDATE()), $idUSer, $neck, $hand, $back, $leg )";
-
-                                //$sql = "SELECT CURDATE()";
-                            
-                                if (mysqli_query($conn, $sql)) {
-                                    $errors["success"] = true;
-                                    echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
-                                } else {
-                                    $errors["success"] = false;
-                                    echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
-                                }
-  
-                                mysqli_close($conn);
-                            }
-                        }
-
-                    } 
-                    
-                    // ak je vytvorena, aktualizujem aktivitu 
-                    if( $errors["activity"] == true ){
-                        echo "Dnes uz je aktivita.  ";
-
-                        // aktualizovanie aktivity z cvikov posilovania
-                        if( $_POST['saveStre'] ){
-                            //echo "Odoslany formular. ";
-
-                            // kontrola formularu
-                            if( $errors["checked"] == false ) {
-                                //echo "Spravny formular.";
-
-                                $sql = "UPDATE useractivity SET neckSt='$neck', handSt='$hand', backSt='$back', 
-                                legSt='$leg' WHERE userId='$idUSer' AND (date=(SELECT CURDATE()))";
-
-                                //$sql = "SELECT CURDATE()";
-
-                                if (mysqli_query($conn, $sql)) {
-                                    $errors["success"] = true;
-                                    echo "<div class='gText'>Uspesne aktualizovanie aktivity!</div>";
-                                } else {
-                                    $errors["success"] = false;
-                                    echo "<div class='rText'>Neuspesne aktualizovanie aktivity!</div>";
-                                }
-  
-                                mysqli_close($conn);
-                            }
-                        }
-
-                    }
-
-                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
-
-                    if($activity["neckSt"] > 0){
-                        $_POST["neck"] = $activity["neckSt"];
-                    }
-                    if($activity["handSt"] > 0){
-                        $_POST["hand"] = $activity["handSt"];
-                    }
-                    if($activity["backSt"] > 0){
-                        $_POST["back"] = $activity["backSt"];
-                    }
-                    if($activity["legSt"] > 0){
-                        $_POST["leg"] = $activity["legSt"];
-                    }
-
-                    ?>
-  
-                        <select id="stretching" name="neck" 
-                        class="" >
-                            <option value="0">Vyber cvik na krk</option>
-                            <?php foreach($streNecks as $streNeck): ?>
-                                <option value="<?= $streNeck["idExercise"] ?>"
-                                    <?php 
-                                    // oznaci vyber z $_POST
-                                    if($_POST["neck"] == $streNeck["idExercise"]) { 
-                                        echo "selected";
-                                    }
-                                    ?>
-                                >
-                                    <?= $streNeck["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-                                    
-                        <select id="stretching" name="hand" 
-                        class="" >
-                            <option value="0">Vyber cvik na ruky</option>
-                            <?php foreach($streHands as $streHand): ?>
-                                <option value="<?= $streHand["idExercise"] ?>"
-                                    <?php 
-                                    // oznaci vyber z $_POST
-                                    if($_POST["hand"] == $streHand["idExercise"]) { 
-                                        echo "selected";
-                                    }
-                                    ?>
-                                >
-                                    <?= $streHand["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-
-                        <select id="stretching" name="back" 
-                        class="" >
-                            <option value="0">Vyber cvik na chrbát</option>
-                            <?php foreach($streBacks as $streBack): ?>
-                                <option value="<?= $streBack["idExercise"] ?>"
-                                    <?php 
-                                    // oznaci vyber z $_POST
-                                    if($_POST["back"] == $streBack["idExercise"]) { 
-                                        echo "selected";
-                                    }
-                                    ?>
-                                >
-                                    <?= $streBack["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-
-                        <select id="stretching" name="leg" 
-                        class="" >
-                            <option value="0">Vyber cvik na nohy</option>
-                            <?php foreach($streLegs as $streLeg): ?>
-                                <option value="<?= $streLeg["idExercise"] ?>"
-                                    <?php 
-                                    // oznaci vyber z $_POST
-                                    if($_POST["leg"] == $streLeg["idExercise"]) { 
-                                        echo "selected";
-                                    }
-                                    ?>
-                                >
-                                    <?= $streLeg["name"] ?>
-                                </option>
-                            <?php endforeach ?>
-                        </select>
-                                    
-                        <input type="submit" class="bt-save" name="saveStre" 
-                        value="Uložiť">
-                                    
-                    </form>
-                </div>
-            </article>
-
             <div>
                 <?php
                     // kontrola premennych
@@ -591,6 +330,8 @@
 </html>
 
 <?php
+    mysqli_close($conn);
+
     //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
     //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 ?>
