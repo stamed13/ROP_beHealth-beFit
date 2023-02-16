@@ -72,11 +72,22 @@
                     <form action="" method="post" id="calisthenics">
 
                     <?php
-                    // ak nevyplnil apon jeden cvik 
-                    if( $_POST["pull"] == 0 && $_POST["push"] == 0 
-                    && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
-                        $errors["checked"] = true;
-                    } 
+                    $activityCount = mySQLassoc($conn, "SELECT COUNT(*) AS count FROM useractivity WHERE (userId='$idUSer')");
+
+                    // ak nevyplnil vsetky cviky
+                    if( $activityCount["count"] == 0 || $activityCount["count"] == 1 ){
+                        if( $_POST["pull"] == 0 || $_POST["push"] == 0 
+                        || $_POST["legC"] == 0 || $_POST["core"] == 0 ){
+                            $errors["checked"] = true;
+                        }
+                    }
+                    // ak nevyplnil apon jeden cvik
+                    if( $activityCount["count"] > 1 ){
+                        if( $_POST["pull"] == 0 && $_POST["push"] == 0 
+                        && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
+                            $errors["checked"] = true;
+                        } 
+                    }
                     // ak vyplnil apon jeden cvik
                     else {
                         $errors["checked"] = false;
@@ -85,9 +96,9 @@
                     $activity = 0;
                     //$errors["success"] = true;
 
-                    errorCALI($errors); 
+                    errorCALI($errors, $conn); 
                     warningCALI($errors, $conn);
-                    infoCALI($errors);
+                    infoCALI($errors, $conn);
 
                     
 
@@ -106,10 +117,10 @@
                     $core = $calisthenics["core"];
                     $legC = $calisthenics["legC"];
 
-                    echo $_POST["pull"];
-                    echo $_POST["push"];
-                    echo $core;
-                    echo $legC;
+                    //echo $_POST["pull"];
+                    //echo $_POST["push"];
+                    //echo $core;
+                    //echo $legC;
 
                     //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
                     //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
@@ -183,6 +194,8 @@
                         // aktualizovanie aktivity z cvikov posilovania
                         if( $_POST['saveCali'] ){
                             //echo "Odoslany formular. ";
+
+                            $activityCount = mySQLassoc($conn, "SELECT COUNT(*) AS count FROM useractivity WHERE (userId='$idUSer')");
 
                             // kontrola formularu
                             if( $errors["checked"] == false ) {

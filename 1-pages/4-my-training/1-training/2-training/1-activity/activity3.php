@@ -72,6 +72,15 @@
                     <form action="" method="post" id="stretch">
 
                     <?php
+                    $activityCount = mySQLassoc($conn, "SELECT COUNT(*) AS count FROM useractivity WHERE (userId='$idUSer')");
+
+                    // ak nevyplnil vsetky cviky
+                    if( $activityCount["count"] == 0 || $activityCount["count"] == 1 ){
+                        if( $_POST["neck"] == 0 || $_POST["hand"] == 0 
+                        || $_POST["back"] == 0 || $_POST["leg"] == 0 ){
+                            $errors["checked"] = true;
+                        }
+                    }
                     // ak nevyplnil apon jeden cvik 
                     if( $_POST["neck"] == 0 && $_POST["hand"] == 0 
                     && $_POST["back"] == 0 && $_POST["leg"] == 0 ){
@@ -85,9 +94,9 @@
                     $activity = 0;
                     //$errors["success"] = true;
 
-                    errorSTRETCH($errors); 
+                    errorSTRETCH($errors, $conn); 
                     warningSTRE($errors, $conn);
-                    infoSTRETCH($errors);
+                    infoSTRETCH($errors, $conn);
 
                     $stretching = [
                         "neck" => $_POST["neck"],
@@ -104,10 +113,10 @@
                     $back = $stretching["back"];
                     $leg = $stretching["leg"];
 
-                    echo $neck;
-                    echo $hand;
-                    echo $back;
-                    echo $leg;
+                    //echo $neck;
+                    //echo $hand;
+                    //echo $back;
+                    //echo $leg;
 
                     //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
                     //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
