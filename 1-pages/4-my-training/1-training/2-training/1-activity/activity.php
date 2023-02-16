@@ -44,6 +44,8 @@
     ];
 
     //saveActivity($conn, $calisthenics, $errors);
+
+    $activity = 0;
     
 ?>
 
@@ -102,7 +104,7 @@
                     <?php
                     // ak nevyplnil apon jeden cvik 
                     if( $_POST["pull"] == 0 && $_POST["push"] == 0 
-                    && $_POST["leg"] == 0 && $_POST["core"] == 0 ){
+                    && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
                         $errors["checked"] = true;
                     } 
                     // ak vyplnil apon jeden cvik
@@ -110,6 +112,7 @@
                         $errors["checked"] = false;
                     }
 
+                    $activity = 0;
                     //$errors["success"] = true;
 
                     errorCALI($errors); 
@@ -121,7 +124,7 @@
                     $calisthenics = [
                         "pull" => $_POST["pull"],
                         "push" => $_POST["push"],
-                        "leg" => $_POST["leg"],
+                        "legC" => $_POST["legC"],
                         "core" => $_POST["core"],
                     ];
 
@@ -131,11 +134,16 @@
                     $pull = $calisthenics["pull"];
                     $push = $calisthenics["push"];
                     $core = $calisthenics["core"];
-                    $leg = $calisthenics["leg"];
+                    $legC = $calisthenics["legC"];
+
+                    echo $pull;
+                    echo $push;
+                    echo $core;
+                    echo $legC;
 
                     //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
-                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                    //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     // zistenie obtiaznosti cviku danej oblasti posilovania
                     if( $pull > 0 ){
@@ -150,7 +158,7 @@
                         //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$core'");
                         //$core = $row["levelId"];
                     }
-                    if( $leg > 0 ){
+                    if( $legC > 0 ){
                         //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
                         //$leg = $row["levelId"];
                     }
@@ -180,7 +188,7 @@
                                 //echo "Spravny formular.";
                             
                                 $sql = "INSERT INTO useractivity (date, userId, pullCa, pushCa, coreCa, legCa) 
-                                VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $leg )";
+                                VALUES ( (SELECT CURDATE()), $idUSer, $pull, $push, $core, $legC )";
 
                                 //$sql = "SELECT CURDATE()";
                             
@@ -211,7 +219,7 @@
                                 //echo "Spravny formular.";
 
                                 $sql = "UPDATE useractivity SET pullCa='$pull', pushCa='$push', coreCa='$core', 
-                                legCa='$leg' WHERE userId='$idUSer' AND (date=(SELECT CURDATE()))";
+                                legCa='$legC' WHERE userId='$idUSer' AND (date=(SELECT CURDATE()))";
 
                                 //$sql = "SELECT CURDATE()";
 
@@ -228,6 +236,9 @@
                         }
 
                     }
+
+                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     ?>
 
@@ -309,7 +320,7 @@
                             <?php endforeach ?>
                         </select>
 
-                        <select id="calisthenics" name="leg" 
+                        <select id="calisthenics" name="legC" 
                         class="" >
                             <option value="0">Vyber cvik na nohy</option>
                             <?php foreach($caliLegs as $caliLeg): ?>
@@ -318,7 +329,7 @@
                                     $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
                                     WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
                                     if( $errors["activity"] == false ){
-                                        if($_POST["leg"] == $caliLeg["idExercise"]) { 
+                                        if($_POST["legC"] == $caliLeg["idExercise"]) { 
                                             echo "selected";
                                         }
                                     } 
@@ -371,6 +382,7 @@
                         $errors["checked"] = false;
                     }
 
+                    $activity = 0;
                     //$errors["success"] = true;
 
                     errorSTRETCH($errors); 
@@ -398,26 +410,8 @@
                     echo $leg;
 
                     //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
-                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
-
-                    // zistenie obtiaznosti cviku danej oblasti strecingu
-                    if( $neck > 0 ){
-                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$neck'");
-                        //$neck = $row["levelId"];
-                    }
-                    if( $hand > 0 ){
-                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$hand'");
-                        //$hand = $row["levelId"];
-                    }
-                    if( $back > 0 ){
-                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$back'");
-                        //$back = $row["levelId"];
-                    }
-                    if( $leg > 0 ){
-                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$leg'");
-                        //$leg = $row["levelId"];
-                    }
+                    //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     
                     /*
@@ -493,9 +487,12 @@
 
                     }
 
+                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+
                     ?>
-    
-                    <select id="stretching" name="neck" 
+  
+                        <select id="stretching" name="neck" 
                         class="" >
                             <option value="0">Vyber cvik na krk</option>
                             <?php foreach($streNecks as $streNeck): ?>

@@ -5,7 +5,7 @@
 
             // ak nevyplnil apon jeden cvik
             if( $_POST["pull"] == 0 && $_POST["push"] == 0 
-            && $_POST["leg"] == 0 && $_POST["core"] == 0 ){
+            && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
                 echo "<div class='rText'>Vyber aspon jeden cvik na posilovanie!</div>";
             } 
             // ak vyplnil apon jeden cvik
@@ -45,9 +45,9 @@
 
             // ak je extrem
             if( $_POST["pull"] == 1 || $_POST["push"] == 1 
-            || $_POST["leg"] == 1 || $_POST["core"] == 1
+            || $_POST["legC"] == 1 || $_POST["core"] == 1
             && $_POST["pull"] == 3 || $_POST["push"] == 3 
-            || $_POST["leg"] == 3 || $_POST["core"] == 3 ){
+            || $_POST["legC"] == 3 || $_POST["core"] == 3 ){
                 echo "<div class='oText'>Urcite to dokazes?</div>";
             }
         }
@@ -58,7 +58,7 @@
         if( $_POST['saveCali'] ){
             // ak nevyplnil apon jeden cvik
             if( $_POST["pull"] == 0 && $_POST["push"] == 0 
-            && $_POST["leg"] == 0 && $_POST["core"] == 0 ){
+            && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
                 
             } 
             if($errors["checked"] == false) {
@@ -82,7 +82,7 @@
     }
 
     // ulozenie aktivity
-    function saveActivity($conn, $calisthenics, $errors){
+    /*function saveActivity($conn, $calisthenics, $errors){
         $idUSer = $_SESSION['idUser'];
         $pull = $calisthenics["pull"];
         $push = $calisthenics["push"];
@@ -147,6 +147,6 @@
             }
 
         }
-    }
+    }*/
 
 ?>
