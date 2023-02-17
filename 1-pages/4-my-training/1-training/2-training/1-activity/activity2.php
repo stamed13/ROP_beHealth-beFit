@@ -81,13 +81,11 @@
                             $errors["checked"] = true;
                         }
                     }
-                    // ak nevyplnil apon jeden cvik
-                    if( $activityCount["count"] > 1 ){
-                        if( $_POST["pull"] == 0 && $_POST["push"] == 0 
-                        && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
-                            $errors["checked"] = true;
-                        } 
-                    }
+                    // ak nevyplnil apon jeden cvik 
+                    if( $_POST["pull"] == 0 && $_POST["push"] == 0 
+                    && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
+                        $errors["checked"] = true;
+                    } 
                     // ak vyplnil apon jeden cvik
                     else {
                         $errors["checked"] = false;
@@ -159,6 +157,9 @@
                     if( $errors["activity"] == false ){
                     //if(1 == 1){
                         //echo "Dnes nie je aktivita.  ";
+
+                        $errors["activity"] = mySQLcheck($conn, "SELECT * FROM useractivity 
+                        WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
                     
                         // vytvorenie aktivity z cvikov posilovania
                         if( $_POST['saveCali'] ){
@@ -194,8 +195,6 @@
                         // aktualizovanie aktivity z cvikov posilovania
                         if( $_POST['saveCali'] ){
                             //echo "Odoslany formular. ";
-
-                            $activityCount = mySQLassoc($conn, "SELECT COUNT(*) AS count FROM useractivity WHERE (userId='$idUSer')");
 
                             // kontrola formularu
                             if( $errors["checked"] == false ) {
