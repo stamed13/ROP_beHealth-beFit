@@ -20,8 +20,15 @@
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
-    $caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
-    $advice = mySQLall($conn, "SELECT * FROM advice");
+    //$caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
+    $advices = mySQLall($conn, "SELECT * FROM advice");
+
+    //echo $advice["name"];
+
+    foreach($advices as $advice){
+        echo $advice["name"];
+            
+    }
 
 
 ?>
@@ -43,7 +50,10 @@
                 </div>
                 <div id="advice-list">
                     Rady, jeden...
-                    <div> <?php echo $advice["name"]; ?> </div>
+                    <div> <?php foreach($advices as $advice){
+        echo $advice["name"];
+            
+    }  ?> </div>
                 </div>
             </article>
             
