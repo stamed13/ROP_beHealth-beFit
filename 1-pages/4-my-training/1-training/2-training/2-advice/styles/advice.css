@@ -66,6 +66,15 @@
   text-align: center;
 }
 
+#content #advice #main #advice-list {
+  display: -ms-grid;
+  display: grid;
+  justify-items: left;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+
 #content #advice .buttons-arrow {
   display: -ms-grid;
   display: grid;

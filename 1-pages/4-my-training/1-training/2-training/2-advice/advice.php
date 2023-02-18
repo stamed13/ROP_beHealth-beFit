@@ -25,11 +25,6 @@
 
     //echo $advice["name"];
 
-    foreach($advices as $advice){
-        echo $advice["name"];
-            
-    }
-
 
 ?>
 
@@ -49,11 +44,12 @@
                     </div>
                 </div>
                 <div id="advice-list">
-                    Rady, jeden...
                     <div> <?php foreach($advices as $advice){
-        echo $advice["name"];
-            
-    }  ?> </div>
+                    echo $advice["name"];            
+                    }  ?> </div>
+                </div>
+                <div>
+                    <?php //echo $advice["name"]; ?>
                 </div>
             </article>
             

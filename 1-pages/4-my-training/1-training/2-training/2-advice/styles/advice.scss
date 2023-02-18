@@ -50,6 +50,15 @@
                     text-align: center;
                 }
             }
+            // rady
+            #advice-list {
+                display: grid;
+                justify-items: left;
+                font-size: 25px;
+                //font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                text-align: center;
+            }
         }
         // sipky na posun
         .buttons-arrow {
