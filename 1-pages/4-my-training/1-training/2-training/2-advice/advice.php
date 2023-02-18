@@ -10,11 +10,18 @@
     //pripojenie header casti
     include('../../layout/header.php');
 
+    // ak nie som prihlaseny presmeruje naspat
+    if( $_SESSION['login'] == false ){
+        header("Location: ../training.php");
+    }
+
     $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/2-advice/advice.php";
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
+    $caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
+    $advice = mySQLall($conn, "SELECT * FROM advice");
 
 
 ?>
@@ -36,6 +43,7 @@
                 </div>
                 <div id="advice-list">
                     Rady, jeden...
+                    <div> <?php echo $advice["name"]; ?> </div>
                 </div>
             </article>
             
