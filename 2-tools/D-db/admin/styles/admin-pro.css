@@ -62,3 +62,11 @@
   background: #c2c2c2;
   border-radius: 25px;
 }
+
+#content #database form #commit {
+  padding: 5px;
+  font-size: 25px;
+  border: none;
+  background: #ff7300;
+  color: white;
+}

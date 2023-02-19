@@ -56,6 +56,33 @@
 
         //debug($row, "SELECT");
     }
+
+    function commitChanges($conn){
+        //prikazy
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (1, 'Máš normálnu váhu.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (2, 'Máš nadváhu.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (3, 'Máš nízku váhu.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (4, 'Máš obezitu.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (5, 'Tesim sa, ze cvicis dost casto.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (6, 'Tesim sa, cvicis rovnomerne na vsetky partie.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (7, 'Máš obezitu.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (8, 'Máš obezitu.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (9, 'Máš obezitu.')";
+        mysqli_query($conn, $sql);
+        $sql = "INSERT INTO advice (idAdvice, name) VALUES (10, 'Máš obezitu.')";
+        mysqli_query($conn, $sql);
+
+        //
+        mysqli_close($conn);
+    }
     
 ?>
 
@@ -164,6 +191,13 @@
                     <textarea name="queryDD" class="query" placeholder="DROP TABLE table"><?= $_POST["queryDD"] ?></textarea>
                     <input class="submit" type="submit" name="drop" value="Drop">
                 </div>
+                    
+                <?php
+                    if( $_POST["commit"] ){  
+                        //commitChanges($conn, $sql);
+                    }
+                ?>
+                <input id="commit" type="submit" name="commit" value="Commit">
             </form>
 
             <div>
