@@ -13,7 +13,7 @@
 
     if( $_POST["login"] && $_POST["password"] == $password ){
         $_SESSION["logedAdmin"] = true;
-        header("Location: satabase.php");
+        header("Location: database.php");
     }
     
 ?>

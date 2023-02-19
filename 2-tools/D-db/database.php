@@ -92,13 +92,11 @@
             ?>
 
             <form action="" method="post">
-                <?php if( $_SESSION["logedAdmin"] == true ): ?>
-                    <input type="text" name="query" placeholder="Prikaz">
+            <input type="text" name="query" placeholder="Prikaz">
 
-                    <input type="submit" name="submit" value="Vykonaj">
+            <input type="submit" name="submit" value="Vykonaj">
 
-                    <input type="submit" name="logout" value="Odhlasit">
-                <?php endif ?>
+<input type="submit" name="logout" value="Odhlasit">
             </form>
         </div>
     </div>
