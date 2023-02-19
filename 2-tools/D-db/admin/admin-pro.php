@@ -6,6 +6,11 @@
     require_once ('../../E-login/helper/config.php');
     require_once ('../../E-login/helper/Helper.php');
 
+    //triedy
+    $classes = [
+        "actual" => "actual",
+    ];
+
     function selectSQL($conn, $sql){
         $row = mySQLall($conn, $sql);
 
@@ -81,49 +86,84 @@
             <div id="main-title">Admin</div>
 
             <?php
-                if( $_POST["select"] ){
-                    $sql = $_POST["queryS"];
 
-                    echo "prikaz: ";
-                    echo $sql;
-
-                    selectSQL($conn, $sql);
-                }
-
-                if( $_POST["insert"] ){
-                    $sql = $_POST["queryI"];
-
-                    echo "prikaz: ";
-                    echo $sql;
-
-                    insertSQL($conn, $sql);
-                }
-
-                if( $_POST["update"] ){
-                    $sql = $_POST["queryU"];
-
-                    echo "prikaz: ";
-                    echo $sql;
-
-                    updateSQL($conn, $sql);
-                }
             ?>
 
             <form action="" method="post">
-                <textarea name="queryS" class="query" placeholder="SELECT * FROM table">SELECT * FROM table</textarea>
-                <input class="submit" type="submit" name="select" value="Select">
+                <div class="command <?php echo addClass( $_POST["select"], $classes["actual"] ); ?>">
+                    <?php
+                    if( $_POST["select"] ){
+                        $sql = $_POST["queryS"];
+    
+                        echo "prikaz: ";
+                        echo $sql;
+    
+                        selectSQL($conn, $sql);
+                    }
+                    ?>
+                    <textarea name="queryS" class="query" placeholder="SELECT * FROM table"><?= $_POST["queryS"] ?></textarea>
+                    <input class="submit" type="submit" name="select" value="Select">
+                </div>
+                
+                <div class="command <?php echo addClass( $_POST["insert"], $classes["actual"] ); ?>">
+                    <?php
+                    if( $_POST["insert"] ){
+                        $sql = $_POST["queryI"];
+    
+                        echo "prikaz: ";
+                        echo $sql;
+    
+                        insertSQL($conn, $sql);
+                    }
+                    ?>
+                    <textarea name="queryI" class="query" placeholder="INSERT INTO table () VALUES ()"><?= $_POST["queryI"] ?></textarea>
+                    <input class="submit" type="submit" name="insert" value="Insert">
+                </div>
 
-                <textarea name="queryI" class="query" placeholder="INSERT INTO table () VALUES ()">INSERT INTO table () VALUES ()</textarea>
-                <input class="submit" type="submit" name="insert" value="Insert">
+                <div class="command <?php echo addClass( $_POST["update"], $classes["actual"] ); ?>">
+                    <?php
+                    if( $_POST["update"] ){
+                        $sql = $_POST["queryU"];
+    
+                        echo "prikaz: ";
+                        echo $sql;
+    
+                        updateSQL($conn, $sql);
+                    }
+                    ?>
+                    <textarea name="queryU" class="query" placeholder="UPDATE table SET column='value' WHERE condition"><?= $_POST["queryU"] ?></textarea>
+                    <input class="submit" type="submit" name="update" value="Update">
+                </div>
 
-                <textarea name="queryU" class="query" placeholder="UPDATE table SET column='value' WHERE condition">UPDATE table SET column='value' WHERE condition</textarea>
-                <input class="submit" type="submit" name="update" value="Update">
+                <div class="command <?php echo addClass( $_POST["delete"], $classes["actual"] ); ?>">
+                    <?php
+                    if( $_POST["delete"] ){
+                        $sql = $_POST["queryD"];
+    
+                        echo "prikaz: ";
+                        echo $sql;
+    
+                        selectSQL($conn, $sql);
+                    }
+                    ?>
+                    <textarea name="queryD" class="query" placeholder="DELETE FROM table WHERE condition"><?= $_POST["queryD"] ?></textarea>
+                    <input class="submit" type="submit" name="delete" value="Delete">
+                </div>
 
-                <textarea name="queryD" class="query" placeholder="DELETE FROM table WHERE condition">DELETE FROM table WHERE condition</textarea>
-                <input class="submit" type="submit" name="delete" value="Delete">
-
-                <textarea name="queryDD" class="query" placeholder="DROP TABLE table">DROP TABLE table</textarea>
-                <input class="submit" type="submit" name="delete" value="Drop">
+                <div class="command <?php echo addClass( $_POST["drop"], $classes["actual"] ); ?>">
+                    <?php
+                    if( $_POST["drop"] ){
+                        $sql = $_POST["queryD"];
+    
+                        echo "prikaz: ";
+                        echo $sql;
+    
+                        selectSQL($conn, $sql);
+                    }
+                    ?>
+                    <textarea name="queryDD" class="query" placeholder="DROP TABLE table"><?= $_POST["queryDD"] ?></textarea>
+                    <input class="submit" type="submit" name="drop" value="Drop">
+                </div>
             </form>
 
             <div>

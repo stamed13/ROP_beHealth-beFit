@@ -2,6 +2,7 @@
   min-height: 100vh;
   padding: 25px;
   padding-top: 75px;
+  background: #858585;
 }
 
 #content #database {
@@ -28,10 +29,19 @@
   justify-items: center;
   padding: 15px;
   display: grid;
+  gap: 80px;
+}
+
+#content #database form .command {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  padding: 15px;
+  display: grid;
   gap: 25px;
 }
 
-#content #database form .query {
+#content #database form .command .query {
   resize: vertical;
   height: 90px;
   width: 250px;
@@ -40,9 +50,15 @@
   background: white;
 }
 
-#content #database form .submit {
+#content #database form .command .submit {
   padding: 5px;
   font-size: 25px;
   border: none;
-  background: #7E7979;
+  background: #252525;
+  color: white;
+}
+
+#content #database form .actual {
+  background: #c2c2c2;
+  border-radius: 25px;
 }

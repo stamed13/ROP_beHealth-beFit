@@ -2,6 +2,7 @@
     min-height: 100vh;
     padding: 25px;
     padding-top: 75px;
+    background: #858585;
     // denna aktivita
     #database {
         padding-top: 60px;
@@ -21,22 +22,36 @@
             justify-items: center;
             padding: 15px;
             display: grid;
-            gap: 25px;
+            gap: 80px;
             //
-            .query {
-                resize: vertical;
-                height: 90px;
-                width: 250px;
-                font-size: 25px;
-                border: none;
-                background: white;
+            .command {
+                display: grid;
+                justify-items: center;
+                padding: 15px;
+                display: grid;
+                gap: 25px;
+                //
+                .query {
+                    resize: vertical;
+                    height: 90px;
+                    width: 250px;
+                    font-size: 25px;
+                    border: none;
+                    background: white;
+                }
+                //
+                .submit {
+                    padding: 5px;
+                    font-size: 25px;
+                    border: none;
+                    background: #252525;
+                    color: white;
+                }
             }
             //
-            .submit {
-                padding: 5px;
-                font-size: 25px;
-                border: none;
-                background: #7E7979;
+            .actual {
+                background: #c2c2c2;
+                border-radius: 25px;
             }
         }
     }
