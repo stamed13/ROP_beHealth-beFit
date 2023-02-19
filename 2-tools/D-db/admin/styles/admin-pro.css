@@ -32,6 +32,8 @@
 }
 
 #content #database form .query {
+  resize: vertical;
+  height: 90px;
   width: 250px;
   font-size: 25px;
   border: none;

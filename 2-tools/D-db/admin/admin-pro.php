@@ -11,9 +11,9 @@
 
 
         if (mysqli_query($conn, $sql)) {
-            echo "USPECH!!!";
+            echo "<div> USPECH!!! </div>";
         } else {
-            echo "CHYBA!!!";
+            echo "<div> CHYBA!!! </div>";
         }
   
         mysqli_close($conn);
@@ -21,8 +21,35 @@
         debug($row, "SELECT");
     }
 
-    if( $_POST["submit"] ){
+    function insertSQL($conn, $sql){
+        //$row = mySQLall($conn, $sql);
 
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<div> USPECH!!! </div>";
+        } else {
+            echo "<div> CHYBA!!! </div>";
+        }
+  
+        mysqli_close($conn);
+
+        //debug($row, "SELECT");
+    }
+
+    function updateSQL($conn, $sql){
+        //$row = mySQLall($conn, $sql);
+        //$sql = "UPDATE advice SET name='Tesim sa, cvicis rovnomerne na vsetky partie' WHERE id=6";
+
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<div> USPECH!!! </div>";
+        } else {
+            echo "<div> CHYBA!!! </div>";
+        }
+  
+        mysqli_close($conn);
+
+        //debug($row, "SELECT");
     }
     
 ?>
@@ -56,23 +83,47 @@
             <?php
                 if( $_POST["select"] ){
                     $sql = $_POST["queryS"];
-                    $results = mysqli_query($conn, $sql);
-                    foreach( $results AS $result ){
-                        //echo $result;
-                        //echo "result";
-                    }
 
+                    echo "prikaz: ";
                     echo $sql;
 
                     selectSQL($conn, $sql);
                 }
+
+                if( $_POST["insert"] ){
+                    $sql = $_POST["queryI"];
+
+                    echo "prikaz: ";
+                    echo $sql;
+
+                    insertSQL($conn, $sql);
+                }
+
+                if( $_POST["update"] ){
+                    $sql = $_POST["queryU"];
+
+                    echo "prikaz: ";
+                    echo $sql;
+
+                    updateSQL($conn, $sql);
+                }
             ?>
 
             <form action="" method="post">
-                <input class="query" type="text" name="queryS" placeholder="Prikaz">
-
+                <textarea name="queryS" class="query" placeholder="SELECT * FROM table">SELECT * FROM table</textarea>
                 <input class="submit" type="submit" name="select" value="Select">
 
+                <textarea name="queryI" class="query" placeholder="INSERT INTO table () VALUES ()">INSERT INTO table () VALUES ()</textarea>
+                <input class="submit" type="submit" name="insert" value="Insert">
+
+                <textarea name="queryU" class="query" placeholder="UPDATE table SET column='value' WHERE condition">UPDATE table SET column='value' WHERE condition</textarea>
+                <input class="submit" type="submit" name="update" value="Update">
+
+                <textarea name="queryD" class="query" placeholder="DELETE FROM table WHERE condition">DELETE FROM table WHERE condition</textarea>
+                <input class="submit" type="submit" name="delete" value="Delete">
+
+                <textarea name="queryDD" class="query" placeholder="DROP TABLE table">DROP TABLE table</textarea>
+                <input class="submit" type="submit" name="delete" value="Drop">
             </form>
 
             <div>
