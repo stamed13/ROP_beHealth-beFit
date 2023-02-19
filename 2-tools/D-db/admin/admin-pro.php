@@ -57,6 +57,38 @@
         //debug($row, "SELECT");
     }
 
+    function deleteSQL($conn, $sql){
+        //$row = mySQLall($conn, $sql);
+        //$sql = "UPDATE advice SET name='Tesim sa, cvicis rovnomerne na vsetky partie' WHERE id=6";
+
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<div> USPECH!!! </div>";
+        } else {
+            echo "<div> CHYBA!!! </div>";
+        }
+  
+        mysqli_close($conn);
+
+        //debug($row, "SELECT");
+    }
+
+    function dropSQL($conn, $sql){
+        //$row = mySQLall($conn, $sql);
+        //$sql = "UPDATE advice SET name='Tesim sa, cvicis rovnomerne na vsetky partie' WHERE id=6";
+
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<div> USPECH!!! </div>";
+        } else {
+            echo "<div> CHYBA!!! </div>";
+        }
+  
+        mysqli_close($conn);
+
+        //debug($row, "SELECT");
+    }
+
     function commitChanges($conn){
         //prikazy
         $sql = "INSERT INTO advice (idAdvice, name) VALUES (1, 'Máš normálnu váhu.')";
@@ -170,7 +202,7 @@
                         echo "prikaz: ";
                         echo $sql;
     
-                        selectSQL($conn, $sql);
+                        deleteSQL($conn, $sql);
                     }
                     ?>
                     <textarea name="queryD" class="query" placeholder="DELETE FROM table WHERE condition"><?= $_POST["queryD"] ?></textarea>
@@ -180,12 +212,12 @@
                 <div class="command <?php echo addClass( $_POST["drop"], $classes["actual"] ); ?>">
                     <?php
                     if( $_POST["drop"] ){
-                        $sql = $_POST["queryD"];
+                        $sql = $_POST["queryDD"];
     
                         echo "prikaz: ";
                         echo $sql;
     
-                        selectSQL($conn, $sql);
+                        dropSQL($conn, $sql);
                     }
                     ?>
                     <textarea name="queryDD" class="query" placeholder="DROP TABLE table"><?= $_POST["queryDD"] ?></textarea>
