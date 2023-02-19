@@ -1,0 +1,46 @@
+#content {
+  min-height: 100vh;
+  padding: 25px;
+  padding-top: 75px;
+}
+
+#content #database {
+  padding-top: 60px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content #database #main-title {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  justify-items: left;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#content #database form {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  padding: 15px;
+  display: grid;
+  gap: 25px;
+}
+
+#content #database form .query {
+  width: 250px;
+  font-size: 25px;
+  border: none;
+  background: white;
+}
+
+#content #database form .submit {
+  padding: 5px;
+  font-size: 25px;
+  border: none;
+  background: #7E7979;
+}

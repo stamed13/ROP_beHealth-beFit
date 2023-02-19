@@ -27,8 +27,7 @@
 
     <link rel="shortcut icon" href="../../B-media/real-icon3.png" type="image/x-icon" />
     <link rel="stylesheet" href="../../A-styles/global.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/header-mobile.css">
+    <link rel="stylesheet" href="styles/header-login.css">
     <link rel="stylesheet" href="../../A-styles/content.css">
     <link rel="stylesheet" href="../../A-styles/footer.css">
     <link rel="stylesheet" href="styles/admin-login.css">

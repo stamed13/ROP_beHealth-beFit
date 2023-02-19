@@ -1,0 +1,41 @@
+#content {
+    min-height: 100vh;
+    padding: 25px;
+    padding-top: 75px;
+    // denna aktivita
+    #database {
+        padding-top: 60px;
+        display: grid;
+        justify-content: center;
+        //hlavny nadpis
+        #main-title {
+            position: absolute;
+            display: grid;
+            justify-items: left;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        // formular
+        form {
+            display: grid;
+            justify-items: center;
+            padding: 15px;
+            display: grid;
+            gap: 25px;
+            //
+            .query {
+                width: 250px;
+                font-size: 25px;
+                border: none;
+                background: white;
+            }
+            //
+            .submit {
+                padding: 5px;
+                font-size: 25px;
+                border: none;
+                background: #7E7979;
+            }
+        }
+    }
+}

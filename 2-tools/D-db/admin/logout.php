@@ -1,15 +1,17 @@
 <?php
     session_start();
     
-    error_reporting(E_ERROR);// E_ALL, E_WARNING
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
 
-    require_once ('../helper/config.php');
-    require_once ('../helper/Helper.php');
+    require_once ('../../E-login/helper/config.php');
+    require_once ('../../E-login/helper/Helper.php');
+
+    //header("Location: admin.php");
 
     if (session_destroy()) {
-        header(actualLocation());
-        //echo actualLocation();
-        //echo $_SESSION["location"];
+        $_SESSION["logedAdmin"] = false;
+        header("Location: admin.php");
     }
 
+    echo "logout please";
 ?>

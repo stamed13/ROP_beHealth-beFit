@@ -3,34 +3,12 @@
 
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
-    require_once ('../E-login/helper/config.php');
-    require_once ('../E-login/helper/Helper.php');
+    require_once ('../../E-login/helper/config.php');
+    require_once ('../../E-login/helper/Helper.php');
 
-    $password = "rootDB";
-    $_SESSION["logedAdmin"] = false;
+    function selectSQL($conn, $sql){
+        $row = mySQLall($conn, $sql);
 
-    function updateACTIVITY($conn){
-        //somarina, nepouzitelna tabulka, vela moznosti...
-
-        // vyprazdenie tabulke
-        $sql = "TRUNCATE TABLE activities";
-        mysqli_query($conn, $sql);
-
-        // naplnenie tabulky vsetkymi moznymi
-        // len 1, 2, 3
-        $sql = "INSERT INTO activities (idActivity) VALUES (1)";   mysqli_query($conn, $sql);
-        $sql = "UPDATE activities SET pullCa='1', pushCa='1', coreCa='1', legCa='1', neckSt='1', handSt='1', backSt='1', legSt='1' WHERE idActivity=1";
-        mysqli_query($conn, $sql);
-
-       
-
-
-        /*
-        $sql = "INSERT INTO activities (idActivity) VALUES (35)";
-        mysqli_query($conn, $sql);
-        $sql = "UPDATE activities SET pullCa='0', pushCa='0', coreCa='0', legCa='0', neckSt='0', handSt='0', backSt='0', legSt='0' WHERE idActivity=50";
-        mysqli_query($conn, $sql);
-        */
 
         if (mysqli_query($conn, $sql)) {
             echo "USPECH!!!";
@@ -39,11 +17,8 @@
         }
   
         mysqli_close($conn);
-    }
 
-    if( $_POST["logout"] ){
-        $_SESSION["logedAdmin"] = false;
-
+        debug($row, "SELECT");
     }
 
     if( $_POST["submit"] ){
@@ -59,45 +34,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="../B-media/real-icon3.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../A-styles/global.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/header-mobile.css">
-    <link rel="stylesheet" href="../A-styles/content.css">
-    <link rel="stylesheet" href="../A-styles/footer.css">
-    <link rel="stylesheet" href="styles/database.css">
+    <link rel="shortcut icon" href="../../B-media/real-icon3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../A-styles/global.css">
+    <link rel="stylesheet" href="styles/header-pro.css">
+    <link rel="stylesheet" href="../../A-styles/content.css">
+    <link rel="stylesheet" href="../../A-styles/footer.css">
+    <link rel="stylesheet" href="styles/admin-pro.css">
 
     <title>DB admin</title>
 </head>
 <body>
     <?php
         //pripojenie header casti
-        include('layout/header.php');
+        include('layout/header-pro.php');
     ?>
     
     <div id="content">
         <div id="database">
-            <h2>Database</h2>
-            <h1>ADMIN</h1>
+            <div id="main-title">Admin</div>
 
             <?php
-                if( $_POST["submit"] ){
-                    $sql = $_POST["query"];
-                    $result = mysqli_query($conn, $sql);
-                    foreach( $result AS $result ){
-                        echo $result;
-                        echo "result";
+                if( $_POST["select"] ){
+                    $sql = $_POST["queryS"];
+                    $results = mysqli_query($conn, $sql);
+                    foreach( $results AS $result ){
+                        //echo $result;
+                        //echo "result";
                     }
+
+                    echo $sql;
+
+                    selectSQL($conn, $sql);
                 }
             ?>
 
             <form action="" method="post">
-            <input type="text" name="query" placeholder="Prikaz">
+                <input class="query" type="text" name="queryS" placeholder="Prikaz">
 
-            <input type="submit" name="submit" value="Vykonaj">
+                <input class="submit" type="submit" name="select" value="Select">
 
-<input type="submit" name="logout" value="Odhlasit">
             </form>
+
+            <div>
+                <?php
+
+                ?>
+            </div>
         </div>
     </div>
 

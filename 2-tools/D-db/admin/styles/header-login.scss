@@ -1,33 +1,24 @@
-//hlavicka pre sirku vacsiu ako maju mobily
-#header-computer {
+//hlavicka 
+#header {
     position: fixed;
     width: 100%;
+    display: grid;
     font-family: 'Inter', sans-serif;
-    //background: #282828;
-    //skryte na mobile
-    @media(min-width: 0px) {
-        display: none;
-    }
-    //viditelne
-    @media(min-width: 450px) {
-        display: block;
-    }
+    background: #282828;
     //horna cast hlavicky
     .header-top {
         display: grid;
         align-items: center;
         padding: 10px;
-        background: #282828;
         //
         @media(min-width: 450px) {
-            grid-auto-flow: column;
-            justify-content: center;
-            gap: 5px;
+            //grid-auto-flow: column;
+            //gap: 5px;
         }
-
         //nazov webu
         .header-title {
             display: grid;
+            justify-items: center;
             color: white;
             font-size: 30px;
             font-weight: 600;

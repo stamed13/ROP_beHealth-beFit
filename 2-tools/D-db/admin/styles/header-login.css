@@ -1,0 +1,26 @@
+#header {
+  position: fixed;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  font-family: 'Inter', sans-serif;
+  background: #282828;
+}
+
+#header .header-top {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+#header .header-top .header-title {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+}
