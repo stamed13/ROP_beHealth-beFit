@@ -22,8 +22,15 @@
 
     //$caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
     $advices = mySQLall($conn, "SELECT * FROM advice");
+    $adviceWeight = $advices["name"];
 
     //echo $advice["name"];
+
+    /*
+    $sql = "TRUNCATE advice";
+    mysqli_query($conn, $sql);
+    mysqli_close($conn);    
+    */
 
 
 ?>
@@ -44,9 +51,8 @@
                     </div>
                 </div>
                 <div id="advice-list">
-                    <div> <?php foreach($advices as $advice){
-                    echo $advice["name"];            
-                    }  ?> </div>
+                    <?php echo "<div> $adviceWeight </div>";  ?>
+                    
                 </div>
                 <div>
                     <?php //echo $advice["name"]; ?>

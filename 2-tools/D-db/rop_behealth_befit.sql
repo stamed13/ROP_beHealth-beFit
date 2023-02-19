@@ -28,6 +28,11 @@ CREATE TABLE advice (
     name VARCHAR(500) NOT NULL
 ) Engine = Innodb;
 
+INSERT INTO advice (name) VALUES ("Máš normálnu váhu.");
+INSERT INTO advice (name) VALUES ("Máš nadváhu.");
+INSERT INTO advice (name) VALUES ("Máš nízku váhu.");
+INSERT INTO advice (name) VALUES ("Máš obezitu.");
+
 CREATE TABLE users (
 	idUser INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(60) NOT NULL,
