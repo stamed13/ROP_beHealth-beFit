@@ -1,0 +1,185 @@
+#header-mobile {
+  position: fixed;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+@media (min-width: 0px) {
+  #header-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 450px) {
+  #header-mobile {
+    display: none;
+  }
+}
+
+#header-mobile .header-top {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  background: #282828;
+  grid-auto-flow: row;
+  justify-items: center;
+  gap: 5px;
+}
+
+#header-mobile .header-top #row {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 0px) {
+  #header-mobile .header-top #row {
+    grid-auto-flow: column;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 300px) {
+  #header-mobile .header-top #row {
+    grid-auto-flow: column;
+    gap: 90px;
+  }
+}
+
+#header-mobile .header-top #row .loginsM {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: left;
+}
+
+#header-mobile .header-top #row .loginsM .bt-logedM {
+  display: -ms-grid;
+  display: grid;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  background: #0E7619;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#header-mobile .header-top #row .loginsM .ham-settingsM {
+  padding: 5px 15px;
+  margin-top: 33px;
+  position: absolute;
+  display: none;
+  background: #D9D9D9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+
+#header-mobile .header-top #row .loginsM .ham-settingsM .name {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  font-size: 25px;
+  text-decoration: underline;
+  color: black;
+}
+
+#header-mobile .header-top #row .loginsM .ham-settingsM .profile {
+  margin-top: 5px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+#header-mobile .header-top #row .loginsM .ham-settingsM .log-out {
+  margin-top: 15px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  background: #B6B6B6;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+#header-mobile .header-top #row .loginsM .ham-settingsM.active {
+  display: -ms-grid;
+  display: grid;
+}
+
+#header-mobile .header-top #row .bt-log-in {
+  border: 2px solid black;
+  background: #03A500;
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 0px) {
+  #header-mobile .header-top #row .bt-log-in {
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+}
+
+#header-mobile .header-top #row .logo {
+  border-radius: 50%;
+}
+
+@media (min-width: 0px) {
+  #header-mobile .header-top #row .logo {
+    width: 35px;
+  }
+}
+
+#header-mobile .header-top .header-title {
+  color: white;
+}
+
+@media (min-width: 0px) {
+  #header-mobile .header-top .header-title {
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 300px) {
+  #header-mobile .header-top .header-title {
+    font-weight: 600;
+    font-size: 30px;
+  }
+}
+
+#header-mobile #header-nav {
+  padding: 5px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #006600;
+}
+
+#header-mobile #header-nav .search {
+  height: 30px;
+  width: 65vw;
+  padding-left: 5px;
+  font-size: 20px;
+  color: black;
+  border-radius: 9px;
+  border: 2px solid black;
+}

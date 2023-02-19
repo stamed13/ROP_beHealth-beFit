@@ -1,0 +1,43 @@
+#content {
+  min-height: 100vh;
+  padding: 25px;
+  padding-top: 75px;
+}
+
+#content #database {
+  padding-top: 60px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#content #database form {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  padding: 15px;
+  display: grid;
+  gap: 5px;
+  background: #A3A3A3;
+  border-radius: 10px;
+}
+
+#content #database form #title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#content #database form #passwd {
+  width: 250px;
+  font-size: 25px;
+  margin-bottom: 40px;
+  border: none;
+}
+
+#content #database form #submit {
+  padding: 5px;
+  font-size: 25px;
+  border: none;
+}
