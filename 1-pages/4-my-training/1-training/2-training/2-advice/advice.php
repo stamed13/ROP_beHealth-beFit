@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'advice';
@@ -21,7 +21,7 @@
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
     //$caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
-    $advices = mySQLall($conn, "SELECT * FROM advice");
+    $advices = mySQLall($conn, "SELECT * FROM advice WHERE idAdvice=1");
     $adviceWeight = $advices["name"];
 
     //echo $advice["name"];
