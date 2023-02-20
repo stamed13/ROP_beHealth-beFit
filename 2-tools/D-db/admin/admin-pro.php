@@ -5,6 +5,12 @@
 
     require_once ('../../E-login/helper/config.php');
     require_once ('../../E-login/helper/Helper.php');
+    require_once ('commit/changeCommit.php');
+    require_once ('commit/adviceCommit.php');
+
+    if( $_SESSION["logedAdmin"] == false ){
+        header("Location: admin.php");
+    }
 
     //triedy
     $classes = [
@@ -16,9 +22,9 @@
 
 
         if (mysqli_query($conn, $sql)) {
-            echo "<div> USPECH!!! </div>";
+            echo "<div class='gBorder'> USPECH!!! </div>";
         } else {
-            echo "<div> CHYBA!!! </div>";
+            echo "<div  class='rBorder'> CHYBA!!! </div>";
         }
   
         mysqli_close($conn);
@@ -31,9 +37,9 @@
 
 
         if (mysqli_query($conn, $sql)) {
-            echo "<div> USPECH!!! </div>";
+            echo "<div class='gBorder'> USPECH!!! </div>";
         } else {
-            echo "<div> CHYBA!!! </div>";
+            echo "<div  class='rBorder'> CHYBA!!! </div>";
         }
   
         mysqli_close($conn);
@@ -47,9 +53,9 @@
 
 
         if (mysqli_query($conn, $sql)) {
-            echo "<div> USPECH!!! </div>";
+            echo "<div class='gBorder'> USPECH!!! </div>";
         } else {
-            echo "<div> CHYBA!!! </div>";
+            echo "<div  class='rBorder'> CHYBA!!! </div>";
         }
   
         mysqli_close($conn);
@@ -63,9 +69,9 @@
 
 
         if (mysqli_query($conn, $sql)) {
-            echo "<div> USPECH!!! </div>";
+            echo "<div class='gBorder'> USPECH!!! </div>";
         } else {
-            echo "<div> CHYBA!!! </div>";
+            echo "<div  class='rBorder'> CHYBA!!! </div>";
         }
   
         mysqli_close($conn);
@@ -79,9 +85,9 @@
 
 
         if (mysqli_query($conn, $sql)) {
-            echo "<div> USPECH!!! </div>";
+            echo "<div class='gBorder'> USPECH!!! </div>";
         } else {
-            echo "<div> CHYBA!!! </div>";
+            echo "<div  class='rBorder'> CHYBA!!! </div>";
         }
   
         mysqli_close($conn);
@@ -89,32 +95,7 @@
         //debug($row, "SELECT");
     }
 
-    function commitChanges($conn){
-        //prikazy
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (1, 'Máš normálnu váhu.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (2, 'Máš nadváhu.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (3, 'Máš nízku váhu.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (4, 'Máš obezitu.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (5, 'Tesim sa, ze cvicis dost casto.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (6, 'Tesim sa, cvicis rovnomerne na vsetky partie.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (7, 'Máš obezitu.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (8, 'Máš obezitu.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (9, 'Máš obezitu.')";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO advice (idAdvice, name) VALUES (10, 'Máš obezitu.')";
-        mysqli_query($conn, $sql);
-
-        //
-        mysqli_close($conn);
-    }
+    
     
 ?>
 
@@ -154,12 +135,13 @@
                     if( $_POST["select"] ){
                         $sql = $_POST["queryS"];
     
-                        echo "prikaz: ";
-                        echo $sql;
+                        //echo "prikaz: ";
+                        //echo $sql;
     
                         selectSQL($conn, $sql);
                     }
                     ?>
+                    <div class="labelQuery">SELECT * FROM table</div>
                     <textarea name="queryS" class="query" placeholder="SELECT * FROM table"><?= $_POST["queryS"] ?></textarea>
                     <input class="submit" type="submit" name="select" value="Select">
                 </div>
@@ -169,12 +151,13 @@
                     if( $_POST["insert"] ){
                         $sql = $_POST["queryI"];
     
-                        echo "prikaz: ";
-                        echo $sql;
+                        //echo "prikaz: ";
+                        //echo $sql;
     
                         insertSQL($conn, $sql);
                     }
                     ?>
+                    <div class="labelQuery">INSERT INTO table () VALUES ()</div>
                     <textarea name="queryI" class="query" placeholder="INSERT INTO table () VALUES ()"><?= $_POST["queryI"] ?></textarea>
                     <input class="submit" type="submit" name="insert" value="Insert">
                 </div>
@@ -184,12 +167,13 @@
                     if( $_POST["update"] ){
                         $sql = $_POST["queryU"];
     
-                        echo "prikaz: ";
-                        echo $sql;
+                        //echo "prikaz: ";
+                        //echo $sql;
     
                         updateSQL($conn, $sql);
                     }
                     ?>
+                    <div class="labelQuery">UPDATE table SET column='value' WHERE condition</div>
                     <textarea name="queryU" class="query" placeholder="UPDATE table SET column='value' WHERE condition"><?= $_POST["queryU"] ?></textarea>
                     <input class="submit" type="submit" name="update" value="Update">
                 </div>
@@ -199,12 +183,13 @@
                     if( $_POST["delete"] ){
                         $sql = $_POST["queryD"];
     
-                        echo "prikaz: ";
-                        echo $sql;
+                        //echo "prikaz: ";
+                        //echo $sql;
     
                         deleteSQL($conn, $sql);
                     }
                     ?>
+                    <div class="labelQuery">DELETE FROM table WHERE condition</div>
                     <textarea name="queryD" class="query" placeholder="DELETE FROM table WHERE condition"><?= $_POST["queryD"] ?></textarea>
                     <input class="submit" type="submit" name="delete" value="Delete">
                 </div>
@@ -214,22 +199,27 @@
                     if( $_POST["drop"] ){
                         $sql = $_POST["queryDD"];
     
-                        echo "prikaz: ";
-                        echo $sql;
+                        //echo "prikaz: ";
+                        //echo $sql;
     
                         dropSQL($conn, $sql);
                     }
                     ?>
+                    <div class="labelQuery">DROP TABLE table</div>
                     <textarea name="queryDD" class="query" placeholder="DROP TABLE table"><?= $_POST["queryDD"] ?></textarea>
                     <input class="submit" type="submit" name="drop" value="Drop">
                 </div>
                     
-                <?php
-                    if( $_POST["commit"] ){  
-                        //commitChanges($conn, $sql);
-                    }
-                ?>
-                <input id="commit" type="submit" name="commit" value="Commit">
+                <div class="command">
+                    <?php
+                        if( $_POST["commit"] ){  
+                            //commitChange($conn, $sql);
+                            //commitAdvice($conn, $sql);
+                        }
+                    ?>
+                    <div class="labelCommmit">Aktualizovanie databazy</div>
+                    <input class="commit" type="submit" name="commit" value="COMMIT">
+                </div>
             </form>
 
             <div>

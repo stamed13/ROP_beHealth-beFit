@@ -3,6 +3,7 @@
   padding: 25px;
   padding-top: 75px;
   background: #858585;
+  font-size: 16px;
 }
 
 #content #database {
@@ -48,6 +49,7 @@
   font-size: 25px;
   border: none;
   background: white;
+  border-radius: 5px;
 }
 
 #content #database form .command .submit {
@@ -56,6 +58,25 @@
   border: none;
   background: #252525;
   color: white;
+  border-radius: 5px;
+}
+
+#content #database form .command .rBorder {
+  padding: 5px;
+  font-size: 18px;
+  color: whitesmoke;
+  background: red;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+#content #database form .command .gBorder {
+  padding: 5px;
+  font-size: 18px;
+  color: whitesmoke;
+  background: green;
+  border-radius: 5px;
+  font-weight: 500;
 }
 
 #content #database form .actual {
@@ -63,10 +84,19 @@
   border-radius: 25px;
 }
 
-#content #database form #commit {
+#content #database form .labelCommmit {
+  padding: 5px;
+  background: #252525;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+
+#content #database form .commit {
   padding: 5px;
   font-size: 25px;
+  font-weight: bold;
   border: none;
-  background: #ff7300;
+  background: #ff3c00;
   color: white;
+  border-radius: 5px;
 }

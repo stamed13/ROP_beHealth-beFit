@@ -3,6 +3,7 @@
     padding: 25px;
     padding-top: 75px;
     background: #858585;
+    font-size: 16px;
     // denna aktivita
     #database {
         padding-top: 60px;
@@ -38,6 +39,7 @@
                     font-size: 25px;
                     border: none;
                     background: white;
+                    border-radius: 5px;
                 }
                 //
                 .submit {
@@ -46,6 +48,25 @@
                     border: none;
                     background: #252525;
                     color: white;
+                    border-radius: 5px;
+                }
+                //
+                .rBorder {
+                    padding: 5px;
+                    font-size: 18px;
+                    color: whitesmoke;
+                    background: red;
+                    border-radius: 5px;
+                    font-weight: 500;
+                }
+                //
+                .gBorder {
+                    padding: 5px;
+                    font-size: 18px;
+                    color: whitesmoke;
+                    background: green;
+                    border-radius: 5px;
+                    font-weight: 500;
                 }
             }
             //
@@ -54,12 +75,20 @@
                 border-radius: 25px;
             }
             //
-            #commit {
+            .labelCommmit {
+                padding: 5px;
+                background: rgb(37, 37, 37);
+                color: whitesmoke;
+                border-radius: 5px;
+            }
+            .commit {
                 padding: 5px;
                 font-size: 25px;
+                font-weight: bold;
                 border: none;
-                background: #ff7300;
+                background: #ff3c00;
                 color: white;
+                border-radius: 5px;
             }
         }
     }
