@@ -186,7 +186,8 @@
             gap: 30px;
             // vyhladavac
             .search {
-                display: grid;
+                display: none;
+                //display: grid;
                 height: 30px;
                 width: 65vw;
                 padding-left: 5px;

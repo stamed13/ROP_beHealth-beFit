@@ -227,8 +227,7 @@
 }
 
 #header-mobile #header-nav div .search {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   height: 30px;
   width: 65vw;
   padding-left: 5px;
