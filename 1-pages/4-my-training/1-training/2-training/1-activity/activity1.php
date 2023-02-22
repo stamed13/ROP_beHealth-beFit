@@ -15,7 +15,7 @@
         header("Location: ../training.php");
     }
 
-    $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/1-activity/activity.php#main";
+    $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/1-activity/activity1.php";
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
