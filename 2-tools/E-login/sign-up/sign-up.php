@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     require_once ('../helper/config.php');
@@ -136,7 +138,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="shortcut icon" href="../B-media/real-icon3.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../B-media/real-icon3.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles/sign-up.css">
 
     <title>sign-up</title>
@@ -145,7 +147,7 @@
     <div id="content">
         <div id="sign-up">
             <div id="sign-up-header">
-                <a href="../../../index.php"><img src="../../B-media/logo-real.svg" 
+                <a href="<?php echo $_SESSION["location"]; ?>"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
                 <div id="sign-up-title">Sign-up</div>
             </div>
