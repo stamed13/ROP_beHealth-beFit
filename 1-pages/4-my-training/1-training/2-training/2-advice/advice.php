@@ -21,16 +21,18 @@
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
 
     //$caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
-    $advices = mySQLall($conn, "SELECT * FROM advice WHERE idAdvice=1");
-    $adviceWeight = $advices["name"];
+    $advices = mySQLall($conn, "SELECT * FROM advice");
+    //$adviceWeight = $advices["name"];
 
-    //echo $advice["name"];
+    //echo $advices["1"]["name"];
 
     /*
     $sql = "TRUNCATE advice";
     mysqli_query($conn, $sql);
     mysqli_close($conn);    
     */
+
+    
 
 
 ?>
@@ -51,11 +53,18 @@
                     </div>
                 </div>
                 <div id="advice-list">
-                    <?php echo "<div> $adviceWeight </div>";  ?>
+                <div>  </div>
+                    <?php echo $adviceWeight['name']; 
+                    //debug($advices);
+
+                    foreach( $advices AS $advice ){
+                        echo $advice["name"];
+                        echo " ";
+                    } ?>
                     
                 </div>
                 <div>
-                    <?php //echo $advice["name"]; ?>
+                    <?php echo $advices[1]["name"]; ?>
                 </div>
             </article>
             
