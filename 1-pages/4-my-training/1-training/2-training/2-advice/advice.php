@@ -58,8 +58,8 @@
                     //debug($advices);
 
                     foreach( $advices AS $advice ){
-                        echo $advice["name"];
-                        echo " ";
+                        //echo $advice["name"];
+                        //echo " ";
                     } ?>
                     
                 </div>
