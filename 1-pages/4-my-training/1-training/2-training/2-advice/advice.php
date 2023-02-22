@@ -58,24 +58,23 @@
                     </div>
                 </div>
                 <div id="advice-list">
-                <div> <?php adviceWeight($advices, $body_mass); ?> </div>
+                    <div> <?php adviceWeight($advices, $body_mass); ?> </div>
 
-                    
-                </div>
-                <div>
-                    <?php
-                        //vypis vysky uzivatela
-                        //$height = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=1");
-                        //echo $userInfo["height"];
+                    <div>
+                        <?php
+                            //vypis vysky uzivatela
+                            //$height = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=1");
+                            //echo $userInfo["height"];
 
-                        //vypis vahy uzivatela
-                        //$weight = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=1");
-                        //echo $userInfo["weight"];
+                            //vypis vahy uzivatela
+                            //$weight = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=1");
+                            //echo $userInfo["weight"];
 
                         
 
-                    ?>
-                    <?php //echo $advices[2]["name"]; ?>
+                        ?>
+                        <?php //echo $advices[2]["name"]; ?>
+                    </div>
                 </div>
             </article>
             
