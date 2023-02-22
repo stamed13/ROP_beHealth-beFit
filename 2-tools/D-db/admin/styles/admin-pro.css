@@ -1,9 +1,33 @@
 #content {
   min-height: 100vh;
-  padding: 25px;
-  padding-top: 75px;
   background: #858585;
   font-size: 16px;
+}
+
+@media (max-width: 224px) {
+  #content {
+    padding-top: 85px;
+  }
+}
+
+@media (min-width: 224px) {
+  #content {
+    padding-top: 55px;
+  }
+}
+
+@media (min-width: 400px) {
+  #content {
+    padding: 10px;
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: 500px) {
+  #content {
+    padding: 25px;
+    padding-top: 35px;
+  }
 }
 
 #content #database {
@@ -13,15 +37,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'Inter', sans-serif;
 }
 
 #content #database #main-title {
-  position: absolute;
   display: -ms-grid;
   display: grid;
-  justify-items: left;
   font-size: 30px;
   font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  #content #database #main-title {
+    justify-items: center;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #database #main-title {
+    justify-items: left;
+  }
 }
 
 #content #database form {
@@ -40,16 +75,30 @@
   padding: 15px;
   display: grid;
   gap: 25px;
+  background: #9e9494;
+  border-radius: 25px;
 }
 
 #content #database form .command .query {
   resize: vertical;
   height: 90px;
-  width: 250px;
   font-size: 25px;
   border: none;
   background: white;
+  color: black;
   border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  #content #database form .command .query {
+    width: 75vw;
+  }
+}
+
+@media (min-width: 500px) {
+  #content #database form .command .query {
+    width: 350px;
+  }
 }
 
 #content #database form .command .submit {

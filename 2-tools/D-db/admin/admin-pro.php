@@ -210,6 +210,7 @@
                     <input class="submit" type="submit" name="drop" value="Drop">
                 </div>
                     
+                <!--
                 <div class="command">
                     <?php
                         if( $_POST["commit"] ){  
@@ -220,6 +221,7 @@
                     <div class="labelCommmit">Aktualizovanie databazy</div>
                     <input class="commit" type="submit" name="commit" value="COMMIT">
                 </div>
+                -->
             </form>
 
             <div>

@@ -11,6 +11,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'Inter', sans-serif;
 }
 
 #content #database form {
@@ -34,10 +35,18 @@
   font-size: 25px;
   margin-bottom: 40px;
   border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 330px) {
+  #content #database form #passwd {
+    width: 75vw;
+  }
 }
 
 #content #database form #submit {
   padding: 5px;
   font-size: 25px;
   border: none;
+  border-radius: 5px;
 }

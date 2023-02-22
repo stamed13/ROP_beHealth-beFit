@@ -7,6 +7,7 @@
         padding-top: 60px;
         display: grid;
         justify-content: center;
+        font-family: 'Inter', sans-serif;
         // formular
         form {
             display: grid;
@@ -27,12 +28,20 @@
                 font-size: 25px;
                 margin-bottom: 40px;
                 border: none;
+                border-radius: 5px;
+                @media(max-width: 330px){
+                    width: 75vw;
+                }
+                @media(min-width: 330px){
+                    //padding-top: 55px;
+                }
             }
             //
             #submit {
                 padding: 5px;
                 font-size: 25px;
                 border: none;
+                border-radius: 5px;
             }
         }
     }

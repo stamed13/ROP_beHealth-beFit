@@ -16,7 +16,7 @@
 
     <header id="header">
         <div class="header-top">
-            <a href="logout.php" class="log-out">Odhlasit</a>
             <div class="header-title">beHealth-beFit</div>
+            <a href="logout.php" class="log-out">Odhlasit</a>
         </div>
     </header>
