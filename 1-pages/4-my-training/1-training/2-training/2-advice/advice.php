@@ -16,9 +16,14 @@
     }
 
     $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/2-advice/advice.php";
+    $idUser = $_SESSION["idUser"];
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
+    require_once ('adviceHelp.php');
+
+    $userInfo = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=$idUser");
+    $body_mass = ( ($userInfo["weight"]) / (pow($userInfo["height"], 2)) ) * 10000;
 
     //$caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
     $advices = mySQLall($conn, "SELECT * FROM advice");
@@ -53,18 +58,24 @@
                     </div>
                 </div>
                 <div id="advice-list">
-                <div>  </div>
-                    <?php echo $adviceWeight['name']; 
-                    //debug($advices);
+                <div> <?php adviceWeight($advices, $body_mass); ?> </div>
 
-                    foreach( $advices AS $advice ){
-                        //echo $advice["name"];
-                        //echo " ";
-                    } ?>
                     
                 </div>
                 <div>
-                    <?php echo $advices[1]["name"]; ?>
+                    <?php
+                        //vypis vysky uzivatela
+                        //$height = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=1");
+                        //echo $userInfo["height"];
+
+                        //vypis vahy uzivatela
+                        //$weight = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=1");
+                        //echo $userInfo["weight"];
+
+                        
+
+                    ?>
+                    <?php //echo $advices[2]["name"]; ?>
                 </div>
             </article>
             
