@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: localhost:3306
--- Čas generovania: Út 21.Feb 2023, 23:20
+-- Čas generovania: Št 23.Feb 2023, 20:33
 -- Verzia serveru: 10.4.24-MariaDB
 -- Verzia PHP: 7.4.29
 
@@ -58,10 +58,20 @@ INSERT INTO `advice` (`idAdvice`, `name`) VALUES
 (19, 'Skus viac strecovat nohy.'),
 (20, 'Ak mas bolesti hlavy alebo zapastia skus prosim strecovat krk alebo ruky (to co robi problem).'),
 (21, 'Si zaciatocnik, pokojne cvic dalej, vysledky pomaly pridu.'),
-(22, 'Si expert, pokojne si zlepsuj \r\nsvoje chopnosti.'),
-(23, ''),
-(24, ''),
-(25, '');
+(22, 'Si pokrocili, pokojne si mozes zlepsit svoje schopnisti a posunut level narocnosti.'),
+(23, 'Si expert, pokojne si zlepsuj \r\nsvoje chopnosti.'),
+(24, 'Radim ti cvicit hlboky drep a vysiet na hrazde.'),
+(25, 'Radim ti cvicit hlboky drep a striedat pasivny vis s aktivnym visom, zapoj prosim lopatky.'),
+(26, 'Radim ti cvicit hlboky drep s nohami na sirku ramien a denne aspon jeden zhyb a kluk.'),
+(27, 'Radim ti cvicit hlboky drep s nohami na sirku ramien, pike pulses a denne 5 zhybov a klukov.'),
+(28, 'Radim ti cvicit hlboky drep s nohami na sirku ramien, pike pulses a striezku. Cviky, v ktorych sa chces zlepsit cvic co najcastejsie, vtedy ked si na nich spomenies (len take, ktore ta velmi neunavia).'),
+(29, 'j'),
+(30, 'j'),
+(31, ''),
+(32, ''),
+(33, ''),
+(34, ''),
+(35, '');
 
 --
 -- Kľúče pre exportované tabuľky
@@ -81,7 +91,7 @@ ALTER TABLE `advice`
 -- AUTO_INCREMENT pre tabuľku `advice`
 --
 ALTER TABLE `advice`
-  MODIFY `idAdvice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `idAdvice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
