@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ERROR);// E_ALL, E_WARNING
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'advice';
@@ -60,7 +60,7 @@
                 <div id="advice-list">
                     <div> <?php 
                         adviceWeight($advices, $body_mass); 
-                        adviceExercise($advices, $body_mass);
+                        adviceExercise($advices, $body_mass, $conn, $idUser);
                     ?> </div>
 
                     <div>

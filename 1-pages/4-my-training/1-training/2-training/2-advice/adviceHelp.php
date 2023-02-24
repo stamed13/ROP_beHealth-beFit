@@ -1,4 +1,5 @@
 <?php
+//kontrola vahy pouzivatela podla bmi
     function adviceWeight($advices, $body_mass){
         if($body_mass > 30){
             echo $advices[3]["name"];
@@ -19,10 +20,16 @@
             }
         }
 
-        function adviceExercise($advices, $conn){
-            $pull = mySQLall($conn, "");
+        //kontrola cvicenia pouzivatela
+        function adviceExercise($advices, $body_mass, $conn, $idUser){
+            //pocet aktivit pouzivatela
+            $activityCount = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
 
-            if( $pull ){echo "pullCheck";}
+            
+
+            echo $activityCount[0]["activityCount"];
+
+            //if( $activityCount > 0 ){echo "pullCheck";}
             
             $disbalanc = false;
         }
