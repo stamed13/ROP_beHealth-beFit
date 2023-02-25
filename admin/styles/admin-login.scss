@@ -1,0 +1,48 @@
+#content {
+    min-height: 100vh;
+    padding: 25px;
+    padding-top: 75px;
+    // denna aktivita
+    #database {
+        padding-top: 60px;
+        display: grid;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+        // formular
+        form {
+            display: grid;
+            justify-items: center;
+            padding: 15px;
+            display: grid;
+            gap: 5px;
+            background: #A3A3A3;
+            border-radius: 10px;
+            //
+            #title {
+                font-weight: 600;
+                font-size: 30px;
+            }
+            //
+            #passwd {
+                width: 250px;
+                font-size: 25px;
+                margin-bottom: 40px;
+                border: none;
+                border-radius: 5px;
+                @media(max-width: 330px){
+                    width: 75vw;
+                }
+                @media(min-width: 330px){
+                    //padding-top: 55px;
+                }
+            }
+            //
+            #submit {
+                padding: 5px;
+                font-size: 25px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}

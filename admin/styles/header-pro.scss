@@ -1,0 +1,53 @@
+//hlavicka 
+#header {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    font-family: 'Inter', sans-serif;
+    background: #282828;
+    //horna cast hlavicky
+    .header-top {
+        display: grid;
+        align-items: center;
+        padding: 10px;
+        @media(max-width: 400px){
+            justify-items: center;
+            //log-out
+            .log-out {
+                position: relative;
+                padding: 5px;
+                margin-top: 10px;
+                display: grid;
+                justify-items: center;
+            }
+        }
+        @media(min-width: 400px){
+            //log-out
+            .log-out {
+                position: absolute;
+                padding: 5px;
+                margin-left: 10px;
+                display: grid;
+                justify-items: left;
+            }
+        }
+        //log-out
+        .log-out {
+            color: black;
+            background: #D9D9D9;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        //nazov webu
+        .header-title {
+            display: grid;
+            text-align: center;
+            justify-items: center;
+            color: white;
+            //background: #D9D9D9;            
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+}

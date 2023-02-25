@@ -1,0 +1,29 @@
+//hlavicka 
+#header {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    font-family: 'Inter', sans-serif;
+    background: #282828;
+    //horna cast hlavicky
+    .header-top {
+        padding: 10px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        //
+        @media(min-width: 450px) {
+            //grid-auto-flow: column;
+            //gap: 5px;
+        }
+        //nazov webu
+        .header-title {
+            display: grid;
+            justify-items: center;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+        }
+    }
+}

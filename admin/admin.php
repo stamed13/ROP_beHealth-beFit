@@ -3,8 +3,8 @@
 
     error_reporting(E_ERROR);// E_ALL, E_WARNING
 
-    require_once ('../../E-login/helper/config.php');
-    require_once ('../../E-login/helper/Helper.php');
+    require_once ('../2-tools/E-login/helper/config.php');
+    require_once ('../2-tools/E-login/helper/Helper.php');
 
     $password = "rootDB";
     $_SESSION["logedAdmin"] = false;
@@ -25,11 +25,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="../../B-media/real-icon3.png" type="image/x-icon" />
-    <link rel="stylesheet" href="../../A-styles/global.css">
+    <link rel="shortcut icon" href="../2-tools/B-media/real-icon3.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../2-tools/A-styles/global.css">
     <link rel="stylesheet" href="styles/header-login.css">
-    <link rel="stylesheet" href="../../A-styles/content.css">
-    <link rel="stylesheet" href="../../A-styles/footer.css">
+    <link rel="stylesheet" href="../2-tools/A-styles/content.css">
+    <link rel="stylesheet" href="../2-tools/A-styles/footer.css">
     <link rel="stylesheet" href="styles/admin-login.css">
 
     <title>admin</title>
