@@ -7,6 +7,7 @@
         $advice3 = $advices[2]["name"];
         $advice4 = $advices[3]["name"];
 
+        //vyhodnotenie
         if($body_mass > 30){
             //echo $advices[3]["name"];
             echo "<div class='advice'> $advice4 Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
@@ -22,6 +23,8 @@
                 echo "<div class='advice'> $advice3 </div>";
             }
         }
+    }
+
 
         //kontrola cvicenia pouzivatela
         function adviceExercise($advices, $body_mass, $conn, $idUser){
@@ -39,7 +42,7 @@
             $advice15= $advices[14]["name"];
             $advice16 = $advices[15]["name"];
 
-            echo "<div>---------------------------------------</div>";
+            //echo "<div>---------------------------------------</div>";
             //pocet aktivit pouzivatela
             $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
             $activityCount = $activity[0]["activityCount"];
@@ -114,34 +117,176 @@
             //ako casto cvici
             //c = a / (b / 7)
             $howOffen = $activityCount / ( $odpocetActual_First / 7 );
-            if( $howOffen <= 1 ){
-                echo "<div class='advice'> $advice16 </div>";
+
+            //spocitam levely, zistim podla priemeru a priradim
+            $activity = mySQLall($conn, "SELECT SUM(pullCa) AS pullCa FROM useractivity");
+            $pullCa = $activity[0]["pullCa"] / $activityCount;
+
+            if( $pullCa <= 6 ){
+                $pullCa = 1;
             }
-            if( $howOffen > 1 && $howOffen <= 2.5 ){
-                echo "<div class='advice'> $advice11 </div>";
+            if( $pullCa <= 12 && $pullCa > 6 ){
+                $pullCa = 2;
             }
-            if( $howOffen > 2.5 && $howOffen <= 3.5 ){
-                echo "<div class='advice'> $advice12 </div>";
+            if( $pullCa <= 18 && $pullCa > 12 ){
+                $pullCa = 3;
             }
-            if( $howOffen > 3.5 && $howOffen <= 4.5 ){
-                echo "<div class='advice'> $advice13 </div>";
+            
+            $activity = mySQLall($conn, "SELECT SUM(pushCa) AS pushCa FROM useractivity");
+            $pushCa = $activity[0]["pushCa"] / $activityCount;
+
+            if( $pushCa > 18 && $pushCa <= 25 ){
+                $pushCa = 1;
             }
-            if( $howOffen > 4.5 && $howOffen <= 5.5 ){
-                echo "<div class='advice'> $advice14 </div>";
+            if( $pushCa <= 30 && $pushCa > 25 ){
+                $pushCa = 2;
             }
-            if( $howOffen > 5.5 ){
-                echo "<div class='advice'> $advice15 </div>";
+            if( $pushCa <= 36 && $pushCa > 30 ){
+                $pushCa = 3;
+            }
+
+            $activity = mySQLall($conn, "SELECT SUM(coreCa) AS coreCa FROM useractivity");
+            $coreCa = $activity[0]["coreCa"] / $activityCount;
+            
+            if( $coreCa > 36 && $coreCa <= 42 ){
+                $coreCa = 1;
+            }
+            if( $coreCa <= 48 && $coreCa > 42 ){
+                $coreCa = 2;
+            }
+            if( $coreCa <= 54 && $coreCa > 48 ){
+                $coreCa = 3;
+            }
+
+            $activity = mySQLall($conn, "SELECT SUM(legCa) AS legCa FROM useractivity");
+            $legCa = $activity[0]["legCa"] / $activityCount;
+
+            if( $legCa > 54 && $legCa <= 60 ){
+                $legCa = 1;
+            }
+            if( $legCa <= 67 && $legCa > 60 ){
+                $legCa = 2;
+            }
+            if( $legCa <= 72 && $legCa > 67 ){
+                $legCa = 3;
+            }
+
+            $activity = mySQLall($conn, "SELECT SUM(neckSt) AS neckSt FROM useractivity");
+            $neckSt = $activity[0]["neckSt"] / $activityCount;
+
+            if( $neckSt <= 1.5 ){
+                $neckSt = 1;
+            }
+            if( $neckSt <= 2.5 && $neckSt > 1.5 ){
+                $neckSt = 2;
+            }
+            if( $neckSt > 2.5 ){
+                $neckSt = 3;
+            }
+            
+            $activity = mySQLall($conn, "SELECT SUM(handSt) AS handSt FROM useractivity");
+            $handSt = $activity[0]["handSt"] / $activityCount;
+
+            if( $handSt <= 1.5 ){
+                $handSt = 1;
+            }
+            if( $handSt <= 2.5 && $handSt > 1.5 ){
+                $handSt = 2;
+            }
+            if( $handSt > 2.5 ){
+                $handSt = 3;
+            }
+
+            $activity = mySQLall($conn, "SELECT SUM(backSt) AS backSt FROM useractivity");
+            $backSt = $activity[0]["backSt"] / $activityCount;
+
+            if( $backSt <= 1.5 ){
+                $backSt = 1;
+            }
+            if( $backSt <= 2.5 && $backSt > 1.5 ){
+                $backSt = 2;
+            }
+            if( $backSt > 2.5 ){
+                $backSt = 3;
+            }
+            
+            $activity = mySQLall($conn, "SELECT SUM(legSt) AS legSt FROM useractivity");
+            $legSt = $activity[0]["legSt"] / $activityCount;
+
+            if( $legSt <= 1.5 ){
+                $legSt = 1;
+            }
+            if( $legSt <= 2.5 && $legSt > 1.5 ){
+                $legSt = 2;
+            }
+            if( $legSt > 2.5 ){
+                $legSt = 3;
+            }
+
+            echo "<div>pullCa: $pullCa</div>";
+            echo "<div>pushCa: $pushCa</div>";
+            echo "<div>coreCa: $coreCa</div>";
+            echo "<div>legCa: $legCa</div>";
+            echo "<div>neckSt: $neckSt</div>";
+            echo "<div>neckSt: $neckSt</div>";
+            echo "<div>backSt: $backSt</div>";
+            echo "<div>legSt: $legSt</div>";
+
+            //je disbalancia
+            //nerovnomerne
+            if( ( $pullCa == 1 || $pushCa == 1 || $coreCa == 1 || $legCa == 1 || $neckSt == 1 || $neckSt == 1 || $backSt == 1 || $legCa == 1 ) 
+            && ( $pullCa == 3 || $pushCa == 3 || $coreCa == 3 || $legCa == 3 || $neckSt == 3 || $handSt == 3 || $backSt == 3 || $legCa == 3 )  ){
+                //vyhodnotenie
+                if( $howOffen <= 1 ){
+                    echo "<div class='advice'> $advice16 </div>";
+                }
+                if( $howOffen > 1 && $howOffen <= 2.5 ){
+                    echo "<div class='advice'> $advice11 </div>";
+                }
+                if( $howOffen > 2.5 && $howOffen <= 3.5 ){
+                    echo "<div class='advice'> $advice12 </div>";
+                }
+                if( $howOffen > 3.5 && $howOffen <= 4.5 ){
+                    echo "<div class='advice'> $advice13 </div>";
+                }
+                if( $howOffen > 4.5 && $howOffen <= 5.5 ){
+                    echo "<div class='advice'> $advice14 </div>";
+                }
+                if( $howOffen > 5.5 ){
+                    echo "<div class='advice'> $advice15 </div>";
+                }
+            //rovnomerne
+            } else {
+                //vyhodnotenie
+                if( $howOffen <= 1 ){
+                    echo "<div class='advice'> $advice10 </div>";
+                }
+                if( $howOffen > 1 && $howOffen <= 2.5 ){
+                    echo "<div class='advice'> $advice5 </div>";
+                }
+                if( $howOffen > 2.5 && $howOffen <= 3.5 ){
+                    echo "<div class='advice'> $advice6 </div>";
+                }
+                if( $howOffen > 3.5 && $howOffen <= 4.5 ){
+                    echo "<div class='advice'> $advice7 </div>";
+                }
+                if( $howOffen > 4.5 && $howOffen <= 5.5 ){
+                    echo "<div class='advice'> $advice8 </div>";
+                }
+                if( $howOffen > 5.5 ){
+                    echo "<div class='advice'> $advice9 </div>";
+                }
             }
 
             //vypis hodnot
-            echo "<div>activityCount: $activityCount</div>";
-            echo "<div>activityFirst: $activityFirst</div>";
-            echo "<div>actualDate: $actualDate</div>";
-            echo "<div>---------------------------------------</div>";
-            echo "<div>activityFirstYear: $activityFirstYear</div>";
-            echo "<div>activityFirstMonth: $activityFirstMonth</div>";
-            echo "<div>activityFirstDay: $activityFirstDay</div>";
-            echo "<div>---------------------------------------</div>";
+            //echo "<div>activityCount: $activityCount</div>";
+            //echo "<div>activityFirst: $activityFirst</div>";
+            //echo "<div>actualDate: $actualDate</div>";
+            //echo "<div>---------------------------------------</div>";
+            //echo "<div>activityFirstYear: $activityFirstYear</div>";
+            //echo "<div>activityFirstMonth: $activityFirstMonth</div>";
+            //echo "<div>activityFirstDay: $activityFirstDay</div>";
+            //echo "<div>---------------------------------------</div>";
             //echo "<div>activityFirstYear: $actualDateYear</div>";
             //echo "<div>activityFirstMonth: $actualDateMonth</div>";
             //echo "<div>activityFirstDay: $actualDateDay</div>";
@@ -155,5 +300,4 @@
             
             $disbalanc = false;
         }
-    }
 ?>
