@@ -58,10 +58,10 @@
                     </div>
                 </div>
                 <div id="advice-list">
-                    <div> <?php 
+                    <?php 
                         adviceWeight($advices, $body_mass); 
                         adviceExercise($advices, $body_mass, $conn, $idUser);
-                    ?> </div>
+                    ?>
 
                     <div>
                         <?php

@@ -55,10 +55,15 @@
             #advice-list {
                 display: grid;
                 justify-items: left;
+                //grid-auto-flow: column;
                 font-size: 25px;
                 font-family: 'Inter', sans-serif;
                 font-weight: 400;
-                text-align: center;
+                text-align: left;
+
+                .advice {
+                    
+                }
             }
         }
         // sipky na posun
