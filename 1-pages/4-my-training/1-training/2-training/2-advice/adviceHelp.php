@@ -142,14 +142,14 @@
             echo "<div>activityFirstMonth: $activityFirstMonth</div>";
             echo "<div>activityFirstDay: $activityFirstDay</div>";
             echo "<div>---------------------------------------</div>";
-            echo "<div>activityFirstYear: $actualDateYear</div>";
-            echo "<div>activityFirstMonth: $actualDateMonth</div>";
-            echo "<div>activityFirstDay: $actualDateDay</div>";
-            echo "<div>---------------------------------------</div>";
-            echo "<div>rozdielYear: $rozdielYear</div>";
-            echo "<div> $actualDays</div>";
-            echo "<div>-$activityDays</div>";
-            echo "<div>$odpocetActual_First</div>";
+            //echo "<div>activityFirstYear: $actualDateYear</div>";
+            //echo "<div>activityFirstMonth: $actualDateMonth</div>";
+            //echo "<div>activityFirstDay: $actualDateDay</div>";
+            //echo "<div>---------------------------------------</div>";
+            //echo "<div>rozdielYear: $rozdielYear</div>";
+            //echo "<div> $actualDays</div>";
+            //echo "<div>-$activityDays</div>";
+            //echo "<div>$odpocetActual_First</div>";
 
             //if( $activityCount > 0 ){echo "pullCheck";}
             
