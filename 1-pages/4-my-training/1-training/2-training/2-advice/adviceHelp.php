@@ -23,11 +23,15 @@
         //kontrola cvicenia pouzivatela
         function adviceExercise($advices, $body_mass, $conn, $idUser){
             //pocet aktivit pouzivatela
-            $activityCount = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
-
+            $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
+            $activityCount = $activity[0]["activityCount"];
             
+            //prva aktivita pouzivatela
+            $activity = mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUser'");
+            $activityFirst = $activity[0]["date"];
 
-            echo $activityCount[0]["activityCount"];
+            echo "<div>activityCount: $activityCount</div>";
+            echo "<div>activityFirst: $activityFirst</div>";
 
             //if( $activityCount > 0 ){echo "pullCheck";}
             
