@@ -125,9 +125,8 @@
                     //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     // zistenie obtiaznosti cviku danej oblasti posilovania
-                    if( $pull > 0 ){
-                        //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$pull'");
-                        //$pull = $row["levelId"];
+                    if( $pull == 0 ){
+                        //$pull = 1;
                     }
                     if( $push > 0 ){
                         //$row = mySQLassoc($conn, "SELECT * FROM exercises WHERE idExercise='$push'");
