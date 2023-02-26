@@ -3,11 +3,12 @@
         function adviceImprove($advices, $conn, $idUser){
             //rady pre hmotnost
             $advice20 = $advices[19]["name"];
-            $advice32 = $advices[31]["name"];
-            $advice33 = $advices[32]["name"];
-            $advice34 = $advices[33]["name"];
-            $advice35 = $advices[34]["name"];
-            $advice36= $advices[35]["name"];
+            $advice31 = $advices[32]["name"];
+            $advice32 = $advices[33]["name"];
+            $advice33 = $advices[34]["name"];
+            $advice34 = $advices[35]["name"];
+            $advice35 = $advices[36]["name"];
+            $advice36= $advices[37]["name"];
 
             //pocet aktivit pouzivatela
             $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
@@ -140,15 +141,57 @@
                 $balance = false;
             }
 
+            /*$disbalance = [
+                "pullCa" => false,
+                "pushCa" => false,
+                "coreCa" => false,
+                "legCa" => false,
+            ];*/
+
             //zistim co je chyba
             if( $balance == true ){
-                if( $pullCa == 3 ){
+                echo "<div class'advice'> $advice20 ";
 
+                if( $pullCa == 1 ){
+                    //$disbalance["pullCa"] = true;
+                    //echo $advice31;
+                    echo " posilnovat biceps ";
                 }
+
+                if( $pushCa == 1 ){
+                    //echo $advice32;
+                    echo " posilnovat triceps ";
+                }
+
+                if( $legCa == 1 ){
+                    //echo $advice36;
+                    echo " posilnovat nohy";
+                }
+
+                if( $backSt == 1 ){
+                    //echo $advice34;
+                    echo " strecovat  chrbat";
+                }
+
+                if( $legSt == 1 ){
+                    //echo $advice33;
+                    echo " strecovat  nohy";
+                }
+
+                echo ".</div>";
+
+                if( $neckSt == 1 || $handSt == 1 ){
+                    echo "<div class='advice'> $advice34 </div>";
+                }
+
+                //echo $advice20;
+                //echo $advice31;
+                //echo  $advice32;
+                //echo  $advice33;
+                //echo  $advice35;
+                //echo  $advice36;
+
             }
 
-            //if( $activityCount > 0 ){echo "pullCheck";}
-            
-            $disbalanc = false;
         }
 ?>

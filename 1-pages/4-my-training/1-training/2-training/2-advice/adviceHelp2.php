@@ -95,7 +95,7 @@
             if( $pullCa <= 12 && $pullCa > 6 ){
                 $pullCa = 2;
             }
-            if( $pullCa <= 18 && $pullCa > 12 ){
+            if( $pullCa > 12 ){
                 $pullCa = 3;
             }
             
@@ -108,7 +108,7 @@
             if( $pushCa <= 30 && $pushCa > 25 ){
                 $pushCa = 2;
             }
-            if( $pushCa <= 36 && $pushCa > 30 ){
+            if( $pushCa > 30 ){
                 $pushCa = 3;
             }
 
@@ -121,7 +121,7 @@
             if( $legCa <= 48 && $legCa > 42 ){
                 $legCa = 2;
             }
-            if( $legCa <= 54 && $legCa > 48 ){
+            if( $legCa > 48 ){
                 $legCa = 3;
             }
 
@@ -147,7 +147,7 @@
             if( $neckSt <= 76 && $neckSt > 74 ){
                 $neckSt = 2;
             }
-            if( $neckSt <= 78 && $neckSt > 76 ){
+            if( $neckSt > 76 ){
                 $neckSt = 3;
             }
             
@@ -160,7 +160,7 @@
             if( $handSt <= 86 && $handSt > 82 ){
                 $handSt = 2;
             }
-            if( $handSt <= 90 && $handSt > 86 ){
+            if( $handSt > 86 ){
                 $handSt = 3;
             }
 
@@ -173,7 +173,7 @@
             if( $backSt <= 98 && $backSt > 94 ){
                 $backSt = 2;
             }
-            if( $backSt <= 102 && $backSt > 98 ){
+            if( $backSt > 98 ){
                 $backSt = 3;
             }
             
@@ -186,7 +186,7 @@
             if( $legSt <= 110 && $legSt > 102 ){
                 $legSt = 2;
             }
-            if( $legSt <= 114 && $legSt > 110 ){
+            if( $legSt > 110 ){
                 $legSt = 3;
             }
 
