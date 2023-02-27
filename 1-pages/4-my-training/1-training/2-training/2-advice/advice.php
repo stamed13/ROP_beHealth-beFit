@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'advice';
@@ -25,23 +25,18 @@
     require_once ('adviceHelp2.php');
     require_once ('adviceHelp3.php');
     require_once ('adviceHelp4.php');
+    require_once ('adviceHelp5.php');
+    require_once ('adviceHelp6.php');
 
     $userInfo = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=$idUser");
     $body_mass = ( ($userInfo["weight"]) / (pow($userInfo["height"], 2)) ) * 10000;
 
     //$caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
     $advices = mySQLall($conn, "SELECT * FROM advice");
-    //$adviceWeight = $advices["name"];
 
-    //echo $advices["1"]["name"];
-
-    /*
-    $sql = "TRUNCATE advice";
-    mysqli_query($conn, $sql);
-    mysqli_close($conn);    
-    */
-
-    
+    //prva aktivita pouzivatela
+    $activity = mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUser'");
+    $activityFirst = $activity[0]["date"];    
 
 
 ?>
@@ -64,9 +59,17 @@
                 <div id="advice-list">
                     <?php 
                         adviceWeight($advices, $body_mass); 
-                        adviceExercise($advices, $conn, $idUser);
-                        adviceImprove($advices, $conn, $idUser);
-                        adviceStatus($advices, $conn, $idUser);
+                        
+                        if( $activityFirst > 0 ){
+                            adviceExercise($advices, $conn, $idUser);
+                            adviceImprove($advices, $conn, $idUser);
+                            adviceStatus($advices, $conn, $idUser);
+                            adviceDaily($advices, $conn, $idUser);
+                        } 
+                        //nema aktivitu, ostatne neporadi
+                        if( $activityFirst == 0 ) {
+                            echo "<div class='advice'> Viac ti nedokazem poradit. Vypln prosim aspon jednu aktivitu. </div>";
+                        }
                     ?>
                 </div>
             </article>

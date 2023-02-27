@@ -10,7 +10,7 @@
         //vyhodnotenie
         if($body_mass > 30){
             //echo $advices[3]["name"];
-            echo "<div class='advice'> $advice4 Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
+            echo "<div class='advice weight'> $advice4 Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
         }
         if($body_mass < 30){
             if($body_mass > 18.5 && $body_mass < 24.99){

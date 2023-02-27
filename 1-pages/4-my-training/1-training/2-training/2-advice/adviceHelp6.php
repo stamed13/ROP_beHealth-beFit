@@ -1,6 +1,6 @@
 <?php
         //kontrola cvicenia pouzivatela
-        function adviceImprove($advices, $conn, $idUser){
+        function adviceLifestyle($advices, $conn, $idUser){
             //rady pre hmotnost
             $advice20 = $advices[19]["name"];
             $advice31 = $advices[32]["name"];
