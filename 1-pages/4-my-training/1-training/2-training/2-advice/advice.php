@@ -24,6 +24,7 @@
     require_once ('adviceHelp1.php');
     require_once ('adviceHelp2.php');
     require_once ('adviceHelp3.php');
+    require_once ('adviceHelp4.php');
 
     $userInfo = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=$idUser");
     $body_mass = ( ($userInfo["weight"]) / (pow($userInfo["height"], 2)) ) * 10000;
@@ -65,6 +66,7 @@
                         adviceWeight($advices, $body_mass); 
                         adviceExercise($advices, $conn, $idUser);
                         adviceImprove($advices, $conn, $idUser);
+                        adviceStatus($advices, $conn, $idUser);
                     ?>
                 </div>
             </article>

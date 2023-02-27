@@ -196,43 +196,43 @@
             && ( $pullCa == 3 || $pushCa == 3 || $coreCa == 3 || $legCa == 3 || $neckSt == 3 || $handSt == 3 || $backSt == 3 || $legCa == 3 )  ){
                 //vyhodnotenie
                 if( $howOffen <= 1 ){
-                    echo "<div class='advice'> $advice16 </div>";
+                    echo "<div class='advice exercise'> $advice16 </div>";
                 }
                 if( $howOffen > 1 && $howOffen <= 2.5 ){
-                    echo "<div class='advice'> $advice11 </div>";
+                    echo "<div class='advice exercise'> $advice11 </div>";
                 }
                 if( $howOffen > 2.5 && $howOffen <= 3.5 ){
-                    echo "<div class='advice'> $advice12 </div>";
+                    echo "<div class='advice exercise'> $advice12 </div>";
                 }
                 if( $howOffen > 3.5 && $howOffen <= 4.5 ){
-                    echo "<div class='advice'> $advice13 </div>";
+                    echo "<div class='advice exercise'> $advice13 </div>";
                 }
                 if( $howOffen > 4.5 && $howOffen <= 5.5 ){
-                    echo "<div class='advice'> $advice14 </div>";
+                    echo "<div class='advice exercise'> $advice14 </div>";
                 }
                 if( $howOffen > 5.5 ){
-                    echo "<div class='advice'> $advice15 </div>";
+                    echo "<div class='advice exercise'> $advice15 </div>";
                 }
             //rovnomerne
             } else {
                 //vyhodnotenie
                 if( $howOffen <= 1 ){
-                    echo "<div class='advice'> $advice10 </div>";
+                    echo "<div class='advice exercise'> $advice10 </div>";
                 }
                 if( $howOffen > 1 && $howOffen <= 2.5 ){
-                    echo "<div class='advice'> $advice5 </div>";
+                    echo "<div class='advice exercise'> $advice5 </div>";
                 }
                 if( $howOffen > 2.5 && $howOffen <= 3.5 ){
-                    echo "<div class='advice'> $advice6 </div>";
+                    echo "<div class='advice exercise'> $advice6 </div>";
                 }
                 if( $howOffen > 3.5 && $howOffen <= 4.5 ){
-                    echo "<div class='advice'> $advice7 </div>";
+                    echo "<div class='advice exercise'> $advice7 </div>";
                 }
                 if( $howOffen > 4.5 && $howOffen <= 5.5 ){
-                    echo "<div class='advice'> $advice8 </div>";
+                    echo "<div class='advice exercise'> $advice8 </div>";
                 }
                 if( $howOffen > 5.5 ){
-                    echo "<div class='advice'> $advice9 </div>";
+                    echo "<div class='advice exercise'> $advice9 </div>";
                 }
             }
 

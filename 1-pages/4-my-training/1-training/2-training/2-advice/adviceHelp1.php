@@ -14,13 +14,13 @@
         }
         if($body_mass < 30){
             if($body_mass > 18.5 && $body_mass < 24.99){
-                echo "<div class='advice'> $advice1 </div>";
+                echo "<div class='advice weight'> $advice1 </div>";
             }
             if($body_mass > 25 && $body_mass < 29.99){
-                echo "<div class='advice'> $advice2 </div>";
+                echo "<div class='advice weight'> $advice2 </div>";
             }
             if($body_mass  < 18.5){
-                echo "<div class='advice'> $advice3 </div>";
+                echo "<div class='advice weight'> $advice3 </div>";
             }
         }
     }

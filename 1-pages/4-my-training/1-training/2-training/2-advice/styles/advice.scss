@@ -43,6 +43,7 @@
                 }
                 // kratke informacie
                 #hello-user {
+                    padding: 10px;
                     display: grid;
                     justify-items: center;
                     font-size: 25px;
@@ -53,16 +54,57 @@
             }
             // rady
             #advice-list {
+                padding-top: 25px;
                 display: grid;
                 justify-items: left;
-                //grid-auto-flow: column;
+                grid-auto-flow: row;
+                gap: 15px;
                 font-size: 25px;
                 font-family: 'Inter', sans-serif;
                 font-weight: 400;
                 text-align: left;
-
+                //vsetky mozne rady
                 .advice {
                     
+                }
+                //rada vaha
+                .weight {
+                    font-weight: 600;
+                    //color: blue;
+                }
+                //rada ako casto cvicim, disbalancia
+                .exercise {}
+                //rada co zlepsit
+                .improve {
+                    font-weight: 600;
+                }
+
+                .improve1 {
+                    //color: green;
+                }
+
+                .improve2 {
+                    //color: green;
+                }
+                //
+                .status {
+                    padding: 5px;
+                    font-weight: 400;
+                    border-radius: 8px;
+                }
+
+                .beginner {
+                    //background: rgb(13, 143, 13);
+                    background: yellow
+                    //background: rgb(29, 132, 201);
+                }
+
+                .intermediate {
+                    background: rgb(13, 143, 13);
+                }
+
+                .advanced {
+                    background: rgb(29, 132, 201);
                 }
             }
         }

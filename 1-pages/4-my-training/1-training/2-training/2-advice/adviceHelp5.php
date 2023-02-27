@@ -174,6 +174,15 @@
                     echo "<div class='advice improve improve2'> $advice34 </div>";
                 }
 
+                echo $pullCa;
+                echo $pushCa;
+                echo $coreCa;
+                echo $legCa;
+                echo $neckSt;
+                echo $backSt;
+                echo $handSt;
+                echo $legSt;
+
             }
 
         }

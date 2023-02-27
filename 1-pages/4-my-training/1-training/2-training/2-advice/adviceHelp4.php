@@ -1,14 +1,10 @@
 <?php
         //kontrola cvicenia pouzivatela
-        function adviceImprove($advices, $conn, $idUser){
+        function adviceStatus($advices, $conn, $idUser){
             //rady pre hmotnost
-            $advice20 = $advices[19]["name"];
-            $advice31 = $advices[32]["name"];
-            $advice32 = $advices[33]["name"];
-            $advice33 = $advices[34]["name"];
-            $advice34 = $advices[35]["name"];
-            $advice35 = $advices[36]["name"];
-            $advice36= $advices[37]["name"];
+            $advice21 = $advices[20]["name"];
+            $advice22 = $advices[21]["name"];
+            $advice23 = $advices[22]["name"];
 
             //pocet aktivit pouzivatela
             $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
@@ -119,62 +115,27 @@
                 $legSt = 3;
             }
 
-            //je disbalancia
-            //nerovnovaha
-            if( ( $pullCa == 1 || $pushCa == 1 || $coreCa == 1 || $legCa == 1 || $neckSt == 1 || $neckSt == 1 || $backSt == 1 || $legCa == 1 ) 
-            && ( ( $pullCa == 2 || $pushCa == 2 || $coreCa == 2 || $legCa == 2 || $neckSt == 2 || $handSt == 2 || $backSt == 2 || $legCa == 2 ) ||
-            ( $pullCa == 3 || $pushCa == 3 || $coreCa == 3 || $legCa == 3 || $neckSt == 3 || $handSt == 3 || $backSt == 3 || $legCa == 3 ) ) ){
-                $balance = true;
-            } //rovnovaha
-            else {
-                $balance = false;
+            //vypocet stavu, priemer celkoveho cvicenia
+            $avg = ( $pullCa + $pushCa + $coreCa + $legCa + $neckSt + $handSt + $backSt + $legSt ) / 8;
+
+            //priradim stav na zaklade priemeru
+            if( $avg >= 0 && $avg < 1.5 ){
+                echo "<div class='advice status beginner'> $advice21 </div>";                
             }
 
-            /*$disbalance = [
-                "pullCa" => false,
-                "pushCa" => false,
-                "coreCa" => false,
-                "legCa" => false,
-            ];*/
-
-            //zistim co je chyba
-            if( $balance == true ){
-                //echo "<div class='advice improve'> $advice34 </div>";
-                echo "<div class='advice improve improve1'> $advice20 ";
-
-                if( $pullCa == 1 ){
-                    //$disbalance["pullCa"] = true;
-                    //echo $advice31;
-                    echo " posilnovat biceps ";
-                }
-
-                if( $pushCa == 1 ){
-                    //echo $advice32;
-                    echo " posilnovat triceps ";
-                }
-
-                if( $legCa == 1 ){
-                    //echo $advice36;
-                    echo " posilnovat nohy";
-                }
-
-                if( $backSt == 1 ){
-                    //echo $advice34;
-                    echo " strecovat  chrbat";
-                }
-
-                if( $legSt == 1 ){
-                    //echo $advice33;
-                    echo " strecovat  nohy";
-                }
-
-                echo ".</div>";
-
-                if( $neckSt == 1 || $handSt == 1 ){
-                    echo "<div class='advice improve improve2'> $advice34 </div>";
-                }
-
+            if( $avg >= 1.5 && $avg < 2.5 ){
+                echo "<div class='advice status intermediate'> $advice22 </div>";                
             }
+
+            if( $avg >= 2.5 && $avg < 3 ){
+                echo "<div class='advice status advanced'> $advice23 </div>";                
+            }
+
+            //echo "<div class='advice status advanced'> $advice23 </div>";                
+            //echo "<div class='advice status intermediate'> $advice22 </div>";    
+            //echo "<div class='advice status beginner'> $advice21 </div>";                            
+
+            //echo $avg;
 
         }
 ?>
