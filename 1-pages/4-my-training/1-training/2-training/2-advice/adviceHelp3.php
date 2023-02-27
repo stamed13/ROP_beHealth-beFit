@@ -107,18 +107,7 @@
             }
             
             $activity = mySQLall($conn, "SELECT SUM(legSt) AS legSt FROM useractivity WHERE userId='$idUser'");
-            $legSt = $activity[0]["legSt"] / $activityCount;
-
-            if( $backSt > 0 && $backSt <= 94 ){
-                $backSt = 1;
-            }
-            if( $backSt <= 98 && $backSt > 94 ){
-                $backSt = 2;
-            }
-            if( $backSt <= 102 && $backSt > 98 ){
-                $backSt = 3;
-            }
-            
+            $legSt = $activity[0]["legSt"] / $activityCount;          
 
             if( $legSt > 0 && $legSt <= 102 ){
                 $legSt = 1;
@@ -133,7 +122,7 @@
             //je disbalancia
             //nerovnovaha
             if( ( $pullCa == 1 || $pushCa == 1 || $coreCa == 1 || $legCa == 1 || $neckSt == 1 || $neckSt == 1 || $backSt == 1 || $legCa == 1 ) 
-            && ( ( $pullCa == 3 || $pushCa == 3 || $coreCa == 3 || $legCa == 3 || $neckSt == 3 || $handSt == 3 || $backSt == 3 || $legCa == 3 ) ||
+            && ( ( $pullCa == 2 || $pushCa == 2 || $coreCa == 2 || $legCa == 2 || $neckSt == 2 || $handSt == 2 || $backSt == 2 || $legCa == 2 ) ||
             ( $pullCa == 3 || $pushCa == 3 || $coreCa == 3 || $legCa == 3 || $neckSt == 3 || $handSt == 3 || $backSt == 3 || $legCa == 3 ) ) ){
                 $balance = true;
             } //rovnovaha
@@ -184,12 +173,14 @@
                     echo "<div class='advice'> $advice34 </div>";
                 }
 
-                //echo $advice20;
-                //echo $advice31;
-                //echo  $advice32;
-                //echo  $advice33;
-                //echo  $advice35;
-                //echo  $advice36;
+                echo $pullCa;
+                echo $pushCa;
+                echo $coreCa;
+                echo $legCa;
+                echo $neckSt;
+                echo $backSt;
+                echo $handSt;
+                echo $legSt;
 
             }
 
