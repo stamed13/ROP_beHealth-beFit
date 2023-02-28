@@ -65,6 +65,7 @@
                             adviceImprove($advices, $conn, $idUser);
                             adviceStatus($advices, $conn, $idUser);
                             adviceDaily($advices, $conn, $idUser);
+                            adviceLifestyle($advices, $conn, $idUser);
                         } 
                         //nema aktivitu, ostatne neporadi
                         if( $activityFirst == 0 ) {
