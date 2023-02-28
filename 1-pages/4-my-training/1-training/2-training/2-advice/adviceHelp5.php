@@ -122,26 +122,26 @@
 
             //priradenie dennych cvikov na zaklade spravania pouzivatela (schopnosti)
             if( $avg >= 0 && $avg < 0.5 ){
-                echo "<div class='advice daily advanced'> $advice24 </div>";                
+                echo "<div class='advice daily'> $advice24 </div>";                
             }
 
             if( $avg >= 0.5 && $avg < 1 ){
-                echo "<div class='advice daily advanced'> $advice25 </div>";                
+                echo "<div class='advice daily'> $advice25 </div>";                
             }
 
             if( $avg >= 1 && $avg < 2 ){
-                echo "<div class='advice daily advanced'> $advice26 </div>";                
+                echo "<div class='advice daily'> $advice26 </div>";                
             }
 
             if( $avg >= 2 && $avg < 2.5 ){
-                echo "<div class='advice daily advanced'> $advice27 </div>";                
+                echo "<div class='advice daily'> $advice27 </div>";                
             }
 
             if( $avg >= 2.5 && $avg < 3 ){
-                echo "<div class='advice daily advanced'> $advice28 </div>";                
+                echo "<div class='advice daily'> $advice28 </div>";                
             }                      
 
-            echo $avg;
+            //echo $avg;
 
         }
 ?>

@@ -106,6 +106,12 @@
   background: #1d84c9;
 }
 
+#content #advice #main #advice-list .daily {
+  padding: 5px;
+  background: #ffc04a;
+  border-radius: 5px;
+}
+
 #content #advice .buttons-arrow {
   display: -ms-grid;
   display: grid;
