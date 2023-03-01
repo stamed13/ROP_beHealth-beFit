@@ -41,7 +41,8 @@
         } 
 
         //kontrola emailu
-        if( mySQLall($conn, "SELECT email FROM users WHERE email='$email' ") ) {
+        $sql = "SELECT email FROM users WHERE email='$email' ";
+        if( mySQLall($conn, $sql) ) {
             echo "<p class='eText'> E-mail už existuje. </p>";
             $errors["email"] = true;
         } 
