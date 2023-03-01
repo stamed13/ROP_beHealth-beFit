@@ -1,23 +1,19 @@
 #header-mobile {
   position: fixed;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
 @media (min-width: 0px) {
   #header-mobile {
     display: block;
   }
 }
-
 @media (min-width: 450px) {
   #header-mobile {
     display: none;
   }
 }
-
 #header-mobile .header-top {
-  display: -ms-grid;
   display: grid;
   padding: 10px;
   background: #282828;
@@ -25,33 +21,25 @@
   justify-items: center;
   gap: 5px;
 }
-
 #header-mobile .header-top #row {
-  display: -ms-grid;
   display: grid;
 }
-
 @media (min-width: 0px) {
   #header-mobile .header-top #row {
     grid-auto-flow: column;
     gap: 40px;
   }
 }
-
 @media (min-width: 300px) {
   #header-mobile .header-top #row {
     grid-auto-flow: column;
     gap: 90px;
   }
 }
-
 #header-mobile .header-top #row .loginsM {
-  display: -ms-grid;
   display: grid;
 }
-
 #header-mobile .header-top #row .loginsM .bt-logedM {
-  display: -ms-grid;
   display: grid;
   padding: 5px;
   font-weight: 600;
@@ -62,44 +50,34 @@
   border-radius: 50%;
   cursor: pointer;
 }
-
 #header-mobile .header-top #row .loginsM .profile-menuM {
   left: -100%;
   margin-top: 45px;
   position: absolute;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 25px;
   background: #0E7619;
   border-radius: 10px;
 }
-
 #header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav {
-  display: -ms-grid;
   display: grid;
   justify-items: left;
 }
-
 #header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav a {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 15px;
   padding-right: 45px;
-  display: -ms-grid;
   display: grid;
   font-size: 25px;
   text-decoration: none;
   color: #D3D3D3;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
 #header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav .hide {
   display: none;
 }
-
 #header-mobile .header-top #row .loginsM .profile-menuM #mobile-nav .actual {
   padding-right: 62px;
   padding-bottom: 5px;
@@ -107,50 +85,40 @@
   background: #03A500;
   text-decoration: underline;
 }
-
 #header-mobile .header-top #row .loginsM .profile-menuM .bt-logout {
   margin: 25px;
   padding: 8px;
   margin-top: 50%;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-size: 20px;
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
   background: #B6B6B6;
   border: 1px solid black;
   border-radius: 5px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
 #header-mobile .header-top #row .loginsM .profile-menuM.active {
   left: 25px;
 }
-
 #header-mobile .header-top #row .logo {
   border-radius: 50%;
 }
-
 @media (min-width: 0px) {
   #header-mobile .header-top #row .logo {
     width: 35px;
   }
 }
-
 #header-mobile .header-top .header-title {
   color: white;
 }
-
 @media (min-width: 0px) {
   #header-mobile .header-top .header-title {
     font-weight: 500;
     font-size: 25px;
   }
 }
-
 @media (min-width: 300px) {
   #header-mobile .header-top .header-title {
     font-weight: 600;

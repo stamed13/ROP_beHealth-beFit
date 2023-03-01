@@ -46,6 +46,8 @@
     //saveActivity($conn, $calisthenics, $errors);
 
     $activity = 0;
+
+    $idUser = $_SECTION["idUSer"];
     
 ?>
 
@@ -121,8 +123,8 @@
                     //echo $legC;
 
                     //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
-                    //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     // zistenie obtiaznosti cviku danej oblasti posilovania
                     if( $pull == 0 ){
@@ -218,8 +220,8 @@
 
                     }
 
-                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                    //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     if($activity["pullCa"] > 0){
                         $_POST["pull"] = $activity["pullCa"];
@@ -341,7 +343,7 @@
 </html>
 
 <?php
-    mysqli_close($conn);
+    //mysqli_close($conn);
 
     //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
     //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");

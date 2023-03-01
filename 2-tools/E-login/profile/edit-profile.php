@@ -71,7 +71,7 @@
         } 
 
         //kontrola hesla
-        if( trim($_POST["passwd"])  == "" || strlen( trim($_POST["passwd"]) ) < 8 
+        if( trim($_POST["passwd"])  != "" && strlen( trim($_POST["passwd"]) ) < 8 
         || strlen( trim($_POST["passwd"]) ) > 10 ) {
             $errors["passwd"] = true;
         }

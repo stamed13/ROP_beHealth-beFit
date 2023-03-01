@@ -1,25 +1,15 @@
 body {
   background: #1690A7;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 * {
   font-family: sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 form {
@@ -61,7 +51,7 @@ button {
 }
 
 button:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .error {
@@ -90,5 +80,5 @@ a {
 }
 
 a:hover {
-  opacity: .7;
+  opacity: 0.7;
 }

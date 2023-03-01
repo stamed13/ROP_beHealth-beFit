@@ -1,115 +1,89 @@
 #content {
   padding: 20px;
 }
-
 #content #plan {
-  display: -ms-grid;
   display: grid;
 }
-
 #content #plan #main {
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content #plan #main {
     padding-top: 150px;
   }
 }
-
 @media (min-width: 450px) {
   #content #plan #main {
     padding-top: 115px;
   }
 }
-
 @media (min-width: 500px) {
   #content #plan #main {
     padding-top: 120px;
   }
 }
-
 @media (min-width: 800px) {
   #content #plan #main {
     padding-top: 135px;
   }
 }
-
 #content #plan #main #main-content {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   gap: 10px;
 }
-
 #content #plan #main #main-content #content-title {
   padding: 10px;
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   background: #FFC700;
   color: #000;
   border-radius: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 35px;
   text-align: center;
 }
-
 #content #plan #main #main-content #plan-content {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   font-size: 25px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   text-align: center;
 }
-
 #content #plan #main #table-plan {
   padding: 15px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background: #A5CE00;
   border-radius: 25px;
 }
-
 #content #plan #main #table-plan tr td {
   padding: 5px;
   font-weight: 700;
   font-size: 30px;
   border: 1px solid black;
 }
-
 #content #plan #main .buttons-arrow {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 @media (min-width: 0px) {
   #content #plan #main .buttons-arrow {
     margin-bottom: 10px;
   }
 }
-
 @media (min-width: 450px) {
   #content #plan #main .buttons-arrow {
     margin-bottom: 0;
   }
 }
-
 #content #plan #main .buttons-arrow .bt-arrow {
-  display: -ms-grid;
   display: grid;
   padding: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 25px;
   border-radius: 10px;
   color: black;
@@ -117,7 +91,6 @@
   font-weight: 600;
   text-decoration: none;
 }
-
 #content #plan #main .buttons-arrow .bt-arrow img {
   width: 30px;
 }

@@ -98,14 +98,14 @@
 
         //kontrola emailu
         if( mySQLall($conn, "SELECT email FROM users WHERE email='$email' ") && ! $_SESSION['email']) {
-            echo "<p class='eText'> E-mail už existuje. </p>";
-            $errors["email"] = true;
+            //echo "<p class='eText'> E-mail už existuje. </p>";
+            //$errors["email"] = true;
         } 
 
         //ak je spravne vyplneny email
         if ( $errors["email"] == false ) {
             //kontrola hesla
-            if( strlen( trim($_POST["passwd"]) ) < 8 || strlen( trim($_POST["passwd"]) ) > 10 ) {
+            if( trim($_POST["passwd"])  != "" && ( strlen( trim($_POST["passwd"]) ) < 8 || strlen( trim($_POST["passwd"]) ) > 10 ) ) {
                 echo "<p class='eText'> Zadaj heslo zložené z ľubovoľných 8-11 znakov, čisel alebo symbolov. </p>";
                 $errors["passwd"] = true;
             }

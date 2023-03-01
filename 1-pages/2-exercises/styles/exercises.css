@@ -2,262 +2,190 @@
   padding: 20px;
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content {
     padding-top: 130px;
   }
 }
-
 @media (min-width: 300px) {
   #content {
     padding-top: 138px;
   }
 }
-
 @media (min-width: 510px) {
   #content {
     padding-top: 132px;
   }
 }
-
 @media (min-width: 900px) {
   #content {
     padding-top: 128px;
   }
 }
-
 #content #exercises #main {
   min-height: 100vh;
 }
-
 #content #exercises #main #content-title {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 600;
   font-size: 35px;
 }
-
 #content #exercises #main #exercises-info {
   font-size: 25px;
 }
-
 #content #exercises #main .exercise-title {
   font-weight: 600;
   font-size: 30px;
 }
-
 #content #exercises #main .exercise-info {
   font-size: 25px;
 }
-
 #content #exercises #main .exercise-kinds {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  justify-content: start;
   gap: 12px;
   font-size: 25px;
 }
-
 @media (min-width: 0px) {
   #content #exercises #main .exercise-kinds {
     grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 }
-
 @media (min-width: 426px) {
   #content #exercises #main .exercise-kinds {
     grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 }
-
 #content #exercises #main .exercise-kinds .ex-kinds-title {
   padding-top: 20px;
 }
-
 #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   grid-auto-flow: row;
   gap: 5px;
 }
-
 @media (min-width: 0px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[1];
-        grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(1, auto);
   }
 }
-
 @media (min-width: 600px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
   }
 }
-
 @media (min-width: 1000px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
   }
 }
-
 @media (min-width: 1300px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[4];
-        grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, auto);
   }
 }
-
 #content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
   padding-right: 20px;
   color: black;
 }
-
 #content #exercises .exercise {
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content #exercises .exercise {
     padding-top: 140px;
   }
 }
-
 @media (min-width: 500px) {
   #content #exercises .exercise {
     padding-top: 130px;
   }
 }
-
 @media (min-width: 500px) {
   #content #exercises .exercise {
     padding-top: 140px;
   }
 }
-
 @media (min-width: 800px) {
   #content #exercises .exercise {
     padding-top: 165px;
   }
 }
-
 @media (min-width: 825px) {
   #content #exercises .exercise {
     padding-top: 125px;
   }
 }
-
 #content #exercises .exercise .exercise-title {
   font-weight: 600;
   font-size: 30px;
 }
-
 #content #exercises .exercise .exercise-info {
   font-size: 25px;
 }
-
 #content #exercises .exercise .exercise-kinds {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  justify-content: start;
   gap: 12px;
   font-size: 25px;
 }
-
 @media (min-width: 0px) {
   #content #exercises .exercise .exercise-kinds {
     grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 }
-
 @media (min-width: 426px) {
   #content #exercises .exercise .exercise-kinds {
     grid-auto-flow: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 }
-
 #content #exercises .exercise .exercise-kinds .ex-kinds-title {
   padding-top: 20px;
 }
-
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   grid-auto-flow: row;
   gap: 5px;
 }
-
 @media (min-width: 0px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[1];
-        grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(1, auto);
   }
 }
-
 @media (min-width: 600px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
   }
 }
-
 @media (min-width: 1200px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
   }
 }
-
 @media (min-width: 1600px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[4];
-        grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, auto);
   }
 }
-
 @media (min-width: 2000px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
-    -ms-grid-columns: (auto)[5];
-        grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, auto);
   }
 }
-
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
-  display: -ms-grid;
   display: grid;
   padding-right: 20px;
   color: black;
 }
-
 #content #exercises .exercise .view-more {
   display: none;
   padding-top: 500px;

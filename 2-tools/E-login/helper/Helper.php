@@ -31,6 +31,8 @@
         else {
             return 0;
         }
+
+        mysqli_close($conn);
     }
 
     //funkcia vykona prikaz spojeny s databazou
@@ -44,6 +46,8 @@
         else {
             return 0;
         }
+
+        mysqli_close($conn);
     }
 
     //funkcia vykona prikaz, vrati true / false
@@ -55,6 +59,8 @@
         else {
             return false;
         }
+
+        mysqli_close($conn);
     }
 
     //funkcia vykona prikaz spojeny s databazou
@@ -62,6 +68,8 @@
         if ($conn->query($sql) === TRUE) {
             echo true;
         }
+
+        mysqli_close($conn);
     }
 
     //funkcia na presmerovanie na aktualnu stranku

@@ -13,10 +13,8 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr auto;
-      grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr auto;
 }
 
 body.selected {

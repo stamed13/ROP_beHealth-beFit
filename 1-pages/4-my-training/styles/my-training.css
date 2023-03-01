@@ -2,75 +2,54 @@
   padding: 20px;
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content {
     padding-top: 130px;
   }
 }
-
 @media (min-width: 300px) {
   #content {
     padding-top: 138px;
   }
 }
-
 @media (min-width: 510px) {
   #content {
     padding-top: 132px;
   }
 }
-
 @media (min-width: 900px) {
   #content {
     padding-top: 128px;
   }
 }
-
 #content #training {
-  display: -ms-grid;
   display: grid;
   gap: 120px;
 }
-
 #content #training #main #content-title {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 600;
   font-size: 35px;
 }
-
 #content #training #main #training-info {
   font-size: 25px;
 }
-
 #content #training #training-menu {
-  display: -ms-grid;
   display: grid;
   gap: 40px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 #content #training #training-menu #bt-training {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   font-weight: 600;
   background: #A5CE00;
   border: 2px solid #000000;
   color: black;
   text-decoration: none;
 }
-
 @media (min-width: 0px) {
   #content #training #training-menu #bt-training {
     height: 100px;
@@ -79,7 +58,6 @@
     border-radius: 15px;
   }
 }
-
 @media (min-width: 600px) {
   #content #training #training-menu #bt-training {
     height: 140px;

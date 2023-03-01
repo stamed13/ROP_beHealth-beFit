@@ -2,96 +2,72 @@
   padding: 20px;
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content {
     padding-top: 130px;
   }
 }
-
 @media (min-width: 300px) {
   #content {
     padding-top: 138px;
   }
 }
-
 @media (min-width: 510px) {
   #content {
     padding-top: 132px;
   }
 }
-
 @media (min-width: 900px) {
   #content {
     padding-top: 128px;
   }
 }
-
 #content #contact #content-title {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 600;
   font-size: 35px;
 }
-
 #content #contact #autor-info #title-autor {
-  display: -ms-grid;
   display: grid;
   gap: 10px;
   font-weight: 600;
   font-size: 30px;
 }
-
 @media (min-width: 0px) {
   #content #contact #autor-info #title-autor {
     justify-items: center;
   }
 }
-
 @media (min-width: 500px) {
   #content #contact #autor-info #title-autor {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    justify-content: left;
   }
 }
-
 #content #contact #autor-info #contact-items {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
 }
-
 #content #contact #autor-info #contact-items .contact-item {
-  display: -ms-grid;
   display: grid;
   gap: 10px;
 }
-
 @media (min-width: 0px) {
   #content #contact #autor-info #contact-items .contact-item {
     grid-auto-flow: row;
     justify-items: center;
   }
 }
-
 @media (min-width: 500px) {
   #content #contact #autor-info #contact-items .contact-item {
     grid-auto-flow: column;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    justify-content: left;
   }
 }
-
 #content #contact #autor-info #contact-items .contact-item .item-title {
   font-weight: 400;
   font-size: 25px;
 }
-
 #content #contact #autor-info #contact-items .contact-item .item-content {
   font-weight: 400;
   font-size: 25px;

@@ -3,73 +3,57 @@
   background: #858585;
   font-size: 16px;
 }
-
 @media (max-width: 224px) {
   #content {
     padding-top: 85px;
   }
 }
-
 @media (min-width: 224px) {
   #content {
     padding-top: 55px;
   }
 }
-
 @media (min-width: 400px) {
   #content {
     padding: 10px;
     padding-top: 15px;
   }
 }
-
 @media (min-width: 500px) {
   #content {
     padding: 25px;
     padding-top: 35px;
   }
 }
-
 #content #database {
   padding-top: 60px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: 'Inter', sans-serif;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
 }
-
 #content #database #main-title {
-  display: -ms-grid;
   display: grid;
   font-size: 30px;
   font-weight: 600;
 }
-
 @media (max-width: 500px) {
   #content #database #main-title {
     justify-items: center;
   }
 }
-
 @media (min-width: 500px) {
   #content #database #main-title {
     justify-items: left;
   }
 }
-
 #content #database form {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   padding: 15px;
   display: grid;
   gap: 80px;
 }
-
 #content #database form .command {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   padding: 15px;
@@ -78,7 +62,6 @@
   background: #9e9494;
   border-radius: 25px;
 }
-
 #content #database form .command .query {
   resize: vertical;
   height: 90px;
@@ -88,19 +71,16 @@
   color: black;
   border-radius: 5px;
 }
-
 @media (max-width: 500px) {
   #content #database form .command .query {
     width: 75vw;
   }
 }
-
 @media (min-width: 500px) {
   #content #database form .command .query {
     width: 350px;
   }
 }
-
 #content #database form .command .submit {
   padding: 5px;
   font-size: 25px;
@@ -109,7 +89,6 @@
   color: white;
   border-radius: 5px;
 }
-
 #content #database form .command .rBorder {
   padding: 5px;
   font-size: 18px;
@@ -118,7 +97,6 @@
   border-radius: 5px;
   font-weight: 500;
 }
-
 #content #database form .command .gBorder {
   padding: 5px;
   font-size: 18px;
@@ -127,19 +105,16 @@
   border-radius: 5px;
   font-weight: 500;
 }
-
 #content #database form .actual {
   background: #c2c2c2;
   border-radius: 25px;
 }
-
 #content #database form .labelCommmit {
   padding: 5px;
-  background: #252525;
+  background: rgb(37, 37, 37);
   color: whitesmoke;
   border-radius: 5px;
 }
-
 #content #database form .commit {
   padding: 5px;
   font-size: 25px;

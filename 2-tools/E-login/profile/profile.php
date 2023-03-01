@@ -3,7 +3,7 @@
     $currentPage = 'profile';
     $page_styles = 'styles/profile.css';
 
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     require_once ('../helper/config.php');
     require_once ('../helper/Helper.php');

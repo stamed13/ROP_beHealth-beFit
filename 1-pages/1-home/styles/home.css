@@ -2,70 +2,52 @@
   padding: 20px;
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content {
     padding-top: 130px;
   }
 }
-
 @media (min-width: 300px) {
   #content {
     padding-top: 138px;
   }
 }
-
 @media (min-width: 510px) {
   #content {
     padding-top: 132px;
   }
 }
-
 @media (min-width: 900px) {
   #content {
     padding-top: 128px;
   }
 }
-
 #content #content-title {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 600;
   font-size: 35px;
 }
-
 #content #main {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   gap: 75px;
 }
-
 #content #main #info {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-size: 25px;
 }
-
 #content #main #home-sportsman {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   border-radius: 50px;
 }
-
 @media (min-width: 0px) {
   #content #main #home-sportsman {
     width: 75vw;
   }
 }
-
 @media (min-width: 550px) {
   #content #main #home-sportsman {
     width: 400px;

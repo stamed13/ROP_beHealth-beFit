@@ -1,143 +1,113 @@
 #content {
   padding: 20px;
 }
-
 #content #advice {
-  display: -ms-grid;
   display: grid;
 }
-
 #content #advice #main {
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content #advice #main {
     padding-top: 130px;
   }
 }
-
 @media (min-width: 450px) {
   #content #advice #main {
     padding-top: 105px;
   }
 }
-
 @media (min-width: 500px) {
   #content #advice #main {
     padding-top: 110px;
   }
 }
-
 @media (min-width: 800px) {
   #content #advice #main {
     padding-top: 125px;
   }
 }
-
 #content #advice #main #main-content {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   gap: 10px;
 }
-
 #content #advice #main #main-content #content-title {
   padding: 10px;
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   background: #F89500;
   color: #000;
   border-radius: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 35px;
   text-align: center;
 }
-
 #content #advice #main #main-content #hello-user {
   padding: 10px;
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   font-size: 25px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   text-align: center;
 }
-
 #content #advice #main #advice-list {
   padding-top: 25px;
-  display: -ms-grid;
   display: grid;
   justify-items: left;
   grid-auto-flow: row;
   gap: 15px;
   font-size: 25px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   text-align: left;
 }
-
 #content #advice #main #advice-list .weight {
   font-weight: 600;
 }
-
 #content #advice #main #advice-list .improve {
   font-weight: 600;
 }
-
 #content #advice #main #advice-list .status {
   padding: 5px;
   font-weight: 400;
   border-radius: 8px;
 }
-
 #content #advice #main #advice-list .beginner {
   background: yellow;
 }
-
 #content #advice #main #advice-list .intermediate {
-  background: #0d8f0d;
+  background: rgb(13, 143, 13);
 }
-
 #content #advice #main #advice-list .advanced {
-  background: #1d84c9;
+  background: rgb(29, 132, 201);
 }
-
 #content #advice #main #advice-list .daily {
   padding: 5px;
   background: #ffc04a;
   border-radius: 5px;
 }
-
 #content #advice .buttons-arrow {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 @media (min-width: 0px) {
   #content #advice .buttons-arrow {
     margin-bottom: 10px;
   }
 }
-
 @media (min-width: 450px) {
   #content #advice .buttons-arrow {
     margin-bottom: 0;
   }
 }
-
 #content #advice .buttons-arrow .bt-arrow {
-  display: -ms-grid;
   display: grid;
   padding: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 25px;
   border-radius: 10px;
   color: black;
@@ -145,7 +115,6 @@
   font-weight: 600;
   text-decoration: none;
 }
-
 #content #advice .buttons-arrow .bt-arrow img {
   width: 30px;
 }

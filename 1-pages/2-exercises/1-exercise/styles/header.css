@@ -1,49 +1,36 @@
 #header-computer {
   position: fixed;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
 @media (min-width: 0px) {
   #header-computer {
     display: none;
   }
 }
-
 @media (min-width: 450px) {
   #header-computer {
     display: block;
   }
 }
-
 #header-computer .header-top {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 10px;
   background: #282828;
 }
-
 @media (min-width: 450px) {
   #header-computer .header-top {
     grid-auto-flow: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     gap: 5px;
   }
 }
-
 #header-computer .header-top .loginsC {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: row;
 }
-
 #header-computer .header-top .loginsC .bt-logedC {
-  display: -ms-grid;
   display: grid;
   padding: 5px;
   font-weight: 600;
@@ -54,51 +41,37 @@
   border-radius: 50%;
   cursor: pointer;
 }
-
 #header-computer .header-top .loginsC .ham-settingsC {
   left: -100%;
   padding: 5px 15px;
   margin-top: 33px;
   position: absolute;
-  display: -ms-grid;
   display: grid;
   background: #D9D9D9;
   border: 1px solid #000000;
   border-radius: 10px;
 }
-
 #header-computer .header-top .loginsC .ham-settingsC .name {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 400;
   font-size: 25px;
   text-decoration: underline;
   color: black;
 }
-
 #header-computer .header-top .loginsC .ham-settingsC .profile {
   margin-top: 5px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
   font-weight: 400;
   font-size: 20px;
   text-decoration: none;
   color: black;
 }
-
 #header-computer .header-top .loginsC .ham-settingsC .log-out {
   margin-top: 15px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 400;
   font-size: 20px;
   text-decoration: none;
@@ -107,11 +80,9 @@
   border: 1px solid #000000;
   border-radius: 5px;
 }
-
 #header-computer .header-top .loginsC .ham-settingsC.active {
   left: 10px;
 }
-
 #header-computer .header-top .bt-log-in {
   border: 2px solid black;
   border-radius: 15px;
@@ -119,78 +90,63 @@
   text-decoration: none;
   color: black;
 }
-
 @media (min-width: 450px) {
   #header-computer .header-top .bt-log-in {
     padding: 5px;
     font-size: 20px;
   }
 }
-
 @media (min-width: 900px) {
   #header-computer .header-top .bt-log-in {
     padding: 5px;
     font-size: 25px;
   }
 }
-
 #header-computer .header-top .header-title {
   color: white;
 }
-
 @media (min-width: 450px) {
   #header-computer .header-top .header-title {
     font-weight: 600;
     font-size: 30px;
   }
 }
-
 @media (min-width: 500px) {
   #header-computer .header-top .header-title {
     font-weight: 600;
     font-size: 35px;
   }
 }
-
 @media (min-width: 800px) {
   #header-computer .header-top .header-title {
     font-weight: 800;
     font-size: 45px;
   }
 }
-
 #header-computer .header-top .logo {
   border-radius: 50%;
 }
-
 @media (min-width: 450px) {
   #header-computer .header-top .logo {
     width: 35px;
   }
 }
-
 @media (min-width: 500px) {
   #header-computer .header-top .logo {
     width: 40px;
   }
 }
-
 @media (min-width: 800px) {
   #header-computer .header-top .logo {
     width: 50px;
   }
 }
-
 #header-computer .header-menu {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   justify-items: center;
   background: #004700;
 }
-
 #header-computer .header-menu .search {
   height: 30px;
   padding-left: 5px;
@@ -200,13 +156,11 @@
   border-radius: 9px;
   border: 2px solid black;
 }
-
 @media (min-width: 450px) {
   #header-computer .header-menu .search {
     width: 300px;
   }
 }
-
 @media (min-width: 800px) {
   #header-computer .header-menu .search {
     width: 400px;

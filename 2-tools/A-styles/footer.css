@@ -1,27 +1,20 @@
 #footer {
   background: #282828;
 }
-
 #footer #footer-info #since {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  font-family: 'Inter', sans-serif;
+  justify-content: center;
+  align-content: center;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: white;
 }
-
 @media (min-width: 0px) {
   #footer #footer-info #since {
     padding: 8px;
     font-size: 18px;
   }
 }
-
 @media (min-width: 450px) {
   #footer #footer-info #since {
     padding: 20px;

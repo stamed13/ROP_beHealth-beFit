@@ -3,19 +3,13 @@
   padding: 25px;
   padding-top: 75px;
 }
-
 #content #database {
   padding-top: 60px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: 'Inter', sans-serif;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
 }
-
 #content #database form {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   padding: 15px;
@@ -24,12 +18,10 @@
   background: #A3A3A3;
   border-radius: 10px;
 }
-
 #content #database form #title {
   font-weight: 600;
   font-size: 30px;
 }
-
 #content #database form #passwd {
   width: 250px;
   font-size: 25px;
@@ -37,13 +29,11 @@
   border: none;
   border-radius: 5px;
 }
-
 @media (max-width: 330px) {
   #content #database form #passwd {
     width: 75vw;
   }
 }
-
 #content #database form #submit {
   padding: 5px;
   font-size: 25px;

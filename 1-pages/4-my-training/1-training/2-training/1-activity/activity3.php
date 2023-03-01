@@ -119,8 +119,8 @@
                     //echo $leg;
 
                     //premenna, ktora obsahuje uzivatelovu dnesnu aktivitu
-                    //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     
                     /*
@@ -199,8 +199,8 @@
 
                     }
 
-                    $activity = mySQLassoc($conn, "SELECT * FROM useractivity 
-                    WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
+                    //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
+                    //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                     if($activity["neckSt"] > 0){
                         $_POST["neck"] = $activity["neckSt"];
@@ -322,7 +322,7 @@
 </html>
 
 <?php
-    mysqli_close($conn);
+    //mysqli_close($conn);
 
     //$activity = mySQLassoc($conn, "SELECT * FROM useractivity 
     //WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");

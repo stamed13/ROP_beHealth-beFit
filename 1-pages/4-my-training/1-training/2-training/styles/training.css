@@ -2,56 +2,46 @@
   padding: 20px;
   min-height: 100vh;
 }
-
 @media (min-width: 0px) {
   #content {
     padding-top: 140px;
   }
 }
-
 @media (min-width: 450px) {
   #content {
     padding-top: 105px;
   }
 }
-
 @media (min-width: 500px) {
   #content {
     padding-top: 110px;
   }
 }
-
 @media (min-width: 800px) {
   #content {
     padding-top: 125px;
   }
 }
-
 #content #buttons-arrow {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
 }
-
 @media (min-width: 0px) {
   #content #buttons-arrow {
     justify-items: center;
   }
 }
-
 @media (min-width: 450px) {
   #content #buttons-arrow {
     justify-items: left;
   }
 }
-
 #content #buttons-arrow #bt-arrow {
-  display: -ms-grid;
   display: grid;
   text-align: left;
   padding: 10px;
   margin-top: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 25px;
   border-radius: 10px;
   color: black;
@@ -59,51 +49,34 @@
   font-weight: 600;
   text-decoration: none;
 }
-
 #content #training {
   padding-top: 20px;
-  display: -ms-grid;
   display: grid;
   gap: 120px;
 }
-
 #content #training #main #content-title {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-weight: 600;
   font-size: 35px;
 }
-
 #content #training #main #training-info {
   font-size: 25px;
 }
-
 #content #training #training-menu {
-  display: -ms-grid;
   display: grid;
   gap: 40px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 #content #training #training-menu #bt-training {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   font-weight: 600;
   background: #A5CE00;
   color: black;
   text-decoration: none;
 }
-
 @media (min-width: 0px) {
   #content #training #training-menu #bt-training {
     height: 100px;
@@ -112,7 +85,6 @@
     border-radius: 15px;
   }
 }
-
 @media (min-width: 600px) {
   #content #training #training-menu #bt-training {
     height: 140px;
