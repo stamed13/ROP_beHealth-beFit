@@ -19,6 +19,14 @@
                 <p>Nevahaj, cas bezi a ty mas jedinecnu moznost na zmenu.</p>
             </div>
             <img src="2-tools/B-media/strong-man.jpg" alt="hopa" id="home-sportsman">
+            <div id="other">
+                <?php 
+                    // ak nie som prihlaseny presmeruje naspat
+                    if( $_SESSION['login'] == false ){
+                       //echo "<a href='2-tools/E-login/log-in/log-in.php' class='login'>Prihlas sa prosim!</a>";
+                    }
+                ?>
+            </div>
         </article>
 
     </div>

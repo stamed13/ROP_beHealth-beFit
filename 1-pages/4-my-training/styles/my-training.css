@@ -26,13 +26,25 @@
   display: grid;
   gap: 120px;
 }
+#content #training #main {
+  display: grid;
+  justify-content: center;
+  gap: 25px;
+}
 #content #training #main #content-title {
+  margin: 0;
+  padding: 10px;
+  display: grid;
+  justify-items: center;
+  font-weight: 600;
+  font-size: 35px;
+  background: rgb(20, 140, 50);
+  border-radius: 25px;
+}
+#content #training #main #training-info {
   display: grid;
   justify-content: center;
   font-weight: 600;
-  font-size: 35px;
-}
-#content #training #main #training-info {
   font-size: 25px;
 }
 #content #training #training-menu {

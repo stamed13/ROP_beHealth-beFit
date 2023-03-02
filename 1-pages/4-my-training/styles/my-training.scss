@@ -22,15 +22,27 @@
         //
         #main {
             //min-height: 100vh;
+            display: grid;
+            justify-content: center;
+            gap: 25px;
             //
             #content-title {
+                //width: 50vw;
+                margin: 0;
+                padding: 10px;
                 display: grid;
-                justify-content: center;
+                justify-items: center;
                 font-weight: 600;
                 font-size: 35px;
+                background: rgb(20, 140, 50);
+                //border: 2px solid black;
+                border-radius: 25px;
             }
             //
             #training-info {
+                display: grid;
+                justify-content: center;
+                font-weight: 600;
                 font-size: 25px;
             }
         }
