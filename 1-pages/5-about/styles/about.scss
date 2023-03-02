@@ -1,5 +1,4 @@
 #content {
-    padding: 20px;
     min-height: 100vh;
     //
     @media(min-width: 0px) {
@@ -13,57 +12,67 @@
     }
     @media(min-width: 900px) {
         padding-top: 128px;
+        //margin-top: 128px;
     }
     //
-    #main {
-        #content-title {
-            display: grid;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 35px;
+    #about {
+        margin: 25px;
+        padding: 20px;
+        //background: rgb(52, 151, 52);
+        background: rgb(162, 247, 156);
+        border: 5px solid green;
+        border-radius: 10px;
+        //
+        #main {
+            #content-title {
+                display: grid;
+                justify-content: center;
+                font-weight: 600;
+                font-size: 35px;
+            }
+            #main-info {
+                display: grid;
+                justify-content: center;
+                font-size: 25px;
+            }
         }
-        #main-info {
-            display: grid;
-            justify-content: center;
-            font-size: 25px;
-        }
-    }
-    #functions {
-        padding-top: 25px;
-        #functions-title {
-            font-weight: 600;
-            font-size: 30px;
-        }
-        ul {
-            display: grid;
-            gap: 20px;
-            padding-left: 25px;
-            list-style-type: decimal;
-            font-weight: 600;
-            font-size: 25px;
-            li {
-                .function {
-                    display: grid;
-                    .function-title {
-                        font-weight: 600;
-                        font-size: 25px;
-                    }
-                    .function-info {
-                        font-weight: 400;
-                        font-size: 25px;
+        #functions {
+            padding-top: 25px;
+            #functions-title {
+                font-weight: 600;
+                font-size: 30px;
+            }
+            ul {
+                display: grid;
+                gap: 20px;
+                padding-left: 25px;
+                list-style-type: decimal;
+                font-weight: 600;
+                font-size: 25px;
+                li {
+                    .function {
+                        display: grid;
+                        .function-title {
+                            font-weight: 600;
+                            font-size: 25px;
+                        }
+                        .function-info {
+                            font-weight: 400;
+                            font-size: 25px;
+                        }
                     }
                 }
             }
         }
-    }
-    #access {
-        padding-top: 25px;
-        #access-title {
-            font-weight: 600;
-            font-size: 30px;
+        #access {
+            padding-top: 25px;
+            #access-title {
+                font-weight: 600;
+                font-size: 30px;
+            }
+            #access-info {
+                font-size: 25px;
+            }
         }
-        #access-info {
-            font-size: 25px;
-        }
-    }
+    }    
 }

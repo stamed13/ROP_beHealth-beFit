@@ -9,6 +9,7 @@
 ?>
 
     <div id="content">
+        <div id="about">
         <div id="main">
             <div id="content-title">About beHealth-beFit</div>
             <div id="main-info">
@@ -52,6 +53,7 @@
             len zaregistrovanym uzivatelov. Je to z jednoducheho dovodu. Potrebujem vediet od pouzivatelov dolezite 
             informacie, inak im nemozem poradit. Najma pretoze udaje ukladam do databazy ...
             </div>
+        </div>
         </div>
     </div>
     

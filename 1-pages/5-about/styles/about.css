@@ -1,5 +1,4 @@
 #content {
-  padding: 20px;
   min-height: 100vh;
 }
 @media (min-width: 0px) {
@@ -22,25 +21,32 @@
     padding-top: 128px;
   }
 }
-#content #main #content-title {
+#content #about {
+  margin: 25px;
+  padding: 20px;
+  background: rgb(162, 247, 156);
+  border: 5px solid green;
+  border-radius: 10px;
+}
+#content #about #main #content-title {
   display: grid;
   justify-content: center;
   font-weight: 600;
   font-size: 35px;
 }
-#content #main #main-info {
+#content #about #main #main-info {
   display: grid;
   justify-content: center;
   font-size: 25px;
 }
-#content #functions {
+#content #about #functions {
   padding-top: 25px;
 }
-#content #functions #functions-title {
+#content #about #functions #functions-title {
   font-weight: 600;
   font-size: 30px;
 }
-#content #functions ul {
+#content #about #functions ul {
   display: grid;
   gap: 20px;
   padding-left: 25px;
@@ -48,24 +54,24 @@
   font-weight: 600;
   font-size: 25px;
 }
-#content #functions ul li .function {
+#content #about #functions ul li .function {
   display: grid;
 }
-#content #functions ul li .function .function-title {
+#content #about #functions ul li .function .function-title {
   font-weight: 600;
   font-size: 25px;
 }
-#content #functions ul li .function .function-info {
+#content #about #functions ul li .function .function-info {
   font-weight: 400;
   font-size: 25px;
 }
-#content #access {
+#content #about #access {
   padding-top: 25px;
 }
-#content #access #access-title {
+#content #about #access #access-title {
   font-weight: 600;
   font-size: 30px;
 }
-#content #access #access-info {
+#content #about #access #access-info {
   font-size: 25px;
 }
