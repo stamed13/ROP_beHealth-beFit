@@ -22,6 +22,10 @@
     padding-top: 128px;
   }
 }
+#content #contact {
+  display: grid;
+  gap: 50px;
+}
 #content #contact #content-title {
   display: grid;
   justify-content: center;
@@ -29,15 +33,27 @@
   font-size: 35px;
 }
 #content #contact #autor-info {
-  display: grid;
-  justify-content: center;
   padding: 10px;
-  border: 5px solid black;
-  border-radius: 5px;
+  display: grid;
+  justify-content: left;
+  gap: 5px;
+  border: 5px solid rgb(13, 84, 0);
+  border-radius: 10px;
+  color: rgb(46, 46, 46);
+  background: rgb(227, 255, 199);
+}
+@media (min-width: 0px) {
+  #content #contact #autor-info {
+    width: auto;
+  }
+}
+@media (min-width: 400px) {
+  #content #contact #autor-info {
+    width: 300px;
+  }
 }
 #content #contact #autor-info #title-autor {
   display: grid;
-  gap: 10px;
   font-weight: 600;
   font-size: 30px;
 }
@@ -53,7 +69,7 @@
 }
 #content #contact #autor-info #contact-items {
   display: grid;
-  gap: 20px;
+  gap: 10px;
 }
 #content #contact #autor-info #contact-items .contact-item {
   display: grid;
@@ -78,5 +94,9 @@
 #content #contact #autor-info #contact-items .contact-item .item-content {
   font-weight: 400;
   font-size: 25px;
-  color: black;
+  color: rgb(46, 46, 46);
+}
+#content #contact #autor-info #contact-items .contact-item #full-name {
+  display: grid;
+  justify-items: center;
 }

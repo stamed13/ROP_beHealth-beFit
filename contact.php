@@ -14,8 +14,8 @@
             <article id="autor-info">
                 <div id="title-autor">autor</div>
                 <div id="contact-items">
-                <div class="contact-item">
-                        <div class="item-title">name:</div>
+                    <div class="contact-item">
+                        <div class="item-title">meno:</div>
                         <div class="item-content" id="full-name">Stanislav Medvec</div>
                     </div>
                     <div class="contact-item">
@@ -25,7 +25,7 @@
                     <div class="contact-item">
                         <div class="item-title">github:</div>
                         <a href="https://github.com/stamed13" class="item-content" id="github-profile">profil</a>
-                        <a href="https://github.com/stamed13/ROP_beHealth-beFit" class="item-content" id="github-project">project</a>
+                        <a href="https://github.com/stamed13/ROP_beHealth-beFit" class="item-content" id="github-project">projekt</a>
                         <a class="item-content" id="vzor linku"></a>
                     </div>
                 </div>
