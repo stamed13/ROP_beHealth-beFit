@@ -21,6 +21,9 @@
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
     require_once ('planHelp.php');
 
+    $plans = mySQLall($conn, "SELECT * FROM plans");
+    //$row = mySQLall($conn, "SELECT * FROM users");
+    //$userPlan = $row["planId"];
 
 ?>
 
@@ -49,7 +52,7 @@
                     </tr>
                     <tr>
                         <td>PO</td>
-                        <td></td>
+                        <td> <?php echo $plans[0]["mon"] ?> </td>
                     </tr>
                     <tr>
                         <td>UT</td>
