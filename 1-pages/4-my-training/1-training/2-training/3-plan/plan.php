@@ -16,12 +16,21 @@
     }
     
     $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/3-plan/plan.php";
+    $idUser = $_SESSION["idUser"];
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
     require_once ('planHelp.php');
 
+    $userInfo = mySQLassoc($conn, "SELECT * FROM users WHERE idUser=$idUser");
+    $body_mass = ( ($userInfo["weight"]) / (pow($userInfo["height"], 2)) ) * 10000;
+
+    //prva aktivita pouzivatela
+    $activity = mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUser'");
+    $activityFirst = $activity[0]["date"];
+
     $plans = mySQLall($conn, "SELECT * FROM plans");
+
     //$row = mySQLall($conn, "SELECT * FROM users");
     //$userPlan = $row["planId"];
 
@@ -44,6 +53,15 @@
                         
                     </div>
                 </div>
+
+                <?php
+                    if( $body_mass > 30 ){
+                        echo "<div class=''> Mas obezitu. Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
+                    }
+                    if( $body_mass <= 30 ){
+                        echo "<div class=''> OK </div>";
+                    }
+                ?>
 
                 <table id="table-plan">
                     <tr>
