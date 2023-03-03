@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'plan';
@@ -19,7 +19,7 @@
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
-
+    require_once ('planHelp.php');
 
 
 ?>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div id="main-content">
-                    <div id="content-title">Treningovy plan</div>
+                    <div id="content-title">Treningový plán</div>
                     <div id="plan-content">
                         
                     </div>
@@ -76,6 +76,16 @@
                         <td></td>
                     </tr>
                 </table>
+
+                <div id="explanations">
+                    <div class="note">pull - príťah </div>
+                    <div class="note">push - tlak</div>
+                    <div class="note">core - jadro</div>
+                    <div class="note">leg - nohy</div>
+                    <div class="note">back - chrbát</div>
+                    <div class="note">hand - ruky, zápästie</div>
+                    <div class="note">neck - krk</div>
+                </div>
             </article>
             
         </section>
