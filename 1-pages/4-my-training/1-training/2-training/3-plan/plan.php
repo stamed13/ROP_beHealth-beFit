@@ -44,7 +44,7 @@
 
                 <table id="table-plan">
                     <tr>
-                        <td></td>
+                        <td id="zeroBunka"></td>
                         <td>kalistenika / strecing</td>
                     </tr>
                     <tr>

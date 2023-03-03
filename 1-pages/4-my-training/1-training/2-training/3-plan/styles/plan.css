@@ -63,7 +63,12 @@
   padding: 5px;
   font-weight: 700;
   font-size: 30px;
+  border-radius: 10px;
   border: 1px solid black;
+  border-collapse: collapse;
+}
+#content #plan #main #table-plan tr #zeroBunka {
+  background: rgba(0, 0, 0, 0);
 }
 #content #plan #main .buttons-arrow {
   display: grid;
