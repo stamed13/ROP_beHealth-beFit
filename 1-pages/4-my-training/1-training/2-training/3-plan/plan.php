@@ -28,12 +28,15 @@
     //prva aktivita pouzivatela
     $activity = mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUser'");
     $activityFirst = $activity[0]["date"];
-    $activityCount = mySQLassoc($conn, "SELECT COUNT(*) AS count FROM useractivity WHERE (userId='$idUSer')");
+    $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
+    $activityCount = $activity[0]["activityCount"];
 
     $plans = mySQLall($conn, "SELECT * FROM plans");
 
     //$row = mySQLall($conn, "SELECT * FROM users");
     //$userPlan = $row["planId"];
+
+    echo $activityCount;
 
 ?>
 
@@ -51,7 +54,17 @@
                 <div id="main-content">
                     <div id="content-title">Treningový plán</div>
                     <div id="plan-content">
-                        
+                        <?php if( $body_mass <= 30 ): ?>
+                            <div class="info">
+                                <div class="info-name">pred:</div>
+                                <div class="info-text">zahrievačka, kĺbová rozcvička, dynamický strečing</div>
+                            </div>
+
+                            <div class="info">
+                                <div class="info-name">po:</div>
+                                <div class="info-text">statický strečing</div>
+                            </div>
+                        <?php endif ?>
                     </div>
                 </div>
 
@@ -71,6 +84,7 @@
                             if( $activityCount > 0 ){
                                 echo "<div class=''> Mas aktivitu </div>";
                             }
+
                         }
                     ?>
                 </div>

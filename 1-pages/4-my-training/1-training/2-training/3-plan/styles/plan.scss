@@ -26,7 +26,7 @@
             #main-content {
                 display: grid;
                 justify-items: center;
-                gap: 10px;
+                gap: 25px;
                 // nadpis
                 #content-title {
                     padding: 10px;
@@ -42,12 +42,26 @@
                 }
                 // kratke informacie
                 #plan-content {
+                    margin-bottom: 30px;
                     display: grid;
-                    justify-items: center;
                     font-size: 25px;
                     font-family: 'Inter', sans-serif;
-                    font-weight: 600;
-                    text-align: center;
+                    //info
+                    .info {
+                        //max-width: 80vw;
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: left;
+                        gap: 10px;
+                        //
+                        .info-name {
+                            font-weight: 600;
+                        }
+                        //
+                        .info-text {
+                            font-weight: 400;
+                        }
+                    }
                 }
             }
             //
@@ -63,8 +77,8 @@
                     border-radius: 10px;
                 }
                 .weight {
-                font-size: 20px;
-                font-weight: 600;
+                    font-size: 20px;
+                    font-weight: 600;
                 }
             }
             // tabulka treningovy plan
