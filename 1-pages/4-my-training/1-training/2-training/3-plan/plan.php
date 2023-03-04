@@ -28,6 +28,7 @@
     //prva aktivita pouzivatela
     $activity = mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUser'");
     $activityFirst = $activity[0]["date"];
+    $activityCount = mySQLassoc($conn, "SELECT COUNT(*) AS count FROM useractivity WHERE (userId='$idUSer')");
 
     $plans = mySQLall($conn, "SELECT * FROM plans");
 
@@ -60,6 +61,14 @@
                     }
                     if( $body_mass <= 30 ){
                         echo "<div class=''> OK </div>";
+
+                        if( $activityCount == 0 ){
+                            echo "<div class=''> nemas aktivitu </div>";
+                        }
+
+                        if( $activityCount > 0 ){
+                            echo "<div class=''> mas aktivitu </div>";
+                        }
                     }
                 ?>
 
@@ -99,13 +108,16 @@
                 </table>
 
                 <div id="explanations">
-                    <div class="note">pull - príťah </div>
-                    <div class="note">push - tlak</div>
-                    <div class="note">core - jadro</div>
-                    <div class="note">leg - nohy</div>
-                    <div class="note">back - chrbát</div>
-                    <div class="note">hand - ruky, zápästie</div>
-                    <div class="note">neck - krk</div>
+                    <div class="note cali">full - celé telo</div>
+                    <div class="note cali">pull - príťah </div>
+                    <div class="note cali">push - tlak</div>
+                    <div class="note cali">core - jadro</div>
+                    <div class="note cali">legs - nohy</div>
+                    <div class="note stre">back - chrbát</div>
+                    <div class="note stre">hand - ruky, zápästie</div>
+                    <div class="note stre">legs - nohy</div>
+                    <div class="note stre">bridge - mostík</div>
+                    <div class="note stre">split - šnúra</div>
                 </div>
             </article>
             

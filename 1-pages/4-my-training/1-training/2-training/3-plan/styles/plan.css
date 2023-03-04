@@ -88,6 +88,16 @@
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
+#content #plan #main #explanations .cali {
+  padding: 5px;
+  background: rgba(255, 166, 0, 0.548);
+  border-radius: 5px;
+}
+#content #plan #main #explanations .stre {
+  padding: 5px;
+  background: rgba(0, 255, 0, 0.534);
+  border-radius: 5px;
+}
 #content #plan #main .buttons-arrow {
   display: grid;
   grid-auto-flow: column;
