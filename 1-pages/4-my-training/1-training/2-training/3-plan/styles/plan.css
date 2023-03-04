@@ -52,6 +52,21 @@
   font-weight: 600;
   text-align: center;
 }
+#content #plan #main #filter {
+  display: grid;
+  justify-items: center;
+}
+#content #plan #main #filter .rText {
+  padding: 5px;
+  font-size: 20px;
+  background: red;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+#content #plan #main #filter .weight {
+  font-size: 20px;
+  font-weight: 600;
+}
 #content #plan #main #table-plan {
   padding: 15px;
   display: grid;
@@ -69,6 +84,11 @@
 }
 #content #plan #main #table-plan tr #zeroBunka {
   background: rgba(0, 0, 0, 0);
+}
+@media (min-width: 350px) {
+  #content #plan #main #table-plan tr #mainBunka {
+    width: 50vw;
+  }
 }
 #content #plan #main #explanations {
   max-width: 350px;

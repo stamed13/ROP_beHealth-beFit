@@ -55,70 +55,78 @@
                     </div>
                 </div>
 
-                <?php
-                    if( $body_mass > 30 ){
-                        echo "<div class=''> Mas obezitu. Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
-                    }
-                    if( $body_mass <= 30 ){
-                        echo "<div class=''> OK </div>";
-
-                        if( $activityCount == 0 ){
-                            echo "<div class=''> nemas aktivitu </div>";
+                <div id="filter">
+                    <?php
+                        if( $body_mass > 30 ){
+                            echo "<div class='rText'> Mas obezitu! </div>";
+                            echo "<div class='weight'> Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
                         }
+                        if( $body_mass <= 30 ){
+                            echo "<div class=''> OK (dobra vaha) </div>";
 
-                        if( $activityCount > 0 ){
-                            echo "<div class=''> mas aktivitu </div>";
+                            if( $activityCount == 0 ){
+                                echo "<div class='rText'> Nemas aktivitu! </div>";
+                            }
+
+                            if( $activityCount > 0 ){
+                                echo "<div class=''> Mas aktivitu </div>";
+                            }
                         }
-                    }
-                ?>
-
-                <table id="table-plan">
-                    <tr>
-                        <td id="zeroBunka"></td>
-                        <td>kalistenika / strecing</td>
-                    </tr>
-                    <tr>
-                        <td>PO</td>
-                        <td> <?php echo $plans[0]["mon"] ?> </td>
-                    </tr>
-                    <tr>
-                        <td>UT</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>ST</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>ŠT</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>PI</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>SO</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>NE</td>
-                        <td></td>
-                    </tr>
-                </table>
-
-                <div id="explanations">
-                    <div class="note cali">full - celé telo</div>
-                    <div class="note cali">pull - príťah </div>
-                    <div class="note cali">push - tlak</div>
-                    <div class="note cali">core - jadro</div>
-                    <div class="note cali">legs - nohy</div>
-                    <div class="note stre">back - chrbát</div>
-                    <div class="note stre">hand - ruky, zápästie</div>
-                    <div class="note stre">legs - nohy</div>
-                    <div class="note stre">bridge - mostík</div>
-                    <div class="note stre">split - šnúra</div>
+                    ?>
                 </div>
+
+                <?php if( $body_mass <= 30 ): ?>
+                        <table id="table-plan">
+                        <tr>
+                            <td id="zeroBunka"></td>
+                            <td id="mainBunka">tréning</td>
+                        </tr>
+                        <tr>
+                            <td>PO</td>
+                            <td> <?php echo $plans[0]["mon"] ?> </td>
+                        </tr>
+                        <tr>
+                            <td>UT</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ST</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ŠT</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>PI</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>SO</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>NE</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                <?php endif ?>
+
+
+                <?php if( $body_mass <= 30 ): ?>
+                    <div id="explanations">
+                        <div class="note cali">full - celé telo</div>
+                        <div class="note cali">pull - príťah </div>
+                        <div class="note cali">push - tlak</div>
+                        <div class="note cali">core - jadro</div>
+                        <div class="note cali">legs - nohy</div>
+                        <div class="note stre">back - chrbát</div>
+                        <div class="note stre">hand - ruky, zápästie</div>
+                        <div class="note stre">legs - nohy</div>
+                        <div class="note stre">bridge - mostík</div>
+                        <div class="note stre">split - šnúra</div>
+                    </div>
+                <?php endif ?>
             </article>
             
         </section>

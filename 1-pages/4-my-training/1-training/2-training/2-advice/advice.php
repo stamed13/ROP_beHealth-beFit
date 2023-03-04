@@ -60,16 +60,18 @@
                     <?php 
                         adviceWeight($advices, $body_mass); 
                         
-                        if( $activityFirst > 0 ){
-                            adviceExercise($advices, $conn, $idUser);
-                            adviceImprove($advices, $conn, $idUser);
-                            adviceStatus($advices, $conn, $idUser);
-                            adviceDaily($advices, $conn, $idUser);
-                            adviceLifestyle($advices, $conn, $idUser);
-                        } 
-                        //nema aktivitu, ostatne neporadi
-                        if( $activityFirst == 0 ) {
-                            echo "<div class='advice'> Viac ti nedokazem poradit. Vypln prosim aspon jednu aktivitu. </div>";
+                        if( $body_mass < 30 ){
+                            if( $activityFirst > 0 ){
+                                adviceExercise($advices, $conn, $idUser);
+                                adviceImprove($advices, $conn, $idUser);
+                                adviceStatus($advices, $conn, $idUser);
+                                adviceDaily($advices, $conn, $idUser);
+                                adviceLifestyle($advices, $conn, $idUser);
+                            } 
+                            //nema aktivitu, ostatne neporadi
+                            if( $activityFirst == 0 ) {
+                                echo "<div class='advice'> Viac ti nedokazem poradit. Vypln prosim aspon jednu aktivitu. </div>";
+                            }
                         }
                     ?>
                 </div>
