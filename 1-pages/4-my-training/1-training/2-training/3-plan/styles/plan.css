@@ -110,6 +110,23 @@
   border: 1px solid black;
   border-collapse: collapse;
 }
+#content #plan #main #table-plan tr td .part {
+  padding: 3px;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#content #plan #main #table-plan tr td .part:hover {
+  color: whitesmoke;
+  background: rgb(37, 37, 37);
+}
+#content #plan #main #table-plan tr td .cali {
+  margin-right: 10px;
+  background: rgba(255, 166, 0, 0.316);
+}
+#content #plan #main #table-plan tr td .stre {
+  background: rgba(0, 255, 0, 0.301);
+}
 #content #plan #main #table-plan tr #zeroBunka {
   background: rgba(0, 0, 0, 0);
 }

@@ -124,31 +124,52 @@
                         </tr> -->
                         <tr>
                             <td>PO</td>
-                            <td id="mainBunka"> <?php echo $userPlan["mon"] ?> </td>
+                            <td id="mainBunka">
+                                <a href="" class="part cali"> <?php echo $userPlan["monC"] ?> </a>
+                                <a href="" class="part stre"> <?php echo $userPlan["monS"] ?> </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>UT</td>
-                            <td> <?php echo $userPlan["tue"] ?> </td>
+                            <td>
+                                <a href="" class="part cali"> <?php echo $userPlan["tueC"] ?> </a>
+                                <a href="" class="part stre"> <?php echo $userPlan["tueS"] ?> </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>ST</td>
-                            <td> <?php echo $userPlan["wed"] ?> </td>
+                            <td>
+                                <a href="" class="part cali"> <?php echo $userPlan["wedC"] ?> </a>
+                                <a href="" class="part stre"> <?php echo $userPlan["wedS"] ?> </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>ŠT</td>
-                            <td> <?php echo $userPlan["thu"] ?> </td>
+                            <td>
+                                <a href="" class="part cali"> <?php echo $userPlan["thuC"] ?> </a>
+                                <a href="" class="part stre"> <?php echo $userPlan["thuS"] ?> </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>PI</td>
-                            <td> <?php echo $userPlan["fri"] ?> </td>
+                            <td>
+                                <a href="" class="part cali"> <?php echo $userPlan["friC"] ?> </a>
+                                <a href="" class="part stre"> <?php echo $userPlan["friS"] ?> </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>SO</td>
-                            <td> <?php echo $userPlan["sat"] ?> </td>
+                            <td>
+                                <a href="" class="part cali"> <?php echo $userPlan["satC"] ?> </a>
+                                <a href="" class="part stre"> <?php echo $userPlan["satS"] ?> </a>
+                            </td>
                         </tr>
                         <tr>
                             <td>NE</td>
-                            <td> <?php echo $userPlan["sun"] ?> </td>
+                            <td>
+                                <a href="" class="part cali"> <?php echo $userPlan["sunC"] ?> </a>
+                                <a href="" class="part stre"> <?php echo $userPlan["sunS"] ?> </a>
+                            </td>
                         </tr>
                     </table>
                 <?php endif ?>
@@ -161,6 +182,7 @@
                         <div class="note cali">push - tlak</div>
                         <div class="note cali">core - jadro</div>
                         <div class="note cali">legs - nohy</div>
+                        <div class="note cali">hand - ruky, ramená</div>
                         <div class="note stre">static - statický strečing</div>
                         <div class="note stre">back - chrbát</div>
                         <div class="note stre">hand - ruky, zápästie</div>

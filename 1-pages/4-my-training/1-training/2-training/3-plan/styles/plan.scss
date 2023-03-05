@@ -124,11 +124,34 @@
                     td {
                         padding: 5px;
                         //margin: 5px;
+                        //display: grid;
+                        //grid-auto-flow: column;
+                        //justify-content: center;
+                        //gap: 10px;
                         font-weight: 700;
                         font-size: 30px;
                         border-radius: 10px;
                         border: 1px solid black;
                         border-collapse: collapse;
+                        //
+                        .part {
+                            padding: 3px;
+                            color: black;
+                            border-radius: 5px;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: whitesmoke;
+                                background: rgb(37, 37, 37);
+                            }
+                        }
+                        .cali {
+                            margin-right: 10px;
+                            background: rgba(255, 166, 0, 0.316);
+                        }
+                        .stre {
+                            background: rgba(0, 255, 0, 0.301);
+                        }
                     }
                     //
                     #zeroBunka {
