@@ -255,7 +255,7 @@
                          ?>">
 
                         <input type="submit" id="bt-register" name="submit" 
-                        value="Register">
+                        value="Update">
                     </form>
                         
                     </div>

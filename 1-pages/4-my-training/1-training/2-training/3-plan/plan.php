@@ -47,10 +47,19 @@
         $plan = getPlanForMe($status);
         //$plan = 2;
         $userPlan = $plans[$plan];
-
-        //echo $status;
-        //echo $plan;
     }
+    
+        $sql = "UPDATE users SET planId='$plan' WHERE idUser='$idUser'";
+
+        mysqli_query($conn, $sql);
+
+        if (mysqli_query($conn, $sql)) {
+            
+        } else {
+            echo "Chyba pridania planu!";
+        }
+  
+        mysqli_close($conn);
 
 ?>
 
@@ -97,24 +106,24 @@
                             }
 
                             if( $activityCount > 0 ){
-                                echo "<div class=''> Mas aktivitu </div>";
+                                //echo "<div class=''> Mas aktivitu </div>";
                             }
 
                         }
 
-                        echo $status;
+                        //echo $status;
                     ?>
                 </div>
 
                 <?php if( $body_mass <= 30 ): ?>
-                        <table id="table-plan">
-                        <tr>
+                    <table id="table-plan">
+                        <!-- <tr>
                             <td id="zeroBunka"></td>
-                            <td id="mainBunka">tréning</td>
-                        </tr>
+                            <td >tréning</td>
+                        </tr> -->
                         <tr>
                             <td>PO</td>
-                            <td> <?php echo $userPlan["mon"] ?> </td>
+                            <td id="mainBunka"> <?php echo $userPlan["mon"] ?> </td>
                         </tr>
                         <tr>
                             <td>UT</td>
