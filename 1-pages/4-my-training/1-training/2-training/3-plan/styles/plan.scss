@@ -71,14 +71,30 @@
                 //
                 .rText {
                     padding: 5px;
+                    margin-bottom: 10px;
                     font-size: 20px;
                     background: red;
                     color: whitesmoke;
                     border-radius: 10px;
                 }
-                .weight {
+                .oText {
+                    padding: 5px;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    background: orange;
+                    color: whitesmoke;
+                    border-radius: 10px;
+                }
+                .filter-info {
+                    margin-bottom: 10px;
                     font-size: 20px;
                     font-weight: 600;
+                }
+                .weight {
+
+                }
+                .activity {
+ 
                 }
             }
             // tabulka treningovy plan

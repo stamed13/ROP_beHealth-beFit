@@ -1,5 +1,9 @@
 <?php
-    function planRegular($plans, $conn){
-        
+    //ak nema ziadnu aktivitu
+    function planRegular(){
+        //
+        if( false ){}
+
+        else{}
     }
 ?>

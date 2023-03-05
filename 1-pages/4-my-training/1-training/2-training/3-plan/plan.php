@@ -36,7 +36,12 @@
     //$row = mySQLall($conn, "SELECT * FROM users");
     //$userPlan = $row["planId"];
 
-    echo $activityCount;
+    //echo $activityCount;
+
+    //ak nema aktivitu, dostane obycajny plan
+    if( $activityCount == 0 ){
+        $userPlan = $plans[0];
+    }
 
 ?>
 
@@ -72,13 +77,14 @@
                     <?php
                         if( $body_mass > 30 ){
                             echo "<div class='rText'> Mas obezitu! </div>";
-                            echo "<div class='weight'> Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
+                            echo "<div class='filter-info weight'> Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
                         }
                         if( $body_mass <= 30 ){
-                            echo "<div class=''> OK (dobra vaha) </div>";
+                            //echo "<div class=''> OK (dobra vaha) </div>";
 
                             if( $activityCount == 0 ){
-                                echo "<div class='rText'> Nemas aktivitu! </div>";
+                                echo "<div class='oText'> Nemas aktivitu! </div>";
+                                echo "<div class='filter-info activity'> Nemozem ti dobre poradit. Mam pre teba jednoduchy treningovy plan. </div>";
                             }
 
                             if( $activityCount > 0 ){
@@ -97,7 +103,7 @@
                         </tr>
                         <tr>
                             <td>PO</td>
-                            <td> <?php echo $plans[0]["mon"] ?> </td>
+                            <td> <?php echo $plans[0]["mon"] ?> <?php echo $userPlan["mon"] ?> </td>
                         </tr>
                         <tr>
                             <td>UT</td>
