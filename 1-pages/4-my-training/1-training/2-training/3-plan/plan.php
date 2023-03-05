@@ -43,8 +43,9 @@
         $userPlan = $plans[0];
     }
     if( $activityCount > 0 ){
-        $status = adviceStatus($conn, $idUser);
+        $status = status($conn, $idUser);
         $plan = getPlanForMe($status);
+        $offen = offen($conn, $idUser);
         //$plan = 2;
         $userPlan = $plans[$plan];
     }
@@ -106,7 +107,7 @@
                             }
 
                             if( $activityCount > 0 ){
-                                //echo "<div class=''> Mas aktivitu </div>";
+                                getHowOffen($plan, $offen);
                             }
 
                         }
@@ -160,6 +161,7 @@
                         <div class="note cali">push - tlak</div>
                         <div class="note cali">core - jadro</div>
                         <div class="note cali">legs - nohy</div>
+                        <div class="note stre">static - statický strečing</div>
                         <div class="note stre">back - chrbát</div>
                         <div class="note stre">hand - ruky, zápästie</div>
                         <div class="note stre">leg - nohy</div>

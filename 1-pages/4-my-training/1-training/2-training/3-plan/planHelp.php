@@ -30,13 +30,52 @@
             return 4;
         }
 
-        
+    }   
 
-        //else{}
+
+
+    function getHowOffen( $plan, $offen ){
+        //ma cvicit 3x tyzdenne
+        if($plan == 0 || $plan == 1){
+            //ak cvici aspon 3x do tyzdna, je to spravne
+            if($offen > 2.5){
+                echo "<div class='gText'> Super, ides podla nastaveneho planu! </div>";
+            }
+            //ak cvici menej ako 3x a zaroven aspon 1x do tyzdna, je to dobre
+            if($offen > 1 && $offen <= 2.5){
+                echo "<div class='oText'> Pokial mas dost casu, skus cvicit 3x do tyzdna! </div>";
+            }
+            //ak cvici menej ako 1x do tyzdna, je to zle
+            if($offen <= 1 ){
+                echo "<div class='rText'> Pozor, cvicis menej ako 1x do tyzdna! Najdi si prosim viac casu. </div>";
+            }
+        }
+
+        //ma cvicit 7x tyzdenne
+        if($plan > 1 || $plan < 5){
+            //ak cvici aspon 5x do tyzdna, je to spravne
+            if($offen > 5.5){
+                echo "<div class='gText'> Super, ides podla nastaveneho planu! </div>";
+            }
+            //ak cvici menej ako 3x a zaroven aspon 1x do tyzdna, je to dobre
+            if($offen > 2.5 && $offen <= 5.5){
+                echo "<div class='oText'> Pokial mas dost casu, skus cvicit 5x do tyzdna! </div>";
+            }
+            //ak cvici menej ako 3x a zaroven aspon 1x do tyzdna do tyzdna, je to zle
+            if($offen > 1 && $offen <= 2.5 ){
+                echo "<div class='rText'> Pozor, cvicis menej ako 3x do tyzdna! Najdi si prosim viac casu. </div>";
+            }
+            //ak cvici menej ako 1x do tyzdna, je to velmi zle
+            if($offen <= 1 ){
+                echo "<div class='rText'> Cvicis velmi malo! Skus cvicit pravidelnejsie a budes lepsie regenerovat. </div>";
+            }
+        }
     }
 
+
+    
     //stav kondicie
-    function adviceStatus($conn, $idUser){
+    function status($conn, $idUser){
         //pocet aktivit pouzivatela
         $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
         $activityCount = $activity[0]["activityCount"];
@@ -152,5 +191,83 @@
         //echo $avg;
 
         return $avg;
+    }
+
+
+
+    //kontrola cvicenia pouzivatela
+    function offen($conn, $idUser){
+        //pocet aktivit pouzivatela
+        $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
+        $activityCount = $activity[0]["activityCount"];
+        
+        //prva aktivita pouzivatela
+        $activity = mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUser'");
+        $activityFirst = $activity[0]["date"];
+
+        //aktualny datum
+        $date = mySQLall($conn, "SELECT CURDATE()");
+        $actualDate = $date[0]["CURDATE()"];
+        //$actualDate = "2023-02-08";
+
+        //devat mesacny zaznam
+        //o kolko mesiacov je rozdiel prvej aktivity a aktualneho dna
+        $mothFirstAct = ( substr($activityFirst, 0, 4) * 12 ) + substr($activityFirst, 5, 2);
+        $mothActDate = ( substr($actualDate, 0, 4) * 12 ) + substr($actualDate, 5, 2);
+        $monthRozdiel = $mothActDate - $mothFirstAct;
+
+        if($monthRozdiel > 9){
+            //echo "<div>Velku rozdiel!<div>";
+            //zmena $activityFirst a pocet aktivit od noveho $activityFirst
+        }
+
+        //podmienka ak cislo zacina nulou nedavaj nulu
+        //prva aktivita, vsetko potrebne
+        $activityFirstYear = substr($activityFirst, 0, 4);
+        $activityFirstMonth = substr($activityFirst, 5, 2);
+
+        if( substr($activityFirstMonth, 0, 1) == 0 ){
+            $activityFirstMonth = substr($activityFirstMonth, 1, 1);
+        }
+
+        $activityFirstDay = substr($activityFirst, 8, 2);
+
+        if( substr($activityFirstDay, 0, 1) == 0 ){
+            $activityFirstDay = substr($activityFirstDay, 1, 1);
+        }
+
+        //aktualny datum, vsetko potrebne
+        $actualDateYear = substr($actualDate, 0, 4);
+        $actualDateMonth = substr($actualDate, 5, 2);
+
+        if( substr($actualDateMonth, 0, 1) == 0 ){
+            $actualDateMonth = substr($actualDateMonth, 1, 1);
+        }
+
+        $actualDateDay = substr($actualDate, 8, 2);
+
+        if( substr($actualDateDay, 0, 1) == 0 ){
+            $actualDateDay = substr($actualDateDay, 1, 1);
+        }
+
+        //dni od prvej aktivity
+        //aktualny datum - prva aktivita
+        //odcitame roky
+        //prevediem vsetko na dni (rok * mesiac * 30 dni) + den
+        //rok uz odpocitam bez roznasobovania
+        $rozdielYear = $actualDateYear - $activityFirstYear;
+        $activityDays = (($activityFirstMonth - 1) * 30) + $activityFirstDay;
+        $actualDays = ($rozdielYear * 12 * 30) + (($actualDateMonth - 1) * 30) + $actualDateDay;
+
+        //odcitam 
+        //mam vysledok
+        $odpocetActual_First = $actualDays - $activityDays;
+
+        //ako casto cvici
+        //c = a / (b / 7)
+        $howOffen = $activityCount / ( $odpocetActual_First / 7 );
+
+        return $howOffen; 
+
     }
 ?>

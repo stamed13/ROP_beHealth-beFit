@@ -82,6 +82,14 @@
   color: whitesmoke;
   border-radius: 10px;
 }
+#content #plan #main #filter .gText {
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background: green;
+  color: whitesmoke;
+  border-radius: 10px;
+}
 #content #plan #main #filter .filter-info {
   margin-bottom: 10px;
   font-size: 20px;
