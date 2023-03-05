@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ERROR);// E_ALL, E_WARNING
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'plan';
@@ -36,11 +36,20 @@
     //$row = mySQLall($conn, "SELECT * FROM users");
     //$userPlan = $row["planId"];
 
-    //echo $activityCount;
+    //$activityCount = 1;
 
     //ak nema aktivitu, dostane obycajny plan
     if( $activityCount == 0 ){
         $userPlan = $plans[0];
+    }
+    if( $activityCount > 0 ){
+        $status = adviceStatus($conn, $idUser);
+        $plan = getPlanForMe($status);
+        //$plan = 2;
+        $userPlan = $plans[$plan];
+
+        //echo $status;
+        //echo $plan;
     }
 
 ?>
@@ -83,7 +92,7 @@
                             //echo "<div class=''> OK (dobra vaha) </div>";
 
                             if( $activityCount == 0 ){
-                                echo "<div class='oText'> Nemas aktivitu! </div>";
+                                echo "<div class='oText'> Nevyplnil si este aktivitu! </div>";
                                 echo "<div class='filter-info activity'> Nemozem ti dobre poradit. Mam pre teba jednoduchy treningovy plan. </div>";
                             }
 
@@ -103,31 +112,31 @@
                         </tr>
                         <tr>
                             <td>PO</td>
-                            <td> <?php echo $plans[0]["mon"] ?> <?php echo $userPlan["mon"] ?> </td>
+                            <td> <?php echo $userPlan["mon"] ?> </td>
                         </tr>
                         <tr>
                             <td>UT</td>
-                            <td></td>
+                            <td> <?php echo $userPlan["tue"] ?> </td>
                         </tr>
                         <tr>
                             <td>ST</td>
-                            <td></td>
+                            <td> <?php echo $userPlan["wed"] ?> </td>
                         </tr>
                         <tr>
                             <td>ŠT</td>
-                            <td></td>
+                            <td> <?php echo $userPlan["thu"] ?> </td>
                         </tr>
                         <tr>
                             <td>PI</td>
-                            <td></td>
+                            <td> <?php echo $userPlan["fri"] ?> </td>
                         </tr>
                         <tr>
                             <td>SO</td>
-                            <td></td>
+                            <td> <?php echo $userPlan["sat"] ?> </td>
                         </tr>
                         <tr>
                             <td>NE</td>
-                            <td></td>
+                            <td> <?php echo $userPlan["sun"] ?> </td>
                         </tr>
                     </table>
                 <?php endif ?>
