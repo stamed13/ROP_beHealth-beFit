@@ -101,6 +101,8 @@
                             }
 
                         }
+
+                        echo $status;
                     ?>
                 </div>
 
@@ -151,7 +153,7 @@
                         <div class="note cali">legs - nohy</div>
                         <div class="note stre">back - chrbát</div>
                         <div class="note stre">hand - ruky, zápästie</div>
-                        <div class="note stre">legs - nohy</div>
+                        <div class="note stre">leg - nohy</div>
                         <div class="note stre">bridge - mostík</div>
                         <div class="note stre">split - šnúra</div>
                     </div>

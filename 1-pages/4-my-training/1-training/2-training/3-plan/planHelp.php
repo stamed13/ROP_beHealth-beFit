@@ -6,9 +6,31 @@
         //$status = adviceStatus($conn, $idUser);
 
         //uplny zaciatocnik
-        if( $status ){
+        if( $status >= 0 && $status <= 0.5 ){
             return 0;
         }
+
+        //zaciatocnik
+        if( $status > 0.5 && $status <= 1.5 ){
+            return 1;
+        }
+
+        //menej pokrocily
+        if( $status > 1.5 && $status <= 2 ){
+            return 2;
+        }
+
+        //viacej pokrocily
+        if( $status > 2 && $status <= 2.5 ){
+            return 3;
+        }
+
+        //expert
+        if( $status > 2.5 && $status <= 3 ){
+            return 4;
+        }
+
+        
 
         //else{}
     }
