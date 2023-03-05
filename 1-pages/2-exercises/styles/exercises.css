@@ -42,9 +42,10 @@
   font-size: 25px;
 }
 #content #exercises #main .exercise-kinds {
+  margin-top: 25px;
   display: grid;
   grid-auto-flow: column;
-  justify-content: start;
+  justify-items: start;
   gap: 12px;
   font-size: 25px;
 }
@@ -61,13 +62,19 @@
   }
 }
 #content #exercises #main .exercise-kinds .ex-kinds-title {
-  padding-top: 20px;
+  margin-top: 20px;
+  padding: 5px;
+  display: grid;
+  justify-items: left;
+  background: rgb(56, 56, 56);
+  color: whitesmoke;
+  border-radius: 10px;
 }
 #content #exercises #main .exercise-kinds .ex-kinds-kinds {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   grid-auto-flow: row;
-  gap: 5px;
+  gap: 10px;
 }
 @media (min-width: 0px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
@@ -90,11 +97,26 @@
   }
 }
 #content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
-  padding-right: 20px;
+  padding: 5px;
   color: black;
+  background: white;
+  border-radius: 15px;
+}
+#content #exercises #main .exercise-kinds .ex-kinds-kinds .be-af {
+  background: yellow;
+}
+#content #exercises #main .exercise-kinds .ex-kinds-kinds .cali {
+  background: #F89500;
+}
+#content #exercises #main .exercise-kinds .ex-kinds-kinds .stre {
+  background: #05F800;
 }
 #content #exercises .exercise {
+  padding: 15px;
+  margin-bottom: 150px;
   min-height: 100vh;
+  background: gray;
+  border-radius: 10px;
 }
 @media (min-width: 0px) {
   #content #exercises .exercise {
@@ -131,7 +153,7 @@
 #content #exercises .exercise .exercise-kinds {
   display: grid;
   grid-auto-flow: column;
-  justify-content: start;
+  justify-items: start;
   gap: 12px;
   font-size: 25px;
 }
@@ -148,13 +170,19 @@
   }
 }
 #content #exercises .exercise .exercise-kinds .ex-kinds-title {
-  padding-top: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  display: grid;
+  justify-items: left;
+  background: rgb(56, 56, 56);
+  color: whitesmoke;
+  border-radius: 10px;
 }
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   grid-auto-flow: row;
-  gap: 5px;
+  gap: 10px;
 }
 @media (min-width: 0px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
@@ -182,13 +210,23 @@
   }
 }
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
-  display: grid;
-  padding-right: 20px;
+  padding: 5px;
   color: black;
+  background: white;
+  border-radius: 15px;
 }
 #content #exercises .exercise .view-more {
   display: none;
   padding-top: 500px;
   font-size: 25px;
   color: black;
+}
+#content #exercises #before-and-after {
+  background: rgb(231, 231, 0);
+}
+#content #exercises #calisthenics {
+  background: rgb(227, 151, 0);
+}
+#content #exercises #flexibility {
+  background: rgb(21, 210, 0);
 }

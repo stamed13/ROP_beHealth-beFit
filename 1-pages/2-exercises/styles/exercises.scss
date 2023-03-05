@@ -36,9 +36,10 @@
                 font-size: 25px;
             }
             .exercise-kinds {
+                margin-top: 25px;
                 display: grid;
                 grid-auto-flow: column;
-                justify-content: start;
+                justify-items: start;
                 gap: 12px;
                 font-size: 25px;
 
@@ -52,14 +53,21 @@
                 }
 
                 .ex-kinds-title {
-                    padding-top: 20px;
+                    //max-width: 65px;
+                    margin-top: 20px;
+                    padding: 5px;
+                    display: grid;
+                    justify-items: left;
+                    background: rgb(56, 56, 56);
+                    color: whitesmoke;
+                    border-radius: 10px;
                 }
 
                 .ex-kinds-kinds {
                     display: grid;
-                    justify-content: center;
+                    justify-items: center;
                     grid-auto-flow: row;
-                    gap: 5px;
+                    gap: 10px;
 
                     @media(min-width: 0px) {
                         grid-template-columns: repeat(1, auto);
@@ -78,16 +86,32 @@
                     }
 
                     .ex-kinds-kind {
-                        padding-right: 20px;
+                        padding: 5px;
                         color: black;
+                        background: white;
+                        border-radius: 15px;
+                    }
+                    .be-af {
+                        background: yellow;
+                    }
+                    .cali {
+                        background: #F89500;
+                    }
+                    .stre {
+                        background: #05F800;
+                    }
+                    .ba-st {
+                        //background: #05F800;
                     }
                 }
             }
         }
         .exercise {
-            //padding-top: 20px;
-            //padding-top: 130px;
+            padding: 15px;
+            margin-bottom: 150px;
             min-height: 100vh;
+            background: gray;
+            border-radius: 10px;
 
             @media(min-width: 0px) {
                 padding-top: 140px;
@@ -115,7 +139,7 @@
             .exercise-kinds {
                 display: grid;
                 grid-auto-flow: column;
-                justify-content: start;
+                justify-items: start;
                 gap: 12px;
                 font-size: 25px;
                 @media(min-width: 0px) {
@@ -127,13 +151,19 @@
                     justify-content: start;
                 }
                 .ex-kinds-title {
-                    padding-top: 20px;
+                    padding: 5px;
+                    margin-top: 20px;
+                    display: grid;
+                    justify-items: left;
+                    background: rgb(56, 56, 56);
+                    color: whitesmoke;
+                    border-radius: 10px;
                 }
                 .ex-kinds-kinds {
                     display: grid;
-                    justify-content: center;
+                    justify-items: center;
                     grid-auto-flow: row;
-                    gap: 5px;
+                    gap: 10px;
 
                     @media(min-width: 0px) {
                         grid-template-columns: repeat(1, auto);
@@ -151,11 +181,10 @@
                         grid-template-columns: repeat(5, auto);
                     }
                     .ex-kinds-kind {
-                        display: grid;
-                        //justify-content: left;
-                        padding-right: 20px;
+                        padding: 5px;
                         color: black;
-                        //background: greenyellow;
+                        background: white;
+                        border-radius: 15px;
                     }
                 }
             }
@@ -166,6 +195,15 @@
                 font-size: 25px;
                 color: black;
             }
+        }
+        #before-and-after {
+            background: rgb(231, 231, 0);
+        }
+        #calisthenics {
+            background: rgb(227, 151, 0);
+        }
+        #flexibility {
+            background: rgb(21, 210, 0);
         }
     }
 }

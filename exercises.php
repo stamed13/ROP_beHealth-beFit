@@ -23,13 +23,13 @@
                 <div class="exercise-kinds">
                     <div class="ex-kinds-title">druhy:</div>
                     <nav class="ex-kinds-kinds">
-                    <a  href="#before-and-after" class="ex-kinds-kind">pred a po cvičení</a>
-                        <a href="#calisthenics" class="ex-kinds-kind">kalistenika</a>
-                        <a href="#flexibility" class="ex-kinds-kind">flexibilita</a>
-                        <a  class="ex-kinds-kind">rovnováha alebo stabilita</a>
-                        <a  class="ex-kinds-kind">kardio</a>
-                        <a  class="ex-kinds-kind">HIIT</a>
-                        <a  class="ex-kinds-kind">silový tréning</a>
+                    <a  href="#before-and-after" class="ex-kinds-kind be-af">pred a po cvičení</a>
+                        <a href="#calisthenics" class="ex-kinds-kind cali">kalistenika</a>
+                        <a href="#flexibility" class="ex-kinds-kind stre">flexibilita</a>
+                        <a  class="ex-kinds-kind ba-st">rovnováha alebo stabilita</a>
+                        <a  class="ex-kinds-kind kardio">kardio</a>
+                        <a  class="ex-kinds-kind hiit">HIIT</a>
+                        <a  class="ex-kinds-kind weigth">silový tréning</a>
                     </nav>
                 </div>
             </article>
