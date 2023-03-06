@@ -113,7 +113,9 @@
                 padding: 15px;
                 display: grid;
                 justify-content: center;
-                background: #A5CE00;
+                //background: #FFC700;
+                //background: rgb(223, 223, 1);
+                background: greenyellow;
                 border-radius: 25px;
                 //
                 tr {
@@ -176,8 +178,9 @@
                 justify-content: left;
                 gap: 10px;
                 border-radius: 5px;
-                border: 5px dotted rgb(42, 42, 42);
-                background: rgb(175, 175, 175);
+                border: 5px solid rgb(42, 42, 42);
+                //background: rgb(175, 175, 175);
+                background: rgb(198, 198, 198);;
                 //poznamka k vysvetlivke
                 .note {
                     display: grid;
