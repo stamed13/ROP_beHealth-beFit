@@ -24,6 +24,7 @@
 }
 #content #exercises #main {
   min-height: 100vh;
+  margin-bottom: 150px;
 }
 #content #exercises #main #content-title {
   display: grid;
@@ -52,48 +53,60 @@
 @media (min-width: 0px) {
   #content #exercises #main .exercise-kinds {
     grid-auto-flow: row;
-    justify-content: start;
+    justify-items: center;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 600px) {
   #content #exercises #main .exercise-kinds {
     grid-auto-flow: row;
-    justify-content: start;
+    justify-items: left;
   }
 }
 #content #exercises #main .exercise-kinds .ex-kinds-title {
   margin-top: 20px;
   padding: 5px;
   display: grid;
-  justify-items: left;
   background: rgb(56, 56, 56);
   color: whitesmoke;
   border-radius: 10px;
 }
+@media (min-width: 0px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-title {
+    justify-items: center;
+  }
+}
+@media (min-width: 600px) {
+  #content #exercises #main .exercise-kinds .ex-kinds-title {
+    justify-items: left;
+  }
+}
 #content #exercises #main .exercise-kinds .ex-kinds-kinds {
   display: grid;
-  justify-items: center;
   grid-auto-flow: row;
   gap: 10px;
 }
 @media (min-width: 0px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(1, auto);
+    justify-items: center;
   }
 }
 @media (min-width: 600px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(2, auto);
+    justify-items: left;
   }
 }
 @media (min-width: 1000px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(3, auto);
+    justify-items: left;
   }
 }
 @media (min-width: 1300px) {
   #content #exercises #main .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(4, auto);
+    justify-items: left;
   }
 }
 #content #exercises #main .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
@@ -153,60 +166,72 @@
 #content #exercises .exercise .exercise-kinds {
   display: grid;
   grid-auto-flow: column;
-  justify-items: start;
   gap: 12px;
   font-size: 25px;
 }
 @media (min-width: 0px) {
   #content #exercises .exercise .exercise-kinds {
     grid-auto-flow: row;
-    justify-content: start;
+    justify-items: center;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 600px) {
   #content #exercises .exercise .exercise-kinds {
     grid-auto-flow: row;
-    justify-content: start;
+    justify-items: left;
   }
 }
 #content #exercises .exercise .exercise-kinds .ex-kinds-title {
   padding: 5px;
   margin-top: 20px;
   display: grid;
-  justify-items: left;
   background: rgb(56, 56, 56);
   color: whitesmoke;
   border-radius: 10px;
 }
+@media (min-width: 0px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-title {
+    justify-items: center;
+  }
+}
+@media (min-width: 600px) {
+  #content #exercises .exercise .exercise-kinds .ex-kinds-title {
+    justify-items: left;
+  }
+}
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
   display: grid;
-  justify-items: center;
   grid-auto-flow: row;
   gap: 10px;
 }
 @media (min-width: 0px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(1, auto);
+    justify-items: center;
   }
 }
 @media (min-width: 600px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(2, auto);
+    justify-items: left;
   }
 }
 @media (min-width: 1200px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(3, auto);
+    justify-items: left;
   }
 }
 @media (min-width: 1600px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(4, auto);
+    justify-items: left;
   }
 }
 @media (min-width: 2000px) {
   #content #exercises .exercise .exercise-kinds .ex-kinds-kinds {
     grid-template-columns: repeat(5, auto);
+    justify-items: left;
   }
 }
 #content #exercises .exercise .exercise-kinds .ex-kinds-kinds .ex-kinds-kind {
