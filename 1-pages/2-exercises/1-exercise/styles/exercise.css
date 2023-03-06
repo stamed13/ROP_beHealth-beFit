@@ -4,41 +4,70 @@
 }
 @media (min-width: 0px) {
   #content {
-    padding-top: 140px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 450px) {
   #content {
-    padding-top: 105px;
+    padding-top: 85px;
   }
 }
 @media (min-width: 500px) {
   #content {
-    padding-top: 110px;
+    padding-top: 90px;
   }
 }
 @media (min-width: 800px) {
   #content {
-    padding-top: 125px;
+    padding-top: 105px;
   }
 }
-#content #back {
-  display: grid;
-  text-align: left;
-  width: 75px;
+#content #type {
   padding: 10px;
-  margin-top: 10px;
-  font-size: 25px;
   border-radius: 10px;
-  color: black;
-  background: #BFBFBF;
-  font-weight: 600;
-  text-decoration: none;
 }
 #content #type #main {
   min-height: 100vh;
 }
-#content #type #main #content-title {
+#content #type #main #main-head {
+  margin-bottom: 10px;
+}
+@media (min-width: 0px) {
+  #content #type #main #main-head {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+  }
+}
+@media (min-width: 450px) {
+  #content #type #main #main-head {
+    display: block;
+  }
+}
+#content #type #main #main-head #back {
+  display: grid;
+  justify-items: center;
+  padding: 5px;
+  font-size: 25px;
+  border-radius: 10px;
+  color: #EEEEEE;
+  background: #4C4C4C;
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (min-width: 0px) {
+  #content #type #main #main-head #back {
+    position: relative;
+    justify-content: center;
+  }
+}
+@media (min-width: 450px) {
+  #content #type #main #main-head #back {
+    position: absolute;
+    justify-content: left;
+  }
+}
+#content #type #main #main-head #content-title {
   display: grid;
   justify-content: center;
   font-weight: 600;
@@ -61,47 +90,74 @@
   gap: 10px;
   padding-top: 10px;
   font-size: 25px;
+  font-weight: 600;
 }
 #content #type #main #types-of-type {
-  padding-top: 20px;
+  margin-top: 60px;
   font-size: 25px;
 }
 #content #type #main #types-of-type #types-ex-title {
+  font-size: 32px;
   font-weight: 600;
 }
 #content #type #main #types-of-type #types-ex-list {
   display: grid;
+  justify-items: left;
   gap: 5px;
 }
 #content #type #main #types-of-type #types-ex-list .type-ex {
-  color: black;
+  padding: 3px;
+  color: #000000;
+  background: #D9D9D9;
+  border-radius: 15px;
+}
+#content #type #main #types-of-type #types-ex-list .beginer {
+  background: #03cd00;
+}
+#content #type #main #types-of-type #types-ex-list .intermediate {
+  background: #ccc900;
+}
+#content #type #main #types-of-type #types-ex-list .expert {
+  background: #ff1515;
 }
 #content #type .exercise {
   min-height: 100vh;
 }
 @media (min-width: 0px) {
   #content #type .exercise {
-    padding-top: 140px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 450px) {
   #content #type .exercise {
-    padding-top: 105px;
+    padding-top: 85px;
   }
 }
 @media (min-width: 500px) {
   #content #type .exercise {
-    padding-top: 110px;
+    padding-top: 90px;
   }
 }
 @media (min-width: 800px) {
   #content #type .exercise {
-    padding-top: 125px;
+    padding-top: 105px;
   }
 }
 #content #type .exercise .exercise-title {
+  padding: 5px;
+  margin-bottom: 15px;
   font-weight: 600;
   font-size: 30px;
+  border-radius: 10px;
+}
+#content #type .exercise .beginer {
+  background: #03cd00;
+}
+#content #type .exercise .intermediate {
+  background: #ccc900;
+}
+#content #type .exercise .expert {
+  background: #ff1515;
 }
 #content #type .exercise .exercise-info {
   font-size: 25px;
@@ -110,11 +166,25 @@
 #content #type .exercise ul {
   padding-left: 20px;
 }
+#content #type .exercise ul li {
+  display: grid;
+  justify-items: left;
+}
 #content #type .exercise ul li .exercises {
+  margin: 5px;
+  padding: 5px;
+  display: grid;
+  justify-items: left;
   font-size: 25px;
   font-weight: 600;
+  background: #292929;
+  color: #FFFFFF;
+  border-radius: 10px;
 }
 #content #type .exercise ul li .info {
   font-size: 25px;
   font-weight: 400;
+}
+#content .cali {
+  background: rgb(216, 141, 0);
 }

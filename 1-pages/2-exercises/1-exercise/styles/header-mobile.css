@@ -131,7 +131,7 @@
 }
 #header-mobile #header-nav {
   padding: 5px;
-  display: grid;
+  display: none;
   justify-content: center;
   background-color: #006600;
 }
