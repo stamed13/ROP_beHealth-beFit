@@ -3,7 +3,7 @@
     
     //aktualna stranka
     $currentPage = 'activity';
-    $page_styles = 'styles/activity.css';
+    $page_styles = 'styles/activity2.css';
     $up = '../';
     $curPageLink = '../1-activity/activity3.php#stretch';
 

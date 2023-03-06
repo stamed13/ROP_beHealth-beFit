@@ -1,62 +1,15 @@
-#content {
-  padding: 20px;
-}
-#content #activity {
-  display: grid;
-}
-#content #activity #main {
-  min-height: 100vh;
-}
 @media (min-width: 0px) {
-  #content #activity #main {
-    padding-top: 104px;
-  }
-}
-@media (min-width: 450px) {
-  #content #activity #main {
-    padding-top: 68px;
+  #content {
+    padding: 10px;
   }
 }
 @media (min-width: 500px) {
-  #content #activity #main {
-    padding-top: 78px;
+  #content {
+    padding: 20px;
   }
 }
-@media (min-width: 800px) {
-  #content #activity #main {
-    padding-top: 98px;
-  }
-}
-#content #activity #main #main-content {
+#content #activity {
   display: grid;
-  justify-items: center;
-  gap: 10px;
-}
-#content #activity #main #main-content #content-title {
-  padding: 10px;
-  display: grid;
-  justify-items: center;
-  background: #05F800;
-  color: #000;
-  border-radius: 10px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 35px;
-  text-align: center;
-}
-#content #activity #main #main-content #activity-info {
-  display: grid;
-  justify-items: center;
-  font-size: 25px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  text-align: center;
-}
-#content #activity #main .exercise {
-  display: grid;
-  justify-items: left;
-  gap: 2px;
-  font-size: 25px;
 }
 #content #activity .form {
   min-height: 100vh;
@@ -89,7 +42,7 @@
 #content #activity .form .form-content .form-title {
   padding: 5px 25px;
   display: grid;
-  justify-items: center;
+  justify-content: center;
   background: #000000;
   color: white;
   border-radius: 10px;
@@ -100,30 +53,79 @@
 }
 #content #activity .form .form-content form {
   display: grid;
-  justify-items: center;
+  justify-content: center;
   gap: 10px;
+  background: rgb(166, 166, 166);
+  border-radius: 10px;
+}
+@media (min-width: 0px) {
+  #content #activity .form .form-content form {
+    padding: 10px;
+  }
+}
+@media (min-width: 500px) {
+  #content #activity .form .form-content form {
+    padding: 25px;
+  }
 }
 #content #activity .form .form-content form select {
   display: grid;
+  justify-content: left;
   gap: 5px;
-  padding: 10px;
   font-weight: 600;
-  font-size: 25px;
   color: #000000;
-  background: #A5CE00;
+  background: #3ace00;
   border: 1px solid #000000;
   border-radius: 10px;
+}
+@media (min-width: 0px) {
+  #content #activity .form .form-content form select {
+    padding: 2px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 280px) {
+  #content #activity .form .form-content form select {
+    padding: 5px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 500px) {
+  #content #activity .form .form-content form select {
+    padding: 10px;
+    font-size: 25px;
+  }
 }
 #content #activity .form .form-content form select option {
   color: #000000;
   background: #c2c2c2;
 }
+@media (min-width: 0px) {
+  #content #activity .form .form-content form select option {
+    padding: 2px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 280px) {
+  #content #activity .form .form-content form select option {
+    padding: 5px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 500px) {
+  #content #activity .form .form-content form select option {
+    padding: 10px;
+    font-size: 25px;
+  }
+}
 #content #activity .form .form-content form .bt-save {
+  display: grid;
+  justify-items: center;
   padding: 10px;
   font-weight: 600;
   font-size: 25px;
-  color: #ffffff;
-  background: #000000;
+  color: #d1d1d1;
+  background: #2c2c2c;
   border-radius: 15px;
   border: none;
 }
