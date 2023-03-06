@@ -102,11 +102,13 @@
 }
 #content #type #main #types-of-type #types-ex-list {
   display: grid;
-  justify-items: left;
+  justify-content: center;
   gap: 5px;
 }
 #content #type #main #types-of-type #types-ex-list .type-ex {
   padding: 3px;
+  display: grid;
+  justify-items: center;
   color: #000000;
   background: #D9D9D9;
   border-radius: 15px;
@@ -146,9 +148,20 @@
 #content #type .exercises .exercise-title {
   padding: 5px;
   margin-bottom: 15px;
+  display: grid;
   font-weight: 600;
   font-size: 30px;
   border-radius: 10px;
+}
+@media (min-width: 0px) {
+  #content #type .exercises .exercise-title {
+    justify-items: center;
+  }
+}
+@media (min-width: 500px) {
+  #content #type .exercises .exercise-title {
+    justify-items: left;
+  }
 }
 #content #type .exercises .beginer {
   background: #03cd00;
