@@ -120,57 +120,58 @@
 #content #type #main #types-of-type #types-ex-list .expert {
   background: #ff1515;
 }
-#content #type .exercise {
+#content #type .exercises {
   min-height: 100vh;
 }
 @media (min-width: 0px) {
-  #content #type .exercise {
+  #content #type .exercises {
     padding-top: 120px;
   }
 }
 @media (min-width: 450px) {
-  #content #type .exercise {
+  #content #type .exercises {
     padding-top: 85px;
   }
 }
 @media (min-width: 500px) {
-  #content #type .exercise {
+  #content #type .exercises {
     padding-top: 90px;
   }
 }
 @media (min-width: 800px) {
-  #content #type .exercise {
+  #content #type .exercises {
     padding-top: 105px;
   }
 }
-#content #type .exercise .exercise-title {
+#content #type .exercises .exercise-title {
   padding: 5px;
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 30px;
   border-radius: 10px;
 }
-#content #type .exercise .beginer {
+#content #type .exercises .beginer {
   background: #03cd00;
 }
-#content #type .exercise .intermediate {
+#content #type .exercises .intermediate {
   background: #ccc900;
 }
-#content #type .exercise .expert {
+#content #type .exercises .expert {
   background: #ff1515;
 }
-#content #type .exercise .exercise-info {
+#content #type .exercises .exercise-info {
   font-size: 25px;
   padding-bottom: 20px;
 }
-#content #type .exercise ul {
-  padding-left: 20px;
+#content #type .exercises .exercises-exercise {
+  display: grid;
+  gap: 5px;
 }
-#content #type .exercise ul li {
+#content #type .exercises .exercises-exercise .exercise {
   display: grid;
   justify-items: left;
 }
-#content #type .exercise ul li .exercises {
+#content #type .exercises .exercises-exercise .exercise .name {
   margin: 5px;
   padding: 5px;
   display: grid;
@@ -181,7 +182,7 @@
   color: #FFFFFF;
   border-radius: 10px;
 }
-#content #type .exercise ul li .info {
+#content #type .exercises .exercises-exercise .exercise .info {
   font-size: 25px;
   font-weight: 400;
 }

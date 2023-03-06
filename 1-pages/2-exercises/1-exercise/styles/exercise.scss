@@ -122,7 +122,7 @@
             }
         }
         //
-        .exercise {
+        .exercises {
             min-height: 100vh;
 
             @media(min-width: 0px) {
@@ -160,15 +160,15 @@
                 padding-bottom: 20px;
             }
             //
-            ul {
-                padding-left: 20px;
-
+            .exercises-exercise {
+                display: grid;
+                gap: 5px;
                 //
-                li {
+                .exercise {
                     display: grid;
                     justify-items: left;
                     //
-                    .exercises {
+                    .name {
                         margin: 5px;
                         padding: 5px;
                         display: grid;
