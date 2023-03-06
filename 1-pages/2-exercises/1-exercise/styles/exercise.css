@@ -102,8 +102,17 @@
 }
 #content #type #main #types-of-type #types-ex-list {
   display: grid;
-  justify-content: center;
   gap: 5px;
+}
+@media (min-width: 0px) {
+  #content #type #main #types-of-type #types-ex-list {
+    justify-content: center;
+  }
+}
+@media (min-width: 500px) {
+  #content #type #main #types-of-type #types-ex-list {
+    justify-content: left;
+  }
 }
 #content #type #main #types-of-type #types-ex-list .type-ex {
   padding: 3px;

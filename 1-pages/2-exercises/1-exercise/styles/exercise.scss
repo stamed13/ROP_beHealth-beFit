@@ -100,9 +100,14 @@
 
                 #types-ex-list {
                     display: grid;
-                    justify-content: center;
                     gap: 5px;
-
+                    @media(min-width: 0px) {
+                        justify-content: center;
+                    }
+                    @media(min-width: 500px) {
+                        justify-content: left;
+                    }
+                    //
                     .type-ex {
                         padding: 3px;
                         display: grid;
