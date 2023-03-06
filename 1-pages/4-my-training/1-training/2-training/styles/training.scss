@@ -3,16 +3,16 @@
     min-height: 100vh;
     //
     @media(min-width: 0px) {
-        padding-top: 140px;
+        padding-top: 104px;
     }
     @media(min-width: 450px) {
-        padding-top: 105px;
+        padding-top: 68px;
     }
     @media(min-width: 500px) {
-        padding-top: 110px;
+        padding-top: 78px;
     }
     @media(min-width: 800px) {
-        padding-top: 125px;
+        padding-top: 98px;
     }
     //
     #buttons-arrow {
@@ -42,11 +42,14 @@
     }
 
     #training {
+        margin-bottom: 100px;
         padding-top: 20px;
         display: grid;
-        gap: 120px;
+        gap: 80px;
         //
         #main {
+            display: grid;
+            gap: 10px;
             //min-height: 100vh;
             #content-title {
                 display: grid;
@@ -56,7 +59,11 @@
             }
             //
             #training-info {
+                display: grid;
+                justify-content: center;
+                text-align: center;
                 font-size: 25px;
+                font-weight: 600;
             }
         }
         

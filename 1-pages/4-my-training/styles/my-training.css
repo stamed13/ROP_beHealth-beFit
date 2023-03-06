@@ -4,22 +4,22 @@
 }
 @media (min-width: 0px) {
   #content {
-    padding-top: 130px;
+    padding-top: 140px;
   }
 }
 @media (min-width: 300px) {
   #content {
-    padding-top: 138px;
+    padding-top: 145px;
   }
 }
 @media (min-width: 510px) {
   #content {
-    padding-top: 132px;
+    padding-top: 102px;
   }
 }
 @media (min-width: 900px) {
   #content {
-    padding-top: 128px;
+    padding-top: 133px;
   }
 }
 #content #training {
@@ -28,22 +28,22 @@
 }
 #content #training #main {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   gap: 25px;
 }
 #content #training #main #content-title {
-  margin: 0;
   padding: 10px;
   display: grid;
   justify-items: center;
   font-weight: 600;
   font-size: 35px;
-  background: rgb(20, 140, 50);
+  background: rgb(0, 178, 44);
   border-radius: 25px;
 }
 #content #training #main #training-info {
   display: grid;
-  justify-content: center;
+  justify-items: center;
+  text-align: center;
   font-weight: 600;
   font-size: 25px;
 }

@@ -4,22 +4,22 @@
 }
 @media (min-width: 0px) {
   #content {
-    padding-top: 140px;
+    padding-top: 104px;
   }
 }
 @media (min-width: 450px) {
   #content {
-    padding-top: 105px;
+    padding-top: 68px;
   }
 }
 @media (min-width: 500px) {
   #content {
-    padding-top: 110px;
+    padding-top: 78px;
   }
 }
 @media (min-width: 800px) {
   #content {
-    padding-top: 125px;
+    padding-top: 98px;
   }
 }
 #content #buttons-arrow {
@@ -50,9 +50,14 @@
   text-decoration: none;
 }
 #content #training {
+  margin-bottom: 100px;
   padding-top: 20px;
   display: grid;
-  gap: 120px;
+  gap: 80px;
+}
+#content #training #main {
+  display: grid;
+  gap: 10px;
 }
 #content #training #main #content-title {
   display: grid;
@@ -61,7 +66,11 @@
   font-size: 35px;
 }
 #content #training #main #training-info {
+  display: grid;
+  justify-content: center;
+  text-align: center;
   font-size: 25px;
+  font-weight: 600;
 }
 #content #training #training-menu {
   display: grid;

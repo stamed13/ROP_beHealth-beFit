@@ -3,7 +3,7 @@
     
     //aktualna stranka
     $currentPage = 'activity';
-    $page_styles = 'styles/activity.css';
+    $page_styles = 'styles/activity1.css';
     $up = '../';
     $curPageLink = '../1-activity/activity1.php#main';
 
@@ -19,33 +19,9 @@
 
     require_once ('../../../../../2-tools/E-login/helper/config.php');
     require_once ('../../../../../2-tools/E-login/helper/Helper.php');
-    require_once ('activityHelp.php');
+    //require_once ('activityHelp.php');
 
     //debug($_POST, "formular [data]");
-
-    //vyber vsetkych cvikov podla kategorii
-    $caliPulls =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='1'");
-    $caliPushs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='2'");
-    $caliLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='3'");
-    $caliCores =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='4'");
-    $streNecks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='5'");
-    $streHands =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='6'");
-    $streBacks =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='7'");
-    $streLegs =  mySQLall($conn, "SELECT * FROM exercises WHERE partId='8'");
-   
-
-    $errors = [
-        "checked" => false,
-        "success" => false,
-        "activity" => false,
-        "email" => false,
-        "passwd" => false,
-        "loged" => false,
-    ];
-
-    //saveActivity($conn, $calisthenics, $errors);
-
-    $activity = 0;
     
 ?>
 
@@ -80,20 +56,8 @@
                 </div>
                 -->
             </article>
-
-            <div>
-                <?php
-                    // kontrola premennych
-                    /*echo "pull:  "; echo $caPullVal; 
-                    echo "  push:  "; echo $caPushVal;
-                    echo "  leg:   "; echo $caLegVal;
-                    echo "  core:  "; echo $caCoreVal;*/
-                ?>
-            </div>
         </section>
 
-        
-        
     </div>
 
 <?php

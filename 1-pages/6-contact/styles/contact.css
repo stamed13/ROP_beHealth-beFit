@@ -14,7 +14,7 @@
 }
 @media (min-width: 510px) {
   #content {
-    padding-top: 132px;
+    padding-top: 97px;
   }
 }
 @media (min-width: 900px) {
@@ -54,37 +54,28 @@
 }
 #content #contact #autor-info #title-autor {
   display: grid;
+  justify-content: left;
   font-weight: 600;
   font-size: 30px;
-}
-@media (min-width: 0px) {
-  #content #contact #autor-info #title-autor {
-    justify-items: center;
-  }
-}
-@media (min-width: 500px) {
-  #content #contact #autor-info #title-autor {
-    justify-content: left;
-  }
 }
 #content #contact #autor-info #contact-items {
   display: grid;
   gap: 10px;
+  justify-content: left;
 }
 #content #contact #autor-info #contact-items .contact-item {
   display: grid;
   gap: 10px;
+  justify-content: left;
 }
 @media (min-width: 0px) {
   #content #contact #autor-info #contact-items .contact-item {
     grid-auto-flow: row;
-    justify-items: center;
   }
 }
 @media (min-width: 500px) {
   #content #contact #autor-info #contact-items .contact-item {
     grid-auto-flow: column;
-    justify-content: left;
   }
 }
 #content #contact #autor-info #contact-items .contact-item .item-title {

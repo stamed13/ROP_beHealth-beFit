@@ -9,22 +9,22 @@
 }
 @media (min-width: 0px) {
   #content #activity #main {
-    padding-top: 150px;
+    padding-top: 104px;
   }
 }
 @media (min-width: 450px) {
   #content #activity #main {
-    padding-top: 115px;
+    padding-top: 68px;
   }
 }
 @media (min-width: 500px) {
   #content #activity #main {
-    padding-top: 120px;
+    padding-top: 78px;
   }
 }
 @media (min-width: 800px) {
   #content #activity #main {
-    padding-top: 135px;
+    padding-top: 98px;
   }
 }
 #content #activity #main #main-content {
@@ -63,22 +63,22 @@
 }
 @media (min-width: 0px) {
   #content #activity .form {
-    padding-top: 150px;
+    padding-top: 104px;
   }
 }
 @media (min-width: 450px) {
   #content #activity .form {
-    padding-top: 115px;
+    padding-top: 68px;
   }
 }
 @media (min-width: 500px) {
   #content #activity .form {
-    padding-top: 120px;
+    padding-top: 78px;
   }
 }
 @media (min-width: 800px) {
   #content #activity .form {
-    padding-top: 135px;
+    padding-top: 98px;
   }
 }
 #content #activity .form .form-content {

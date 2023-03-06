@@ -8,11 +8,10 @@
         padding-top: 138px;
     }
     @media(min-width: 510px) {
-        padding-top: 132px;
+        padding-top: 97px;
     }
     @media(min-width: 900px) {
         padding-top: 128px;
-        //margin-top: 128px;
     }
     //
     #about {
@@ -29,6 +28,7 @@
                 justify-content: center;
                 font-weight: 600;
                 font-size: 35px;
+                text-decoration: underline;
             }
             #main-info {
                 display: grid;

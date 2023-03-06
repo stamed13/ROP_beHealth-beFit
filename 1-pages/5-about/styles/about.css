@@ -13,7 +13,7 @@
 }
 @media (min-width: 510px) {
   #content {
-    padding-top: 132px;
+    padding-top: 97px;
   }
 }
 @media (min-width: 900px) {
@@ -33,6 +33,7 @@
   justify-content: center;
   font-weight: 600;
   font-size: 35px;
+  text-decoration: underline;
 }
 #content #about #main #main-info {
   display: grid;

@@ -14,7 +14,7 @@
 }
 @media (min-width: 510px) {
   #content {
-    padding-top: 132px;
+    padding-top: 97px;
   }
 }
 @media (min-width: 900px) {
@@ -133,27 +133,22 @@
 }
 @media (min-width: 0px) {
   #content #exercises .exercise {
-    padding-top: 140px;
-  }
-}
-@media (min-width: 500px) {
-  #content #exercises .exercise {
     padding-top: 130px;
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 300px) {
   #content #exercises .exercise {
-    padding-top: 140px;
+    padding-top: 138px;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 510px) {
   #content #exercises .exercise {
-    padding-top: 165px;
+    padding-top: 97px;
   }
 }
-@media (min-width: 825px) {
+@media (min-width: 900px) {
   #content #exercises .exercise {
-    padding-top: 125px;
+    padding-top: 128px;
   }
 }
 #content #exercises .exercise .exercise-title {

@@ -9,22 +9,22 @@
 }
 @media (min-width: 0px) {
   #content #plan #main {
-    padding-top: 150px;
+    padding-top: 104px;
   }
 }
 @media (min-width: 450px) {
   #content #plan #main {
-    padding-top: 115px;
+    padding-top: 68px;
   }
 }
 @media (min-width: 500px) {
   #content #plan #main {
-    padding-top: 120px;
+    padding-top: 78px;
   }
 }
 @media (min-width: 800px) {
   #content #plan #main {
-    padding-top: 135px;
+    padding-top: 98px;
   }
 }
 #content #plan #main #main-content {

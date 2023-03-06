@@ -9,7 +9,7 @@
         padding-top: 138px;
     }
     @media(min-width: 510px) {
-        padding-top: 132px;
+        padding-top: 97px;
     }
     @media(min-width: 900px) {
         padding-top: 128px;
@@ -42,32 +42,27 @@
             }
             //
             #title-autor {
-                display: grid;        
+                display: grid;  
+                justify-content: left;      
                 font-weight: 600;
                 font-size: 30px;
-                @media(min-width: 0px) {
-                    justify-items: center;
-                }
-                @media(min-width: 500px) {
-                    justify-content: left;
-                }
             }
             //
             #contact-items {
                 display: grid;
                 gap: 10px;
+                justify-content: left;
                 //
                 .contact-item {
                     display: grid;
                     gap: 10px;
+                    justify-content: left;
                     //
                     @media(min-width: 0px) {
                         grid-auto-flow: row;
-                        justify-items: center;
                     }
                     @media(min-width: 500px) {
                         grid-auto-flow: column;
-                        justify-content: left;
                     }
                     //
                     .item-title {
