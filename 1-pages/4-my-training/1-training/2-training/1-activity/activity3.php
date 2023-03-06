@@ -5,7 +5,7 @@
     $currentPage = 'activity';
     $page_styles = 'styles/activity2.css';
     $up = '../';
-    $curPageLink = '../1-activity/activity3.php#stretch';
+    $curPageLink = '../1-activity/activity1.php';
 
     //pripojenie header casti
     include('../../layout/header.php');
@@ -62,10 +62,10 @@
             <article class="form" id="stretch">
                 <div class="buttons-arrow">
                     <a href="activity2.php" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vlavo.svg" alt="hopa"></a>
-                    <a href="../training.php" class="bt-arrow">ukoncit</a>
+                    <a href="../training.php" class="bt-arrow">ukončiť</a>
                 </div>
                 <div class="form-content">
-                    <div class="form-title">Strecing</div>
+                    <div class="form-title">Strečing</div>
 
                     <?php //debug($_POST, "formular [data]"); ?>
 

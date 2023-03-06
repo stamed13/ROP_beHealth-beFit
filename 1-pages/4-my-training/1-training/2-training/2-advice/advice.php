@@ -48,12 +48,12 @@
             <article id="main">
                 <div class="buttons-arrow">
                     <a href="../training.php" class="bt-arrow">naspäť</a>
-                    <a href="../training.php" class="bt-arrow">ukoncit</a>
+                    <a href="../training.php" class="bt-arrow">ukončiť</a>
                 </div>
                 <div id="main-content">
                     <div id="content-title">Rady a typy</div>
                     <div id="hello-user">
-                        Dobry den <?php if(isset($_SESSION['fullname'])){echo $_SESSION['fullname'];} ?>!
+                        Dobrý deň <?php if(isset($_SESSION['fullname'])){echo $_SESSION['fullname'];} ?>!
                     </div>
                 </div>
                 <div id="advice-list">

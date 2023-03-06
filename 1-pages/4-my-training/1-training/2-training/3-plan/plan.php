@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(E_ERROR);// E_ALL, E_WARNING
+    error_reporting(E_ERROR);// E_ALL, E_WARNING
     
     //aktualna stranka
     $currentPage = 'plan';
@@ -72,7 +72,7 @@
                 
                 <div class="buttons-arrow">
                     <a href="../training.php" class="bt-arrow">naspäť</a>
-                    <a href="../training.php" class="bt-arrow">ukoncit</a>
+                    <a href="../training.php" class="bt-arrow">ukončiť</a>
                 </div>
 
                 <div id="main-content">
@@ -95,15 +95,15 @@
                 <div id="filter">
                     <?php
                         if( $body_mass > 30 ){
-                            echo "<div class='rText'> Mas obezitu! </div>";
-                            echo "<div class='filter-info weight'> Nemozem ti pomoct. Vyhladaj si prosim odbornika. </div>";
+                            echo "<div class='rText'> Máš obezitu! </div>";
+                            echo "<div class='filter-info weight'> Nemôžem ti pomôct. Vyhľadaj si prosím odborníka. </div>";
                         }
                         if( $body_mass <= 30 ){
                             //echo "<div class=''> OK (dobra vaha) </div>";
 
                             if( $activityCount == 0 ){
-                                echo "<div class='oText'> Nevyplnil si este aktivitu! </div>";
-                                echo "<div class='filter-info activity'> Nemozem ti dobre poradit. Mam pre teba jednoduchy treningovy plan. </div>";
+                                echo "<div class='oText'> Nevyplnil si ešte žiadnu aktivitu! </div>";
+                                echo "<div class='filter-info activity'> Nemôžem ti dobre poradiť. Mám pre teba jednoduchý tréningový plán. </div>";
                             }
 
                             if( $activityCount > 0 ){

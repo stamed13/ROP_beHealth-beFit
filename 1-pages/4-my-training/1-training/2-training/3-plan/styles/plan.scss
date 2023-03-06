@@ -45,7 +45,7 @@
                     margin-bottom: 30px;
                     display: grid;
                     font-size: 25px;
-                    font-family: 'Inter', sans-serif;
+                    //font-family: 'Inter', sans-serif;
                     //info
                     .info {
                         //max-width: 80vw;
@@ -124,10 +124,6 @@
                     td {
                         padding: 5px;
                         //margin: 5px;
-                        //display: grid;
-                        //grid-auto-flow: column;
-                        //justify-content: center;
-                        //gap: 10px;
                         font-weight: 700;
                         font-size: 30px;
                         border-radius: 10px;
@@ -136,6 +132,7 @@
                         //
                         .part {
                             padding: 3px;
+                            //margin-right: 25px;
                             color: black;
                             border-radius: 5px;
                             text-decoration: none;

@@ -5,7 +5,7 @@
     $currentPage = 'activity';
     $page_styles = 'styles/activity1.css';
     $up = '../';
-    $curPageLink = '../1-activity/activity1.php#main';
+    $curPageLink = '../1-activity/activity1.php';
 
     //pripojenie header casti
     include('../../layout/header.php');

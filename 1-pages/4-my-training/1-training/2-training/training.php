@@ -20,14 +20,14 @@
             <article id="main">
                 <div id="content-title">My training</div>
                 <div id="training-info">
-                    Mozes si vybrat z nasledujucich moznosti: 
+                    Môžes si vybrať z nasledujúcich možností: 
                 </div>
             </article>
 
             <article id="training-menu">
                 <a id="bt-training" href="1-activity/activity1.php">Denná aktivita</a>
                 <a id="bt-training" href="2-advice/advice.php">Rady a typy</a>
-                <a id="bt-training" href="3-plan/plan.php">Trenigový plán</a>
+                <a id="bt-training" href="3-plan/plan.php">Treningový plán</a>
             </article>
 
         </section>

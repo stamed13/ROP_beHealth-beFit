@@ -5,7 +5,7 @@
     $currentPage = 'activity';
     $page_styles = 'styles/activity2.css';
     $up = '../';
-    $curPageLink = '../1-activity/activity2.php#cali';
+    $curPageLink = '../1-activity/activity1.php';
 
     //pripojenie header casti
     include('../../layout/header.php');
@@ -67,7 +67,7 @@
                     <a href="activity3.php" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vpravo.svg" alt="hopa"></a>
                 </div>
                 <div class="form-content">
-                    <div class="form-title">Posilovanie</div>
+                    <div class="form-title">Posilňovanie</div>
 
                     <?php //debug($_POST, "formular [data]"); ?>
 
@@ -240,7 +240,7 @@
 
                     <select id="calisthenics" name="pull" 
                         class="" >
-                            <option value="0">Vyber cvik na pritah</option>
+                            <option value="0">Vyber cvik na príťah</option>
                             <?php foreach($caliPulls as $caliPull): ?>
                                 <option value="<?= $caliPull["idExercise"] ?>"
                                     <?php 

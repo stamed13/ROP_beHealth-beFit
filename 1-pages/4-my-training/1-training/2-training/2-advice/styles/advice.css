@@ -9,22 +9,22 @@
 }
 @media (min-width: 0px) {
   #content #advice #main {
-    padding-top: 130px;
+    padding-top: 104px;
   }
 }
 @media (min-width: 450px) {
   #content #advice #main {
-    padding-top: 105px;
+    padding-top: 68px;
   }
 }
 @media (min-width: 500px) {
   #content #advice #main {
-    padding-top: 110px;
+    padding-top: 78px;
   }
 }
 @media (min-width: 800px) {
   #content #advice #main {
-    padding-top: 125px;
+    padding-top: 98px;
   }
 }
 #content #advice #main #main-content {
@@ -33,19 +33,18 @@
   gap: 10px;
 }
 #content #advice #main #main-content #content-title {
-  padding: 10px;
+  padding: 20px;
   display: grid;
   justify-items: center;
-  background: #F89500;
   color: #000;
-  border-radius: 10px;
+  border-radius: 25px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 35px;
   text-align: center;
+  background: #F89500;
 }
 #content #advice #main #main-content #hello-user {
-  padding: 10px;
   display: grid;
   justify-items: center;
   font-size: 25px;
