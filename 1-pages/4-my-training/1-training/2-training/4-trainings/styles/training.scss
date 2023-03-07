@@ -1,0 +1,208 @@
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    //
+    @media(min-width: 0px) {
+        padding-top: 120px;
+    }
+    @media(min-width: 450px) {
+        padding-top: 85px;
+    }
+    @media(min-width: 500px) {
+        padding-top: 90px;
+    }
+    @media(min-width: 800px) {
+        padding-top: 105px;
+    }
+    //
+    #type {
+        padding: 10px;
+        border-radius: 10px;
+        //
+        #main {
+            min-height: 100vh;
+            //
+            #main-head {
+                margin-bottom: 10px;
+                @media(min-width: 0px){
+                    display: grid;
+                    justify-items: center;
+                    gap: 10px;
+                }
+                @media(min-width: 450px){
+                    display: block;
+                }
+                //
+                #back {
+                    display: grid;
+                    justify-items: center;
+                    padding: 5px;
+                    font-size: 25px;
+                    border-radius: 10px;
+                    color: #EEEEEE;
+                    background: #4C4C4C;
+                    font-weight: 600;
+                    text-decoration: none;
+                    //font-family: 'Inter', sans-serif;
+                    //
+                    @media(min-width: 0px){
+                        position: relative;
+                        justify-content: center;
+                    }
+                    @media(min-width: 450px){
+                        position: absolute;
+                        justify-content: left;
+                    }
+                }
+                #content-title {
+                    display: grid;
+                    justify-content: center;
+                    font-weight: 600;
+                    font-size: 35px;
+                }
+            }
+            #type-info {
+                //margin-top: 25px;
+                font-size: 25px;
+            }
+            .exercise-title {
+                font-weight: 600;
+                font-size: 30px;
+            }
+            .exercise-info {
+                font-size: 25px;
+            }
+            #exercises {
+                display: grid;
+                grid-auto-flow: column;
+                justify-content: start;
+                gap: 10px;
+                padding-top: 10px;
+                font-size: 25px;
+                font-weight: 600;
+
+                .ex-kinds-title {
+
+                }
+                .ex-kinds-kinds {
+
+                }
+            }
+
+            #types-of-type {
+                margin-top: 60px;
+                font-size: 25px;
+                
+                #types-ex-title {
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+
+                #types-ex-list {
+                    display: grid;
+                    gap: 5px;
+                    @media(min-width: 0px) {
+                        justify-content: center;
+                    }
+                    @media(min-width: 500px) {
+                        justify-content: left;
+                    }
+                    //
+                    .type-ex {
+                        padding: 3px;
+                        display: grid;
+                        justify-items: center;
+                        color: #000000;
+                        background: #D9D9D9;
+                        border-radius: 15px;
+                    }
+                    .beginer {
+                        background: #03cd00;
+                    }
+                    .intermediate {
+                        background: #ccc900;
+                    }
+                    .expert {
+                        background: #ff1515;
+                    }
+                }
+            }
+        }
+        //
+        .exercises {
+            min-height: 100vh;
+
+            @media(min-width: 0px) {
+                padding-top: 120px;
+            }
+            @media(min-width: 450px) {
+                padding-top: 85px;
+            }
+            @media(min-width: 500px) {
+                padding-top: 90px;
+            }
+            @media(min-width: 800px) {
+                padding-top: 105px;
+            }
+            //
+            .exercise-title {
+                padding: 5px;
+                margin-bottom: 15px;
+                display: grid;
+                font-weight: 600;
+                font-size: 30px;
+                border-radius: 10px;
+                @media(min-width: 0px) {
+                    justify-items: center;
+                }
+                @media(min-width: 500px) {
+                    justify-items: left;
+                }
+            }
+            .beginer {
+                background: #03cd00;
+            }
+            .intermediate {
+                background: #ccc900;
+            }
+            .expert {
+                background: #ff1515;
+            }
+            //
+            .exercise-info {
+                font-size: 25px;
+                padding-bottom: 20px;
+            }
+            //
+            .exercises-exercise {
+                display: grid;
+                gap: 5px;
+                //
+                .exercise {
+                    display: grid;
+                    justify-items: left;
+                    //
+                    .name {
+                        margin: 5px;
+                        padding: 5px;
+                        display: grid;
+                        justify-items: left;
+                        font-size: 25px;
+                        font-weight: 600;
+                        background: #292929;
+                        color: #FFFFFF;
+                        border-radius: 10px;
+                    }
+                    //
+                    .info {
+                        font-size: 25px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .cali {
+        background: rgb(216, 141, 0);
+    }
+}
