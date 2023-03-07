@@ -129,7 +129,7 @@
   background: #ccc900;
 }
 #content #type #main #types-of-type #types-ex-list .expert {
-  background: #ff1515;
+  background: #cc2828;
 }
 #content #type .exercises {
   min-height: 100vh;
@@ -179,7 +179,7 @@
   background: #ccc900;
 }
 #content #type .exercises .expert {
-  background: #ff1515;
+  background: #cc2828;
 }
 #content #type .exercises .exercise-info {
   font-size: 25px;
@@ -200,8 +200,8 @@
   justify-items: left;
   font-size: 25px;
   font-weight: 600;
-  background: #292929;
-  color: #FFFFFF;
+  background: #3a3a3a;
+  color: #ffffff;
   border-radius: 10px;
 }
 #content #type .exercises .exercises-exercise .exercise .info {
@@ -210,4 +210,7 @@
 }
 #content .cali {
   background: rgb(216, 141, 0);
+}
+#content .stre {
+  background: rgb(100, 222, 34);
 }

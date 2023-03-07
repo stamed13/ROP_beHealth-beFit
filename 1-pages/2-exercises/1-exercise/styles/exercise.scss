@@ -123,7 +123,7 @@
                         background: #ccc900;
                     }
                     .expert {
-                        background: #ff1515;
+                        background: #cc2828;
                     }
                 }
             }
@@ -166,7 +166,7 @@
                 background: #ccc900;
             }
             .expert {
-                background: #ff1515;
+                background: #cc2828;
             }
             //
             .exercise-info {
@@ -189,8 +189,8 @@
                         justify-items: left;
                         font-size: 25px;
                         font-weight: 600;
-                        background: #292929;
-                        color: #FFFFFF;
+                        background: #3a3a3a;
+                        color: #ffffff;
                         border-radius: 10px;
                     }
                     //
@@ -204,5 +204,8 @@
     }
     .cali {
         background: rgb(216, 141, 0);
+    }
+    .stre {
+        background: rgb(100, 222, 34);
     }
 }

@@ -83,10 +83,10 @@
                 <div class="exercise-kinds">
                     <div class="ex-kinds-title">druhy:</div>
                     <nav class="ex-kinds-kinds">
-                        <a href="" class="ex-kinds-kind">chrbát</a>
-                        <a href="" class="ex-kinds-kind">ruky</a>
-                        <a href="" class="ex-kinds-kind">krk</a>
-                        <a href="" class="ex-kinds-kind">nohy</a>
+                        <a href="1-pages/2-exercises/1-exercise/2-flexibility/back.php" class="ex-kinds-kind">chrbát</a>
+                        <a href="1-pages/2-exercises/1-exercise/2-flexibility/hand.php" class="ex-kinds-kind">ruky</a>
+                        <a href="1-pages/2-exercises/1-exercise/2-flexibility/neck.php" class="ex-kinds-kind">krk</a>
+                        <a href="1-pages/2-exercises/1-exercise/2-flexibility/leg.php" class="ex-kinds-kind">nohy</a>
                     </nav>
                 </div>
                 <a href="" class="view-more">pozrieť viac</a>
