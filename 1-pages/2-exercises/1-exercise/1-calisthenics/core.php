@@ -46,7 +46,7 @@
                 </div>
                 <div class="exercises-exercise">
                     <div class="exercise">
-                        <div id="" class="name">skracovačky 5-10x</div>
+                        <div id="" class="name">skracovačky</div>
                         <div class="info">
                             <p>
                             ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je na zemi, 
@@ -59,7 +59,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">dotýkanie členkov 5x P+Ľ</div>
+                        <div id="" class="name">dotýkanie členkov</div>
                         <div class="info">
                             ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je na zemi, 
                             pomaly sa dotýkaj raz ľavou a raz pravou rukou členku na rovnakej strane
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">sklápačky 5-10x </div>
+                        <div id="" class="name">sklápačky</div>
                         <div class="info">
                             (jednoduchšia verzia)
                             ľahni si na chrbát, pokrč nohy (do 90° v kolennom aj v bedrovom kĺbe), plecia sú zatlačené, 
@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">quadrupedál  5-10s</div>
+                        <div id="" class="name">quadrupedál</div>
                         <div class="info">
                             kľakni si na kolená, ruky sú pod pleciami, plecia sú zatlačené , pokrč nohy 
                             (do 90° aj v bedrovom kĺbe), chrbát je vystretý, vydrž v tejto polohe na špičkách
@@ -84,11 +84,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div class="name">oddych  60s</div>
-                    </div>
-
-                    <div class="exercise">
-                        <div id="" class="name">ruské otočky  5x P+Ľ</div>
+                        <div id="" class="name">ruské otočky</div>
                         <div class="info">
                             (jednoduchšia verzia)
                             ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je vystretý, 
@@ -97,7 +93,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">plank na kolenách  30-60s</div>
+                        <div id="" class="name">plank na kolenách</div>
                         <div class="info">
                             ľahni si na brucho, vyflexuj špičky, plecia sú zatlačené, ruky sú pokrčené (do 90° v lakťoch), 
                             predlaktie a dlane sú na zemi, chrbát je vystretý, zdvihni sa, napni zadok, vydrž v tejto pozícii 
@@ -114,7 +110,7 @@
                 </div>
                 <div class="exercises-exercise">
                     <div class="exercise">
-                        <div id="" class="name">kolíska 30s</div>
+                        <div id="" class="name">kolíska</div>
                         <div class="info">
                             <p>
                             (ťahšia verzia) ľahni si na chrbát, pokrč nohy (do 90° v kolennom aj v bedrovom kĺbe), 
@@ -125,7 +121,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">striedavé zdvihy nôh 30s</div>
+                        <div id="" class="name">striedavé zdvihy nôh</div>
                         <div class="info">
                             <p>
                             (lahšia verzia) ľahni si na chrbát, vystri nohy a ruky, ruky sú na zemi 
@@ -143,7 +139,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">horolezci  60s</div>
+                        <div id="" class="name">horolezci</div>
                         <div class="info">
                             kľakni si na kolená, vystri ruky, ruky sú kolmo na zem, chrbát je vystretý, 
                             brucho je aktivované a spevnené, plecia sú zatlačené, choď na špičky, 
@@ -154,7 +150,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">ruské otočky  30s</div>
+                        <div id="" class="name">ruské otočky</div>
                         <div class="info">
                             (ťahšia verzia)
                             ľahni si na chrbát, pokrč nohy, zdvihni sa na zadok, plecia sú zatlačené, 
@@ -164,7 +160,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">stierače  60s</div>
+                        <div id="" class="name">stierače</div>
                         <div class="info">
                             (ťahšia verzia)
                             ľahni si na chrbát, ruky sú upažené, vedľa seba (do 90° v ramennom kĺbe)
@@ -175,11 +171,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">oddych  60s</div>
-                    </div>
-
-                    <div class="exercise">
-                        <div id="" class="name">nožnice  60s</div>
+                        <div id="" class="name">nožnice</div>
                         <div class="info">
                             ľahni si na chrbát, opri sa o predlaktie, chrbát je vystretý, plecia sú 
                             zatlačené, nohy sú vystreté, zdvihni nohy (približne do výšky ramien), 
@@ -188,7 +180,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">izometria  30s</div>
+                        <div id="" class="name">izometria</div>
                         <div class="info">
                             sadni si na zem, pokrč nohy, nohy sú vpredu vedľa seba, chrbát je vystretý, 
                             plecia sú zatlačené, ruky si daj dlaňami na hrudník do kríža, spusť sa tak, 
@@ -206,28 +198,28 @@
                 </div>
                 <div class="exercises-exercise">
                     <div class="exercise">
-                        <div id="" class="name">dragon flag  5-10x</div>
+                        <div id="" class="name">dragon flag</div>
                         <div class="info">
                             zdvíhanie nôh na zemi, rukami sa držím napríklad rebriny
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">vznos do 180° 5-10x</div>
+                        <div id="" class="name">vznos do 180°</div>
                         <div class="info">
                             zdvíhanie nôh na hrazde
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">stierače 5-10x</div>
+                        <div id="" class="name">stierače</div>
                         <div class="info">
                             (ťažká verzia) tak, ako ľahšia verzia, ale ruky sú pokčené v lakťoch
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">kolíska 60s</div>
+                        <div id="" class="name">kolíska</div>
                         <div class="info">
                             <p>
                             (ťažká verzia) ľahni si na chrbát, vystri nohy a ruky, buď približne v rovine
@@ -238,7 +230,7 @@
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">tlak panvy nad seba 5-10x</div>
+                        <div id="" class="name">tlak panvy nad seba</div>
                         <div class="info">
                             <p>
                             podobne ako výtlak do stojky, vytlačenie sa cez panvu nahor, ruky sú na zemi
