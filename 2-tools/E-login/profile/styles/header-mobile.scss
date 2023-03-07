@@ -62,13 +62,10 @@
                 // navigacne menu profil pre pocitace
                 #mobile-nav {
                     display: grid;
-                    justify-items: left;
+                    justify-items: center;
                     // odkazy na stranky
                     a {
-                        padding-top: 5px;
-                        padding-bottom: 5px;
-                        padding-left: 15px;
-                                  padding-right: 45px;
+                        padding: 5px;
                         display: grid;
                         font-size: 25px;
                         text-decoration: none;

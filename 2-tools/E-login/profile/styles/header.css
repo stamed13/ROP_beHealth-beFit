@@ -47,18 +47,15 @@
   display: grid;
   justify-content: center;
   gap: 25px;
-  background: #0E7619;
+  background: #4d534d;
   border-radius: 10px;
 }
 #header-computer .header-top .loginsC .profile-menuC #computer-nav {
   display: grid;
-  justify-items: left;
+  justify-items: center;
 }
 #header-computer .header-top .loginsC .profile-menuC #computer-nav a {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 45px;
+  padding: 5px;
   display: grid;
   font-size: 25px;
   text-decoration: none;
@@ -84,7 +81,7 @@
   font-size: 20px;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  background: #B6B6B6;
+  background: #4ac10f;
   border: 1px solid black;
   border-radius: 5px;
   font-family: "Inter", sans-serif;
