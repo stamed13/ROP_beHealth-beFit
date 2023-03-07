@@ -13,23 +13,22 @@
 ?>
 
     <div id="content">
-        <section id="type" class="pull">
+        <section id="type" class="cali">
             <article id="main">
                 <div id="main-head">
                     <a href="../../../../exercises.php#calisthenics" id="back">naspäť</a>
-                    <div id="content-title" class="exercise-title">Jadro</div>
+                    <div id="content-title" class="exercise-title">Príťah</div>
                 </div>
                 <div id="type-info" class="exercise-info">
-                    Pri týchto cvikoch posilňujeme svaly jadra ako sú brušné svaly. Veľa ľudí si spája cvičenie na
-                    jadro s tehličkami. "Tehličky" na bruchu ukazujú koľko percent podkožného tuku máme. 
-                    Nemusíme Jadro môžme mať silné aj keď ich nemáme.
+                    Pri týchto cvikoch posilňujeme svaly chrbta, bicepsu a ramien. Pri týchto cvikoch potrebujeme 
+                    pomôcky ako hrazda, gymnastické kruhy alebo niečo podobné.
                 </div>
                 <div id="exercises">
                     <div class="ex-kinds-title">cviky:</div>
-                    <div class="ex-kinds-kinds">plank, kolíska, horolezci...</div>
+                    <div class="ex-kinds-kinds">zhyb nadhmat/podhmat, austrálsky zhyb...</div>
                 </div>
                 <div id="types-of-type">
-                    <div id="types-ex-title">Zoznam cvikov na brucho</div>
+                    <div id="types-ex-title">Zoznam cvikov na príťah</div>
                     <div id="types-ex-list">
                         <a href="#beginer" class="type-ex beginer">level začiatočník</a>
                         <a href="#intermediate" class="type-ex intermediate">level pokročilý</a>
@@ -46,58 +45,54 @@
                 </div>
                 <div class="exercises-exercise">
                     <div class="exercise">
-                        <div id="" class="name">skracovačky</div>
+                        <div id="" class="name">aktívny vis</div>
                         <div class="info">
-                            <p>
-                            ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je na zemi, 
-                            pomaly sa dotýkaj rukami kolien 
-                            </p>
-                            <p>
-                            ( známy cvik, ale nie je to brušák, ten je málo užitočný )
-                            </p>
+                            zaves sa na hrazdu, ruky máš vystreté, ramená sú zatlačené, 
+                            pevné jadro, zatiahnutý zadok, nohy sú vystreté 
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">dotýkanie členkov</div>
+                        <div id="" class="name">vytlacanie z ramien</div>
                         <div class="info">
-                            ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je na zemi, 
-                            pomaly sa dotýkaj raz ľavou a raz pravou rukou členku na rovnakej strane
+                            zaves sa na hrazdu, ruky máš vystreté, pevné jadro, zatiahnutý zadok, 
+                            nohy sú vystreté, pomaly sa vytláčaj ramená a potom spúšťaj
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">sklápačky</div>
+                        <div id="" class="name">negatívny zhyb nadhmat</div>
                         <div class="info">
-                            (jednoduchšia verzia)
-                            ľahni si na chrbát, pokrč nohy (do 90° v kolennom aj v bedrovom kĺbe), plecia sú zatlačené, 
-                            chrbát je na zemi, pomaly sa dotýkaj lakťami kolien 
+                            pod hrazdu si daj stoličku, vystúp na ňu a vyskoč na hrazdu do pozície zhybu,
+                            uchop hrazdu nadhmatom na šírku ramien, spevni jadro, zatlač ramená,
+                            snaž sa pomaly klesať do vystretých rúk
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">quadrupedál</div>
+                        <div id="" class="name">izometria podhmat</div>
                         <div class="info">
-                            kľakni si na kolená, ruky sú pod pleciami, plecia sú zatlačené , pokrč nohy 
-                            (do 90° aj v bedrovom kĺbe), chrbát je vystretý, vydrž v tejto polohe na špičkách
+                            pod hrazdu si daj stoličku, vystúp na ňu a vyskoč na hrazdu do pozície zhybu,
+                            uchop hrazdu podhmatom na šírku ramien, spevni jadro, zatlač ramená,
+                            snaž sa udržať čo najdlhšie
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">ruské otočky</div>
+                        <div id="" class="name">izometria nadhmat</div>
                         <div class="info">
-                            (jednoduchšia verzia)
-                            ľahni si na chrbát, pokrč nohy (do 90°), plecia sú zatlačené, chrbát je vystretý, 
-                            pomaly rotuj do strán, raz do prava a raz do ľava a dotkni sa prstami zeme
+                            pod hrazdu si daj stoličku, vystúp na ňu a vyskoč na hrazdu do pozície zhybu,
+                            uchop hrazdu nadhmatom na šírku ramien, spevni jadro, zatlač ramená,
+                            snaž sa udržať čo najdlhšie
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">plank na kolenách</div>
+                        <div id="" class="name">austrálsky zhyb</div>
                         <div class="info">
-                            ľahni si na brucho, vyflexuj špičky, plecia sú zatlačené, ruky sú pokrčené (do 90° v lakťoch), 
-                            predlaktie a dlane sú na zemi, chrbát je vystretý, zdvihni sa, napni zadok, vydrž v tejto pozícii 
-                            (príprava na plank)
+                            poď na nižšiu hrazdu, približne vo výške hrude, chyť sa hrazdy nadhmatom
+                            na šírku ramien, spevni jadro, zatlač ramená, priťahuj sa  kým nebudeš mať 
+                            hrudník pri hrazde
                         </div>
                     </div>
                 </div>
@@ -110,81 +105,51 @@
                 </div>
                 <div class="exercises-exercise">
                     <div class="exercise">
-                        <div id="" class="name">kolíska</div>
+                        <div id="" class="name">zhyb podhmat</div>
                         <div class="info">
-                            <p>
-                            (ťahšia verzia) ľahni si na chrbát, pokrč nohy (do 90° v kolennom aj v bedrovom kĺbe), 
-                            ruky sú vystreté a sú kolmo na zem, plecia sú zatlačené, chrbát je stále na zemi, 
-                            pevne drž pozíciu, pomaly sa kýv vpred a vzad
-                            </p>
+                            vyskoč na hrazdu, uchop hrazdu podhmatom na šírku ramien, spevni jadro, 
+                            zatlač ramená, priťahuj sa  kým nebudeš mať hrudník pri hrazde
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">striedavé zdvihy nôh</div>
+                        <div id="" class="name">zhyb nadhmat</div>
                         <div class="info">
-                            <p>
-                            (lahšia verzia) ľahni si na chrbát, vystri nohy a ruky, ruky sú na zemi 
-                            vedľa tela, plecia sú zatlačené, chrbát je stále na zemi, zdvihni nohy do 90°, 
-                            spevni telo, pomaly dvíhaj raz pravú nohu a raz ľavú nohu do 90°, tak aby 
-                            bola stále zdvihnutá aspoň jedna noha
-                            </p>
-                            <p>
-                            (ťahšia verzia) ľahni si na chrbát, vystri nohy a ruky, ruky sú na zemi 
-                            vedľa tela, plecia sú zatlačené, chrbát je stále na zemi, zdvihni nohy do 90°, 
-                            spevni telo, pomaly dvíhaj raz pravú nohu a raz ľavú nohu do 90°, 
-                            keď budeš mať zdvihnuté obe nohy dvihni sa, odlep chrbát od zeme 
-                            </p>
+                            vyskoč na hrazdu, uchop hrazdu nadhmatom na šírku ramien, spevni jadro, 
+                            zatlač ramená, priťahuj sa  kým nebudeš mať hrudník pri hrazde
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">horolezci</div>
+                        <div id="" class="name">austrálsky zhyb ťahší</div>
                         <div class="info">
-                            kľakni si na kolená, vystri ruky, ruky sú kolmo na zem, chrbát je vystretý, 
-                            brucho je aktivované a spevnené, plecia sú zatlačené, choď na špičky, 
-                            nohy sú stále nad zemou, jedna noha je stále vystretá, pokrč raz 
-                            pravú a raz ľavú nohu, pritiahni ju smerom dopredu približne pod brucho 
-                            a potom zasuň naspäť
+                            poď na vysoké bradlá, približne vo výške trupu, chyť sa bradiel nadhmatom
+                            na šírku ramien, spevni jadro, zatlač ramená, pokrč nohy, 
+                            priťahuj sa  kým nebudeš mať hrudník pri bradlách
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">ruské otočky</div>
+                        <div id="" class="name">tuck front lever výdrž</div>
                         <div class="info">
-                            (ťahšia verzia)
-                            ľahni si na chrbát, pokrč nohy, zdvihni sa na zadok, plecia sú zatlačené, 
-                            chrbát je vystretý, spevni telo, pomaly rotuj do strán, 
-                            raz do prava a raz do ľava a dotkni sa prstami zeme 
+                            vyskoč na hrazdu, uchop hrazdu nadhmatom na šírku ramien, spevni jadro, 
+                            zatlač ramená, pritiahni sa, pokrč nohy a vytoč telo, aby bol chrbát 
+                            vodorovne zo zemou
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">stierače</div>
+                        <div id="" class="name">lopatkový zhyb, záklon</div>
                         <div class="info">
-                            (ťahšia verzia)
-                            ľahni si na chrbát, ruky sú upažené, vedľa seba (do 90° v ramennom kĺbe)
-                            nohy sú vystreté, chrbát je na zemi, plecia sú zatlačené, 
-                            zdvihni nohy (do 90° v bedrovom kĺbe), nohy drž v tomto uhle, presúvaj 
-                            nohy raz do prava a raz do ľava až sa špičky dotknú zeme 
+                            zaves sa na hrazdu, vystri ruky, zatlač ramená, nohy sú voľné, jadro nie je spevnené,
+                            ťahaj sa hruďou nahor k hrazde
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">nožnice</div>
+                        <div id="" class="name">motýlik</div>
                         <div class="info">
-                            ľahni si na chrbát, opri sa o predlaktie, chrbát je vystretý, plecia sú 
-                            zatlačené, nohy sú vystreté, zdvihni nohy (približne do výšky ramien), 
-                            nohy drž v tejto výške, pomaly zdvihni raz pravú a raz ľavú nohu
-                        </div>
-                    </div>
 
-                    <div class="exercise">
-                        <div id="" class="name">izometria</div>
-                        <div class="info">
-                            sadni si na zem, pokrč nohy, nohy sú vpredu vedľa seba, chrbát je vystretý, 
-                            plecia sú zatlačené, ruky si daj dlaňami na hrudník do kríža, spusť sa tak, 
-                            aby si sa udržal, aktivuj jadro, mierne zaguľať chrbát, vydrž v tejto pozícii
                         </div>
                     </div>
 
@@ -198,43 +163,46 @@
                 </div>
                 <div class="exercises-exercise">
                     <div class="exercise">
-                        <div id="" class="name">dragon flag</div>
+                        <div id="" class="name">zhyb na 1 ruke</div>
                         <div class="info">
-                            zdvíhanie nôh na zemi, rukami sa držím napríklad rebriny
+                            zhyb s nadhmatom/podhmatom
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">vznos do 180°</div>
+                        <div id="" class="name">L-zhyb</div>
                         <div class="info">
-                            zdvíhanie nôh na hrazde
+                            zhyb s nadhmatom/podhmatom, nohy sú vystreté, 90° v bedrách, vytvoríme tvar L
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">stierače</div>
+                        <div id="" class="name">frontlever</div>
                         <div class="info">
-                            (ťažká verzia) tak, ako ľahšia verzia, ale ruky sú pokčené v lakťoch
+                            (ťažká verzia) prvok, vodorovná doska, chrbát smerom k zemi
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">kolíska</div>
+                        <div id="" class="name">backlever</div>
                         <div class="info">
-                            <p>
-                            (ťažká verzia) ľahni si na chrbát, vystri nohy a ruky, buď približne v rovine
-                            plecia sú zatlačené, chrbát je stále na zemi, pevne drž pozíciu, 
-                            pomaly sa kýv vpred a vzad
-                            </p>
+                            (ťažká verzia) prvok, vodorovná doska, chrbát smerom nahor
                         </div>
                     </div>
 
                     <div class="exercise">
-                        <div id="" class="name">tlak panvy nad seba</div>
+                        <div id="" class="name">lukostrelecký zhyb</div>
                         <div class="info">
-                            <p>
-                            podobne ako výtlak do stojky, vytlačenie sa cez panvu nahor, ruky sú na zemi
-                            </p>
+                            zhyb s nadhmatom, pritiahnem sa jednou rukou, potom sa presuniem k druhej ruke,
+                            spustím sa a naopak
+                        </div>
+                    </div>
+
+                    <div class="exercise">
+                        <div id="" class="name">false grip zhyb</div>
+                        <div class="info">
+                            zhyb s nadhmatom, úchop je vyššie ako zvyčajne, zápästie je vytočené
+                            palec je na hornej časti tyče, prsty sú pod hrazdou, celá váha je na zápästí
                         </div>
                     </div>
     
