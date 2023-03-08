@@ -4,6 +4,7 @@ CREATE DATABASE rop_behealth_befit CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 USE rop_behealth_befit;
 
+SET FOREIGN_KEY_CHECKS=0;
 
 
 
@@ -80,7 +81,8 @@ CREATE TABLE useractivity (
   neckSt int(11) NOT NULL,
   handSt int(11) NOT NULL,
   backSt int(11) NOT NULL,
-  legSt int(11) NOT NULL
+  legSt int(11) NOT NULL,
+  FOREIGN KEY (userId) REFERENCES users(idUser)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 INSERT INTO useractivity (idUsrAct, date, userId, pullCa, pushCa, coreCa, legCa, neckSt, handSt, backSt, legSt) VALUES
