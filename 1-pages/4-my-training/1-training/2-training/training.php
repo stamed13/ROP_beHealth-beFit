@@ -8,6 +8,11 @@
     //pripojenie header casti
     include('../layout/header.php');
 
+    // ak nie som prihlaseny presmeruje naspat
+    if( $_SESSION['login'] == false ){
+        header("Location: ../../../../my-training.php");
+    }
+
     $_SESSION["location"] = "../../../1-pages/4-my-training/1-training/2-training/training.php";
     
 ?>

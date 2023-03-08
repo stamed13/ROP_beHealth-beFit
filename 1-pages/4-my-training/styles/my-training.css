@@ -47,6 +47,27 @@
   font-weight: 600;
   font-size: 25px;
 }
+#content #training #main .rText {
+  padding: 5px;
+  font-size: 20px;
+  background: red;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+#content #training #main .gText {
+  padding: 5px;
+  font-size: 20px;
+  background: green;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+#content #training #main .oText {
+  padding: 5px;
+  font-size: 20px;
+  background: orange;
+  color: whitesmoke;
+  border-radius: 10px;
+}
 #content #training #training-menu {
   display: grid;
   gap: 40px;
