@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "footer-app.scss",
+        "defs.scss"
+    ],
+    "names": [],
+    "file": "footer-app.css"
+}

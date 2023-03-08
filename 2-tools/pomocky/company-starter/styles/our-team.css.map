@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,SAAS,CAAC;EACN,UAAU,ECCJ,OAAiB;EDAvB,MAAM,EAAE,KAAK;CAQhB;;AAVD,AAII,SAJK,CAIL,EAAE,CAAC;EACC,KAAK,ECNH,KAAK;EDOP,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "our-team.scss",
+        "defs.scss"
+    ],
+    "names": [],
+    "file": "our-team.css"
+}

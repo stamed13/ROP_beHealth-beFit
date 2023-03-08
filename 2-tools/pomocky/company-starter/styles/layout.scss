@@ -1,0 +1,16 @@
+@import "./defs.scss";
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    .header-app {
+        background: red; // potom pojde prec, toto je len na test
+    }
+    main {
+        background: green; // potom pojde prec, toto je len na test
+    }
+    .footer-app {
+        background: blue; // potom pojde prec, toto je len na test
+    }
+}
