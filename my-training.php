@@ -32,13 +32,15 @@
                         //ak som prihlaseny
                         if( $_SESSION['login'] == true ){
                             //zistenie ci ma dnes vyplnenu aktivitu
-                            $activityActual = mySQLcheck($conn, "SELECT * FROM useractivity 
+                            $activityActual = $activity = mySQLall($conn, "SELECT * FROM useractivity 
                             WHERE (userId='$idUSer') AND (date=(SELECT CURDATE()))");
 
                             //ak nema dnes aktivitu upozornim, ze moze vyplnit
                             if( $activityActual == false ){
-                                echo "<div class='oText'>Dnes este nemáš vyplnenú aktivitu. Vyplň ju prosím!</div>";
+                                //echo "<div class='oText'>Dnes este nemáš vyplnenú aktivitu. Vyplň ju prosím!</div>";
                             }
+
+                            //echo $activityActual;
                         }
                     ?>
                 </div>
