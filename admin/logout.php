@@ -3,8 +3,8 @@
     
     //error_reporting(E_ERROR);// E_ALL, E_WARNING
 
-    require_once ('../../E-login/helper/config.php');
-    require_once ('../../E-login/helper/Helper.php');
+    require_once ('../2-tools/E-login/helper/config.php');
+    require_once ('../2-tools/E-login/helper/Helper.php');
 
     //header("Location: admin.php");
 
