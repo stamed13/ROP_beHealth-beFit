@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS rop_behealth_befit;
-
-CREATE DATABASE rop_behealth_befit CHARACTER SET utf8 COLLATE utf8_slovak_ci;
