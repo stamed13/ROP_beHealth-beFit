@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: St 08.Mar 2023, 11:53
+-- Čas generovania: St 08.Mar 2023, 16:06
 -- Verzia serveru: 10.4.27-MariaDB
 -- Verzia PHP: 8.2.0
 
@@ -477,7 +477,8 @@ ALTER TABLE `useractivity`
 -- Indexy pre tabuľku `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`idUser`);
+  ADD PRIMARY KEY (`idUser`),
+  ADD KEY `genderId` (`genderId`);
 
 --
 -- AUTO_INCREMENT pre exportované tabuľky
@@ -552,13 +553,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `useractivity`
   ADD CONSTRAINT `useractivity_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`idUser`);
-COMMIT;
-
---
--- Obmedzenie pre tabuľku `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`genderId`) REFERENCES `genders` (`idGender`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
