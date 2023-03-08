@@ -1,10 +1,8 @@
 #services {
-  background: #1dc7dd;
+  background: rgb(29, 199, 221);
   height: 100vh;
 }
-
 #services h1 {
   color: white;
   text-align: center;
 }
-/*# sourceMappingURL=services.css.map */

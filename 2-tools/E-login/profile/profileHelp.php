@@ -1,54 +1,73 @@
 <?php
+    function fullname($conn, $sql) {
+        $row = mySQLassoc($conn, $sql);
+
+		//$fname = $row['fname'];
+        $fname = substr_replace(" ", $row['fname'], 0, 0);
+        //$lname = $row['lname'];
+        $fullname = substr_replace($row['lname'], $fname, 0, 0);
+
+        return $fullname;
+    }
+
+    function email($conn, $sql) {
+        $row = mySQLassoc($conn, $sql);
+
+        $email = $row['email'];
+
+        return $email;
+    }
+
     function fname($conn){
-        $email = $_SESSION['email'];
+        $idUser = $_SESSION['idUser'];
         $sql = "SELECT fname FROM users  
-        WHERE email='$email'";
+        WHERE idUser='$idUser'";
 
         $row = mySQLassoc($conn, $sql);
         return $row['fname'];
     }
 
     function lname($conn){
-        $email = $_SESSION['email'];
+        $idUser = $_SESSION['idUser'];
         $sql = "SELECT lname FROM users  
-        WHERE email='$email'";
+        WHERE idUser='$idUser'";
 
         $row = mySQLassoc($conn, $sql);
         return $row['lname'];
     }
 
     function gender($conn){
-        $email = $_SESSION['email'];
+        $idUser = $_SESSION['idUser'];
         $sql = "SELECT genders.name FROM users  
         LEFT JOIN genders ON users.genderId = genders.idGender
-        WHERE users.email='$email'";
+        WHERE users.idUser='$idUser'";
 
         $row = mySQLassoc($conn, $sql);
         return $row['name'];
     }
 
     function age($conn){
-        $email = $_SESSION['email'];
+        $idUser = $_SESSION['idUser'];
         $sql = "SELECT age FROM users  
-        WHERE email='$email'";
+        WHERE idUser='$idUser'";
 
         $row = mySQLassoc($conn, $sql);
         return $row['age'];
     }
 
     function height($conn){
-        $email = $_SESSION['email'];
+        $idUser = $_SESSION['idUser'];
         $sql = "SELECT height FROM users  
-        WHERE email='$email'";
+        WHERE idUser='$idUser'";
 
         $row = mySQLassoc($conn, $sql);
         return $row['height'];
     }
 
     function weight($conn){
-        $email = $_SESSION['email'];
+        $idUser = $_SESSION['idUser'];
         $sql = "SELECT weight FROM users  
-        WHERE email='$email'";
+        WHERE idUser='$idUser'";
 
         $row = mySQLassoc($conn, $sql);
         return $row['weight'];

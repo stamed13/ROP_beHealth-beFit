@@ -9,7 +9,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: 'Encode Sans Condensed', sans-serif;
+  font-family: "Encode Sans Condensed", sans-serif;
   font-size: 2rem;
   font-weight: 500;
 }
@@ -17,4 +17,3 @@ body {
 h1 {
   font-size: 5rem;
 }
-/*# sourceMappingURL=global.css.map */

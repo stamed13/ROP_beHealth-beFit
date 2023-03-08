@@ -113,8 +113,8 @@
 
     //ulozenie do databazy
     if( $errors["checked"] ) {
-        $sql = "INSERT INTO users (email, passwd, fname, lname, genderId, age, height, weight)
-        VALUES ('$email', '$passwd', '$fname', '$lname', '$gender', '$age', '$height', '$weight')";
+        $sql = "INSERT INTO users (email, passwd, fname, lname, genderId, age, height, weight, planId)
+        VALUES ('$email', '$passwd', '$fname', '$lname', '$gender', '$age', '$height', '$weight', 1 )";
 
         if (mysqli_query($conn, $sql)) {
             $errors["registered"] = true;

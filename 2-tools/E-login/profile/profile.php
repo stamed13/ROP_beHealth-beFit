@@ -3,7 +3,7 @@
     $currentPage = 'profile';
     $page_styles = 'styles/profile.css';
 
-    error_reporting(E_ERROR);// E_ALL, E_WARNING
+    //error_reporting(E_ERROR);// E_ALL, E_WARNING
 
     require_once ('../helper/config.php');
     require_once ('../helper/Helper.php');
@@ -13,6 +13,8 @@
     include('layout/header.php');
 
     //$_SESSION["location"] = "../profile/profile.php";
+
+    $idUser = $_SESSION['idUser'];
 
     //session_destroy();
 ?>
@@ -31,8 +33,8 @@
 
                         <div id="info">
                             <div id="name">
-                                <div id="fullname"> <?= $_SESSION['fullname'] ?> </div>
-                                <div id="email"> <?= $_SESSION['email'] ?> </div>
+                                <div id="fullname"> <?= fullname($conn, "SELECT * FROM users WHERE idUser='$idUser'") ?> </div>
+                                <div id="email"> <?= email($conn, "SELECT * FROM users WHERE idUser='$idUser'"); ?> </div>
                             </div>
 
                             <div id="other">
