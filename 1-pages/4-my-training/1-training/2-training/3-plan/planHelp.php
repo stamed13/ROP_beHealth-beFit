@@ -52,7 +52,7 @@
         }
 
         //ma cvicit 7x tyzdenne
-        if($plan > 1 || $plan < 5){
+        if($plan > 1 && $plan < 5){
             //ak cvici aspon 5x do tyzdna, je to spravne
             if($offen > 5.5){
                 echo "<div class='gText'> Super, ides podla nastaveneho planu! </div>";
