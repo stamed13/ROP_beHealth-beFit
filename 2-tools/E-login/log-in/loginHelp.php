@@ -8,7 +8,7 @@
 
         if ( isset($_POST["submit"])) {
             if ( trim($_POST["email"])  == "" || trim($_POST["passwd"])  == "" ) {
-                echo "<p class='eText'> Vypln udaje. </p>";
+                echo "<p class='eText'> Vyplň údaje. </p>";
                 $errors["check"] = true;
             }
     
@@ -34,7 +34,7 @@
   function login($errors) {
     //uspech
     if ( $errors["checked"] == true ) {
-        echo "<p class='gText'> Úspešné prihlasenie! </p>";
+        echo "<p class='gText'> Úspešné prihlásenie! </p>";
     }
 }
 

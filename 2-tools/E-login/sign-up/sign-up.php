@@ -176,7 +176,7 @@
 
                 <input type="password" id="co-password" 
                 class="<?php echo addClass( $errors["co_passwd"], $classes["eBorder"] ); ?>" 
-                name="co_passwd" placeholder="Potvrd heslo" value="<?= $_POST["co_passwd"] ?>">
+                name="co_passwd" placeholder="Potvrď heslo" value="<?= $_POST["co_passwd"] ?>">
 
                 <input type="text" id="fname" 
                 class="<?php echo addClass( $errors["fname"], $classes["eBorder"] ); ?>" 

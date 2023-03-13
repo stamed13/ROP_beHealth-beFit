@@ -103,7 +103,7 @@
                                     //kontrola vysky
                                     if( $_POST["height"]  == 0 || $_POST["height"] < 130 
                                     || $_POST["height"] > 240 ) {
-                                        echo "<p class='eText'> Zadaj vysku. </p>";
+                                        echo "<p class='eText'> Zadaj výšku. </p>";
                                         $errors["age"] = true;
                                     }
 

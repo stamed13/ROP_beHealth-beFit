@@ -156,7 +156,7 @@
                     <a href="profile.php" class="bt-arrow">naspäť</a>
                 </div>
                 <div id="main-content">
-                    <div id="content-title">Upravit profil</div>
+                    <div id="content-title">Upraviť profil</div>
                     <div id="profile-content">
                         
                     <form action="" method="post" id="sign-up-formular">
@@ -183,7 +183,7 @@
 
                         <input type="password" id="co-password" 
                         class="<?php echo addClass( $errors["co_passwd"], $classes["eBorder"] ); ?>" 
-                        name="co_passwd" placeholder="Potvrd heslo" value="<?= $_POST["co_passwd"] ?>">
+                        name="co_passwd" placeholder="Potvrď heslo" value="<?= $_POST["co_passwd"] ?>">
 
                         <input type="text" id="fname" 
                         class="<?php echo addClass( $errors["fname"], $classes["eBorder"] ); ?>" 

@@ -177,10 +177,10 @@
                             
                                 if (mysqli_query($conn, $sql)) {
                                     $errors["success"] = true;
-                                    echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+                                    echo "<div class='gText'>Úspešné aktualizovanie aktivity!</div>";
                                 } else {
                                     $errors["success"] = false;
-                                    echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+                                    echo "<div class='rText'>Neúspešné aktualizovanie aktivity!</div>";
                                 }
   
                                 mysqli_close($conn);
@@ -208,10 +208,10 @@
 
                                 if (mysqli_query($conn, $sql)) {
                                     $errors["success"] = true;
-                                    echo "<div class='gText'>Uspesne aktualizovanie aktivity!</div>";
+                                    echo "<div class='gText'>Úspešné aktualizovanie aktivity!</div>";
                                 } else {
                                     $errors["success"] = false;
-                                    echo "<div class='rText'>Neuspesne aktualizovanie aktivity!</div>";
+                                    echo "<div class='rText'>Neúspešné aktualizovanie aktivity!</div>";
                                 }
   
                                 mysqli_close($conn);
@@ -240,7 +240,7 @@
 
                     <select id="calisthenics" name="pull" 
                         class="" >
-                            <option value="0">Vyber cvik na príťah</option>
+                            <option value="0">vyber cvik na príťah</option>
                             <?php foreach($caliPulls as $caliPull): ?>
                                 <option value="<?= $caliPull["idExercise"] ?>"
                                     <?php 
@@ -257,7 +257,7 @@
 
                         <select id="calisthenics" name="push" 
                         class="" >
-                            <option value="0">Vyber cvik na tlak</option>
+                            <option value="0">vyber cvik na tlak</option>
                             <?php foreach($caliPushs as $caliPush): ?>
                                 <option value="<?= $caliPush["idExercise"] ?>"
                                     <?php 
@@ -274,7 +274,7 @@
 
                         <select id="calisthenics" name="core" 
                         class="" >
-                            <option value="0">Vyber cvik na brucho</option>
+                            <option value="0">vyber cvik na brucho</option>
                             <?php foreach($caliCores as $caliCore): ?>
                                 <option value="<?= $caliCore["idExercise"] ?>"
                                     <?php 
@@ -291,7 +291,7 @@
 
                         <select id="calisthenics" name="legC" 
                         class="" >
-                            <option value="0">Vyber cvik na nohy</option>
+                            <option value="0">vyber cvik na nohy</option>
                             <?php foreach($caliLegs as $caliLeg): ?>
                                 <option value="<?= $caliLeg["idExercise"] ?>"
                                     <?php 

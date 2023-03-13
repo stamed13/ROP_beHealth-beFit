@@ -10,7 +10,7 @@
                 // ak nevyplnil apon jeden cvik
             if( $_POST["pull"] == 0 && $_POST["push"] == 0 
             && $_POST["legC"] == 0 && $_POST["core"] == 0 ){
-                echo "<div class='rText'>Vyber aspon jeden cvik na posilovanie!</div>";
+                echo "<div class='rText'>Vyber aspoň jeden cvik na posilňovanie!</div>";
             } 
             }
             // ak vyplnil apon jeden cvik
@@ -32,7 +32,7 @@
                 // ak nevyplnil apon jeden cvik
                 if( $_POST["neck"] == 0 && $_POST["hand"] == 0 
                 && $_POST["back"] == 0 && $_POST["leg"] == 0 ){
-                    echo "<div class='rText'>Vyber aspon jeden cvik na strecing!</div>";
+                    echo "<div class='rText'>Vyber aspoň jeden cvik na strečing!</div>";
                 } 
             }
             // ak vyplnil apon jeden cvik
@@ -56,7 +56,7 @@
         if( $activityCount["count"] == 0 || $activityCount["count"] == 1 ){
             if( $_POST["pull"] == 0 || $_POST["push"] == 0 
             || $_POST["legC"] == 0 || $_POST["core"] == 0 ){
-                echo "<div class='oText'>Ahoj! Toto je tvoja prva aktivita. Vypln prosim vsetky moznosti. Ukaz mi prosim, co dokazes!</div>";
+                echo "<div class='oText'>Ahoj! Toto je tvoja prvá aktivita. Vyplň prosím všetky možnosti. Ukáž mi prosím, čo všetko dokážeš!</div>";
                 //echo "Ahoj! Vidim, ze si tu este kratko. Vyber prosim cviky, ktore ";
     
                 // ak je extrem
@@ -88,7 +88,7 @@
         if( $activityCount["count"] == 0 || $activityCount["count"] == 1 ){
             if( $_POST["neck"] == 0 || $_POST["hand"] == 0 
             || $_POST["back"] == 0 || $_POST["leg"] == 0 ){
-                echo "<div class='oText'>Ahoj! Toto je tvoja prva aktivita. Vypln prosim vsetky moznosti. Ukaz mi prosim, co dokazes!</div>";
+                echo "<div class='oText'>Ahoj! Toto je tvoja prvá aktivita. Vyplň prosím všetky možnosti. Ukáž mi prosím, čo všetko dokážeš!</div>";
                 //echo "Ahoj! Vidim, ze si tu este kratko. Vyber prosim cviky, ktore ";
 
                 //extrem

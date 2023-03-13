@@ -43,8 +43,8 @@
                 <div id="main-content">
                     <div id="content-title">Moja aktivita</div>
                     <div id="activity-info">
-                        Nech sa paci,  tu mozes postupne vyplnit tvoju dennu aktivitu. 
-                        Pokojne si aktualizuj v priebehu dna. <?php //echo $_SESSION['email'] ?>
+                        Nech sa páči,  tu môžeš postupne vyplniť tvoju dennú aktivitu. 
+                        Pokojne si ju aktualizuj v priebehu dňa. <?php //echo $_SESSION['email'] ?>
                     </div>
                 </div>
                 <!--

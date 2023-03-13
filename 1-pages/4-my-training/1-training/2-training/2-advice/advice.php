@@ -70,7 +70,7 @@
                             } 
                             //nema aktivitu, ostatne neporadi
                             if( $activityFirst == 0 ) {
-                                echo "<div class='advice'> Viac ti nedokazem poradit. Vypln prosim aspon jednu aktivitu. </div>";
+                                echo "<div class='advice'> Viac ti nedokážem poradiť. Vyplň prosím aspoň jednu aktivitu. </div>";
                             }
                         }
                     ?>

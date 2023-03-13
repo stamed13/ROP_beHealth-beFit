@@ -96,7 +96,7 @@
             trim($_POST["fname"])  == "" || trim($_POST["gender"])  == "" ||
             trim($_POST["age"])  == "" || trim($_POST["height"])  == "" || 
             trim($_POST["weight"])  == "" ) {
-                echo "<p class='eText'> Vypln udaje. </p>";
+                echo "<p class='eText'> Vyplň údaje. </p>";
                 $errors["check"] = true;
             }
         }

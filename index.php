@@ -1,6 +1,6 @@
 <?php
     //aktualna stranka
-    $currentPage = 'home';
+    $currentPage = 'index';
 
     //pripojenie header casti
     include('C-layout/header.php');

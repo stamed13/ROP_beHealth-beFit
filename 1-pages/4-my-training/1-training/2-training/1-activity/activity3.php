@@ -156,10 +156,10 @@
                             
                                 if (mysqli_query($conn, $sql)) {
                                     $errors["success"] = true;
-                                    echo "<div class='gText'>Uspesne vytvorenie aktivity!</div>";
+                                    echo "<div class='gText'>Úspešné aktualizovanie aktivity!</div>";
                                 } else {
                                     $errors["success"] = false;
-                                    echo "<div class='rText'>Neuspesne vytvorenie aktivity!</div>";
+                                    echo "<div class='rText'>Neúspešné aktualizovanie aktivity!</div>";
                                 }
   
                                 mysqli_close($conn);
@@ -187,10 +187,10 @@
 
                                 if (mysqli_query($conn, $sql)) {
                                     $errors["success"] = true;
-                                    echo "<div class='gText'>Uspesne aktualizovanie aktivity!</div>";
+                                    echo "<div class='gText'>Úspešné aktualizovanie aktivity!</div>";
                                 } else {
                                     $errors["success"] = false;
-                                    echo "<div class='rText'>Neuspesne aktualizovanie aktivity!</div>";
+                                    echo "<div class='rText'>Neúspešné aktualizovanie aktivity!</div>";
                                 }
   
                                 mysqli_close($conn);
@@ -219,7 +219,7 @@
   
                         <select id="stretching" name="neck" 
                         class="" >
-                            <option value="0">Vyber cvik na krk</option>
+                            <option value="0">vyber cvik na krk</option>
                             <?php foreach($streNecks as $streNeck): ?>
                                 <option value="<?= $streNeck["idExercise"] ?>"
                                     <?php 
@@ -236,7 +236,7 @@
                                     
                         <select id="stretching" name="hand" 
                         class="" >
-                            <option value="0">Vyber cvik na ruky</option>
+                            <option value="0">vyber cvik na ruky</option>
                             <?php foreach($streHands as $streHand): ?>
                                 <option value="<?= $streHand["idExercise"] ?>"
                                     <?php 
@@ -253,7 +253,7 @@
 
                         <select id="stretching" name="back" 
                         class="" >
-                            <option value="0">Vyber cvik na chrbát</option>
+                            <option value="0">vyber cvik na chrbát</option>
                             <?php foreach($streBacks as $streBack): ?>
                                 <option value="<?= $streBack["idExercise"] ?>"
                                     <?php 
@@ -270,7 +270,7 @@
 
                         <select id="stretching" name="leg" 
                         class="" >
-                            <option value="0">Vyber cvik na nohy</option>
+                            <option value="0">vyber cvik na nohy</option>
                             <?php foreach($streLegs as $streLeg): ?>
                                 <option value="<?= $streLeg["idExercise"] ?>"
                                     <?php 
