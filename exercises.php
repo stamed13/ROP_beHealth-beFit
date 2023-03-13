@@ -44,10 +44,10 @@
                 <div class="exercise-kinds">
                     <div class="ex-kinds-title">druhy:</div>
                     <nav class="ex-kinds-kinds">
-                        <a class="ex-kinds-kind">zahrievačka</a>
-                        <a class="ex-kinds-kind">rozcvička na vrchnú časť</a>
-                        <a class="ex-kinds-kind">rozcvička na spodnú časť</a>
-                        <a class="ex-kinds-kind">statický strečing</a>
+                        <a class="ex-kinds-kind not">zahrievačka</a>
+                        <a class="ex-kinds-kind not">rozcvička na vrchnú časť</a>
+                        <a class="ex-kinds-kind not">rozcvička na spodnú časť</a>
+                        <a class="ex-kinds-kind not">statický strečing</a>
                     </nav>
                 </div>
                 <a href="" class="view-more">pozrieť viac</a>
@@ -56,7 +56,7 @@
             <article id="calisthenics" class="exercise">
                 <div class="exercise-title">Kalistenika</div>
                 <div class="exercise-info">
-                    Kalistenika je cvičenie, ktrorým si rozvíjame svoju silu pomocou váhy vlastného tela.
+                    Kalistenika je cvičenie, ktorým si rozvíjame svoju silu pomocou váhy vlastného tela.
                     Toto cvičenie je komplexné, pri každom cviku zapájame viacero svalových partií naraz.
                     Je praktické, pretože sa dá vystačiť s jednoduchými pomôckami ako sú hrazda, bradlá alebo gymnastické kruhy. 
                     Môžme si zlepšiť rovnováhu, koordináciu a vytrvalosť.

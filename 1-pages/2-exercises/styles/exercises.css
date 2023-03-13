@@ -235,6 +235,10 @@
   background: white;
   border-radius: 15px;
 }
+#content #exercises .exercise .exercise-kinds .ex-kinds-kinds .not {
+  text-decoration: none;
+  background: none;
+}
 #content #exercises .exercise .view-more {
   display: none;
   padding-top: 500px;

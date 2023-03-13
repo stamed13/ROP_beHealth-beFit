@@ -29,16 +29,17 @@
                 gap: 25px;
                 // nadpis
                 #content-title {
-                    padding: 10px;
+                    padding: 20px;
                     display: grid;
                     justify-items: center;
-                    background: #FFC700;
+                    //background: #05F800;
                     color: #000;
-                    border-radius: 10px;
+                    border-radius: 25px;
                     font-family: 'Inter', sans-serif;
                     font-weight: 600;
                     font-size: 35px;
                     text-align: center;
+                    background: #FFC700;                    
                 }
                 // kratke informacie
                 #plan-content {

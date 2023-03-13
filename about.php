@@ -13,7 +13,7 @@
         <div id="main">
             <div id="content-title">About beHealth-beFit</div>
             <div id="main-info">
-            Jednoducha webova aplikacia, ktora pomaha byt zdravy. Hlavna tema je zdravie a cvicenie.
+                Jednoduchá webová aplikácia, ktorá pomaha byť zdravý. Hlavná téma je zdravie a cvičenie.
             </div>
         </div>
 
@@ -23,22 +23,21 @@
             <ul>
                 <li>
                     <div class="function">
-                        <div class="function-title">prehlad cvikov</div>
+                        <div class="function-title">prehľad cvikov</div>
                         <div class="function-info">
-                        Prehlad zakladnych druhov cvikov na vsetky casti tela. Na kazdu cast su aj priklady cvikov 
-                        so strucnym popisom. Cviky sú usporiadané podla kategorii. Kazdy cvik ma odporucany pocet 
-                        opakovani alebo cas cviku.
+                        Prehľad základných druhov cvikov na všetky časti tela. Na každu čast sú aj príklady cvikov 
+                        so stručným popisom. Cviky sú usporiadané podľa kategórií. 
                         </div>
                     </div>
                 </li>
 
                 <li>
                     <div class="function">
-                        <div class="function-title">treningova sekcia</div>
+                        <div class="function-title">tréningová sekcia</div>
                         <div class="function-info">
-                        Moznost zapisat si dennu aktivitu vo viacerych kategoriach podla odcvicenych narocnosti. 
-                        Nasledne sa da este vygenerovat treningovy plan. Treningovy plan sa meni podla zmien Vasich 
-                        informacii.
+                        Možnosť zapísať si dennú aktivitu vo viacerých kategóriách podľa odcvičených náročností. 
+                        Následne sa dá ešte vygenerovať tréningový plán. Treningový plán sa mení podľa zmien 
+                        informácií od daného používateľa.
                         </div>
                     </div>
                 </li>
@@ -47,11 +46,11 @@
         </div>
 
         <div id="access">
-            <div id="access-title">Pristup</div>
+            <div id="access-title">Prístup</div>
             <div id="access-info">
-            Tento web je volne k dispozicii. Cast webu je dostupna pre kazdeho zadarmo. Stranka my-training je dostupna 
-            len zaregistrovanym uzivatelov. Je to z jednoducheho dovodu. Potrebujem vediet od pouzivatelov dolezite 
-            informacie, inak im nemozem poradit. Najma pretoze udaje ukladam do databazy ...
+            Tento web je voľne k dispozícií. Časť webu je dostupná pre každeho zadarmo. Stránka my-training je dostupná 
+            len zaregistrovaným užívateľom. Je to z jednoduchého dôvodu. Potrebujem vedieť od použivateľov dôležité 
+            informácie, inak im nemôžem poradiť. Najmä pretože potrebujem dlhodo zbierať údaje. Podľa thovo dokážem spoľahlivo vyhodnotiť a poradiť ...
             </div>
         </div>
         </div>

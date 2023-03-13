@@ -33,16 +33,16 @@
   gap: 25px;
 }
 #content #plan #main #main-content #content-title {
-  padding: 10px;
+  padding: 20px;
   display: grid;
   justify-items: center;
-  background: #FFC700;
   color: #000;
-  border-radius: 10px;
+  border-radius: 25px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 35px;
   text-align: center;
+  background: #FFC700;
 }
 #content #plan #main #main-content #plan-content {
   margin-bottom: 30px;
