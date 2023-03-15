@@ -26,7 +26,7 @@
   padding: 20px;
   background: rgb(162, 247, 156);
   border: 5px solid green;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 #content #about #main #content-title {
   display: grid;
