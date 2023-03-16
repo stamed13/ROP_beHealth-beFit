@@ -264,8 +264,21 @@
         $odpocetActual_First = $actualDays - $activityDays;
 
         //ako casto cvici
-        //c = a / (b / 7)
-        $howOffen = $activityCount / ( $odpocetActual_First / 7 );
+            //ak nema ziadnu aktivitu
+            if( $activityCount == 0 ){
+                $howOffen = 0;
+            }
+
+            //ak ma 1 aktivitu a rozdiel je 0
+            if( $activityCount == 1 && $odpocetActual_First == 0 ){
+                $howOffen = 14;
+            }
+
+            //ak ma viac aktivit a rozdiel viacej ako 0
+            if( $activityCount > 1 || $odpocetActual_First > 0 ){
+                //c = a / (b / 7)
+                $howOffen = $activityCount / ( $odpocetActual_First / 7 );
+            }
 
         return $howOffen; 
 

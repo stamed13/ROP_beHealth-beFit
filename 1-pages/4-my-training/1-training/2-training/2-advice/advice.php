@@ -38,6 +38,10 @@
     $activity = mySQLall($conn, "SELECT * FROM useractivity WHERE userId='$idUser'");
     $activityFirst = $activity[0]["date"];    
 
+    //pocet aktivit pouzivatela
+    $activity = mySQLall($conn, "SELECT count(*) AS activityCount FROM useractivity WHERE userId='$idUser'");
+    $activityCount = $activity[0]["activityCount"];
+
 
 ?>
 
@@ -62,7 +66,7 @@
                         
                         if( $body_mass < 30 ){
                             if( $activityFirst > 0 ){
-                                if( $activityFirst == 1 ){
+                                if( $activityCount == 1 ){
                                     echo "<div class='advice'> Máš len jednu aktivitu. </div>";
                                 }
 

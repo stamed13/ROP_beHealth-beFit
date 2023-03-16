@@ -77,15 +77,15 @@
             //$rozdielYear = 0;
             //$actualDateMonth = 0;
             //$actualDateDay = 0;
-            echo "rozdielYear: $rozdielYear";
-            echo "actualDateMonth: $actualDateMonth";
-            echo "actualDateDay: $actualDateDay";
+            //echo "rozdielYear: $rozdielYear";
+            //echo "actualDateMonth: $actualDateMonth";
+            //echo "actualDateDay: $actualDateDay";
         
             $activityDays = (($activityFirstMonth - 1) * 30) + $activityFirstDay;
             $actualDays = ($rozdielYear * 12 * 30) + (($actualDateMonth - 1) * 30) + $actualDateDay;
 
-            echo "activityDays: $activityDays";
-            echo "actualDays: $actualDays";
+            //echo "activityDays: $activityDays";
+            //echo "actualDays: $actualDays";
             //$actualDays = 5;
 
             //zaciatok erroru
@@ -93,7 +93,7 @@
             //odcitam 
             //mam vysledok
             $odpocetActual_First = $actualDays - $activityDays;
-            echo "odpocetActual_First: $odpocetActual_First";
+            //echo "odpocetActual_First: $odpocetActual_First";
             //$odpocetActual_First = 5;
 
             //ako casto cvici
@@ -113,7 +113,7 @@
                 $howOffen = $activityCount / ( $odpocetActual_First / 7 );
             }
 
-            echo "howOffen: $howOffen";
+            //echo "howOffen: $howOffen";
 
             //spocitam levely, zistim podla priemeru a priradim
             $activity = mySQLall($conn, "SELECT SUM(pullCa) AS pullCa FROM useractivity WHERE userId='$idUser'");
@@ -246,22 +246,22 @@
             //rovnomerne
             } else {
                 //vyhodnotenie
-                if( $howOffen <= 1 ){
+                if( $howOffen <= 1.4 ){
                     echo "<div class='advice exercise'> $advice10 </div>";
                 }
-                if( $howOffen > 1 && $howOffen <= 2.5 ){
+                if( $howOffen > 1.4 && $howOffen <= 1.75 ){
                     echo "<div class='advice exercise'> $advice5 </div>";
                 }
-                if( $howOffen > 2.5 && $howOffen <= 3.5 ){
+                if( $howOffen > 1.75 && $howOffen <= 2.33 ){
                     echo "<div class='advice exercise'> $advice6 </div>";
                 }
-                if( $howOffen > 3.5 && $howOffen <= 4.5 ){
+                if( $howOffen > 2.33 && $howOffen <= 3.5 ){
                     echo "<div class='advice exercise'> $advice7 </div>";
                 }
-                if( $howOffen > 4.5 && $howOffen <= 5.5 ){
+                if( $howOffen > 3.5 && $howOffen <= 7 ){
                     echo "<div class='advice exercise'> $advice8 </div>";
                 }
-                if( $howOffen > 5.5 ){
+                if( $howOffen > 7 ){
                     echo "<div class='advice exercise'> $advice9 </div>";
                 }
             }
