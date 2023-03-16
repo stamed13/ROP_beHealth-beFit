@@ -62,6 +62,10 @@
                         
                         if( $body_mass < 30 ){
                             if( $activityFirst > 0 ){
+                                if( $activityFirst == 1 ){
+                                    echo "<div class='advice'> Máš len jednu aktivitu. </div>";
+                                }
+
                                 adviceExercise($advices, $conn, $idUser);
                                 adviceImprove($advices, $conn, $idUser);
                                 adviceStatus($advices, $conn, $idUser);

@@ -74,19 +74,46 @@
             //prevediem vsetko na dni (rok * mesiac * 30 dni) + den
             //rok uz odpocitam bez roznasobovania
             $rozdielYear = $actualDateYear - $activityFirstYear;
+            //$rozdielYear = 0;
+            //$actualDateMonth = 0;
+            //$actualDateDay = 0;
+            echo "rozdielYear: $rozdielYear";
+            echo "actualDateMonth: $actualDateMonth";
+            echo "actualDateDay: $actualDateDay";
+        
             $activityDays = (($activityFirstMonth - 1) * 30) + $activityFirstDay;
             $actualDays = ($rozdielYear * 12 * 30) + (($actualDateMonth - 1) * 30) + $actualDateDay;
 
+            echo "activityDays: $activityDays";
+            echo "actualDays: $actualDays";
+            //$actualDays = 5;
+
+            //zaciatok erroru
+
             //odcitam 
             //mam vysledok
-            $actualDays = 5;
             $odpocetActual_First = $actualDays - $activityDays;
+            echo "odpocetActual_First: $odpocetActual_First";
+            //$odpocetActual_First = 5;
 
             //ako casto cvici
-            //c = a / (b / 7)
-            //zaciatok erroru
-            //$odpocetActual_First = 5;
-            $howOffen = $activityCount / ( $odpocetActual_First / 7 );
+            //ak nema ziadnu aktivitu
+            if( $activityCount == 0 ){
+                $howOffen = 0;
+            }
+
+            //ak ma 1 aktivitu a rozdiel je 0
+            if( $activityCount == 1 && $odpocetActual_First == 0 ){
+                $howOffen = 14;
+            }
+
+            //ak ma viac aktivit a rozdiel viacej ako 0
+            if( $activityCount > 1 || $odpocetActual_First > 0 ){
+                //c = a / (b / 7)
+                $howOffen = $activityCount / ( $odpocetActual_First / 7 );
+            }
+
+            echo "howOffen: $howOffen";
 
             //spocitam levely, zistim podla priemeru a priradim
             $activity = mySQLall($conn, "SELECT SUM(pullCa) AS pullCa FROM useractivity WHERE userId='$idUser'");
@@ -239,7 +266,7 @@
                 }
             }
 
-            echo $activityCount;
+            //echo $activityCount;
 
         }
 ?>
