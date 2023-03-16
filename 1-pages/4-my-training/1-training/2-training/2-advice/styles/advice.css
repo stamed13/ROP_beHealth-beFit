@@ -53,7 +53,8 @@
   text-align: center;
 }
 #content #advice #main #advice-list {
-  padding-top: 25px;
+  margin-top: 25px;
+  padding: 15px;
   display: grid;
   justify-items: left;
   grid-auto-flow: row;
@@ -62,6 +63,8 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   text-align: left;
+  background: #A5CE00;
+  border-radius: 15px;
 }
 #content #advice #main #advice-list .weight {
   font-weight: 600;

@@ -79,10 +79,13 @@
 
             //odcitam 
             //mam vysledok
+            $actualDays = 5;
             $odpocetActual_First = $actualDays - $activityDays;
 
             //ako casto cvici
             //c = a / (b / 7)
+            //zaciatok erroru
+            //$odpocetActual_First = 5;
             $howOffen = $activityCount / ( $odpocetActual_First / 7 );
 
             //spocitam levely, zistim podla priemeru a priradim
@@ -235,6 +238,8 @@
                     echo "<div class='advice exercise'> $advice9 </div>";
                 }
             }
+
+            echo $activityCount;
 
         }
 ?>
