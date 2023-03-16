@@ -41,6 +41,7 @@
     //ak nema aktivitu, dostane obycajny plan
     if( $activityCount == 0 ){
         $userPlan = $plans[0];
+        $plan = 1;
     }
     if( $activityCount > 0 ){
         $status = status($conn, $idUser);
@@ -49,6 +50,10 @@
         //$plan = 2;
         $userPlan = $plans[$plan];
     }
+
+        echo "activityCount: $activityCount";
+        echo "userPlan: $userPlan";
+        echo "plan: $plan";
     
         $sql = "UPDATE users SET planId='$plan' WHERE idUser='$idUser'";
 
