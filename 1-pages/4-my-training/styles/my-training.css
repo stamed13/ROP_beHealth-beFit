@@ -30,6 +30,7 @@
 }
 #content #training #main {
   display: grid;
+  justify-items: center;
   gap: 10px;
 }
 #content #training #main #content-title {
@@ -47,6 +48,30 @@
   text-align: center;
   font-size: 25px;
   font-weight: 600;
+}
+#content #training #main .rText {
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background: red;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+#content #training #main .oText {
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background: orange;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+#content #training #main .gText {
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background: green;
+  color: whitesmoke;
+  border-radius: 10px;
 }
 #content #training #training-menu {
   display: grid;

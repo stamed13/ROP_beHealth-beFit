@@ -25,6 +25,7 @@
         //
         #main {
             display: grid;
+            justify-items: center;
             gap: 10px;
             //min-height: 100vh;
             #content-title {
@@ -43,6 +44,30 @@
                 text-align: center;
                 font-size: 25px;
                 font-weight: 600;
+            }
+            .rText {
+                padding: 5px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                background: red;
+                color: whitesmoke;
+                border-radius: 10px;
+            }
+            .oText {
+                padding: 5px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                background: orange;
+                color: whitesmoke;
+                border-radius: 10px;
+            }
+            .gText {
+                padding: 5px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                background: green;
+                color: whitesmoke;
+                border-radius: 10px;
             }
         }
         
