@@ -76,7 +76,7 @@
   justify-content: center;
   gap: 10px;
   background: #A5CE00;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 @media (min-width: 0px) {
   #content #activity .form .form-content form {
