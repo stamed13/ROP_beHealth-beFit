@@ -52,10 +52,13 @@
             gap: 10px;
             //min-height: 100vh;
             #content-title {
+                padding: 10px;
                 display: grid;
                 justify-content: center;
                 font-weight: 600;
                 font-size: 35px;
+                background: rgb(0, 219, 55);
+                border-radius: 25px;
             }
             //
             #training-info {

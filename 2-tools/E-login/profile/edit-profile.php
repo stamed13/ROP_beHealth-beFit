@@ -128,8 +128,16 @@
 
     //ulozenie do databazy
     if( $errors["checked"] ) {
-        $sql = "UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
-        genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email'";
+        //ak pouzivatel nezadal heslo, nezmeni ho
+        if( $_POST["passwd"] == ""){
+            $sql = "UPDATE users SET email='$email', fname='$fname', lname='$lname',
+            genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email'";
+        }
+        //ak pouzivatel zadal heslo a je spravne, zmeni ho
+        if( $_POST["passwd"] != ""){
+            $sql = "UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
+            genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email'";
+        }
 
         //$sql = "UPDATE users SET email='$email', passwd='$passwd', fname='$fname', lname='$lname',
         //genderId='$gender', age='$age', height='$height', weight='$weight' WHERE email='$email';";
@@ -143,7 +151,7 @@
   
         mysqli_close($conn);
 
-        header("Location: profile.php");
+        //header("Location: profile.php");
     } 
 
 ?>
@@ -160,7 +168,11 @@
                     <div id="profile-content">
                         
                     <form action="" method="post" id="sign-up-formular">
-                        <?php errorLOG($conn); ?>
+                        <?php 
+                        if(! $errors["registered"]){
+                            errorLOG($conn);
+                        }
+                        ?>
                         <?php register($errors); ?>
 
                         <input type="text" id="email" 
@@ -212,9 +224,24 @@
                             <option value="0">Vyber pohlavie</option>
                             <?php foreach($genders as $gender): ?>
                                 <option value="<?= $gender["idGender"] ?>"
-                                    <?php if($_POST["gender"] == $gender["idGender"]) { ?>
-                                        selected
-                                    <?php } ?>
+                                    <?php   
+                                        if($_POST["gender"] == $gender["idGender"]) { 
+                                            echo "selected";
+                                        } 
+
+                                        /*
+                                        //ak nema zakliknute, oznaci z uctu
+                                        $gender = gender($conn);
+                                        echo $gender;
+
+                                        if($_POST["gender"] == 1 && $gender == $gender["idGender"]){
+                                            echo "selected";
+                                        } 
+                                        if($_POST["gender"] > 1 && $_POST["gender"] == $gender["idGender"]){
+                                            echo "selected";
+                                        } 
+                                        */
+                                    ?>
                                 >
                                     <?= $gender["name"] ?>
                                 </option>
@@ -255,7 +282,7 @@
                          ?>">
 
                         <input type="submit" id="bt-register" name="submit" 
-                        value="Update">
+                        value="Aktualizovať">
                     </form>
                         
                     </div>

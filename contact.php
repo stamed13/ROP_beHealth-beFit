@@ -10,7 +10,7 @@
 
     <div id="content">
         <section id="contact">
-            <div id="content-title">Contact</div>
+            <div id="content-title">Kontakt</div>
             <article id="autor-info">
                 <div id="title-autor">autor</div>
                 <div id="contact-items">

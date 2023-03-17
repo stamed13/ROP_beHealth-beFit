@@ -96,7 +96,7 @@
             <div id="log-in-header">
                 <a href="<?php echo $_SESSION["location"]; ?>"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
-                <div id="log-in-title">Sign-up</div>
+                <div id="log-in-title">Prihlasovanie</div>
             </div>
 
             <form action="" method="post" id="log-in-formular">
@@ -112,11 +112,11 @@
                 name="passwd" placeholder="Heslo" value="<?= $_POST["passwd"] ?>">
 
                 <input type="submit" id="bt-login" name="submit" 
-                value="Login">
+                value="Prihlásiť sa">
             </form>
 
             <div id="log-in-footer">
-                <a href="../sign-up/sign-up.php" id="new-account">Don`t have an account</a>
+                <a href="../sign-up/sign-up.php" id="new-account">Ešte nemám vytvorený účet.</a>
             </div>
         </div>
     </div>

@@ -79,7 +79,7 @@
         <div class='ham-settingsC'>
             <div class='name'> $fullname </div>
             <a href='../../../../2-tools/E-login/profile/profile.php' class='profile'>profil</a>
-            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>odhlásiť sa</a>
         </div>
         ";
     }
@@ -90,7 +90,7 @@
         <div class='ham-settingsM'>
             <div class='name'> $fullname </div>
             <a href='../../../../2-tools/E-login/profile/profile.php' class='profile'>profil</a>
-            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>log-out</a>
+            <a href='../../../../2-tools/E-login/log-out/log-out.php' class='log-out'>odhlásiť sa</a>
         </div>
         ";
     }

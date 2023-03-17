@@ -21,7 +21,7 @@
             trim($_POST["fname"])  == "" || trim($_POST["gender"])  == "" ||
             trim($_POST["age"])  == "" || trim($_POST["height"])  == "" || 
             trim($_POST["weight"])  == "" ) {
-                echo "<p class='eText'> Vypln udaje. </p>";
+                echo "<p class='eText'> Vyplň údaje. </p>";
                 $errors["check"] = true;
             }
         }
@@ -94,23 +94,47 @@
                                 && $errors["co_passwd"] == false && $errors["fname"] == false 
                                 && $errors["lname"] == false && $errors["gender"] == false ) {
                                     //kontrola veku
-                                    if( $_POST["age"]  == 0 ||  $_POST["age"] < 15 
-                                    || $_POST["age"] > 150  ) {
-                                        echo "<p class='eText'> Zadaj vek od 15r. </p>";
+                                    if( $_POST["age"] == "" ) {
+                                        echo "<p class='eText'> Zadaj tvoj vek. </p>";
+                                        $errors["age"] = true;
+                                    }
+                                    if( $_POST["age"] < 15 && $_POST["age"] >= 0 && $_POST["age"] != "" ) {
+                                        echo "<p class='eText'> Si mladý/mladá. Musíš mať aspoň 15 rokov. </p>";
+                                        $errors["age"] = true;
+                                    }
+                                    if( ($_POST["age"] < 0 || $_POST["age"] > 150) && $_POST["age"] != "" ) {
+                                        echo "<p class='eText'> Tvoj vek nie je reálny. Nepoznám takého človeka </p>";
                                         $errors["age"] = true;
                                     }
 
                                     //kontrola vysky
-                                    if( $_POST["height"]  == 0 || $_POST["height"] < 130 
-                                    || $_POST["height"] > 240 ) {
+                                    if( $_POST["height"]  == "" ) {
                                         echo "<p class='eText'> Zadaj výšku. </p>";
+                                        $errors["age"] = true;
+                                    }
+                                    if( $_POST["height"]  != "" && ($_POST["height"] < 130 && $_POST["height"] > 20
+                                    ) ) {
+                                        echo "<p class='eText'> Si nízky/nízka. </p>";
+                                        $errors["age"] = true;
+                                    }
+                                    if( $_POST["height"]  != "" && ($_POST["height"] <= 20 
+                                    || $_POST["height"] > 240) ) {
+                                        echo "<p class='eText'> Zadaj reálnu výšku. </p>";
                                         $errors["age"] = true;
                                     }
 
                                     //kontrola vahy
-                                    if( $_POST["weight"]  == 0 || $_POST["weight"] < 30 
-                                    || $_POST["weight"] > 220 ) {
-                                        echo "<p class='eText'> Zadaj vahu. </p>";
+                                    if( $_POST["weight"]  == "" ) {
+                                        echo "<p class='eText'> Zadaj váhu. </p>";
+                                        $errors["age"] = true;
+                                    }
+                                    if( $_POST["weight"]  != "" && ( $_POST["weight"] < 20 
+                                    || $_POST["weight"] >= 600 ) ) {
+                                        echo "<p class='eText'> Zadaj reálnu váhu. </p>";
+                                        $errors["age"] = true;
+                                    }
+                                    if( $_POST["weight"]  != "" && $_POST["weight"] > 250 && $_POST["weight"] < 600 ) {
+                                        echo "<p class='eText'> Máš extrémnu váhu! Prepáč, nemôžem ti pomôcť. Potrebuješ lekára. </p>";
                                         $errors["age"] = true;
                                     }
                                 }

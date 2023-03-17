@@ -83,7 +83,7 @@
             $errors["gender"] = true;
         }
 
-        //kontrola veku
+        //kontrola veku, musi byt aspon 15r
         if( $_POST["age"]  == 0 ||  $_POST["age"] < 15 
         || $_POST["age"] > 150  ) {
             $errors["age"] = true;
@@ -96,8 +96,8 @@
         }
 
         //kontrola vahy
-        if( $_POST["weight"]  == 0 || $_POST["weight"] < 30 
-        || $_POST["weight"] > 220 ) {
+        if( $_POST["weight"]  == 0 || $_POST["weight"] < 20 
+        || $_POST["weight"] > 250 ) {
             $errors["weight"] = true;
         }
     }    
@@ -124,7 +124,7 @@
   
         mysqli_close($conn);
 
-        header("Location: ../log-in/log-in.php");
+        //header("Location: ../log-in/log-in.php");
     } 
 
 ?>
@@ -149,11 +149,15 @@
             <div id="sign-up-header">
                 <a href="<?php echo $_SESSION["location"]; ?>"><img src="../../B-media/logo-real.svg" 
                     alt="hopa" id="logo"></a>
-                <div id="sign-up-title">Sign-up</div>
+                <div id="sign-up-title">Registrácia</div>
             </div>
 
             <form action="" method="post" id="sign-up-formular">
-                <?php errorLOG($conn); ?>
+                <?php 
+                if(! $errors["registered"]){
+                    errorLOG($conn);
+                }
+                ?>
                 <?php register($errors); ?>
 
                 <input type="text" id="email" 
@@ -213,11 +217,11 @@
                 class="<?php echo addClass( $errors["weight"], $classes["eBorder"] ); ?>" >
 
                 <input type="submit" id="bt-register" name="submit" 
-                value="Register">
+                value="Registrovať sa">
             </form>
 
             <div id="sign-up-footer">
-                <a href="../log-in/log-in.php" id="new-account">Already have an account</a>
+                <a href="../log-in/log-in.php" id="new-account">Už mám vytvorený účet</a>
             </div>
         </div>
     </div>

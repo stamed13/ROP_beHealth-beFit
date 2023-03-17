@@ -20,24 +20,31 @@ html body {
 #content #sign-up {
   display: grid;
   justify-content: center;
-  background: #BFBFBF;
-  border-radius: 5px;
+  background: #A5CE00;
   border: 1px solid #000000;
 }
 @media (min-width: 0px) {
   #content #sign-up {
     width: 90vw;
     padding: 5px;
+    border-radius: 15px;
   }
 }
 @media (min-width: 500px) {
   #content #sign-up {
     width: 450px;
     padding: 10px;
+    border-radius: 25px;
   }
 }
 #content #sign-up #sign-up-header {
   display: grid;
+  /*@media(min-width: 500px) {
+      grid-auto-flow: column;
+      justify-content: start;
+      align-items: center;
+      gap: 120px;
+  }*/
 }
 @media (min-width: 0px) {
   #content #sign-up #sign-up-header {
@@ -45,14 +52,6 @@ html body {
     justify-items: center;
     align-items: center;
     gap: 0;
-  }
-}
-@media (min-width: 500px) {
-  #content #sign-up #sign-up-header {
-    grid-auto-flow: column;
-    justify-content: start;
-    align-items: center;
-    gap: 120px;
   }
 }
 #content #sign-up #sign-up-header #sign-up-title {

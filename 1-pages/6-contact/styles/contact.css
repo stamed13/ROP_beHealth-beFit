@@ -40,7 +40,7 @@
   border: 5px solid rgb(13, 84, 0);
   border-radius: 15px;
   color: rgb(0, 0, 0);
-  background: rgb(162, 247, 156);
+  background: #A5CE00;
 }
 @media (min-width: 0px) {
   #content #contact #autor-info {

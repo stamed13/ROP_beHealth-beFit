@@ -4,69 +4,49 @@
 }
 @media (min-width: 0px) {
   #content {
-    padding-top: 140px;
+    padding-top: 130px;
   }
 }
 @media (min-width: 300px) {
   #content {
-    padding-top: 145px;
+    padding-top: 138px;
   }
 }
 @media (min-width: 510px) {
   #content {
-    padding-top: 102px;
+    padding-top: 97px;
   }
 }
 @media (min-width: 900px) {
   #content {
-    padding-top: 133px;
+    padding-top: 128px;
   }
 }
 #content #training {
+  margin-bottom: 100px;
+  padding-top: 20px;
   display: grid;
-  gap: 120px;
+  gap: 80px;
 }
 #content #training #main {
   display: grid;
-  justify-items: center;
-  gap: 25px;
+  gap: 10px;
 }
 #content #training #main #content-title {
   padding: 10px;
   display: grid;
-  justify-items: center;
+  justify-content: center;
   font-weight: 600;
   font-size: 35px;
-  background: rgb(0, 178, 44);
+  background: rgb(0, 219, 55);
   border-radius: 25px;
 }
 #content #training #main #training-info {
   display: grid;
-  justify-items: center;
+  justify-content: center;
   text-align: center;
-  font-weight: 600;
   font-size: 25px;
-}
-#content #training #main .rText {
-  padding: 5px;
-  font-size: 20px;
-  background: red;
-  color: whitesmoke;
-  border-radius: 10px;
-}
-#content #training #main .gText {
-  padding: 5px;
-  font-size: 20px;
-  background: green;
-  color: whitesmoke;
-  border-radius: 10px;
-}
-#content #training #main .oText {
-  padding: 5px;
-  font-size: 20px;
-  background: orange;
-  color: whitesmoke;
-  border-radius: 10px;
+  font-weight: 600;
 }
 #content #training #training-menu {
   display: grid;
@@ -79,7 +59,6 @@
   align-content: center;
   font-weight: 600;
   background: #A5CE00;
-  border: 2px solid #000000;
   color: black;
   text-decoration: none;
 }

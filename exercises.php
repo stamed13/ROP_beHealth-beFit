@@ -11,7 +11,7 @@
     <div id="content">
         <section id="exercises">
             <article id="main">
-                <div id="content-title" class="exercise-title">Exercises</div>
+                <div id="content-title" class="exercise-title">Cviky</div>
                 <div id="exercises-info" class="exercise-info">
                     Cvičenie je dôležité pre naše zdravie. Či je to už z fyzického alebo psychického hľadiska.
                     Môže predĺžiť Váš život a pomôcť predchádzať určitým chorobám, ako sú niektoré druhy 

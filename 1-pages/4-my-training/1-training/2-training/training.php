@@ -23,7 +23,7 @@
         </div>
         <section id="training">
             <article id="main">
-                <div id="content-title">My training</div>
+                <div id="content-title">Tréning</div>
                 <div id="training-info">
                     Môžes si vybrať z nasledujúcich možností: 
                 </div>

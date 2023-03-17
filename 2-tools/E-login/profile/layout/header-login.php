@@ -69,7 +69,7 @@
                     <a href='$location'>domov</a>
                     <a href='' class='hide'>profile</a>
                 </nav>
-                <a href='../log-out/log-out.php' class='bt-logout'>log out</a>
+                <a href='../log-out/log-out.php' class='bt-logout'>odhlásiť sa</a>
             </div>
             ";
         }
@@ -85,7 +85,7 @@
                     <a href='$location'>domov</a>
                     <a href='' class='hide'>profile</a>
                 </nav>
-                <a href='../log-out/log-out.php' class='bt-logout'>log out</a>
+                <a href='../log-out/log-out.php' class='bt-logout'>odhlásiť sa</a>
             </div>
             ";
         }

@@ -18,7 +18,7 @@
     <div id="content">
         <section id="training">
             <article id="main">
-                <div id="content-title">My training</div>
+                <div id="content-title">Môj tréning</div>
                 <div id="training-info">
                     Môj tréning umožňuje zápis dennej aktivity, vyhodnotenie a tréningový plán.
                 </div>
@@ -46,7 +46,7 @@
                 </div>
             </article>
             <article id="training-menu">
-            <a id="bt-training" href="1-pages/4-my-training/1-training/2-training/training.php">Môj tréning</a>
+            <a id="bt-training" href="1-pages/4-my-training/1-training/2-training/training.php">Tréning</a>
             </article>
 
         </section>

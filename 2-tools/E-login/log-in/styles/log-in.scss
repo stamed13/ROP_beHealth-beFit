@@ -21,17 +21,19 @@ html {
     #log-in {
         display: grid;
         justify-content: center;
-        background: #BFBFBF;
-        border-radius: 5px;
+        //background: #BFBFBF;
+        background: #A5CE00;
         border: 1px solid #000000;
 
         @media(min-width: 0px) {
             width: 90vw;
             padding: 5px;
+            border-radius: 15px;
         }
         @media(min-width: 500px) {
             width: 300px;
             padding: 20px;
+            border-radius: 25px;
         }
         //
         #log-in-header {
@@ -42,12 +44,12 @@ html {
                 align-items: center;
                 gap: 0;
             }
-            @media(min-width: 500px) {
+            /*@media(min-width: 500px) {
                 grid-auto-flow: column;
                 justify-content: start;
                 align-items: center;
                 gap: 120px;
-            }
+            }*/
             //
             #log-in-title {
                 display: grid;

@@ -3,75 +3,51 @@
     min-height: 100vh;
     //
     @media(min-width: 0px) {
-        padding-top: 140px;
+        padding-top: 130px;
     }
     @media(min-width: 300px) {
-        padding-top: 145px;
+        padding-top: 138px;
     }
     @media(min-width: 510px) {
-        padding-top: 102px;
+        padding-top: 97px;
     }
     @media(min-width: 900px) {
-        padding-top: 133px;
+        padding-top: 128px;
     }
     //
+    
+
     #training {
+        margin-bottom: 100px;
+        padding-top: 20px;
         display: grid;
-        gap: 120px;
+        gap: 80px;
         //
         #main {
-            //min-height: 100vh;
             display: grid;
-            justify-items: center;
-            gap: 25px;
-            //
+            gap: 10px;
+            //min-height: 100vh;
             #content-title {
-                //width: 50vw;
-                //margin: 0;
                 padding: 10px;
                 display: grid;
-                justify-items: center;
+                justify-content: center;
                 font-weight: 600;
                 font-size: 35px;
-                background: rgb(0, 178, 44);
-                //border: 2px solid black;
+                background: rgb(0, 219, 55);
                 border-radius: 25px;
             }
             //
             #training-info {
                 display: grid;
-                justify-items: center;
+                justify-content: center;
                 text-align: center;
-                font-weight: 600;
                 font-size: 25px;
-            }
-            //hlasky
-            .rText {
-                padding: 5px;
-                font-size: 20px;
-                background: red;
-                color: whitesmoke;
-                border-radius: 10px;
-            }
-
-            .gText {
-                padding: 5px;
-                font-size: 20px;
-                background: green;
-                color: whitesmoke;
-                border-radius: 10px;
-            }
-
-            .oText {
-                padding: 5px;
-                font-size: 20px;
-                background: orange;
-                color: whitesmoke;
-                border-radius: 10px;
+                font-weight: 600;
             }
         }
-        //
+        
         #training-menu {
+            //padding-top: 45px;
             display: grid;
             gap: 40px;
             justify-content: center;
@@ -82,7 +58,7 @@
                 align-content: center;
                 font-weight: 600;
                 background: #A5CE00;
-                border: 2px solid #000000;
+                //border: 1px solid #000000;
                 color: black;
                 text-decoration: none;
                 //
