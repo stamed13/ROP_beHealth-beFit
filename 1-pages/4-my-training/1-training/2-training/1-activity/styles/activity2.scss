@@ -74,7 +74,8 @@
                     display: grid;
                     justify-content: center;
                     gap: 10px;
-                    background: rgb(166, 166, 166);
+                    //background: rgb(166, 166, 166);
+                    background: #A5CE00;
                     border-radius: 10px;
                     @media(min-width: 0px) {
                         padding: 10px;
@@ -89,7 +90,7 @@
                         gap: 5px;
                         font-weight: 600;
                         color: #000000;
-                        background: #a5da1e;
+                        background: #bdea4b;
                         border: 1px solid #000000;
                         border-radius: 10px;
                         @media(min-width: 0px) {
@@ -129,8 +130,9 @@
                         padding: 10px;
                         font-weight: 600;
                         font-size: 25px;
-                        color: #d1d1d1;
-                        background: #2c2c2c;
+                        //color: #d1d1d1;
+                        //background: #2c2c2c;
+                        background: rgb(0, 207, 0);
                         border-radius: 15px;
                         border: none;
                     }
