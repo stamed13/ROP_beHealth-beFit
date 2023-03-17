@@ -97,20 +97,24 @@
                     .ex-kinds-kind {
                         padding: 5px;
                         color: black;
-                        background: white;
+                        background: #A5CE00;
                         border-radius: 15px;
                     }
                     .be-af {
-                        background: yellow;
+                        //background: yellow;
                     }
                     .cali {
-                        background: #F89500;
+                        //background: #F89500;
                     }
                     .stre {
-                        background: #05F800;
+                        //background: #05F800;
                     }
                     .ba-st {
                         //background: #05F800;
+                    }
+                    .not {
+                        text-decoration: none;
+                        background: none;
                     }
                 }
             }
@@ -119,8 +123,8 @@
             padding: 15px;
             margin-bottom: 150px;
             min-height: 100vh;
-            background: gray;
-            border-radius: 10px;
+            background: #A5CE00;
+            border-radius: 25px;
             @media(min-width: 0px) {
                 padding-top: 130px;
             }
@@ -215,13 +219,13 @@
             }
         }
         #before-and-after {
-            background: rgb(231, 231, 0);
+            //background: rgb(231, 231, 0);
         }
         #calisthenics {
-            background: rgb(227, 151, 0);
+            //background: rgb(227, 151, 0);
         }
         #flexibility {
-            background: rgb(21, 210, 0);
+            //background: rgb(21, 210, 0);
         }
     }
 }

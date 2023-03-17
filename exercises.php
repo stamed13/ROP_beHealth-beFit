@@ -26,10 +26,10 @@
                     <a  href="#before-and-after" class="ex-kinds-kind be-af">pred a po cvičení</a>
                         <a href="#calisthenics" class="ex-kinds-kind cali">kalistenika</a>
                         <a href="#flexibility" class="ex-kinds-kind stre">flexibilita</a>
-                        <a  class="ex-kinds-kind ba-st">rovnováha alebo stabilita</a>
-                        <a  class="ex-kinds-kind kardio">kardio</a>
-                        <a  class="ex-kinds-kind hiit">HIIT</a>
-                        <a  class="ex-kinds-kind weigth">silový tréning</a>
+                        <a  class="ex-kinds-kind ba-st not">rovnováha alebo stabilita</a>
+                        <a  class="ex-kinds-kind kardio not">kardio</a>
+                        <a  class="ex-kinds-kind hiit not">HIIT</a>
+                        <a  class="ex-kinds-kind weigth not">silový tréning</a>
                     </nav>
                 </div>
             </article>
