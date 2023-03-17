@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: St 08.Mar 2023, 16:22
+-- Čas generovania: Pi 17.Mar 2023, 18:44
 -- Verzia serveru: 10.4.27-MariaDB
 -- Verzia PHP: 8.2.0
 
@@ -40,7 +40,7 @@ CREATE TABLE `exercises` (
 
 INSERT INTO `exercises` (`idExercise`, `partId`, `levelId`, `name`) VALUES
 (1, 1, 1, 'aktívny vis'),
-(2, 1, 1, 'vytlacanie z ramien'),
+(2, 1, 1, 'vytláčanie z ramien'),
 (3, 1, 1, 'negatívny zhyb nadhmat'),
 (4, 1, 1, 'izometria podhmat'),
 (5, 1, 1, 'izometria nadhmat'),
@@ -162,7 +162,8 @@ INSERT INTO `exercises` (`idExercise`, `partId`, `levelId`, `name`) VALUES
 -- Indexy pre tabuľku `exercises`
 --
 ALTER TABLE `exercises`
-  ADD PRIMARY KEY (`idExercise`);
+  ADD PRIMARY KEY (`idExercise`),
+  ADD KEY `partId` (`partId`);
 
 --
 -- AUTO_INCREMENT pre exportované tabuľky
@@ -173,6 +174,16 @@ ALTER TABLE `exercises`
 --
 ALTER TABLE `exercises`
   MODIFY `idExercise` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+
+--
+-- Obmedzenie pre exportované tabuľky
+--
+
+--
+-- Obmedzenie pre tabuľku `exercises`
+--
+ALTER TABLE `exercises`
+  ADD CONSTRAINT `exercises_ibfk_1` FOREIGN KEY (`partId`) REFERENCES `parts` (`idPart`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
