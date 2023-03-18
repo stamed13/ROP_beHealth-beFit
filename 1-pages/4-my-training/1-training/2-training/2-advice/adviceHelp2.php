@@ -225,22 +225,22 @@
             if( ( $pullCa == 1 || $pushCa == 1 || $coreCa == 1 || $legCa == 1 || $neckSt == 1 || $neckSt == 1 || $backSt == 1 || $legCa == 1 ) 
             && ( $pullCa == 3 || $pushCa == 3 || $coreCa == 3 || $legCa == 3 || $neckSt == 3 || $handSt == 3 || $backSt == 3 || $legCa == 3 )  ){
                 //vyhodnotenie
-                if( $howOffen <= 1 ){
+                if( $howOffen <= 1.4 ){
                     echo "<div class='advice exercise'> $advice16 </div>";
                 }
-                if( $howOffen > 1 && $howOffen <= 2.5 ){
+                if( $howOffen > 1.4 && $howOffen <= 1.75 ){
                     echo "<div class='advice exercise'> $advice11 </div>";
                 }
-                if( $howOffen > 2.5 && $howOffen <= 3.5 ){
+                if( $howOffen > 1.75 && $howOffen <= 2.33 ){
                     echo "<div class='advice exercise'> $advice12 </div>";
                 }
-                if( $howOffen > 3.5 && $howOffen <= 4.5 ){
+                if( $howOffen > 2.33 && $howOffen <= 3.5 ){
                     echo "<div class='advice exercise'> $advice13 </div>";
                 }
-                if( $howOffen > 4.5 && $howOffen <= 5.5 ){
+                if( $howOffen > 3.5 && $howOffen <= 7 ){
                     echo "<div class='advice exercise'> $advice14 </div>";
                 }
-                if( $howOffen > 5.5 ){
+                if( $howOffen > 7 ){
                     echo "<div class='advice exercise'> $advice15 </div>";
                 }
             //rovnomerne
