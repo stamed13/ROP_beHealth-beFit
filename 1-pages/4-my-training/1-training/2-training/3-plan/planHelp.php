@@ -38,15 +38,15 @@
         //ma cvicit 3x tyzdenne
         if($plan == 0 || $plan == 1){
             //ak cvici aspon 3x do tyzdna, je to spravne
-            if($offen > 2.5){
+            if($offen > 1.75){
                 echo "<div class='gText'> Super, ideš podľa nastaveného plánu! </div>";
             }
             //ak cvici menej ako 3x a zaroven aspon 1x do tyzdna, je to dobre
-            if($offen > 1 && $offen <= 2.5){
+            if($offen > 1.4 && $offen <= 1.75){
                 echo "<div class='oText'> Pokiaľ máš dosť času, skús cvičiť 3x do týždňa! </div>";
             }
             //ak cvici menej ako 1x do tyzdna, je to zle
-            if($offen <= 1 ){
+            if($offen <= 1.4 ){
                 echo "<div class='rText'> Pozor, cvicíš menej ako 1x do týždňa! Nájdi si prosím viac času. </div>";
             }
         }
@@ -54,19 +54,19 @@
         //ma cvicit 7x tyzdenne
         if($plan > 1 && $plan < 5){
             //ak cvici aspon 5x do tyzdna, je to spravne
-            if($offen > 5.5){
+            if($offen > 7){
                 echo "<div class='gText'> Super, ideš podľa nastaveného plánu! </div>";
             }
-            //ak cvici menej ako 3x a zaroven aspon 1x do tyzdna, je to dobre
-            if($offen > 2.5 && $offen <= 5.5){
+            //ak cvici viac ako 3x a zaroven menej ako 5x do tyzdna, je to dobre
+            if($offen > 1.75 && $offen <= 7){
                 echo "<div class='oText'> Pokiaľ máš dosť času, skús cvičiť 5x do týždňa! </div>";
             }
             //ak cvici menej ako 3x a zaroven aspon 1x do tyzdna do tyzdna, je to zle
-            if($offen > 1 && $offen <= 2.5 ){
+            if($offen > 1.4 && $offen <= 1.75){
                 echo "<div class='rText'> Pozor, cvicíš menej ako 1x do týždňa! Nájdi si prosím viac času. </div>";
             }
             //ak cvici menej ako 1x do tyzdna, je to velmi zle
-            if($offen <= 1 ){
+            if($offen <= 1.4){
                 echo "<div class='rText'> Cvicíš veľmi málo! Skús cvičiť pravidelnejšie a budeš lepšie regenerovať. </div>";
             }
         }
