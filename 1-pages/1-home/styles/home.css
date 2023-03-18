@@ -35,6 +35,7 @@
   font-size: 35px;
 }
 #content #home #main {
+  margin-bottom: 10px;
   display: grid;
   justify-items: center;
   gap: 75px;

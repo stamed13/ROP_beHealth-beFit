@@ -19,7 +19,7 @@
 
     <div id="content">
     <div id="buttons-arrow">
-            <a href="../../../../my-training.php" id="bt-arrow">naspäť</a>
+            <a href="../../../../my-training.php" id="bt-arrow">späť</a>
         </div>
         <section id="training">
             <article id="main">

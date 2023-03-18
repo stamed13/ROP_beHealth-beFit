@@ -37,7 +37,7 @@
         <section id="activity">
             <article id="main">
                 <div class="buttons-arrow">
-                    <a href="../training.php" class="bt-arrow">naspäť</a>
+                    <a href="../training.php" class="bt-arrow">späť</a>
                     <a href="activity2.php" class="bt-arrow"><img src="../../../../../2-tools/B-media/sipka-vpravo.svg" alt="hopa"></a>
                 </div>
                 <div id="main-content">

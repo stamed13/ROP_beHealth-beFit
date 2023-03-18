@@ -14,12 +14,12 @@
 }
 @media (min-width: 510px) {
   #content {
-    padding-top: 97px;
+    padding-top: 105px;
   }
 }
 @media (min-width: 900px) {
   #content {
-    padding-top: 128px;
+    padding-top: 145px;
   }
 }
 #content #exercises #main {
@@ -27,6 +27,7 @@
   margin-bottom: 150px;
 }
 #content #exercises #main #content-title {
+  margin-bottom: 25px;
   display: grid;
   justify-content: center;
   font-weight: 600;

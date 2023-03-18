@@ -13,7 +13,7 @@
             <div id="main">
                 <div id="content-title">O webstránke beHealth-beFit</div>
                 <div id="main-info">
-                    Jednoduchá webová aplikácia, ktorá pomaha byť zdravý. Hlavná téma je zdravie a cvičenie.
+                    Jednoduchá webová aplikácia, ktorá pomáha byť zdravším a silnejším. Hlavná téma je zdravie a cvičenie.
                 </div>
             </div>
 

@@ -12,12 +12,12 @@
 
     <div id="content">
         <div id="home">
-            <div id="content-title">Domov</div>
+            <div id="content-title"></div>
             <article id="main">
                 <div id="info">
                     <p>Ahoj, vitaj na stránke beHealth-beFit!</p>
-                    <p>Pokojne sa prihlás a ja ti z radostou pomôžem. Môžes sa zlepšiť v posilňovaní 
-                        tela a zlepšiť si pohybové rozsahy. K tomu získaš cenné rady a typy zdravého životného štýlu.</p>
+                    <p>Pokojne sa prihlás a ja ti s radosťou pomôžem. Môžeš sa zlepšiť v posilňovaní 
+                        tela a zlepšiť si pohybové rozsahy. Získaš tiež cenné rady a typy pre zdravý životný štýl.</p>
                     <p>Neváhaj, čas beží a ty máš jedinečnú možnosť na zmenu.</p>
                 </div>
                 <img src="2-tools/B-media/strong-man.jpg" alt="hopa" id="home-sportsman">

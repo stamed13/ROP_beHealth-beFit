@@ -9,10 +9,10 @@
         padding-top: 138px;
     }
     @media(min-width: 510px) {
-        padding-top: 97px;
+        padding-top: 105px;
     }
     @media(min-width: 900px) {
-        padding-top: 128px;
+        padding-top: 145px;
     }
     //
     #exercises {
@@ -20,6 +20,7 @@
             min-height: 100vh;
             margin-bottom: 150px;
             #content-title {
+                margin-bottom: 25px;
                 display: grid;
                 justify-content: center;
                 font-weight: 600;

@@ -16,7 +16,7 @@
         <section id="type" class="cali">
             <article id="main">
                 <div id="main-head">
-                    <a href="../../../../exercises.php#calisthenics" id="back">naspäť</a>
+                    <a href="../../../../exercises.php#calisthenics" id="back">späť</a>
                     <div id="content-title" class="exercise-title">Jadro</div>
                 </div>
                 <div id="type-info" class="exercise-info">
