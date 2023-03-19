@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Pi 17.Mar 2023, 18:44
+-- Čas generovania: Sun 19.Mar 2023, 17:07
 -- Verzia serveru: 10.4.27-MariaDB
 -- Verzia PHP: 8.2.0
 
@@ -56,7 +56,7 @@ INSERT INTO `advice` (`idAdvice`, `name`) VALUES
 (17, 'Skus viac'),
 (18, 'Skus viac'),
 (19, 'Skus viac'),
-(20, 'Skus viac'),
+(20, 'Skús viac'),
 (21, 'Si začiatočník, pokojne cvič ďalej, výsledky pomaly prídu.'),
 (22, 'Si pokročilý/a, pokojne si môžeš zlepšiť svoje schopnosti a posunúť level náročnosti.'),
 (23, 'Si expert, pokojne si zlepšuj \r\nsvoje schopnosti.'),

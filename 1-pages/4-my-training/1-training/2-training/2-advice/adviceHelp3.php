@@ -145,27 +145,27 @@
                 if( $pullCa == 1 ){
                     //$disbalance["pullCa"] = true;
                     //echo $advice31;
-                    echo " posilnovat biceps ";
+                    echo " posilňovať biceps ";
                 }
 
                 if( $pushCa == 1 ){
                     //echo $advice32;
-                    echo " posilnovat triceps ";
+                    echo " posilňovať triceps ";
                 }
 
                 if( $legCa == 1 ){
                     //echo $advice36;
-                    echo " posilnovat nohy";
+                    echo " posilňovať nohy";
                 }
 
                 if( $backSt == 1 ){
                     //echo $advice34;
-                    echo " strecovat  chrbat";
+                    echo " strečovať  chrbát";
                 }
 
                 if( $legSt == 1 ){
                     //echo $advice33;
-                    echo " strecovat  nohy";
+                    echo " strečovať  nohy";
                 }
 
                 echo ".</div>";
