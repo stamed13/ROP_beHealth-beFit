@@ -113,7 +113,7 @@
                         <div id="" class="name">kolíska</div>
                         <div class="info">
                             <p>
-                            (ťahšia verzia) ľahni si na chrbát, pokrč nohy (do 90° v kolennom aj v bedrovom kĺbe), 
+                            (ťažšia verzia) ľahni si na chrbát, pokrč nohy (do 90° v kolennom aj v bedrovom kĺbe), 
                             ruky sú vystreté a sú kolmo na zem, plecia sú zatlačené, chrbát je stále na zemi, 
                             pevne drž pozíciu, pomaly sa kýv vpred a vzad
                             </p>
@@ -130,7 +130,7 @@
                             bola stále zdvihnutá aspoň jedna noha
                             </p>
                             <p>
-                            (ťahšia verzia) ľahni si na chrbát, vystri nohy a ruky, ruky sú na zemi 
+                            (ťažšia verzia) ľahni si na chrbát, vystri nohy a ruky, ruky sú na zemi 
                             vedľa tela, plecia sú zatlačené, chrbát je stále na zemi, zdvihni nohy do 90°, 
                             spevni telo, pomaly dvíhaj raz pravú nohu a raz ľavú nohu do 90°, 
                             keď budeš mať zdvihnuté obe nohy dvihni sa, odlep chrbát od zeme 
@@ -152,7 +152,7 @@
                     <div class="exercise">
                         <div id="" class="name">ruské otočky</div>
                         <div class="info">
-                            (ťahšia verzia)
+                            (ťažšia verzia)
                             ľahni si na chrbát, pokrč nohy, zdvihni sa na zadok, plecia sú zatlačené, 
                             chrbát je vystretý, spevni telo, pomaly rotuj do strán, 
                             raz do prava a raz do ľava a dotkni sa prstami zeme 
@@ -162,7 +162,7 @@
                     <div class="exercise">
                         <div id="" class="name">stierače</div>
                         <div class="info">
-                            (ťahšia verzia)
+                            (ťažšia verzia)
                             ľahni si na chrbát, ruky sú upažené, vedľa seba (do 90° v ramennom kĺbe)
                             nohy sú vystreté, chrbát je na zemi, plecia sú zatlačené, 
                             zdvihni nohy (do 90° v bedrovom kĺbe), nohy drž v tomto uhle, presúvaj 

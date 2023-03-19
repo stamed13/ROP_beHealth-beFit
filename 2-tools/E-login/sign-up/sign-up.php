@@ -209,11 +209,11 @@
                 class="<?php echo addClass( $errors["age"], $classes["eBorder"] ); ?>" >
 
                 <input type="number" id="height" 
-                name="height" placeholder="Vyska" value="<?= $_POST['height'] ?>"
+                name="height" placeholder="Výška" value="<?= $_POST['height'] ?>"
                 class="<?php echo addClass( $errors["height"], $classes["eBorder"] ); ?>" >
 
                 <input type="number" id="weight" 
-                name="weight" placeholder="Vaha" value="<?= $_POST['weight'] ?>"
+                name="weight" placeholder="Váha" value="<?= $_POST['weight'] ?>"
                 class="<?php echo addClass( $errors["weight"], $classes["eBorder"] ); ?>" >
 
                 <input type="submit" id="bt-register" name="submit" 

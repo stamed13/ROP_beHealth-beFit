@@ -56,8 +56,8 @@
                     margin-top: 33px;
                     position: absolute;
                     display: none;
-                    background: #D9D9D9;
-                    border: 1px solid #000000;
+                    background: white;
+                    border: 3px solid #000000;
                     border-radius: 10px;
         
                     .name {
@@ -85,7 +85,7 @@
                         font-size: 20px;
                         text-decoration: none;
                         color: black;
-                        background: #B6B6B6;
+                        background: #1ba400;
                         border: 1px solid #000000;
                         border-radius: 5px;
                     }
@@ -173,7 +173,7 @@
         left: -100%;
         //top: 135px;
         gap: 0;
-        background-color: rgb(162, 247, 156);
+        background-color: #A5CE00;
         width: 100%;
         min-height: 100vh;
         transition: .3s;
@@ -214,7 +214,7 @@
                     padding: 5px 0;
                     border-radius: 5px;
                     text-decoration: underline;
-                    background: #39d736;
+                    background: rgb(193, 125, 0);
                     color: #000000;
                 }
                 // tlacidlo
@@ -225,7 +225,7 @@
                     padding: 5px 0;
                     border-radius: 5px;
                     color: #000000;
-                    background: orange;
+                    background: #00b621;
                     text-decoration: none;
                 }
             }

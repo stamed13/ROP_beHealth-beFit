@@ -25,6 +25,7 @@
 #content #type {
   padding: 10px;
   border-radius: 10px;
+  background: #A5CE00;
 }
 #content #type #main {
   min-height: 100vh;
@@ -32,44 +33,21 @@
 #content #type #main #main-head {
   margin-bottom: 10px;
 }
-@media (min-width: 0px) {
-  #content #type #main #main-head {
-    display: grid;
-    justify-items: center;
-    gap: 10px;
-  }
-}
-@media (min-width: 450px) {
-  #content #type #main #main-head {
-    display: block;
-  }
-}
 #content #type #main #main-head #back {
+  margin-bottom: 10px;
   display: grid;
-  justify-items: center;
+  justify-content: center;
   padding: 5px;
   font-size: 25px;
   border-radius: 10px;
-  color: #EEEEEE;
-  background: #4C4C4C;
+  color: #000000;
+  background: #e4e4e4;
   font-weight: 600;
   text-decoration: none;
 }
-@media (min-width: 0px) {
-  #content #type #main #main-head #back {
-    position: relative;
-    justify-content: center;
-  }
-}
-@media (min-width: 450px) {
-  #content #type #main #main-head #back {
-    position: absolute;
-    justify-content: left;
-  }
-}
 #content #type #main #main-head #content-title {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   font-weight: 600;
   font-size: 35px;
 }
@@ -200,17 +178,11 @@
   justify-items: left;
   font-size: 25px;
   font-weight: 600;
-  background: #3a3a3a;
-  color: #ffffff;
+  background: rgba(210, 210, 210, 0.5019607843);
+  color: #1c1c1c;
   border-radius: 10px;
 }
 #content #type .exercises .exercises-exercise .exercise .info {
   font-size: 25px;
   font-weight: 400;
-}
-#content .cali {
-  background: rgb(216, 141, 0);
-}
-#content .stre {
-  background: rgb(100, 222, 34);
 }

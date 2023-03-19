@@ -18,45 +18,34 @@
     #type {
         padding: 10px;
         border-radius: 10px;
+        background: #A5CE00;
         //
         #main {
             min-height: 100vh;
             //
             #main-head {
                 margin-bottom: 10px;
-                @media(min-width: 0px){
-                    display: grid;
-                    justify-items: center;
-                    gap: 10px;
-                }
-                @media(min-width: 450px){
-                    display: block;
-                }
+                //display: grid;
+                //justify-content: center;
+                //gap: 10px;
                 //
                 #back {
+                    margin-bottom: 10px;
                     display: grid;
-                    justify-items: center;
+                    justify-content: center;
                     padding: 5px;
                     font-size: 25px;
                     border-radius: 10px;
-                    color: #EEEEEE;
-                    background: #4C4C4C;
+                    color: #000000;
+                    background: #e4e4e4;
                     font-weight: 600;
                     text-decoration: none;
                     //font-family: 'Inter', sans-serif;
                     //
-                    @media(min-width: 0px){
-                        position: relative;
-                        justify-content: center;
-                    }
-                    @media(min-width: 450px){
-                        position: absolute;
-                        justify-content: left;
-                    }
                 }
                 #content-title {
                     display: grid;
-                    justify-content: center;
+                    justify-items: center;
                     font-weight: 600;
                     font-size: 35px;
                 }
@@ -189,8 +178,8 @@
                         justify-items: left;
                         font-size: 25px;
                         font-weight: 600;
-                        background: #3a3a3a;
-                        color: #ffffff;
+                        background: #d2d2d280;
+                        color: #1c1c1c;
                         border-radius: 10px;
                     }
                     //
@@ -203,9 +192,9 @@
         }
     }
     .cali {
-        background: rgb(216, 141, 0);
+        //background: rgb(216, 141, 0);
     }
     .stre {
-        background: rgb(100, 222, 34);
+        //background: rgb(100, 222, 34);
     }
 }
